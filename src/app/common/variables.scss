@@ -1,0 +1,366 @@
+//colors//
+$igmm-color:#007935;
+$background-color-main: #efeeee;
+$simpletext-color:#007935; 
+$h5-color: #007935;
+$h6-color:#007935;
+$text-color: #007935;
+$show-color: #646569; 
+$width-color:#007934;
+$sing-color:#646569;
+$t-section-color:#007935;
+$m-ctext-color:#646569;
+$b-color:  #ffffff;
+$backnew-color: rgb(38,146,87);
+$btn-not-bgcolor: rgb(152, 152,152);
+$color-fifty:white;
+$footer-bg-color:#007934;
+$btn-bg-color: #007a33;
+$btn-continue-color: #fff;
+$btn-cancel-bg-color:#b7b7b7;
+$btn-cancel-color:#727272;
+$btn-help-bg-color: #007a33;
+$btn-help-color: #fff;
+$setup-color: #258c52;
+$li-style-color:#333;
+$li-first-to-zip-color: #333;
+$claimant-color: #258c52;
+$text-color: #007935;
+$white-bg-color:#fdfdfd;
+$arrow-color:#fff;
+$regist-color: #258c52;
+$center-bg-color:#fdfdfd;
+$sidebar-bg-color:#ccc;
+$a-color:#999;
+$claimtop-color: #047832;
+$clmm-tt-color: #047832;
+$sxtmb-bg-color:#eaebec;
+$mycontain-bgcolor:#fff;
+$claim-color:#258c52;
+$claim-center-bg-color:#fdfdfd;
+$li-claim-color:#333;
+$claim-ss-mm-color: #333;
+$clm-pge-color: #007934;
+$btn-claim-bgcolor:#007a33;
+$btn-color-claim: #fff;
+$col-bg-color:#fff;
+$contnt-background: #fff;
+$bbttnn-dropdown-color:#fff;
+$section-make-it-bgcolor:#fff;
+$labelss-mm-color: #6d6c7f;
+$col-xs-12-color: #525253;
+$healthticket-li-htckt-li-a-color:#048a39;
+
+  //sizes//
+$btn-continue-width:50%;
+$max-width:91%;
+$show-pass-width:15px;
+$show-pass-height:15px;
+$forgot-pass-width:50%;
+$widthbtn: 90%;
+$inp-lg-width:89.5%;
+$new-user-width:50%;
+$wrapper-width:38%;
+ $wraper-width-med:83%;
+ $logo-section-width:29%;
+$lg-width:100%;
+$fifty-width:33.3%;
+$logo-div-img-height: 54px;
+$navbar-width:100%;
+$control-month-height:34px;
+$dd-mm-yy-width:12.3%;
+$btn-help-width:100%;
+$control-year-height:34px;
+$control-date-height:34px;
+$desktop-height: 57px;
+$form-control-width: 100%;
+$form-height: 34px;
+$white-width: 50%;
+$navbar-width:100%;
+$fifty-width:33.3%;
+$center-width:50%;
+$sidebar-height:100%;
+$sidebar-width:290px;
+$menu-item-img-width: 32px;
+$list-height: 55px;
+$Databox-width: 100%;
+$claim-center-width:42%;
+$form-claim-data-width: 100%;
+$form-claim-data-height: 29px;
+$claim-btn-width:100%;
+$contnt-health-page-width:45%;
+$button-dropdown-height:40px;
+$col-xs-6-width:50%;
+$col-xs-8-width:40%;
+$tickt-main-width:100%;
+$healthticket-main-page-width: 70%;
+$col-xs-006-width:31.33%;
+$main-xxss-width:50%;
+$col-xs-xs-width:100%;
+$image-sec-sidebr-height: 50px;
+ $height-titltxtd: 80px;
+ $image-sectn-span-height: 50px;
+ $logoclaim-hgt: 80px;
+  //font//
+$h6-fontstyle: italic;
+$body-font: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+$text-font-family: Helvetica;
+$clm-font-family:Helvetica;
+
+///masterpage///
+$sixty-width-master:33.3%;
+$sixty-height-master: 80px;
+$sixty-color-master:white;
+$logoclaim-height-master:80px;
+$logoclaimimg-max-height-master:54px;
+$titltxd-hght-master: 80px;
+$sidebar-height-master:100%;
+$sidebar-width-master:290px;
+$background-color-master:#ccc;
+$image-section-sidebar-height:50px;
+$menu-item-img-sidebar-width:32px;
+$image-section-span-height:50px;
+$activeFooter-bg-color:#cce4d6;
+$logo-diving-img-height:58px;
+
+///header///
+$navbarstyle-background-color: #007a33;
+$sixty-width: 33.3%;
+$color-sixty:#ffffff;
+$height-sixty:80px;
+$logoclaim-height:80px;
+$titltxtd-height: 69px;
+
+///sidebar///
+$sidebar-height:100%;
+$sidebar-width:290px;
+$list-group-item-height:55px;
+$image-section-sidebar-height: 50px;
+$menu-item-img-sidebar-width:32px;
+$image-section-span-height:50px;
+
+///footer///
+$activeFooter-backgroud:#cce4d6;
+$col2-xx-mm-width:20%;
+
+///securityinfo//
+$white-bg-color:#fdfdfd;
+$white-width: 50%;
+$setup-color:#258c52;
+$continue-btn-bg-securityinfo:#007a33;
+$color-security:#fff;
+$btnwidth: 100%;
+$btn-cancel-bg-color:#b7b7b7;
+$btn-color-cancelbtn:#727272;
+$btn-cancel-width:100%;
+
+///password//
+$li-first-to-zip-color: #333;
+$setup-color: #258c52;
+$form-control-data-width: 98%;
+$form-control-data-height: 35px;
+$hint-pass-info-color: #333;
+
+ ///abouttheapp//
+ $content-infosectionn-width:50%;
+ $content-conclsvalue-width: 50%;
+  $content-conclsvalue-bgcolor: #525253;
+
+  ///leave-claim///
+$sxith-dv-width:30%;
+$frt-dv-width:14.8%;
+$aad-abs-section-height:50px;
+$aad-abs-section-background-color:#A8D18B;
+$left-sides-abs-text-width:90%;
+$left-sides-abs-text-height:50px;
+$right-sides-abs-text-width:10%;
+$myprogress-width: 100%;
+$myprogress-background-color: #ddd;
+$mybar-width:100%;
+$mybar-background-color:#b0efc7;
+
+ ///Added Time popup//
+   $claim-span-leave-height:50px; 
+    $claim-span-leave-weight:80%;
+     $claim-image-width:24px;
+      $li-first-color:#333;
+      $form-popup-width:15%;
+   $form-popup-height:35px;
+    $form-control-added-width:30%;
+     $form-control-added-height:34px;
+     $one-scscs-color: black;
+   $one-scscsbgcolor:#cce4d6;
+    $two-scscs-color: #fff;
+   $two-scscsbgcolor:#007a33; 
+   $form-popup-timezone-width:80%;
+   $form-popup-timezone-height:35px; 
+$mybar-background-color:#A8D18B;
+// $title-section-abs-section-bg-color:#cce4d6;
+
+
+///claimleave/
+$whiteleave-claim-width:70%;
+$view-claim-tabs-width:33.3%;
+$view-claim-title-bg-color:#e2f5e9;
+$yyddggdg-color: #007a33;
+ $content-infosectionn-lftside-width:18%;
+ $content-info-width: 90%; 
+ $content-conclsvalue-rightside-width:18%;
+ $hlf-new-lfti-view-width:50%;
+ $hlf-new-rgti-view-width:50%;
+  $myBar-view-bg-color:#f1a84a;
+  $sxith-dv-view-details-width: 25%; 
+  $frt-dv-view-details-width:  25%;
+  $one-scscs-view-color:#fff;
+    $one-scscs-view-bg-color: #007a33;
+      $button-section-view-detail-width:100%;
+//pop up
+$whiteleave-add-pop-width:50%;
+$view-claim-title-add-pop-bg-color:#007a33;
+$view-claim-title-add-pop-color: #fff;
+$view-detail-section-pop-bg-color:#ccc;
+$view-claim-contain-pop-bg-color:#fff;
+$button-section-add-pop-width:100%;
+$button-main-width:50%;
+$btn-cancel-view-bg-color: #b7b7b7;
+$btn-cancel-view-color:#fff;
+$btn-cancel-view-width:100%;
+
+///claims//
+ 
+$whitecolor:#eceeef;
+$lightgreen:#cce4d6;
+$greencolor:#007a33;
+$blackcolor:#373a3c;
+$bcgcolor:#e7e6e6;
+$bdcolor:#00db55;
+$color:#047832;
+$cntcolor:#258c52;
+$txtcol:#444;
+$bcw:#fdfdfd;
+$bcg:#eaeaea;
+$tbc:#efeeee;
+$border-box:1px solid $bcg;
+$fontsize:23px;
+
+///Add Claims//
+$li-col:#333;
+$form:#55595c;
+$cc:#ccc;
+$gc-in-add:#007934;
+$owhite:#fff;
+$whitecolor:#eceeef;
+$lightgreen:#cce4d6;
+$greencolor:#007a33;
+$blackcolor:#373a3c;
+$bcgcolor:#e7e6e6;
+$bdcolor:#00db55;
+$color:#047832;
+$cntcolor:#258c52;
+$txtcol:#444;
+$bcw:#fdfdfd;
+$bcg:#eaeaea;
+$tbc:#efeeee;
+$bgc:#efefef;
+$border-box:1px solid $bcg;
+$fontsize:23px;
+$c-font:14px;
+$width:100%;
+$width-h:50%;
+
+///myclaim//
+$owhite:#fff;
+$whitecolor:#eceeef;
+$lightgreen:#cce4d6;
+$greencolor:#007a33;
+$blackcolor:#373a3c;
+$bcgcolor:#e7e6e6;
+$bdcolor:#00db55;
+$color:#047832;
+$cntcolor:#258c52;
+$txtcol:#444;
+$bcw:#fdfdfd;
+$bcg:#eaeaea;
+$tbc:#efeeee;
+$border-box:1px solid $bcg;
+$fontsize:23px;
+$c-font:14px;
+$width:100%;
+$width-h:50%;
+
+////claims info//
+$owhitecolor:#fff;
+$whitecolor:#eceeef;
+$lightgreen:#cce4d6;
+$greencolor:#007a33;
+$blackcolor:#373a3c;
+$bcgcolor:#e7e6e6;
+$bdcolor:#00db55;
+$color:#047832;
+$cntcolor:#258c52;
+$txtcol:#444;
+$bcw:#fdfdfd;
+$bcg:#eaeaea;
+$tbc:#efeeee;
+$bbcolor:#525253;
+$border-box:1px solid $bcg;
+$fontsize:23px;
+$c-font:14px;
+$width:100%;
+$width-h:50%;
+
+////claim info//
+$width:100%;
+$owhitecolor:#fff;
+$width-h:50%;
+$back-color:#efefef;
+$bbcolor:#525253;
+$padding:0.93rem;
+
+
+// ////Contact Adjuster/////
+$li-in-con-adj:#000;
+$owhite:#fff;
+$blackcolor:#373a3c;
+$bgc:#efefef;
+$bcg:#eaeaea;
+$border-box:1px solid $bcg;
+$fontsize:23px;
+$c-font:14px;
+$width:100%;
+$width-h:50%;
+$width-h-h:25%;
+
+//////ClaimInfoMessage page///
+$li-col:#333;
+$form:#55595c;
+$cc:#ccc;
+$blue-bcg:#5bc0de;
+$clear-col:#c1392b;
+$footer-col:#e5e5e5;
+$grey-hover:#eaebec;
+$red-col:#300;
+$gc-in-add:#007934;
+$owhite:#fff;
+$blackcolor:#373a3c;
+$bgc:#efefef;
+$border-box:1px solid $bcg;
+$fontsize:23px;                                     
+$c-font:14px;
+$width:100%;
+$width-h:50%;
+////nearby////
+$unique:#dddee0;
+
+
+/////provider///
+
+$blu:#31bef8;
+$d6:#d6d6d6;
+$checks:#cfd1d4;
+$checks-bg:#2196f3;
+$border-8:#888;
+$input-g:#f7f7f7;
+$search:#DBDBDB;
+$search-b:#c7cacd;
+

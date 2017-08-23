@@ -1,0 +1,151 @@
+<app-topnav></app-topnav>
+<div class="whiteblank-registration"> 
+  <br>
+ <span class="registuser-registration">REGISTERING USER</span>
+ <br>
+ <br>
+ <ul style="font-size: 14px !important; list-style-type:none;padding: 0 15px;
+">
+
+ <li class="li-first-to-zip-registration"> 
+     First Name 
+     <span class="sm-txt-new-registration">(exactly as shown on the Claim Letter)</span>
+  </li>
+  <li><input type="text" id="firstName" class="form-control-data-registration" [(ngModel)]="firstName" /></li>
+
+   <li class="li-first-to-zip-registration" style="margin-top: 10px;"> 
+     Last Name 
+     <span class="sm-txt-new-registration">(exactly as shown on the Claim Letter)</span>
+   </li>
+   <li> <input type="text" id="lastName" class="form-control-data-registration" [(ngModel)]="lastName" /></li>
+
+   <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
+     Email
+  </li>
+  <li><input type="email" id="email" class="form-control-data-registration" [(ngModel)]="email" /></li>
+
+  <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
+     Re-Enter Email
+  </li>
+  <li style="list-style: outside none none;">
+  <input class="form-control-data-registration" type="email" id="Re-email" [(ngModel)]="reEmail" />
+  </li>
+
+  <li class="claimant-info-registration">CLAIMANT INFORMATION</li>
+
+   <li class="li-first-to-zip-registration" style="margin-top: 10px;">
+     Last 4 digits of Social Security #
+  </li>
+  <li>
+            <input  [(ngModel)] ="ssn" min="0"  class="form-control-data-registration"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+        </li>
+
+  <li class="li-first-to-zip-registration" style="margin-top: 10px;">
+   Date Of Birth</li>
+  <li>
+  <div class="first ">
+   <div class="dd-mm-yy ">
+  <input class="form-control-month " placeholder="mm" type="tel" [(ngModel)] ="dobmonth" min="0" oninput="javascript: if (this.value.length >= this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </div>
+  <div class="dd-mm-yy ">
+  <input class="form-control-date" placeholder="dd" type="tel" [(ngModel)] ="dobdate" min="0" 
+  oninput="javascript: if (this.value.length >= this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </div>
+  <div class="dd-mm-yy" >
+  <input class="form-control-year" placeholder="yyyy" type="tel" [(ngModel)] ="dobyear" min="0"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </div>
+  </div>
+  <div style="clear:both;"></div>
+ </li> 
+
+  <li class="li-first-to-zip-registration" style="margin-top: 10px;">
+   Home Zip Code  
+  </li>
+  <li style="list-style: outside none none;">
+  <input [(ngModel)] ="hzc" min="0" class="form-control-data-registration" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="5" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </li>
+  
+  <li class="claim-no-registration">Date Of Loss</li>
+  <li>
+  <div class="first">
+  <div class="dd-mm-yy">
+  <input class="form-control-month" placeholder="mm"  [(ngModel)] ="dolmonth" min="0" oninput="javascript: if (this.value.length >= this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </div>
+  <div class="dd-mm-yy">
+  <input class="form-control-date" placeholder="dd"  [(ngModel)] ="doldate" min="0" oninput="javascript: if (this.value.length >= this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </div>
+  <div class="dd-mm-yy">
+  <input class="form-control-year" placeholder="yyyy" [(ngModel)] ="dolyear" min="0"  
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </div>
+  </div>
+  <div style="clear:both;"></div>
+ 
+
+  <span (click) = "dateOfLossInfo()" class="text-grn-registration" >Where do I find my Date of Loss?</span>
+  </li> 
+
+
+   <li class="claim-no-registration"> 
+     Claim Number 
+     <span class="sm-txt-new-registration">(exactly as shown on the Claim Letter)</span>
+   </li>
+   <li style="list-style: outside none none;">
+   <input class="form-control-data-registration"  type="text" id="claimNumber" [(ngModel)]="claimNo" />
+   </li>
+
+   <span (click)="claimNoInfo()" class="text-grn-registration">Where do I find my Claim Number?</span><br>
+    </ul>
+    <br>
+    <div class="col-xs-12 tititile">
+    <div class="setup-registration">Setup Online Reset Information (Select any 3)</div>
+ 
+   
+    
+    
+    <ul class="new-user-ul-li-section" *ngFor="let ques of questions; let i = index">
+
+          <li><input type="checkbox" id="checkBox{{i}}" (change)="checkValue($event,i)">{{ques.question}}</li>
+          <li><input type="text" class="form-control-data-registration" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
+
+        </ul>
+        </div>
+
+    <div style="padding: 0px 15px 0 15px;">
+    <div class="col-12-registration" style="width:100%;">
+    <div class="col-6-registration" >
+    <button (click)="createNewUser1()" class="btn-continue-registration">Continue</button>
+    </div>
+    <div class="col-6-registration">
+    <button (click)="goToLogin()"  class="btn-cancel-registration">Cancel</button>
+    </div>
+    </div>
+
+    <div class="col-15-registration">
+      <div class="col-16-registration">
+     <button class="btn-help-registration" (click)="gotoHelp()" >Help</button>
+      </div>
+      </div>
+      </div>
+      <!-- IMAGE DIV -->
+      <div *ngIf= dolImgHide class="lossImg">
+    <div class="innnerr-divv-new">
+    <button type="button" (click)="close()" class="closebutton">X</button>
+    <img src={{dolImg}}/>
+  </div>
+  </div>
+      </div>
+
+       
+     
+   

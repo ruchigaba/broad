@@ -1,0 +1,73 @@
+// @import '../../common/variables.scss';
+// @import '../../common/mixins.scss';
+// @import '../../common/common.scss';
+
+ .whiteblank-info{
+     @include commommix33();
+    }
+.setup-info {
+     @include commommix55();
+   }
+
+.btn-continue-security {
+    background-color: $continue-btn-bg-securityinfo;
+    color: $color-security;
+    max-width: 100%;
+    width: $btnwidth;
+     @include validate();
+}
+.setup-info li{
+    list-style: outside none;
+    line-height: 2.3;
+    color: #333;
+}
+.info-securty.form-control-data{
+     width: 98%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 15px; 
+      
+}
+.info-securty-cls{
+  margin-bottom: 10px;
+  color: #333;
+    font-size: 15px;
+}
+.button-section-security{
+    margin-top: 20px;
+}
+.button-main-security{
+  width:50%;
+  float:left;
+}
+.btn-cancel-security {
+     @extend .btn-continue-security;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-color-cancelbtn;
+     }
+
+  .main-security-info-s{
+     text-align: left;
+     padding: 15px;
+      display:none;
+  }
+@media only screen and (max-width: 800px){
+    .whiteblank-info {
+  width: 100%;
+}
+.main-container {
+  
+    margin-left: 0px;
+    margin-top: 0px;
+}
+}
+@media screen and (min-width: 760px) and (max-width:1024px){
+
+.whiteblank-info {
+    width: 100%;
+}
+
+
+}

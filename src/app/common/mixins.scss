@@ -1,0 +1,316 @@
+@mixin dtmm{
+max-width: 100%;
+font-size: 17px;
+border: 1px solid #ccc;
+border-radius: 4px;
+height:$control-month-height;
+padding-left: 10px;
+outline: none;
+}
+
+
+@mixin claimpage{
+    width:100% important;
+    float:left !important;
+    text-align:left;
+    display:inline-block;
+    border:none;
+}
+////claim-pay///
+@mixin claimpay(){
+font-size:16px !important;
+text-overflow:ellipsis;
+white-space:nowrap;
+background-color:#eceef !important;
+color:txtcol !important;
+width:$width-h-h;
+font-weight:550;
+@include common4();
+}
+
+
+
+
+.form-control-month{
+ @include dtmm;
+}
+
+.form-control-date{
+  @include dtmm;
+}
+.form-control-year{
+ @include dtmm;
+}
+
+@mixin claim-data($fontweight) {
+float: left;
+color: black;
+font-size: 16px;
+width: 24.5%;
+height: auto;
+border: 1px solid #eaeaea;
+padding: 9px 0px 1px 0px;
+display: inline-block;
+font-weight: $fontweight;
+}
+.cleandata li {
+@include claim-data(normal);
+}
+
+.titlehead li {
+@include claim-data(700);
+background-color: #cce4d6;
+}
+@mixin input {
+width: $inp-lg-width;
+outline: none;
+border: 1px solid #ccc;
+font-size: 1rem;
+line-height: 1.5;
+border-radius: 10px;
+padding: 5px 0 8px 15px;
+margin-left: 41px;
+ 
+}
+.inp-lg {
+@include input;
+}
+
+@mixin navigation{
+padding: 0px 0px 0px 5px;
+border-bottom: 1.5px solid white;
+cursor: pointer;
+margin-top: 0;
+height: 50px;
+vertical-align: middle;
+display: inline-block;
+width: 100%;
+min-height: 55px;
+}
+.sidebar .list-group li{
+@include navigation
+}
+
+@mixin faq-bsign{
+color: #000;
+  font-size: 30px;
+    margin-top: -12px;
+    margin-left: -5px;
+    margin-right: 8px;
+	
+}
+
+///claim///
+
+ @mixin common{
+   width:100%;
+    min-height: 1px;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    position:relative;
+    float: left;
+    text-align: center; 
+}
+@mixin common2{
+    border:$border-box;
+    display:inline-block;
+    list-style:outside none none;
+    padding: 12px 3px 12px 15px;
+    width:25%;
+    float: left;
+}
+///my claim//
+@mixin common{
+   width:100%;
+    min-height: 1px;
+    padding-left: 0.93rem;
+    padding-right: 0.93rem;
+    position:relative;
+    float: left;
+    text-align: center; 
+}
+@mixin common2{
+    border:$border-box;
+    display:inline-block;
+    list-style:outside none none;
+    padding: 12px 3px 12px 15px;
+    width:25%;
+    float: left;
+}
+@mixin common3(){
+    width: $width;
+    min-height:1px;
+    position: relative;
+    float:left;
+}
+@mixin common4(){
+     border:1px solid $bcg;
+    display:inline-block;
+    list-style:outside none none;
+    padding: 12px 3px 12px 15px;
+    min-height: 1px;
+    position:relative;
+    float: left;
+}
+
+///Add claim
+@mixin common{
+   width:100%;
+    min-height: 1px;
+    padding-left: 0.93rem;
+    padding-right: 0.93rem;
+    position:relative;
+    float: left;
+    text-align: center; 
+}
+@mixin common2{
+    border:$border-box;
+    display:inline-block;
+    list-style:outside none none;
+    padding: 12px 3px 12px 15px;
+    width:25%;
+    float: left;
+}
+@mixin add1(){
+    min-height:1px;
+   position:relative;
+   float:left;
+}
+@mixin add2{
+     min-height:1px;
+   position:relative;
+   float:left;
+    width:100%;
+    padding-left:0.9375rem;
+    padding-right:0.9375rem;
+}
+///claim info//
+@mixin common{
+   width:100%;
+    min-height: 1px;
+    padding-left: 0.93rem;
+    padding-right: 0.93rem;
+    position:relative;
+    float: left;
+    text-align: center; 
+}
+@mixin common2{
+    border:$border-box;
+    display:inline-block;
+    list-style:outside none none;
+    padding: 12px 3px 12px 15px;
+    width:25%;
+    float: left;
+}
+@mixin common3(){
+    width: $width;
+    min-height:1px;
+    position: relative;
+    float:left;
+}
+@mixin common4(){
+     border:1px solid $bcg;
+    display:inline-block;
+    list-style:outside none none;
+    padding: 12px 3px 12px 15px;
+    min-height: 1px;
+    position:relative;
+    float: left;
+}
+/////claim info//
+@mixin common{
+   width:100%;
+    min-height: 1px;
+    // padding-left: 0.93rem;
+    // padding-right: 0.93rem;
+    position:relative;
+    float: left;
+    text-align: center; 
+}
+@mixin common3(){
+    width: $width;
+    min-height:1px;
+    position: relative;
+    float:left;
+}
+
+
+// /////contact adjuster////
+@mixin con-adj(){
+     min-height: 1px;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    position: relative;
+    float:left;
+}
+/////validate registration
+@mixin validate(){
+    font: inherit;
+    padding: 6px;
+    cursor: pointer;
+    border: medium none;
+    border-radius: 0 !important;
+}
+
+/////validate-forgot-help///
+@mixin commommix(){
+    width:$form-control-width;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: $form-height;
+    outline: none;
+    padding: 10px;
+}
+
+@mixin commonmix11(){
+    margin-bottom: 10px;
+    color: $li-first-to-zip-color;
+    list-style: outside none none; 
+}
+
+@mixin commonmix22(){
+    background-color: $white-bg-color;
+    width:$white-width;
+    margin:0 auto;
+    margin-top: 6%;
+    margin-bottom: 15px;
+}
+////settings//
+@mixin commommix33(){
+    background-color: $white-bg-color;
+    width:$white-width;
+    margin:0 auto;
+    margin-top: 15px;
+}
+
+@mixin commommix44(){
+    margin-bottom: 5px;
+   margin-left: 10px;
+    font-size: 14px;
+}
+@mixin commommix55(){
+    font-weight: bold;
+    color:$setup-color;
+    font-size: 16px;
+}
+@mixin commommix66(){
+    margin-bottom: 8px;
+    margin-top: 12px;
+    color: $li-first-to-zip-color;
+    list-style: outside none none;
+}
+@mixin socialmix(){
+            width: 33.3333%;
+            float: left;
+            min-height: 1px;
+            padding-left: 0.9375rem;
+            padding-right: 0.9375rem;
+            position: relative;
+} 
+
+
+/////providers///
+@mixin pro(){
+     position: relative;
+    top: 2px;
+}

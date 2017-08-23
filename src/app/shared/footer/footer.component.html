@@ -1,0 +1,115 @@
+<div class="mobileFooter">
+
+    <div class="hidden-content slide-down" id="togg-dv" style="float: right;font-size: 10px;line-height: 26px;width: 20%;background: #f6f6f6 none repeat scroll 0 0; display:none; ">
+
+<div id="Claim" [class.active]="activeFooterMenu=='FAQ'">
+    <div class="midd-content" (click)="activeFooterMenu='FAQ'">
+    <a md-ink-ripple="" [routerLink]="['faqs']">
+    <img  src=" .\image\faq2_64x64.png">
+    <div style="clear:both;"></div>
+    <span>FAQ</span></a>
+    </div>
+    </div>
+
+     
+    <div id="Social" (click) = "removeMoreOptions()" [routerLink]="['social-media']" >
+    <a md-ink-ripple="" [routerLink]="['social-media']" (click)="activeFooterMenu = 'Social Media';removeMoreOptions()">
+    <img  src=".\image\social2_64x64.png">
+    <div style="clear:both;"></div>
+     <span [routerLink]="['socialMedia']">Social</span></a>
+    </div>
+
+
+
+
+
+
+    <div id="Claim" [class.active]="activeFooterMenu=='tutorial'">
+    <div class="midd-content" (click)="activeFooterMenu='tutorial'">
+    <a md-ink-ripple="" [routerLink]="['tutorial']">
+    <img  src=".\image\tutorial_64x64.png">
+    <div style="clear:both;"></div>
+    <span>Tutorial</span></a>
+    </div>
+    </div>
+
+    <div  id="Settings" [routerLink]="['settings']" [class.active]="activeFooterMenu=='Settings'">
+    <div class="midd-content" (click) = "removeMoreOptions();activeFooterMenu='Settings'">
+    <a md-ink-ripple="">
+    <img src=".\image\settings2_64x64.png">
+    <div style="clear:both;"></div>
+    <span>Settings</span></a>
+    </div>
+    </div>
+
+
+    <div  id="Log Out" [class.active]="activeFooterMenu=='Logout'">
+    <div class="midd-content" (click)="activeFooterMenu='Logout'">
+    <a md-ink-ripple="" href="#">
+    <img src=".\image\logout_64x64.png">
+    <div style="clear:both;"></div>
+    <span>Log Out</span></a>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+    <div style="clear:both;"></div>
+    <div class="main-data-div">
+    <div class="col2-xx-mm " id="Claim" [class.active]="activeFooterMenu=='Claim Info'">
+    <div class="midd-content" (click)="activeFooterMenu='Claim Info'">
+    <a md-ink-ripple="" href="#/dashboard/claims" [routerLink]="['claims']">
+    <img class="menu-item-img-sidebar" src=".\image\claim-info.png" >
+    <div style="clear:both;"></div>
+     <span>Claims </span>
+    </a>
+    </div>
+    </div>
+        
+
+
+
+    <div class="col2-xx-mm"  id="Health Ticket" [class.active]="activeFooterMenu=='healthTicket'">
+    <div class="midd-content" (click)="activeFooterMenu='healthTicket'">
+    <a md-ink-ripple="" [routerLink]="['healthTicket']">
+    <img src=".\image\healthTicket.png">
+    <div style="clear:both;"></div>
+    <span>Ticket</span>
+    </a></div>
+    </div>
+
+
+    <div class="col2-xx-mm"  id="Contact" [class.active]="activeFooterMenu=='contact-adjuster'">
+    <div class="midd-content" (click)="activeFooterMenu='contact-adjuster'">
+    <a md-ink-ripple="" [routerLink]="['contact-adjuster']">
+    <img src=".\image\contactAdjuster-64x64.png">
+    <div style="clear:both;"></div>
+    <span>Contact</span></a>
+    </div>
+    </div>
+
+    <div class="col2-xx-mm"  id="provider" [class.active]="activeFooterMenu=='provider'">
+    <div class="midd-content" (click)="activeFooterMenu='provider'">
+    <a md-ink-ripple="" [routerLink]="['provider']">
+    <img src=".\image\facilitylookup2_64x64.png">
+    <div style="clear:both;"></div>
+    <span>Providers</span></a>
+    </div>
+    </div>
+
+    <div class="col2-xx-mm" id="moretogg" [class.active]="activeFooterMenu=='More'">
+    <div class="toggle-content" (click)="enableToggle($event);activeFooterMenu='More'">
+    <a><img src=".\image\more-fill.png">
+    </a>
+    <div style="clear:both;"></div>
+    <span>More</span>
+    </div>
+    </div>
+     <div style="clear:both;"></div>
+    </div>
+
+
+    </div>

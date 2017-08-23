@@ -1,0 +1,438 @@
+.claim-py-info-spn-lft{
+
+    text-align: left !important;
+}
+
+.claim-py-info-spn-rtg{
+      font-size:18px;
+      text-align: right !important;
+      font-weight:600;
+}
+
+.header-adjuster{
+    font-size: 18px !important;
+    padding-bottom:10px;
+    padding-top: 16px !important;
+    background-color: $owhitecolor;
+    text-align:center;
+    @include common();
+}
+div{
+    display:block;
+}
+.text-content{
+    font-size:18px;
+    span{
+        float:left;
+        width:93.5%;
+        padding:0;
+        position:relative;
+        text-align: center;
+    }
+}
+.content-healthtick{
+  
+    float:left;
+    padding:0;
+    margin-top:0px;
+    width:$width;
+    ul{
+        background-color:$owhitecolor;
+        
+        margin-bottom:0 !important;
+        margin-top:0;
+        li{
+            list-style:outside none none;
+           
+        }
+    }
+
+}
+.content-healthticket{
+     margin-bottom:7.5px;
+     padding-left: 0.93rem;
+     text-align: center; 
+     @include common3();
+}
+.col-pay{
+   font-size:16px;
+    @include common();
+    @include common3();
+}
+.col8{
+    @extend .col-pay;
+    padding-top:0px;
+    margin-top:-7px;
+}
+.colll{
+    width:$width-h;
+    padding-right:10px;
+    text-align:right;
+    min-height:1px;
+    padding-left:0.9375rem;
+    position: relative;
+    float:left;
+    font-size:16px;
+    span{
+        text-align: right;
+    }
+    :after{
+        content: ":";
+        margin-left:1px;
+    }
+}
+.colllvalue{
+    @extend .colllvalue1;
+    span{
+        display:block;
+        font-weight:700;
+        font-size:16px;
+    }
+}
+.colllvalue1{
+    padding-left:0px;
+    width:$width-h;
+    color:$bbcolor;
+     min-height:1px;
+    text-align: left;
+    position: relative;
+    padding-right:0.9375rem;
+     float:left;
+     font-size:18px;
+    
+}
+.clear
+{
+    display: block;
+    overflow:hidden;
+    clear:both;
+}
+.claim-payment-multi{
+    width:$width;
+    margin-top:10px;
+    @include common();
+}
+.classmain-ttl{
+     @include common();
+     background-color:$lightgreen !important;
+     border-top:medium none;
+     color:$color;
+     font-size: $c-font;
+     padding: 0;
+     width:$width;
+     padding-bottom: 0px;
+}
+.classmain-ttl-claim{
+    @extend .classmain-ttl;
+   }
+.col12{
+   @include claimpay();
+   padding:13px 12px 9px 47px;
+    font-weight: 600;
+}
+.clm-on-desk{
+     border:none !important;
+    position:relative;
+    pointer-events:none;
+    width:$width;
+    float:left;
+    position:relative;
+     margin:0;
+    padding: 0;
+   justify-content:center;
+    vertical-align: middle;
+    color:$txtcol;
+     background-color:$bcw;
+     font-size:$c-font;
+     text-align: center;
+     cursor:pointer;
+     height:45px;
+
+}
+.clm-on-desk-claim{
+   @extend .clm-on-desk;
+   height:45px;
+  
+}
+li .clm-on-desk:hover {
+      background-color: $bcgcolor !important;
+}
+.content-healthtick{
+    margin-top:0;
+    min-height: 1px;
+    position:relative;
+}
+
+
+
+
+.col11{
+    padding-left: 0.9375rem;
+     padding-right: 0.9375rem;
+     width:$width-h-h;
+     background-color:$bcw;
+     color:$txtcol;
+     text-align:center;
+     @include common4();
+     -webkit-flex-direction:column;
+     -webkit-justify-content:center;
+     font-size:$c-font;
+     padding:10px 19px 12px 16px;
+}
+
+@media screen and (max-width:1390px){
+.classmain-ttl-claim{
+   height:45px;
+     ul{
+          height:45px;
+     }
+}
+ .col12{
+     height:65px;
+ }
+.col11{
+    height:70px;
+}
+}
+
+
+
+@media screen and (max-width:767px){
+.clm-on-desk{
+    .col10{
+         padding: 5px 8px 5px 15px;
+          height: 40px !important;
+}
+}
+
+}
+ @media screen and (min-width:767px){
+     .col-pay{
+         font-size: 15px !important;
+          padding-bottom: 10px;
+          padding-top: 0px !important;
+     }
+     .content-healthtick{
+         float: left;
+         padding: 0;
+         width: $width;
+     }
+     .col8{
+         padding: 0;
+         width: $width;
+     }
+     .colll{
+             width: $width-h !important;
+             font-size:15px;
+     }
+     .colllvalue span {
+    font-weight: 600;
+    font-size: 15px;
+}
+   .clm-on-desk-claim ul{
+    margin: 0;
+    padding: 0;
+ }
+ .col11{
+    // height:70px;
+ }
+ li.col9{
+     background-color: $white-bg-color;
+     color: $txtcol;
+     font-size: 14px;
+     text-align: center;
+ }
+ }
+ @media (min-width:544px){
+     .colr{
+         width:$width;
+     }
+ }
+ @media(min-width:768px){
+.show-on-mobile-data{
+    display: none !important;
+ }
+     .col12
+     {
+     display:table;
+    // height:65px;
+     padding-left: 10px;
+     font-size:14px !important;
+     
+ }
+ }
+ @media(min-width:1024px)and (max-width:1380px){ 
+     .clm-on-desk-claim{
+         height:65px;
+     }
+ }
+ 
+ @media(min-width:768px)and (max-width:1024px){
+.clm-on-desk-claim{
+     height:68px;
+ }
+ .col11{
+         padding: 12px 15px 12px 16px;
+ }
+ }
+  @media (min-width:1024px){
+ .clm-on-desk-claim:hover li{
+     background-color: $bcgcolor !important;
+     
+ }
+ .colll{
+    font-size:16px !important;
+}
+   .claim-payment-multi {
+          padding-left: 0.9375rem;
+              padding-right: 0.9375rem; 
+   }
+  }
+   @media (max-width:767px){
+
+.claim-payment-multi.show-on-desk-data {
+    display: none;
+}
+ .header-adjuster{
+       padding-bottom: 7px !important;
+    padding-top: 7px !important;
+    span{
+            font-size: 15px;
+    }
+   }
+   
+    .content-healthtick{
+       float: left;
+       padding: 0;
+       width: $width;
+    }
+
+    .content-healthticket{
+            padding: 0;
+            width: $width;
+    }
+    .col-pay{
+        padding: 0;
+        width: $width !important;
+    }
+
+    .collllenclsvalue {
+    float: left;
+    width: $width-h;
+    padding-left: 7px;
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    overflow-wrap: break-word;
+    line-height: 35px;
+    margin-top:-4px
+}
+
+ul.show-on-mobile-data {
+    background-color: $contnt-background;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+    .colll{
+       // margin-right: 5px;
+        padding: 0;
+        width: $width-h;
+         font-size: 14px;
+           overflow-wrap: break-word;
+        
+    }
+    .colll::after{
+            // content: ":";
+            margin-left: 1px;
+    }
+    .colllvalue1{
+          padding: 0;
+          width: 47%;
+       
+        font-size: 16px;
+        overflow-wrap: break-word;
+        margin-left:4px;
+    
+    }
+    .colllvalue{
+          padding: 0;
+          width: 48%;
+       span{
+        font-size: 14px;
+        overflow-wrap: break-word;
+    }
+    }
+    .claim-payment-multi{
+        padding: 0 !important;
+    }
+    li.col12{
+        display: inline-block;
+        float: none;
+        font-size: 14px !important;
+        line-height: 25px;
+        padding: 0 5px;
+        text-align: left;
+        border:none;
+       
+    }
+    .clm-on-desk-claim{
+      
+        background-color: $bcw;
+        margin-bottom: 10px;
+        padding: 10px 0;
+        font-size: 14px !important;
+    }
+    .classmain-ttl-claim{
+        display:none;
+    }
+    li.col11{
+       display: inline-block;
+    float: none;
+    font-size: 14px !important;
+    line-height: 25px;
+    padding: 0 5px;
+    text-align: left; 
+    color: $col-xs-12-color;
+     border: none;
+    background-color: $contnt-background;
+        width: $width !important;
+    }
+    .colllvalue{
+        float:right;
+    
+     span {
+    font-weight: 600;
+    font-size: 14px;
+    }
+   }
+   }
+   @media screen and (max-width:1024px) and (min-width:767px){
+    .claim-py-info-spn-rtg{
+       font-size:15px !important;;
+       font-weight:600;
+   }
+   .colllvalue1{
+       font-size:16px;
+   }
+   }
+   @media (min-width:1530px){
+       li.col12{
+    border: 1px solid $bcg;
+    display:table;
+    list-style: outside none none;
+    padding: 13px 0px 10px 4px;
+ }
+   }
+
+  @media (max-width:450px){
+   .collllenclsvalue {
+    line-height: 23px;
+    margin-top:1px;
+    padding-bottom:10px;
+        }
+   }
+ 
+   
+   
+

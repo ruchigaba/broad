@@ -1,0 +1,53 @@
+ 
+.seting-main-pg-nn{
+	margin-top:45px;
+}
+.nav-lists{
+font-size:16px;
+list-style: outside none none;
+}
+
+.section-image-setting{
+float: left;
+width: 50%;
+
+img {
+padding: 5px;
+width:25%;
+}
+}
+
+.lft {
+text-align: left;
+}
+
+.rgt {
+text-align: right;
+}
+ 
+
+@media only screen and (max-width: 800px){
+ 
+.main-container {
+  
+ margin-left: 0px;
+}
+ .section-image-setting img{
+  width:40%;
+ }
+ .section-image-setting img {
+    padding: 4px;
+}
+
+}
+@media screen and (min-width: 370px) and (max-width:700px){
+.section-image-setting img{
+  width:50%;
+ }
+}
+
+@media screen and (min-width: 310px) and (max-width:600px){
+.section-image-setting img{
+  width:50%;
+ }
+}

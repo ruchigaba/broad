@@ -1,0 +1,123 @@
+<div class="wrapper-login">
+<div class="main-content">
+
+<div class="logo-section">
+<img class="lg-main" src=".\image\Crawford_Broadspire.png">
+</div>
+
+
+ <div class="title-section-login">
+ <span> Welcome To Broadspire MyClaim
+ <sup >SM</sup>
+ </span>
+ 
+ <div class="m-ctext-md">
+
+                an iQ App
+</div>
+</div>
+
+
+
+<div class="form-section">
+
+
+<div class="form-content">
+
+<div class="sing-in-text"> Sign in with your Broadspire Account </div>
+
+
+<div class="input-section username">
+<input class="inp-lg" name="user" type="email" (input)="user= $event.target.value" [(ngModel)]="username">
+<div style="clear:both;"></div>
+</div>
+
+<div class="input-section passsword">
+<input class="inp-lg" name="pass" type="password" type="{{type}}"  #myInput [(ngModel)]="password" (input)="password= $event.target.value">
+</div>
+
+<div class="show-password-section">
+  <input class="show-pass-check" type="checkbox" name="" value="" (change)="toggleShow()">
+  <label class="show-pass-text" for="">Show Password</label>
+</div>
+
+<div class="login-button-section">
+  <button class="btn-login" style="background-color: #007934;  color: #ffffff;" type="submit" (click)="loginService(username,password)">LOGIN</button>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="main-frps-section">
+
+<div class="new-user-registration-section">
+<ul>
+<li class="user-section" >
+<a type="submit"(click)="newUser()">New User </a>
+</li>
+<li class="user-section" (click)="goToRegistration()">Registration Tutorial</li>
+</ul>
+</div>
+
+<div class="forgot-password-text-section">
+<ul>
+<li class="user-section" >
+<a (click)="forgotPassword(username)">Forgot Password</a>
+</li>
+</ul>
+</div>
+
+<div class="clear"></div>
+
+</div>
+</div>
+</div>
+<div class="displaynone" style="padding: 0 15px 0 15px;">
+<div class="text">
+          <p>
+            "By signing onto this web site, you agree to be bound by the terms of this My Claim Application Agreement (this "Agreement"). You represent and warrant that you are the employee who is the subject of the claim you will be viewing. You further represent and warrant that you have the right and authority to agree to the terms and conditions of this Agreement. In addition, by signing onto this web site, you are agreeing to comply with the terms and conditions."
+            </p>
+</div>
+
+<div class="main" style="width:100%;"  >
+  <div class="sdm" style="float: left; width:50%;" >
+  <div class="dmdm">
+          <h5>DOWNLOAD THE APP. KEYWORD <br>
+              'BROADSPIRE'or 'MYCLAIM'.</h5>
+
+<div class="italic" style="padding-left: 0px; width: 50%; float: left;">
+                      <h6 style="font-style:italic;"> Apple Users</h6>
+                      <a href="http://tiny.cc/sq14cy/"><img src=".\image\apple.png" style="width:80%"></a>
+</div>
+
+<div class="italic" style="padding-left:0px; width:50%; float:left;">
+                      <h6 style="font-style:italic;"> Android Users</h6>
+                      <a href="http://tiny.cc/m214cy/"><img src=".\image\android.png" style="width:80%"></a>
+</div>
+</div>
+</div>
+<div class="sdm" style="width:50%; float:left;">
+ <div class="dmdm" >
+          <h5>OR SCAN THE QR CODE WITH YOUR <br>
+                    MOBILE DEVICE</h5>
+</div>
+<div class="italic" style="padding-left:0px; width:50%; float:left; ">
+                    <h6 style="font-style:italic;">Apple Users</h6>
+                    <img src=".\image\IOS_App_QRC.png" style="width: 100px;">
+</div>
+
+<div class="italic" style="padding-left:0px; width:50%; float:left; ">
+                    <h6 style="font-style:italic;">Android Users</h6>
+                    <img src=".\image\Google_App_QRC.png" style="width: 100px;">
+</div>
+</div>
+</div>
+ <div class="simpletext">
+      <p>It's as easy as that!</p>
+  <div style="clear:both;"></div>
+ </div>
+ <hr>
+  <div class="igmm">
+           *** Broadspire now extends its MyClaim service to your mobile device via Broadspire's MyClaimSM Mobile App. Use your smartphone to conveniently access real time views into claim payment information, contact the adjuster with the click of a button, search providers and more. Registered users of Broadspire's injured Employee's Self Service System do not need to re-register.
+</div>
+ </div>
+</div>
+</div>

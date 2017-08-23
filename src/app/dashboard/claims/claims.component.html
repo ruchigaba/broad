@@ -1,0 +1,228 @@
+    
+  <div class="wrapper-claims" id="claimspagediv" touchmove="">
+    <div class="head-main">
+      <div class="col1">
+        <div class="col2">
+          <div class="clm-inf-pg">
+            <ul class="nav-lines">
+              <li (click)="currentclaim = false;myclaim = true;addclaim = false" [class.active1]="item=='1'" >
+                <a (click)="item = '1';removePositionAbsolute()">My Claims </a></li>
+              <li (click)="currentclaim = true;myclaim = false;addclaim = false" [class.active1]="item=='2'" class="active1">
+                <a   (click)="item = '2'">Current Claim</a>
+              </li>
+              <li (click)="currentclaim= false;myclaim = false;addclaim = true" [class.active1]="item=='3'" class="">
+                <a (click)="item = '3';removePositionAbsolute()">Add Claim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="title-section-claims" >
+          <div class="back-g" style="margin-top:-7px;" *ngIf="currentclaim">
+            <div class="claimtop">
+              <span class="txtleft" text-center="">Claim Number :</span>
+              <span class="txtright" (model)="claimNumber" (click)="openClaimInfoPage()" text-center="">{{claimNumber}}</span>
+              <div class="clear"></div>
+            </div>
+            <div class="claimtop">
+              <span class="txtleft" text-center="">Claim Status :</span>
+              <span class="txtright1" text-center="" (model)="claimStatus" >{{claimStatus}}</span>
+              <div class="clear"></div>
+            </div>
+            <div class="claimtop">
+              <span class="txtleft" text-center="">Total Amount :</span>
+              <span class="txtright1" text-center="" (model)="totalAmount">{{totalAmount}}</span>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+       
+        <div style="clear:both;"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+
+    <!-- ------------------current claim table-------------------------------- -->
+
+
+    <div class="cnt" *ngIf="currentclaim">
+      <div style="clear:both;"></div>
+      <p *ngIf = "!currentClaimTable" style="text-align: center;color: red;position: relative;top: 15px;">No payments found for the requested claim</p>
+      <div class="col4"></div>
+      <div class="col4"></div>
+       <div class="col5 tbl-grd" *ngIf="currentClaimTable">
+         <ul class="col5 classmain-ttl">
+           <li class="col6">Check Number</li>
+           <li class="col6">Check Date</li>
+           <li class="col6">Check Amount</li>
+           <li class="col6">From - To</li>
+           <div style="clear:both;"></div>
+         </ul>
+         <ul *ngFor="let currentclaim of currentclaims" (click)="clickedItemTransNumber(currentclaim.trans_id)" class="col5 tbl-data">
+          <li class="col7 checknum" routerLink="/cpi" >{{currentclaim.trans_number}}</li>
+           <li class="col7 checkdate">{{currentclaim.date_of_check}}</li>
+           <li class="col7 checkamnt">{{currentclaim.amount}}</li>
+           <li class="col7 checkfrmto">{{currentclaim.from_date}} - {{currentclaim.to_date}}</li>
+           <div style="clear:both;"></div>
+         </ul>
+       </div>
+       <div style="clear:both;"></div>
+       <div class="col-sm-12" id="showPaginationLoading"  *ngIf = "showPaginationLoading" style = "display:block;position:relative;z-index:9999999999999999;margin-top:-2%!important;" >
+  <i id="loadingDiv" class="fa fa-spinner fa-spin icon-3x" aria-hidden="true" style="z-index:9999999999999999;font-size: xx-large;margin-top:-1%!important;"></i>
+<!-- <ul class="pagination" >
+
+                          <li *ngFor = "let i of totalPages" ng-init = "$parent.selected = '1'" ng-class="{'active': i == $parent.selected}" ng-click = "$parent.selected = i"> <a (click) ="paginationItemClicked($event);" >{{i}}</a></li>
+
+                      </ul> -->
+</div>
+    </div>
+
+    <!-- IMAGE DIV -->
+<div *ngIf= dolImgShow class="lossImg" style="cursor: pointer;
+  display: block;
+  border-style: solid;
+  border-color: #ff0000 #0000ff;
+  float: left;
+  z-index: 5;
+  position: absolute;
+  right: 285px;
+  top: 50px;">
+  <div class="innnerr-divv-new">
+  <button type="button" (click)="close()" class="closebutton">X</button>
+  <img src={{dolImg}}/>
+</div>
+</div>
+  </div>
+ 
+
+
+  <!-- ///Add Claims/// -->
+
+  <div class="addclaiming" >
+ <div class="change-security-section-page newuser-page-section-mian-wrap" *ngIf="addclaim">
+<div class="secutirysetting">
+    <div class="new-add">
+      <span>Add Claim To List</span>
+    </div>
+    <div class="col4"></div>
+    <div class="main-content-reset-pass-cls">
+      <ul>
+        <li>User ID</li>
+        <li class="brd-cls-new"><span [(ngModel)]="userId" ngDefaultControl >{{userId}}</span></li>
+        <li>Last 4 digits of Social Security Number</li>
+        <li class="brd-cls-new"> <span [(ngModel)]="userSSN" ngDefaultControl >{{userSSN}}</span></li>
+        <li>Date Of Birth</li>
+        <li class="brd-cls-new"><span [(ngModel)]="userDOB" ngDefaultControl>{{userDOB}}</span></li>
+        <li>Home Zip Code</li>
+        <li class="brd-cls-new">
+          <span [(ngModel)]="zipCode" ngDefaultControl>{{zipCode}}</span>
+        </li>
+        <li>Date Of Loss </li>
+        <li>
+          <div class="mmkk-ssk">
+            <div class="col-1-3">
+               <input class="form-add" max="12" min="0" maxlength="2" min="0" name="month"  placeholder="mm" type="tel" [(ngModel)] ="month" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeyup="this.value=this.value.replace(/[^\d]/,'')" ngDefaultControl/>
+            </div>
+              <div class="col-1-3">
+              <input class="form-add" [(ngModel)] ="date" max="31" maxlength="2" min="0" name="date" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="dd" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" ngDefaultControl/>
+              </div>
+              <div class="col-1-3">
+                <input   placeholder="yyyy"  [(ngModel)] ="year"  min="0"  name = "year" class="form-add"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" ngDefaultControl/>
+            </div>
+            <span  (click)="dateOfLossInfo()" style="text-decoration: underline;font-weight: normal;color: #007934;
+           text-align: right;font-family: Helvetica;font-size: 11px;margin: 8px 0px 4px 0px;word-wrap: break-word;
+           white-space: normal;">Where do I find my Date of Loss?</span>
+           </div>
+          <div class="clear"></div>
+          </li>
+         <li> Claim Number
+        </li>
+       <li> <input [(ngModel)]="claimNo" class="form-add" ngdefaultcontrol="" type="text" ngDefaultControl/>
+      <span  class="spanclaim" (click)="dateOfClaimInfo()">Where do I find my Claim Number?</span>
+      </li>
+    </ul>
+    
+  <div class="col2">
+<div class="add-claim-col2"><button class="m-button" type="submit" (click)="addNewClaim(month,date,year,claimNo)">
+  Add Claim</button></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="col4"></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+      <!-- --------------my claim----------------------------------- -->
+          <div class="head-main">
+      <div class="col-my-claim2">
+        <div style="clear:both;"></div>
+        
+        <div style="clear:both;"></div>
+
+
+ <div class="col5 tbl-grd" *ngIf="myclaim" style="padding-top:10px">
+         <ul class="col5 classmain-ttl">
+           <li class="col6">Claim Number</li>
+           <li class="col6">Status</li>
+           <li class="col6">Date of Loss</li>
+           <li class="col6">Adjuster</li>
+           <div style="clear:both;"></div>
+         </ul>
+
+<ul  class="clm-on-desk" (click)="myclaimClickedItemDetails(claim.claim_number,claim.claim_status,
+    claim.claim_id, claim.adjuster_name, claim.adjuster_email, claim.adjuster_phone,
+    claim.event_date, claim.employee_full_name )" *ngFor="let claim of claims" class="col5 tbl-data">
+ 
+  
+  <li class="col7 claimnumber_">{{claim.claim_number}}</li>
+  <li class="col7 checkstatus">{{claim.claim_status}}</li>
+  <li class="col7 checkdol">{{claim.event_date}}</li>
+  <li class="col7 checkadjuster">{{claim.adjuster_name}}</li>
+  <div style="clear:both;"></div>
+</ul>
+<div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+      </div>
+      <div style="clear:both;"></div>
+<div style="clear:both;"></div>
+
+
+<!--<div id="my-claim-section" >
+  <div class="tbl-grd1">
+
+    <ul class="clssmain-ttl">
+
+      <li class="col9">Claim Number</li>
+      <li class="col9">Status</li>
+      <li class="col9">Date of Loss</li>
+      <li class="col9"> Adjuster</li>
+      <div style="clear:both;"></div>
+</ul>
+
+
+
+<!--template bindings={}
+<ul  class="clm-on-desk" (click)="myclaimClickedItemDetails(claim.claim_number,claim.claim_status,
+    claim.claim_id, claim.adjuster_name, claim.adjuster_email, claim.adjuster_phone,
+    claim.event_date, claim.employee_full_name )" *ngFor="let claim of claims" >
+  
+  <li class="col10 claimnumber_">{{claim.claim_number}}</li>
+  <li class="col10 checkstatus">{{claim.claim_status}}</li>
+  <li class="col10 checkdol">{{claim.event_date}}</li>
+  <li class="col10 checkadjuster">{{claim.adjuster_name}}</li>
+  <div style="clear:both;"></div>
+</ul>
+<div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+      </div>
+      <div style="clear:both;"></div>
+</div><div style="clear:both;"></div>-->

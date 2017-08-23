@@ -1,0 +1,71 @@
+ .whiteblank-help{
+     @include commonmix22();
+    }
+  
+    .registuser-help{
+    font-weight: 600;
+    color: #258c52;
+    padding: 0 15px;
+   }
+  .li-first-to-zip-help{
+    @include commonmix11();
+   }
+   .form-control-data-help{
+    @include commommix();
+    }
+   
+    .text-grn-help{
+    cursor: pointer;
+    font-style: italic;
+    text-align: right;
+    font-family: Helvetica;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 4px 0px 4px 0px;
+    word-wrap: break-word;
+    white-space: normal;
+    color: black;
+    }
+   .claim-no-help{
+   margin-bottom: 10px;
+   margin-top: 10px;
+   list-style: outside none none;
+   }
+    button.btn-continue-help:active {
+    position:relative;
+    top: 5px;
+  }
+
+    .btn-continue-help{
+    width: $btn-continue-width;
+    background-color:  $btn-bg-color;
+    float:left;
+    color:$btn-continue-color;
+    @include validate();
+    }
+  
+//    .btn-continue-help:active{
+//     top:5px !important;
+//     border-bottom: 0 !important;
+// }
+    .btn-cancel-help{
+     @extend .btn-continue-help;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-cancel-color;
+     
+    
+    }
+
+    @media screen and (max-width: 800px){
+    .whiteblank-help{
+     margin-top: 90px;
+    width:100%;
+    }
+  }
+  @media screen and  (min-width: 310px) and(max-width: 1020px){
+    .whiteblank-help{
+     margin-top: 90px;
+    width:100%;
+  
+}
+}

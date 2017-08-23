@@ -1,0 +1,44 @@
+
+  
+  <div class="center-the-header-width">
+    <div class="col-con-adj-12 header-adjuster-section">
+      <div class="dropdown-con-adj">
+        <label class="bold-cls-global-con-adj">Select Claim #</label>
+        <button  (click)="healthDropdownFunc(dropdownMenu1)"class="btn-con-adj dropdown-toggle" type="button" id="dropdownMenu1">
+              {{selectedClaim}}
+              <span class="caret-con-adj"></span>
+              </button>
+        <ul #dropdownMenu1 class="dropdown-menu-con-adj" style="display:none;">
+           <li *ngFor="let claim of claims1"><a (click)="dropboxitemselected(claim,dropdownMenu1)">{{claim.claim_number}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="col-con-adj-3"></div>
+  <div class="col-con-adj-6 contentforadjuster-adjuster-section">
+  <div class="main-divs-sivs-adjuster ">
+ <div class="col-con-adj-4">
+<div  class="image-section-con-adj adjusterlbl"><span><img src="image/mail_64x64.png" (click)="claimInfoMessage()"></span></div>
+<div class="label-text-adjuster-page"><span>Email Adjuster:</span><br>
+ <div class="label-1"><span>{{name}}</span></div>
+  </div>
+  </div>
+ <div class="col-con-adj-4">
+ <div class="image-section-con-adj contantnumlbl"><span><a href="tel:+{{'1'+phone}}"><img src="image/contact.png" (click) = "contact()"></a></span></div>
+ <div class="label-text-adjuster-page"><span>Contact Adjuster:</span><br>
+   <div class="label-2"><span><a href="tel:+{{'1'+phone}}">{{phone}}</a></span></div>
+    </div>
+   </div>
+    <div class="col-con-adj-4">
+    <div class="image-section-con-adj supervisorlbl"><span><img src="image/mail_64x64.png" (click)="emailSupervisor()"></span></div>
+    <div class="label-text-adjuster-page"><span> Email Supervisor:</span><br>
+   <div class="label-3"><span>{{superName}}</span></div>
+      </div>
+     </div>
+      <div class="clear"></div>
+    </div>
+    </div>
+   <div class="col-con-adj-1"></div>
+ <div class="clear"></div>
+

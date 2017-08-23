@@ -1,0 +1,29 @@
+     
+
+<div class="whiteblank-info">
+
+
+    <div class="main-security-info-s"  id="secinfo">
+    <span class="setup-info"> Reset Security Information (Select any 3) </span>
+    <br>
+    <br>
+    <ul *ngFor="let ques of questions let i=index" style="padding: 0px;">
+        <li class="info-securty-cls">
+          <input type="checkbox" id="checkBox{{i}}" class="mycheck" id="chk" (change)="checkValue($event,i)" > {{ques.question}} <br>
+
+        <input type="text" id="securityAns{{i}}" class="info-securty form-control-data" [(ngModel)]="inputElem[i]" style="display:none;"  >
+        </li>
+      </ul>
+
+        <div class="button-section-security"  >
+         <div class="button-main-security left-sidebtn"  >
+         <button class="btn-continue-security" (click)="updatesecurityinfo()">Submit</button>
+         </div>
+         <div class="button-main-security right-sidebtn" >
+         <button class="btn-cancel-security" (click)="gotosettings()">Cancel</button>
+         </div>
+         </div>
+
+     <div style="clear:both;"></div>
+    </div>
+    </div>

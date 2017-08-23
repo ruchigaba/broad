@@ -1,0 +1,157 @@
+
+ <div class="" id="claimspagediv" touchmove="" *ngIf = "contentLoaded">
+
+  <div class="header-adjuster">
+    <div class="">
+
+   <ul class="glb">
+      <li class="content-healthticket">
+        <div class="col-pay">
+          <div class="colll">
+            <span class="claim-py-info-spn-rtg">Claim Number</span>
+            
+          </div>
+          <div class="colllvalue1">
+            <span class="claim-py-info-spn-lft" ng-model="checkNumber">{{claimNumber}}</span>
+          </div>
+        </div>
+      </li>
+</ul>
+
+      <!-- <span><span style="font-weight:bold;">Claim Number :</span>{{claimNumber}}</span> -->
+    </div>
+  </div>
+  <div class="content-healthtick">
+    <ul class="glb">
+      <li class="content-healthticket">
+        <div class="col8">
+          <div class="colll">
+            <span>Check Number</span>
+            
+          </div>
+          <div class="colllvalue">
+            <span class = "text-1.1x" ng-model="checkNumber">{{checkNumber}}</span>
+          </div>
+        </div>
+      </li>
+      <li class="content-healthticket">
+        <div class="col8">
+          <div class="colll">
+            <span>Total Payment</span>
+            
+          </div>
+          <div class="colllvalue">
+            <span class="text-1.1x" ng-model = "paymentAmount">{{paymentAmount}}</span>
+          </div>
+        </div>
+      </li>
+      <li class="content-healthticket">
+        <div class="col8">
+          <div class="colll">
+            <span>Paid To</span>
+            
+          </div>
+          <div class="colllvalue">
+            <span class="text-1.1x" ng-model = "paidTo">{{paidTo}}</span>
+          </div>
+        </div>
+      </li>
+      <li class="content-healthticket">
+        <div class="col8">
+          <div class="colll">
+            <span>Address</span>
+            
+          </div>
+          <div class="colllvalue">
+            <span>
+            <div class="text-1.1x" ng-model = "address1">{{address1}}</div>
+            <div class="text-1.1x" ng-model = "address2" >{{address2}}</div>
+            <div class="text-1.1x" href ng-model = "cityStateZip">{{cityStateZip}}</div>
+            </span>
+          </div>
+        </div>
+      </li>
+      <div class="clear"></div>
+    </ul>
+  </div>
+  <div class="colr">
+  <div class="claim-payment-multi show-on-desk-data">
+    <ul class="classmain-ttl-claim">
+      <li class="col12">Transaction Type</li>
+      <li class="col12">Check Date</li>
+      <li class="col12">Amount</li>
+      <li class="col12">From - To</li>
+      <div style="clear:both;"></div>
+    </ul>
+    <ul *ngFor="let transaction of transactionsArray" class="clm-on-desk-claim">
+      <li class="col11 transtype">{{transaction.trans_type}}
+      </li>
+      <li class="col11 checkdate">{{transaction.date_of_check}}
+      </li>
+      <li class="col11 checkamnt">{{transaction.split_amount}}
+      </li>
+      <li class="col11 checkfrmto">{{transaction.dateRange}}
+      </li>
+      <div style="clear:both;"></div>
+    </ul>
+  
+  </div>
+    <div style="clear:both;"></div>
+     <div class="clear"></div>
+</div>
+
+
+<ul class="show-on-mobile-data" *ngFor="let transaction of transactionsArray">
+
+
+<li class="content-healthtick" >
+            <div class="col8">
+               <div class="colll">
+                  <span>Transaction Type</span>
+               </div>
+               <div class="collllenclsvalue">
+                 
+                  <span>{{transaction.trans_type}}</span>
+            
+              </div>
+            </div>
+         </li>
+         <li class="content-healthtick">
+            <div class="col8">
+               <div class="colll">
+                  <span>Check Date</span>
+               </div>
+               <div class="collllenclsvalue">
+                
+                  <span>{{transaction.date_of_check}}</span>
+            
+              </div>
+            </div>
+         </li>
+         <li class="content-healthtick">
+            <div class="col8">
+               <div class="colll">
+                  <span>Check Amount</span>
+               </div>
+               <div class="collllenclsvalue">
+            
+                  <span>{{transaction.split_amount}}</span>
+              
+              </div>
+            </div>
+         </li>
+         <li class="content-healthtick">
+            <div class="col8">
+               <div class="colll">
+                  <span>From-To</span>
+               </div>
+               <div class="collllenclsvalue">
+               
+                  <span>{{transaction.dateRange}}</span>
+            
+              </div>
+            </div>
+         </li>
+         <div class="clear"></div>
+</ul>
+  </div>

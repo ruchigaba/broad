@@ -1,0 +1,63 @@
+// @import '../../common/variables.scss';
+// @import '../../common/mixins.scss';
+
+ 
+  .whiteblank-about{
+     @include commommix33();
+    }
+
+  .content-info-about {
+  display: flex;
+  line-height: 2;
+   }
+
+  .content-infosectionn-about {
+  width: $content-infosectionn-width;
+  text-align: right;
+  color: #333;
+  font-size: 15px;
+  }
+
+  .content-conclsvalue-about {
+  width:$content-conclsvalue-width;
+  text-align: left;
+  color: $content-conclsvalue-bgcolor;
+  padding-left: 5px;
+span {
+  font-weight: 700;
+  color: #525253;
+  font-size: 15px;
+}
+  }
+   
+.setion-infoli{
+   list-style: none;
+}
+
+
+
+@media only screen and (max-width: 800px){
+.main-container {
+    margin-top: 90px;
+    margin-left: 0px;
+}
+.whiteblank-about {
+    background-color: #fdfdfd;
+    width: 100%;
+   margin-bottom: 90px;
+    }
+
+}
+@media screen and (min-width: 1020px) and (max-width:1380px){
+.whiteblank-about {
+    width: 50%;
+   margin-bottom: 90px;
+    }
+
+}
+@media screen and (max-width: 1024px) and (min-width: 767px){
+   .whiteblank-about {
+    width: 100%;
+}
+}
+

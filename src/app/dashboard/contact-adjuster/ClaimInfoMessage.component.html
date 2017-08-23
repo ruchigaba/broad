@@ -1,0 +1,151 @@
+
+	<!--<router-outlet></router-outlet><claiminfomessage _nghost-wnt-25="">-->
+
+<div  class="wrapper-main-message-contracter-page ">
+  <div  class="msg-custom-page">
+    <div  class="col-claim-info-6">
+      <div  class="custom-column-msg-csutom-page md-whiteframe-z2 glb-shd-cls">
+        <ul >
+          <li >
+            <label  class="font-bold-claim-info">Your Name</label>
+            <input  class="form-part"[(ngModel)]="Message_name" type="text">
+          </li>
+          <li >
+            <label class="font-bold-claim-info">Email</label>
+            <input  class="form-part" [(ngModel)]="Message_email" type="email">
+          </li>
+          <li >
+            <label  class="font-bold-claim-info">Telephone</label>
+            <input  [(ngModel)] = "Message_number" class="form-part" maxlength="10" min="0" type="tel"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="10" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+          </li>
+          <li >
+            <label  class="font-bold-claim-info">Subject</label>
+            <input class="form-part" [(ngModel)]="Message_subject" type="text">
+          </li>
+        </ul>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+    <div  class="col-claim-info-6">
+      <div  class="custom-column-msg-csutom-page md-whiteframe-z2 glb-shd-cls">
+        <ul >
+          <li >
+            <label class="font-bold-claim-info">Claim Number</label>
+            <p  class="data-re-fsb"><label>{{claimNumber}}</label></p>
+          </li>
+          <li>
+            <label class="font-bold-claim-info">{{pageName}} Info</label>
+            <p class="data-re-fsb"><label [(ngModel)]="name" ngDefaultControl><b>Name:</b>{{name}}</label></p>
+            <p class="data-re-fsb"><label [(ngModel)]="email" ngDefaultControl><b>Email:</b>{{email}}</label></p>
+          </li>
+          
+          <li >
+           <label class="font-bold">How can we help you ?</label>
+            <p class="data-re-fsb"> <textarea [(ngModel)]="inputMessage" placeholder="Enter Message"></textarea></p>
+          </li>
+        </ul>
+         <!----------------- Image preview section starts ------------------------------------>
+        <div class="upload-image-section">
+          <ul >
+            <li  class="listpreview1" >
+              <img  class="imagepreview1" #img1  >
+              <img  class="deleteImage1" (click)="deletePreview1(img1)" src="image/remove.png">
+              <div  style="clear:both;"></div>
+            </li>
+            <li  class="listpreview2" >
+              <img class="imagepreview2"  #img2  >
+              <img class="deleteImage2"  (click)="deletePreview2(img2)"  src="image/remove.png" >
+              <div  style="clear:both;"></div>
+            </li>
+          </ul>
+        </div>
+       
+		<div class="col-claim-info-12 upd-main-sec" >
+
+<div  class="upd-btn-atc">
+  <button (click)="mainDiv.style.display=='none'?mainDiv.style.display='block':mainDiv.style.display='none'" class="btn-claim-info-1" data-target="#collapseExample" data-toggle="collapse" type="button">
+Upload Attachments
+</button>
+</div>
+  <div  class="msg-img-upd"><span>(Maximum 2 Attachments)</span>
+  </div>
+<div  style="clear:both;"></div>
+  </div>
+   <div id="collapseExample" class="collapse">
+          <input type = "button" class="cma-btn-nw" value = "Camera" *ngIf = "showCameraButton"  
+          (click) = "openCameraAndroid()" />
+          <input type="file" (change)="profileImgChange(input)" style="display:none !important;" #input class="inputFileName" id="fileName" [disabled]="profileImg.length == 2" />
+
+        <div #mainDiv class="collapse-claim-info" id="collapseExample" style="display:none">
+          <!--template bindings={}-->
+          <!--<input class="inputFileName" id="fileName"  type="file">-->
+         <div  class="choosefilecontainer-claim-info">
+          <label for="fileName" style="opacity: 0.98;cursor: pointer;border-radius: 3px;
+          background-color: #ccc;padding: 4px;padding-right: 8px;padding-left: 8px;margin-top:8px;"
+           [class.disableChoose]="profileImg.length == 2">Choose File</label>
+        </div>
+         <img id="capturedPhoto" #imgPhoto data-role="none" class="unknown1" />
+          <br ><br>
+          <label class="font-bold-claim-info">Select Category</label><br >
+          <div class="dropdown">
+            <button (click)="dropdownFunct(dropdownList)" class="btn-claim-info-1 dropdown-toggle"  type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                 {{selectedItem}}
+                  <span  class="caret-claim-info"></span>
+                  </button>
+                    
+            <ul #dropdownList class="dropdown-menu-claim-info" aria-labelledby="dropdownMenu1" style="display:none">
+              <li *ngFor="let categ of categories let i = index"><a (click)="dropboxitemselected(i,dropdownList)">{{categ}}</a></li>
+            </ul>
+          </div>
+          
+          <br ><p><textarea  class="form-part"  [(ngModel)]="attachmentDescription" maxlength="40" minlength="0" placeholder="Enter Description"
+          (keyup)="charCount(attachmentDescription)" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+          </textarea><span  class="txtlng"><span class="msg-num-lmt-sd"><!--template bindings={}-->
+          <label class="char-limit" *ngIf="attachmentDescription.length == 40">Maximum character limit exceeded.</label></span>{{messageLength}}</span>
+          </p>
+          <br ><br >
+          <div  class="col-claim-info-6 btn-cls-mesage-box">
+            <button  class="md-btn md-raised btn-block p-h-md" (click)="uploadDocSave(img1,img2,imgPhoto)" [class.disableChoose]="profileImg.length == 2"  [disabled]="profileImg.length == 2" md-ink-ripple="" type="submit">Save</button>
+          </div>
+          <div class="col-claim-info-6 btn-cls-mesage-box">
+            <button  class="md-btn md-btn-claim-info md-raised btn-block c-h-md " type="submit" (click)="clearClaimInfoData(img1,img2,imgPhoto)" >Clear</button>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+        <!--   Upload doc section ends-->
+<div  style="clear:both;"></div>
+      </div>
+      <div  style="clear:both;"></div>
+    </div>
+  </div>
+  <div class="col-claim-info-12 button-save-msg-pg">
+    <button  class="md-btn md-raised btn-block p-h-md" type="submit"(click)="sendMessageData(img1,img2,imgPhoto)">Send</button>
+  </div>
+  <div  class="clear"></div>
+</div>
+
+
+  <button style="display:none;"  class="btn btn-info btn-lg" data-target="#confirmModal" data-toggle="modal" id="modalOpen"  type="button">Open Modal</button>
+
+  
+  <div  class="modal fade" id="confirmModal" role="dialog">
+    <div  class="modal-dialog">
+
+      
+      <div  class="modal-content">
+        <div  class="modal-header" id="modalHead">
+          <button  class="close" data-dismiss="modal" type="button">×</button>
+          <h6  class="modal-title">Message</h6>
+        </div>
+        <div  class="modal-body" id="modalBody">
+          <label  id="modalMessage">Attachment is not saved.  Do you wish to send without the attachment?</label>
+        </div>
+        <div  class="modal-footer">
+          <button  class="con-btn " data-dismiss="modal" type="button">Yes</button>
+          <button  class="con-btn " data-dismiss="modal" type="button">No</button>
+        </div>
+      </div>
+      
+</div></div>

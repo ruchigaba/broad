@@ -1,0 +1,1011 @@
+button.closebutton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+cursor: pointer;
+}
+.wrapper-claims {
+    position: inherit !important;
+    z-index: inherit !important;
+}
+.lossImg
+
+{ cursor: pointer;
+    display: block;
+    border-style: solid;
+    border-color: #ff0000 #0000ff;
+    float: left;
+    z-index: 9999 !important;
+    position: fixed !important;
+    top: 30% !important;
+    width: 41% !important;
+    left: 38% !important;
+
+}
+* {
+    box-sizing: border-box;
+}
+ 
+ 
+ 
+
+ .col2,.title-section{
+   @include common;
+}
+.tbl-grd{
+     width:$width;
+    min-height: 1px;
+    position:relative;
+    float: left;
+    text-align: center; 
+    box-sizing:border-box;
+    margin-top:-15px;
+   background-color:$tbc !important;
+   padding-top:12px;
+   padding-left:10px;
+   padding-right:10px;
+}
+.clm-inf-pg{
+    padding-bottom: 25px;
+}
+.nav-lines{
+    font-size: 16px;
+    line-height:1.029;
+    border-color:$bdcolor;
+    display:inline-block;
+    list-style: outside none none;
+    margin-bottom:0px;
+    padding-left: 0px;
+    border-width:0 !important;
+    li{
+        color:$color;
+        opacity:1 !important;
+        padding:9px !important;
+        display:block;
+        position:relative;
+        border-color:inherit;
+        float:left;
+        a{
+            padding:12px;
+            background-color:transparent !important;
+            border-width:0 !important;
+            cursor:pointer;
+        }
+        ul{
+            margin-top:0;
+        }
+    }
+       
+}
+.claimtop{
+    text-align: center;
+    color:$color;
+    font-size:16px;
+    margin-bottom: 5px;
+
+}
+.txtleft
+{
+     font-weight: 600;
+    display:inline-block;
+    float: left;
+    padding-right: 8px;
+    text-align:right;
+    width:$width-h;
+    font-family:Open Sans, Helvetica Neue, Helvetica, Arial;
+}
+.txtright,{
+    text-decoration: underline;
+    cursor:pointer;
+    display:inline-block;
+    text-align: left;
+    width:$width-h;
+}
+.txtright1{
+    text-decoration: none; 
+     display:inline-block;
+    text-align: left;
+    width: $width-h;
+}
+.cnt{
+    line-height:1.2285;
+    font-size:17px;
+    color:$cntcolor;
+    font-weight:normal;
+}
+.col4{
+     min-height: 1px;
+    padding-left: 0.93rem;
+    padding-right: 0.93rem;
+    position:relative;
+}
+.col5{
+    padding-top:14px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-top:-10px;
+    width:$width;
+    float:left;
+    min-height:1px;
+    position:relative;
+}
+.classmain-ttl{
+    border:medium none !important;
+    color:$txtcol !important;
+    font-size:14px;
+    margin-bottom:0px;
+    margin-left:0px;
+}
+.col6{
+    background-color:$lightgreen!important;
+     font-weight: 550;
+    @include common2();
+}
+.col7{
+     background-color:$bcw;
+     font-weight: 300;
+     @include common2();
+    }
+
+.tbl-data{
+    margin:0;
+    padding: 0;
+    li{
+        display:table;
+        flex-direction:column;
+        height:45px;
+        justify-content:center;
+        vertical-align: middle;
+        color:$txtcol;
+        background-color:$bcw;
+        font-size:14px;
+        text-align: center;
+        font-weight:500;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+       
+      }
+
+
+
+}
+
+    
+
+*{
+    box-sizing: border-box;
+}
+
+
+///Add-Claim//
+ .clm-inf-pg{
+  
+    background-color:$owhite;
+    padding-bottom:5px;
+}
+
+.addclaiming{
+   width:$width;
+  @include add1();
+}
+
+div{
+    display:block;
+}
+.securitysetting{
+    @include add1();
+    width:$width;
+    padding-left:0.9375rem;
+    padding-right:0.9375rem;
+}
+.new-add{
+    color:$gc-in-add;
+    font-size:17px;
+    margin-top:-40px;
+    text-align:center;
+     @include add2();
+   span{
+       font-weight:700;
+       cursor:pointer;
+   }
+}
+.col4{
+    width:$width-h-h;
+    @include add2();
+}
+.main-content-reset-pass-cls{
+    background-color:$owhite;
+    margin:0 auto;
+    float:none;
+    position:relative;
+    min-height:1px;
+   text-align: -webkit-left;
+    width:$width-h;
+    margin-top:45px;
+    padding:15px;
+    z-index: 0;
+    
+    ul{
+        padding:0;
+
+    }
+}
+ul{
+    font-size:14px !important;
+    margin-top:15px;
+    margin-bottom: 1rem;
+li{
+  
+    color:$li-col;
+    list-style:outside none none;
+    // display:list-item;
+    
+    
+}
+}
+.brd-cls-new{
+    margin-top:5px;
+    border:1px solid $cc;
+   margin-bottom:15px;
+    padding-bottom:5px;
+    padding-top:5px;
+    padding-left:5px;
+}
+.mmkk-ssk{
+    margin-bottom:15px;
+    margin-top:5px;
+    padding:0;
+    width:$width;
+    @include add1();
+    float:none;
+    span{
+        cursor:pointer;
+    text-decoration: underline;
+    font-weight: normal;
+    color: $gc-in-add;
+    text-align: right;
+    font-family: Helvetica;
+    font-size: 11px;
+    margin: 8px 0px 4px 0px;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-bottom:5px;
+    }
+}
+.clssmain-ttl{
+    border: medium none !important;
+    color: #444 !important;
+    font-size: 14px;
+    text-align: center;
+}
+.col-1-3{
+    width:33.33%;
+    padding-right:2%;
+    @include add1();
+    float:left;
+    min-height: 1px;
+    position: relative;
+    
+}
+.mmkk-ssk .col-1-3:nth-child(3) {
+    padding-right: 0;
+    width:33.33%;
+    float:left;
+    
+}
+.form-add{
+    width:100% !important;
+    margin-right:6px;
+    position:relative;
+    top:1px;
+    outline:none;
+    border:1px solid $cc;
+    padding-left:8px;
+    background-color: $owhite;;
+    background-image:none;
+    border-radius:0.25rem;
+    color:$form;
+    font-size:1rem;
+    line-height:1.5;
+    padding:0.375rem 0.75rem;
+    transition:border-color 0.15s ease in out 0s, box-shadow 0.15s
+    ease-in-out 0s;
+    display:block;
+    box-shadow:none;
+    }
+.spanclaim{
+    cursor:pointer;
+    text-decoration: underline;
+    font-weight: normal;
+    color: $gc-in-add;
+    text-align: right;
+    font-family: Helvetica;
+    font-size: 11px;
+    margin: 8px 0px 4px 0px;
+    word-wrap: break-word;
+    white-space: normal;
+
+}
+input{
+    margin:0;
+    font:inherit;
+    text-rendering:auto;
+    letter-spacing:normal;
+    word-spacing:normal;
+    text-transform:none;
+    text-indent:0px;
+    text-shadow:none;
+    text-align:start;
+    -webkit-writing-mode:horizontal-tb;
+}
+
+.clear{
+    display:block;
+    overflow:hidden;
+    clear:both;
+}
+.m-button{
+    background-color:$greencolor;
+    border:medium none;
+    outline:none;
+    // border-radius:0 !important;
+    color:$owhite;
+    margin-top:5px;
+    padding:4px;
+    // padding-bottom:6px;
+    // padding-top:6px;
+    position:relative !important;
+    display:block;
+    width:$width;
+    // padding-left:12px;
+    // padding-right:12px;
+    line-height:inherit;
+    cursor:pointer;
+    text-transform:none;
+    overflow:visible;
+    font:inherit;
+}
+.m-button:active{
+     top: 5px !important;
+    border-bottom: 0 !important;
+}
+.col2{
+    //margin-top:10px;
+    padding:0;
+    width:$width;
+    min-height:1px;
+   position:relative;
+   margin-bottom:5px;
+}
+////my claim///
+
+
+/* .wrapper{
+   width:100%;
+} */
+.col1{
+   
+    padding-bottom:0px;
+    box-shadow: none;
+    @include common();
+    width:$width;
+}
+.col-my-claim2{
+   
+    padding-bottom:0px;
+    box-shadow: none;
+    @include common();
+    width:$width;
+}
+.col2,.title-section{
+    @include common();
+}
+.title-section-claims{
+    background-color: $btn-continue-color;
+    margin-top:-25px;
+    padding-bottom:0px;
+}
+
+.tbl-grd1{
+   
+     width:$width;
+    min-height: 1px;
+    padding-top:10px;
+    position:relative;
+    float: left;
+    text-align: center; 
+    box-sizing:border-box;
+    margin-top:15px;
+    background-color:$tbc !important
+}
+.clm-inf-pg{
+
+    padding-top: 15px;
+    width:$width;
+      padding-top: 15px;
+}
+.tbl-data li{
+     outline:none;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+.nav-lines{
+    font-size: 16px !important;
+    line-height:1.029;
+    border-color:$bdcolor;
+    display:inline-block;
+    list-style: outside none none;
+    margin-bottom:0px;
+    padding-left: 0px;
+    border-width:0 !important;
+    li{
+        color:$color;
+        opacity:1 !important;
+        padding:9px !important;
+        display:block;
+        position:relative;
+        border-color:inherit;
+        float:left;
+        a{
+          
+            padding:12px;
+            background-color:transparent !important;
+            border-width:0 !important;
+            cursor:pointer;
+        }
+        ul{
+            margin-top:0;
+        }
+    }
+}
+.nav-lines li.active1 a{
+  border-bottom: 2.5px solid #007a33 !important;
+  padding:3px;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+.classmain-ttl{
+     @include common();
+     background-color:$lightgreen !important;
+     border-top:medium none;
+     color:$color;
+     font-size: $c-font;
+     padding: 0;
+     width:99.8% !important;
+     padding-bottom: 0px;
+}
+.col9{
+    font-size: 16px !important;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    background-color:$lightgreen !important;
+    color:$txtcol !important;
+    width:$width-h-h;
+    font-weight:600;
+   @include common4();
+   padding:8px 22px 18px 0px;
+}
+.clm-on-desk{
+    height:45px;
+     border:none !important;
+    pointer-events:none;
+    width:$width;
+    float:left;
+    position:relative;
+    margin:0;
+    padding: 0;
+    justify-content:center;
+    vertical-align: middle;
+    color:$txtcol;
+     background-color:$bcw;
+     font-size:$c-font;
+     text-align: center;
+     cursor:pointer;
+}
+     ul .clm-on-desk:hover  {
+    background-color:$bcgcolor !important;
+}
+
+
+
+.col10{
+     margin-top:-14px;
+    padding-left: 0.9375rem;
+     padding-right: 0.9375rem;
+     width:$width-h-h;
+     background-color:$bcw;
+     color:$txtcol;
+     text-align:center;
+    @include common4();
+     -webkit-flex-direction:column;
+     font-size:$c-font;
+     padding:10px 39px 22px 15px;
+}
+*{
+    box-sizing: border-box;
+}
+@media screen and (min-width: 1024px){
+    .tbl-grd1{
+         padding-left: 0.9375rem;
+         padding-right: 0.9375rem;
+    }
+
+.nav-lines a {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
+
+.col5 .tbl-data:hover {
+    cursor: pointer;
+}
+}
+
+  @media only screen and (max-width: 800px) {
+  .main-content-reset-pass-cls {
+    width: $width;
+    
+  }
+  .main-container {
+    padding: 10px;
+}
+}
+@media screen and  (min-width: 310px) and(max-width: 1020px){
+ .main-content-reset-pass-cls {
+    width: $width;
+    li{
+        font-size:14px;
+    }
+  }
+  .main-container {
+    padding: 10px;
+}
+.nav-lines li {
+    font-size:16px;
+}
+} 
+@media screen and (min-width:767px)
+{
+    // .col1{
+    //     padding-bottom:2px;
+
+    // }
+    .claimtop{
+        color: $clmm-tt-color;
+        font-weight:500;
+    font-size: 16px;
+    margin-bottom: 5px;
+    }
+    .claimtop .txtright{
+        display: inline-block;
+        text-align: left;
+    
+    }
+    
+    .tbl-grd ul{
+        margin: 0;
+        padding: 0;
+    }
+    .classmain-ttl li.col6{
+        font-weight: 600;
+        font-size:14px;
+    }
+    .brd-cls-new {
+        
+        font-size:14px;
+    }
+}
+@media screen and (max-width:767px)
+{
+    .lossImg{
+    top:27% !important;
+    width:90% !important;
+    left:5% !important;
+    border-color:black !important;
+    text-align:center;
+}
+.new-add span {
+    font-weight:600;
+}
+.main-content-reset-pass-cls{
+    margin-top:55px;
+}
+
+    .back-g{
+        background-color: $tbc;
+    }
+    .col1{
+        background-color: transparent !important;
+       margin-bottom: -8px;
+        padding: 0 !important;
+            box-shadow: none !important;
+    }
+     .col-my-claim2{
+        background-color: transparent !important;
+       margin-bottom: 30px;
+        padding: 0 !important;
+            box-shadow: none !important;
+            margin-top:-22px;
+    }
+  
+    .col2:first-child {
+    background-color: transparent !important;
+    border-bottom: medium none !important;
+}
+.col2{
+        text-align: center;
+            width: inherit !important;
+                padding: 0 !important;
+}
+    .clm-inf-pg{
+        background-color: $contnt-background;
+        padding-bottom: 8px !important;
+        padding-top: 8px;
+        margin-top:-3%;
+    }
+    .nav-lines {
+    li{
+            padding: 0 !important;
+    }
+    a{
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        padding: 0 !important;
+        font-size: 14px !important;
+        color: $clm-pge-color;
+    }
+    }
+    .title-section-claims{
+            text-align: center;
+                width: inherit !important;
+                    padding: 0 !important;
+                    background-color: $owhite;
+    }
+    .txtleft{
+            width:$width-h !important;
+            display: inline-block !important;
+            font-size: 13px;
+            font-weight:600;
+             text-align: right !important;
+             float:left;
+             padding-right: 0px;
+             margin-left:0px;
+    }
+    .txtright,.txtright1{
+        width: 44% !important;
+        display: flex;
+        font-size: 13px;
+        text-align: left;
+        padding-left:10px;
+    }
+     
+    .claimtop{
+        margin-bottom:0px;
+          color: $blackcolor;
+    }
+    .cnt{
+            margin-bottom: 12%;
+    }
+    .tbl-grd{
+            padding: 0 !important;
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                 display: inline-block;
+                 float: none;
+                 font-size: 14px !important;
+                 line-height: 25px;
+                 padding: 0 5px;
+                 text-align: left;
+                 width: $width;
+                   color: $bbcolor;              
+
+            }
+          }
+          .tbl-data
+          {
+               ul{
+                    background-color: $bcw;
+                    margin-bottom: 10px;
+                    padding: 10px 0;
+                    font-size: 14px !important;
+               }
+               .col7{
+                       border: medium none;
+                       display: inline-block;
+                       float: none;
+                         font-size: 14px !important;
+                         line-height: 25px;
+                         padding: 0 5px;
+                         text-align: left;
+                          width: $width;
+               }
+               li{
+                   height:26px;
+              
+               }
+}
+.col5{
+    margin-top:17px;
+}
+   .checkamnt::before, .checkdate::before, .checkfrmto::before, .checknum::before,.claimnumber_::before,.checkstatus::before,.checkdol::before,.checkadjuster::before,.transtype::before{
+    color: $li-in-con-adj;
+    display: inline-block;
+    text-align: right;
+    width: $width-h;
+}
+.transtype::before {
+    content: "Transaction Type :";
+    margin-right: 10px;
+}
+   .checknum::before {
+    content: "Check Number :";
+    margin-right: 10px;
+   }
+   .checkdate::before{
+    content: "Check Date :";
+    margin-right: 10px;
+   }
+    .checkamnt::before{
+    content: "Check Amount :";
+    margin-right: 10px;
+    }
+    .checkfrmto::before{
+    content: "From - To :";
+    margin-right: 10px;
+} 
+
+   .claimnumber_::before {
+    content: "Claim Number :";
+    margin-right: 10px;
+   }
+    .checkstatus::before {
+    content: "Status :";
+    margin-right: 10px;
+   }
+    .checkdol::before {
+    content: "Date of Loss :";
+    margin-right: 10px;
+   }
+    .checkadjuster::before {
+    content: "Adjuster :";
+    margin-right: 10px;
+   }
+ 
+    .clssmain-ttl{
+      display:none;
+    }
+     .classmain-ttl{
+      display:none;
+    }
+    ul.col5.tbl-data {
+    margin-top:10px;
+    margin-bottom: 0px;
+    padding: 0px 0;
+    background-color: $bcw;
+    }
+    li.col10.claimnumber_{
+         @include claimpage();
+    }
+     li.col10.checkstatus{
+            @include claimpage();
+    }
+     li.col10.checkdol{
+             @include claimpage();
+    }
+     li.col10.checkadjuster{
+              @include claimpage();
+    }
+    .tbl-grd1{
+        margin-top:-15%;
+    }
+    .col10{
+        height:48px !important;
+        
+    }
+    .col7 {
+    font-weight:500;
+    }
+
+    ul.clm-on-desk{
+margin-bottom: 75px;
+    padding: 0px 0;
+    background-color: $bcw;
+    margin-top: 10px
+    }
+}
+@media screen and (max-width:1024px) and (min-width:767px){
+   .col1
+   { 
+       box-shadow:none !important;
+   }
+   .col-my-claim2
+   { 
+       box-shadow:none !important;
+   }
+   .title-section-claims{
+       margin-top:-40px;
+   }
+   .claim-py-info-spn-rtg{
+       font-size:15px;
+       font-weight:600;
+   }
+    .col2{
+        text-align:center;
+        width:$width;
+    }
+    .clm-inf-pg{
+            padding-bottom: 15px !important;
+            margin-top:-15px;
+            margin-bottom:15px;
+    }
+    .txtleft{
+        margin-right: 3px !important;
+         display: inline-block;
+         text-align: right;
+          width: 49%;
+    }
+    .cnt{
+            margin-bottom: 12%;
+    }
+    .classmain-ttl{
+            padding: 0;
+    }
+    // .classmain-ttl li{
+    //     background-color: #cce4d6 !important;
+    // }
+    .tbl-grd li.col6{
+        border: 1px solid $bcg;
+        display: inline-block;
+        list-style: outside none none;
+        padding: 15px 3px 15px 15px;
+    }
+}
+@media screen and (min-width:544px){
+    .col2{
+    float:left;
+}
+.col4{
+    width: $width-h-h;
+    float: left;
+}
+.col5{
+    width:$width;
+}
+// .classmain-ttl{
+//         width: 100%;
+//         float: left;
+// }
+}
+@media screen and (max-width: 970px) and (min-width: 801px)
+{
+ .tbl-grd .tbl-data li {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: center;
+    vertical-align: middle;
+}
+}
+
+@media screen and (max-width: 870px) and (min-width: 801px)
+{
+.classmain-ttl{
+    padding:0;
+    white-space:nowrap;
+}
+}
+@media screen and (max-width: 800px){
+    .tbl-grd{
+        padding:0;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 860px)
+{
+.classmain-ttl{
+    padding:0;
+    white-space:nowrap;
+}
+.classmain-ttl li.col6 {
+    font-weight: 500;
+}
+}
+@media screen and  (min-width: 768px){
+.tbl-grd1{
+    margin-top: -22px;
+}
+}
+@media screen and  (max-width: 450px){
+.txtright,.txtright1 {
+    width: 37% !important;
+}
+.lossImg{
+    top:40% !important;
+    width:86% !important;
+    left:7% !important;
+    border-color:black !important;
+}
+
+ul.col5.tbl-data{
+    padding-bottom:10px;
+}
+.col7 {
+    font-weight:500;
+}
+.txtleft{
+    margin-left:0px;
+}
+.txtright{
+    padding-left:8px;
+}
+.tbl-grd1{
+    margin-top:-4%;
+}
+.back-g{
+    background-color: #efeeee;
+}
+.col8{
+    margin-top:-6px;
+}
+li.col11 {
+    margin-top:0px;
+
+    }
+    .title-section-claims{
+        margin-top:10px;
+        margin-bottom:-10px;
+    }
+}
+@media screen and (max-width: 450px){
+.checkamnt::before, .checkdate::before, .checkfrmto::before, .checknum::before {
+    width: 38% !important;
+}
+.tbl-data .col7 {
+    font-size: 14px !important;
+}
+.txtleft {
+    width: 38% !important;
+    font-weight:600;
+}
+.clm-inf-pg{
+    margin-top:-4%;
+   
+}
+}
+@media screen and (max-width: 320px){
+.checkamnt::before, .checkdate::before, .checkfrmto::before, .checknum::before {
+    width: 40% !important;
+}
+.tbl-data .col7 {
+    font-size: 13px !important;
+}
+.txtleft {
+    width: 40% !important;
+    font-weight:bold;
+}
+}
+@media screen and (min-width: 1024px){
+.tbl-data:hover li {
+    background-color: $bcgcolor!important;
+}
+
+}
+@media screen and (min-width: 800px)and (max-width:1024px){
+    .tbl-data li{
+       height:60px;
+      
+    }
+    .col5{
+        padding-top:0px;
+         padding-left:0px;
+          padding-right:0px;
+    }
+    }
+
+ 

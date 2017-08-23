@@ -1,0 +1,145 @@
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+ @import './variables.scss';
+    @import './mixins.scss';
+ @import '../login/login.component.scss';
+ @import '../dashboard/faqs/faqs.component.scss';
+ @import '../dashboard/settings/aboutapp.component.scss';
+ @import '../dashboard/settings/changeid.component.scss';
+ @import '../dashboard/settings/changepass.component.scss';
+ @import '../dashboard/settings/securityinfo.component.scss';
+ @import '../dashboard/settings/settings.component.scss';
+ @import '../dashboard/claims/claims.component.scss';
+ @import '../dashboard/claims/claim-paymentdetails/claim-paymentdetails.component.scss';
+@import '../dashboard/dashboard.component.css';
+ @import '../newuser/eula/eula.component.scss';
+ @import '../shared/footer/footer.component.scss';
+ @import '../shared/sidebar/sidebar.component.scss';
+ @import '../shared/topnav/topnav.component.scss';
+  @import '../dashboard/healt-ticket/healt-ticket.component.scss';
+ @import '../dashboard/provider/provider.component.scss';
+ @import '../dashboard/claims/claim-info/claim-info.component.scss';
+@import '../dashboard/tutorial/tutorial.component.scss';
+@import '../dashboard/social-media/social-media.component.scss';
+@import '../dashboard/contact-adjuster/ClaimInfoMessage.component.scss';
+@import '../dashboard/contact-adjuster/contact-adjuster.component.scss';
+@import '../newuser/registration/registration.component.scss';
+@import '../newuser/help/help.component.scss'; 
+@import '../dashboard/provider/nearbyphysicians-map/nearbyphysicians-map.component';  
+@import '../forgot-password/forgot-password.component.scss';
+@import '../forgot-password/forgothelp/forgothelp.component.scss'; 
+@import '../forgot-password/validateregistration/validateregistration.component.scss'; 
+@import '../dashboard/contact-adjuster/ClaimInfoMessage.component.scss';
+@import '../dashboard/contact-adjuster/contact-adjuster.component.scss';
+
+@import '../registration-tutorial/registration-tutorial.component.scss';
+
+
+
+ 
+/* .mycontain {
+    margin: 100px 12px 15px 12px;
+}    */
+.main-container {
+
+   margin-left: 259px;
+    margin-top: 80px;
+}
+.clear {
+  clear: both;
+}
+html {
+width: 100%;
+font-family: 'Open Sans', sans-serif;
+ }
+ body{
+// font-family: $body-font;
+font-family: 'Open Sans', sans-serif;
+ font-size: 1rem;
+ line-height: 1.8;
+ margin: 0px;
+ padding: 0px;
+ background-color: $background-color-main;
+
+ li{
+
+ list-style: none;
+ }
+
+ ul {
+ padding: 0px;
+ margin: 0px;
+ }
+
+ a {
+
+ text-decoration: none;
+ }
+
+p {
+  padding: 0px;
+  margin: 0px;
+  font-weight: normal;
+
+}
+h4{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+ }
+
+
+
+
+
+
+body {
+
+
+}
+ 
+ 
+.main-cl-lst-cont {
+    width: 90%;
+    float: left;
+     font-size: 13px;
+}
+ 
+.img-setion-arr{
+
+img {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+}
+}
+ 
+.content-part-box.pd-mmin {
+    padding: 15px;
+    background-color: #fff;
+}
+
+
+ 
+@media screen and (max-width: 800px){
+
+.main-container {
+  
+    margin-top: 0px !important;
+}
+
+.mycontain {
+    margin: 78px 12px 15px 12px !important;
+}
+ 
+.main-container {
+    margin-top: 0;
+    margin-left: 0;
+}
+ 
+ 
+    
+} 
+ 

@@ -1,0 +1,59 @@
+
+img{
+    max-width: 100%;
+}
+
+.w5-display-right {
+    position: absolute;
+    top: 50%;
+    right: 48px;
+    background-color: #007a33;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 3px 14px 5px 15px;
+    text-align: center;
+    border: 0 none;
+    color:white;
+}
+.tutorial-main-slider-container{
+
+    margin: 20px 80px 10px;
+}
+.w5-display-left {
+    position: absolute;
+    top: 50%;
+    background-color: #007a33;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 3px 14px 5px 15px;
+    text-align: center;
+    border: 0 none;
+    left: 299px;
+    color: white;
+}
+@media screen and (max-width: 450px){
+.w5-display-right {
+    right: 26px;
+    top: 45%;
+}
+    .w5-display-left{
+    left: 26px;
+    top: 45%;
+    }
+    .imgmain{
+    width: 260px;
+    margin-left: -44px;
+    }
+}
+@media screen and (min-width:455px) and (max-width:770px){
+    .w5-display-left{
+        top: 45%;
+        left: 77px;
+    }
+}
+@media screen and (min-width:455px) and (max-width:770px){
+    .w5-display-right{
+        top: 45%;
+        right: 61px;
+    }
+}

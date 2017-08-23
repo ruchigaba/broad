@@ -1,0 +1,181 @@
+<div class="center-header" *ngIf= "contentLoaded">
+	<div class="col-xs-ls-header-section"> 
+		<span class="txtleft-provider" >Claim Number :</span>
+		<span class="txtright-provider"  (model)="claimNumber"> {{claimNumber}}</span>
+		<div class="clear"></div>
+	</div>
+	<div class="col-ss-mm-01">
+		<div class="border">
+			<ul class="list-unstyled">
+
+
+
+ 
+ 
+<!-- 
+    <li>
+    <label class="">
+       <span class="">
+         <i>
+            <input type="checkbox">
+        </i>
+       </span>
+         Checkbox checked
+   </label>
+  </li> -->
+
+
+
+                                 <li class="panel-heading-provider">
+                                      <label id="add" class="ui-checks cb-checkbox {{currentLocationHide ? '':'checked'}}">
+               
+
+
+<span class="cb-inner">
+
+                                             <input type="checkbox" (change)='showHideLocation($event)'><i>	
+                 
+                                             </i> </span>Current Location
+                                       </label>
+                                  </li>
+		 </ul>
+		 </div>
+		<div class="border">
+			<div class="panel-heading-provider colssxx-1" id="accordion" *ngIf="currentLocationHide" 	role="tab">
+                  <button class="clear-btn"   type="button" (click) = "clearData()" style="background-color: #007934;color: #ffffff;">CLEAR</button>
+
+
+                  <h4 class="panel-title">
+				<a aria-controls="collapseOne" aria-expanded="false" class="collapse-col" data-parent="#accordion" data-target="#heading1" data-toggle="collapse" role="button">
+                              
+                                           Enter Location
+                                        </a>
+                                        </h4>
+
+				<!-- <span class="spacer">Enter Loaction</span> -->
+				<!-- <button class="clear-btn">CLEAR</button> -->
+			
+                   <div id="heading1" class="hide-col-nn panel-collapse in" role="tabpanel" aria-labelledby="#title1">
+                   <div class="panel-body-provider appstrt" style="text-align:left;">
+		          <ul class="spacetop" >
+				<li><label class="pinput addlabl">Address:</label></li>
+				<li><input class="pinput inputt" value= {{address}} type="text" [(ngModel)]="address" name="address"></li>
+				
+				<li><label class="pinput addlabl" >City:</label></li>
+				<li><input class="pinput inputt" value= {{city}} [(ngModel)] ="city" type="text" name="city"></li>
+				<li><label class="pinput addlabl ">State:</label></li>
+				<li><input value= {{state}} class="pinput inputt" [(ngModel)]="state" type="text" name="state"></li>
+				<li><div  class="center">OR</div></li>
+				<li><label class="pinput addlabl">Zip Code:</label></li>
+				<li><input class="pinput inputt" value = {{zipcode}} [(ngModel)] ="zipcode" type="text"  name="zipcode"
+				oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      maxlength="5" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" /></li>
+			</ul>
+				<!-- </div>
+				</div> -->
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class="border pading">
+			<span class="search-drop">Search Radius(miles)</span>
+			<button aria-expanded="true" aria-haspopup="true" class="search-select  dropdown-toggle btt-nn" data-toggle="dropdown" (click)="hideShowRadius()" id="dropdownMenu1" style="background: #DBDBDB !important;color:#444 !important;" type="button">
+			{{selectedItem}}
+                  <span class="caret"></span>
+                  </button>
+                  <ul  class="dropdown-menu" aria-labelledby="dropdownMenu1" style="display:none;    cursor: pointer;    border: 1px solid rgba(0, 0, 0, 0.15);" id="hide1" >
+                <li  *ngFor="let a of radiusdistance"><a (click) ="searchRadiusdropboxitem(a);hideShowRadius()">{{a}}</a></li>
+                <div style="clear:both;"></div>
+              </ul>
+		</div>
+		<div class="border">
+			 <div class="panel-heading-provider" id="heading2" role="tab">
+                                   <h4 class="panel-title">
+                           <a aria-controls="collapseOne" aria-expanded="true" class="collapse-col" data-parent="#specialities" data-target="#collapse1" data-toggle="collapse" role="button">
+                              
+                              Select Specialities
+                           </a>
+                        </h4>
+                </div>
+                <div  class="hide-col-nn panel-collapse in" id="collapse1" aria-labelledby="#heading2" role="tabpanel">
+                  <div class="panel-body-provider">
+                    <label class="ui-checks" style="float:left;font-weight:600; padding-left:0px;">Providers List</label>
+                    <ul class="nav" style="text-align:left;">
+                         
+
+
+ 
+
+
+
+
+
+
+                                  <li *ngFor="let specialty of specialitesArray" class="panel-heading-provider textspce">
+                                 <div style="clear:both;"></div>
+                                  <div class="">
+                          <label #v for="squaredOne" class="ui-checks cb-checkbox" (click)="classremoved(v)">    
+
+
+<span class="cb-inner">
+
+
+                                             <input type="checkbox" id="" value = "{{specialty.medical_specialty}}" (change)="folder[$event.target.getAttribute('value')]=$event.target.checked || folder['']=$event.target.unchecked" ><i></i> </span>{{specialty.medical_specialty}}
+                                    </label>
+                                    </div>
+                                       
+                                  </li>
+		 </ul>
+                       </div>
+
+                         
+
+                        
+ 
+	
+	</div>
+	</div>
+		<div class="border">
+			<div class="panel-heading-provider" id="optionalSearch">
+				<a aria-controls="collapseOne" aria-expanded="true" class="hide-col-nn collapse-col" data-parent="#specialities" data-target="#collapse2" data-toggle="collapse" role="button">
+                              
+                             Enter Any Optional Search Criteria
+                           </a>
+			</div>
+			<div id="collapse2" class="hide-col-nn panel-body-col" style="text-align: left;">
+                    <div class="form-group" style="margin-bottom:25px; ">
+			<ul>
+				<li ><label class="pinput ">Hospital/Group Name:</label></li>
+				<li style= "padding-left:20px;margin-bottom:20px;"><input class="inputt" [(ngModel)] ="hospitalGroupName" name ="hospitalGroupName" type="text" /></li>
+				<li ><label class="pinput ">Doctor Last Name:</label></li>
+				<li style= "padding-left:20px;margin-bottom:20px;"><input class="inputt" [(ngModel)] ="doctorLastName" name = "doctorLastName" type="text" /></li>
+				<li><label class="pinput">Tax ID:</label></li>
+				<li class="flex marr">
+					<input class="inputt" type="text" placeholder="2 digits" name="taxId2digits" [(ngModel)] ="taxId2digits" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                          maxlength="2" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')"/>
+
+					<input class="inputt" type="text" placeholder="7 digits" [(ngModel)] ="taxId7digits" name = "taxId7digits" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                          maxlength="7" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+				</li>
+
+
+				<li><label class="pinput ">Phone Number:</label></li>
+				<li class="flex marr">
+					<input class=" inputt" type="text" placeholder="3 digits" [(ngModel)] ="phone3digits" name = "phone3digits"oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                          maxlength="3" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+
+					<input class=" inputt" type="text" placeholder="3 digits" [(ngModel)] ="phone3digits2" name = "phone3digits2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                          maxlength="3" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+
+					<input class=" inputt" type="text" placeholder="4 digits" [(ngModel)] ="phone4digits" name = "phone4digits" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                          maxlength="4" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="footer-x">
+		<button class="search-provider" (click) ="saveSearchProvidersData()">Search Providers</button>		
+	</div>
+</div>

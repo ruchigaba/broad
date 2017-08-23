@@ -1,0 +1,99 @@
+// @import '../../common/variables.scss';
+// @import '../../common/mixins.scss';
+// @import '../../common/common.scss';
+ 
+ .whiteblank-pass{
+     @include commommix33();
+    }
+   .main-security-info-pass{
+    text-align: left;
+    padding: 15px;
+    }
+   .li-first-to-zip{
+   @include commommix66();
+   }
+   .setup {
+    font-weight:600;
+        color: #258c52;
+   }
+   .button-section-pass{
+   margin-top: 30px;
+   }
+    .form-control-data{
+    width: $form-control-data-width;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: $form-control-data-height;
+    padding-left: 10px;
+    font-size: 15px;
+    }
+     .hint-pass-info {
+    border: 1px solid #ccc;
+    padding: 15px !important;
+    color:$hint-pass-info-color;
+    list-style: outside none none;
+    line-height: 30px;
+    }
+    .hint-pass-info > li:first-child {
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-left: 0;
+   }
+   .hint-pass-info > li {
+     @include commommix44();
+   }
+   .showpas {
+    position: inherit;
+    color: #333;
+    font-size: 14px;
+     
+    }
+   input.checkpass {
+    vertical-align: middle;
+   }
+   .button-main-pass{
+     width:50%;
+     float:left;
+   }
+   .checkpass {
+    height: 15px;
+    width: 15px;
+}
+  .btn-save-pass {
+    background-color: $continue-btn-bg-securityinfo;
+    color: $color-security;
+    max-width: 100%;
+    width: $btnwidth;
+    @include validate();
+   }
+
+    .btn-cancel-pass {
+     @extend .btn-save-pass;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-color-cancelbtn;
+    }
+
+    @media only screen and (max-width: 800px){
+    .main-container {
+     margin-top: 90px;
+    margin-left: 0px;
+}
+.whiteblank-pass {
+    background-color: #fdfdfd;
+    width: 100%;
+   margin-bottom: 90px;
+    }
+
+}
+@media screen and (min-width: 1020px) and (max-width:1380px){
+.whiteblank-pass {
+    width: 50%;
+   margin-bottom: 90px;
+    }
+
+}
+@media screen and (max-width: 1024px) and (min-width: 767px){
+   .whiteblank-pass {
+    width: 100%;
+}
+}

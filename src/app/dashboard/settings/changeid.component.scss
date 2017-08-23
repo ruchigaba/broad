@@ -1,0 +1,90 @@
+// @import '../../common/variables.scss';
+// @import '../../common/mixins.scss';
+// @import '../../common/common.scss';
+
+
+     .whiteblank-email{
+     @include commommix33();
+    }
+   .main-security-info-email{
+    text-align: left;
+    padding: 15px;
+    }
+   .li-first-to-zip-email{
+   @include commommix66();
+   }
+   .setup-email {
+    font-weight: 600;
+    font-size: 14px;
+   }
+   .button-main-email{
+    width:50%;
+    float:left;
+   }
+   .button-section-email{
+    margin-top: 30px;
+   }
+
+    .form-control-data-email{
+    width: $form-control-data-width;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: $form-control-data-height;
+    padding-left: 10px;
+    font-size: 15px;
+    }
+     .hint-pass-info-email {
+    border: 1px solid #ccc;
+    padding: 15px !important;
+    color:$hint-pass-info-color;
+    list-style: outside none none;
+    line-height: 30px;
+    }
+    .hint-pass-info > li:first-child {
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-left: 0;
+   }
+   .hint-pass-info > li {
+    @include commommix44();
+   }
+
+  .btn-save-email {
+    background-color: $continue-btn-bg-securityinfo;
+    color: $color-security;
+    max-width: 100%;
+    width: $btnwidth;
+    @include validate();
+   }
+
+    .btn-cancel-email {
+     @extend .btn-save-email;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-color-cancelbtn;
+    }
+
+    @media only screen and (max-width: 800px){
+   .main-container {
+     margin-top: 90px;
+    margin-left: 0px;
+}
+.whiteblank-email {
+    background-color: #fdfdfd;
+    width: 100%;
+   margin-bottom: 90px;
+    }
+
+}
+@media screen and (min-width: 1020px) and (max-width:1380px){
+.whiteblank-email {
+    width: 50%;
+   margin-bottom: 90px;
+    }
+
+}
+@media screen and (max-width: 1024px) and (min-width: 767px){
+   .whiteblank-email {
+    width: 100%;
+}
+}
+

@@ -1,0 +1,152 @@
+.wrapper-paymentinfopage-main-page{
+    margin-bottom:10%;
+}
+
+div{
+    display:block;
+}
+
+.content-healthtick-claim-info{
+    min-height:1px;
+    position:relative;
+    margin-top:10px;
+    float:left;
+    padding:0;
+    width:$width;
+    ul{
+        background-color:$owhitecolor;
+        padding:15px;
+        margin-bottom:0 !important;
+        margin-top:4px;
+        margin-left: 15px;
+        margin-right: 15px;
+        li{
+            list-style:outside none none;
+           
+        }
+    }
+
+}
+.content-sectionhealthticket-mains{
+     margin-bottom:7.5px;
+      padding-right: $padding;
+     padding-left: $padding;
+     text-align: center; 
+     @include common3();
+}
+.col-claim-8{
+   font-size:16px;
+   padding:0;
+   width:100%;
+   min-height:1px;
+   position:relative;
+}
+.collllencls-claim{
+    
+    width:$width-h;
+    padding-right:0;
+    text-align:right;
+    min-height:1px;
+    padding-left:$padding;
+    position: relative;
+    float:left;
+    font-size:16px;
+    span{
+        text-align: right;
+    }
+    
+}
+.collllenclsvalue-claim{
+    padding-left:8px;
+    width:$width-h;
+    color:$bbcolor;
+     min-height:1px;
+     text-align: left;
+    position: relative;
+    float:left;
+    span{
+        font-weight:600;
+        img{
+            cursor:pointer;
+            border:0 none;
+            vertical-align:middle;
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+                outline: none;
+        }
+    }
+
+}
+
+.clear
+{
+    display: block;
+    overflow:hidden;
+    clear:both;
+}
+
+*{
+    box-sizing: border-box;
+}
+@media screen and (min-width:800px) and (max-width:1024px){
+    .content-healthtick-claim-info ul{
+        margin-top:5px;
+    }
+     .col-claim-8{
+        margin-top:-1%;
+    }
+    .collllenclsvalue-claim  span{
+             font-weight:600;
+         }
+}
+@media screen and (max-width:800px){
+    .content-healthtick-claim-info ul{
+        margin:-2%;
+    }
+    
+    .collllenclsvalue-claim{
+         font-size: 14px;
+         overflow-wrap: break-word;
+         span{
+             font-weight:600;
+         }
+        
+    }
+    .collllencls-claim{
+         font-size: 14px;
+         overflow-wrap: break-word;
+    }
+}
+@media screen and (max-width:600px){
+    .content-healthtick-claim-info ul{
+        margin:-2%;
+    }
+   
+}
+@media screen and (max-width:325px){
+   .collllencls-claim{
+       padding-left:0px;
+   }
+   .content-sectionhealthticket-mains{
+       margin-bottom:6.5px;
+   }
+   
+}
+@media screen and (max-width:450px){
+.collllencls-claim {
+    font-size: 13px;
+}
+.collllenclsvalue-claim {
+    font-size: 13px;
+}
+.content-healthtick-claim-info ul {
+    margin: -4%;
+}
+.collllenclsvalue-claim span img{
+    width: 28px;
+    height: 28px;
+}
+}
+
+

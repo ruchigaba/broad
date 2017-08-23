@@ -1,0 +1,89 @@
+ <app-topnav></app-topnav>
+<div class="whiteblank-help"> 
+  <br>
+ <span class="registuser-help">Support Center</span>
+ <br>
+ <br>
+ <ul style="font-size: 14px !important; list-style-type:none;padding: 0 15px;
+">
+
+ <li class="li-first-to-zip-help"> 
+     Your Name
+      </li>
+
+  <li style="list-style: outside none none;">
+  <input class="form-control-data-help" id="firstName" type="text" [(ngModel)]="name">
+  </li>
+
+   <li class="li-first-to-zip-help" style="margin-top: 10px;"> 
+    Your Email Address
+     </li>
+   <li style="list-style: outside none none;">
+   <input class="form-control-data-help" id="firstName" type="text" [(ngModel)]="email">
+    <span class="text-grn-help" style="font-style: italic;word-wrap: break-word;white-space: normal; color: black;">**This is the Email address we will use to contact you.</span>
+   </li>
+    
+
+   <li class="li-first-to-zip-help" style="margin-top: 10px;" >
+     Subject
+  </li>
+  <li style="list-style: outside none none;">
+  <input class="form-control-data-help"  [(ngModel)]="subject" type="text" style="padding: 10px;
+    font-size: 16px;">
+  </li>
+
+   
+
+   <li class="li-first-to-zip-help" style="margin-top: 10px;">
+     Your Telephone #
+  </li>
+  <li style="list-style: outside none none;">
+  <input class="form-control-data-help" type="text" [(ngModel)] ="telephone" min="0"
+  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+maxlength="10" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
+  </li>
+
+   
+    
+
+  <li class="li-first-to-zip-help" style="margin-top: 10px;">
+   Claim Number  
+  </li>
+  <li style="list-style: outside none none;">
+  <input class="form-control-data-help" type="text" [(ngModel)]="claimNm">
+  </li>
+   
+ 
+   <li class="claim-no-help"> 
+    How may we help you?
+    </li>
+
+   <li style="list-style: outside none none;">
+   <textarea  [(ngModel)]="canIHelp" class="form-control-data-help" id="firstName" type="text" style="height: 65px;"></textarea>
+    <span class="text-grn-help">**We will endeavor to respond to messages sent through this secure system within two business days. We will not share your contact information with outside parties.</span>
+   </li>
+   </ul>
+
+ 
+
+    <div style="padding: 25px 15px 0 15px;">
+
+    <div class="col-12-help" style="width:100%;">
+    <div class="col-6-help" >
+    <button type="submit" (click)="helpSend()" class="btn-continue-help">Send</button>
+    </div>
+    <div class="col-6-help">
+    <button class="btn-cancel-help" (click)="helpCancel()" type="submit">Cancel</button>
+    </div>
+    </div>
+
+     
+       
+      </div>
+      <div class="clear"></div>
+      </div>
+      
+
+       
+     
+   

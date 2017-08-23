@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Broadspire Phase 4</title>
+  <base href="./">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="image/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js" ></script> -->
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+ <!--  <link rel="stylesheet" type="text/css" href="styles.css?version=51">
+  <link href='styles.scss?version=1' rel='stylesheet'></link> -->
+ <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<!-- <script src="bundle.js"></script>
+<script src="http://localhost:8080/webpack-dev-server.js"></script> -->
+<!-- <script type="text/javascript" src="cordova.js"></script> -->
+
+  <style>
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal {
+    bottom: 0;
+    display: none;
+    left: 0;
+    outline: 0 none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1050;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+
+.carousel-inner, .collapsing, .dropdown-divider, .embed-responsive, .modal, .modal-open, .navbar-divider, .sr-only {
+    overflow: hidden;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal.in .modal-dialog {
+    transform: translate(0px);
+}
+
+.modal.fade .modal-dialog {
+    transform: translateY(-25%);
+    transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+.modal-dialog {     margin: 10px;     position: relative;       width: 600px;
+} .modal-content {     background-color: #fff;     border: 1px solid rgba(0,
+0, 0, 0.2);     border-radius: 0.3rem;     outline: 0 none;     position:
+relative; }
+
+.modal-content, .popover {
+    background-clip: padding-box;
+} 
+.modal-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+}
+
+.modal-header {
+    background-color: #007934;
+    color: #fff !important;
+}
+.modal-footer::after, .modal-header::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.modal-body {
+    padding: 15px;
+    position: relative;
+}
+.modal-body > label#modalLabel {
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.modal-footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 15px;
+    text-align: right;
+        padding-top: 5px;
+}
+button.btnppoopp.btn-default.closepopup {
+    position: relative !important;
+}
+
+.modal .btnppoopp.btn-default {
+    background-color: #007934;
+    color: #fff !important;
+}
+
+.modal-footer .btnppoopp {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    vertical-align: middle;
+   
+  }
+
+.btnppoopp, .c-indicator {
+    -moz-user-select: none;
+}
+
+.btnppoopp {
+    box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+    outline: 0 none !important;
+}
+
+.btn-default {
+    background-color: #fff;
+    border-color: #dddee0;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.modal-backdrop.fade.in {
+    opacity: 0.5;
+}
+
+
+
+.fade.in {
+    opacity: 1;
+}
+
+
+/*.fade.in {
+    
+    background: rgba(0,0,0, 0.2);
+    height: 100%;
+}*/
+
+.modal-backdrop {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+
+@media (min-width: 544px){
+
+.modal-dialog {
+    margin: 30px auto;
+    width: 600px;
+}
+}
+
+@media screen and (max-width: 767px){
+
+.modal-dialog {
+    top: 25% !important;
+}
+}
+@media screen and (max-width: 767px){
+
+.modal-dialog {
+    margin: 10px;
+    position: absolute !important;
+    width: 70% !important;
+    left: 50px !important;
+    right: 89px !important;
+    top: 25% !important;
+}
+}
+
+@media screen and (max-width: 767px){
+
+label#modalLabel {
+    display: inline;
+}
+}
+
+  </style>
+</head>
+<body id="pageHtml">
+
+  <div id="alertPop" class="modal fade in" style="display: none; padding-right: 16px;">
+
+      <div class="modal-dialog" style="font-size:14px;">
+
+          <!-- Modal content-->
+          <button style = "display:none;" id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#alrtModal">Open Modal</button>
+          <div class="modal-content">
+              <div id="title" class="modal-header" id ="modal-head" style="background-color:#007934; color:#fff !important;">Title</div>
+              <div class="modal-body">
+  <label id="modalLabel">Message</label>
+
+              </div>
+              <div class="modal-footer">
+<button id="closeMe"  type="button" class="btnppoopp btn-default closepopup" style="background-color:#007934; color:#fff !important;">OK</button>
+              </div>
+          </div>
+
+      </div>
+  </div>
+   <div id="fade-me" class="modal-backdrop fade in" style="display: none;"></div> 
+    <!-------------------------- common popup for alerts starts-------------------------------------->
+
+  <!-- ------------------------------------loader icon for http requests---------------------- -->
+    <i id = "loadingDiv" class="fa fa-spinner fa-spin icon-3x" aria-hidden="true"
+    style = "z-index: 9;display: none; font-size: 3em; z-index:100; position: fixed;left: 50%; top:50%; color:#007a33!important;"></i>
+  
+    <app-root>Loading...</app-root>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
+<!--Google Maps-->
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtFiDUC61b_MUe3wiMaIwvfpcz2xb_sQ4" async defer></script>
+  
+</body>
+
+</html>

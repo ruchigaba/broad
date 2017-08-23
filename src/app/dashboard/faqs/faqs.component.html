@@ -1,0 +1,23 @@
+<div class="faq-container-main">
+<br>
+<br>
+  <ul class="main-faq-container">
+      <li *ngFor= "let quest of quesArr; let i=index" class="ng-scope" >
+        <div class="panel-group" id="accordion" role="tablist"  aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class ="panel-heading my-class" id ="question-{{i}}" (click)="cls(i,question)" >
+            <h4 class ="faqscollapse">
+              <a class="faqcollapsed" data-parent="#accordion" [innerHTML]="quesArr[i]">
+              </a>
+            </h4>
+          </div>
+          <div id="collapse-{{i}}" style="display:none " class="faqcollapse"  #question>
+            <div class="panel-body" [innerHTML]="ansArr[i]">
+            </div>
+          </div>
+        </div>
+      </div>
+      </li>
+    </ul>
+    <div class="clear"></div>
+</div>

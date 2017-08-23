@@ -1,0 +1,81 @@
+<body>
+<div class = "wrapper-paymentinfopage-main-page " >
+   <div class="content-healthtick-claim-info">
+      <ul class="glb-claim-info">
+         <li class="content-sectionhealthticket-mains">
+            <div class="col-claim-8">
+               <div class="collllencls-claim">
+                  <span>Claim Number :</span>
+                  
+               </div>
+               <div class="collllenclsvalue-claim">
+                  <span>{{claimNumber}} </span>
+               </div>
+            </div>
+         </li>
+         <li class="content-sectionhealthticket-mains">
+            <div class="col-claim-8">
+               <div class="collllencls-claim">
+                  <span>Employee Name :</span>
+                   
+               </div>
+               <div class="collllenclsvalue-claim">
+                  <span ng-model = "employeeName">{{employeeName}}</span>
+               </div>
+            </div>
+         </li>
+         <li class="content-sectionhealthticket-mains">
+            <div class="col-claim-8">
+               <div class="collllencls-claim">
+                  <span>Date Of Loss :</span>
+                   
+               </div>
+               <div class="collllenclsvalue-claim">
+                  <span  ng-model = "dateOfLoss">{{dateOfLoss}}</span>
+               </div>
+            </div>
+         </li>
+         <li class="content-sectionhealthticket-mains">
+            <div class="col-claim-8">
+               <div class="collllencls-claim">
+                  <span>Adjuster :</span>
+                  
+               </div>
+               <div class="collllenclsvalue-claim">
+                  <span  href ng-model = "adjusterName">{{adjusterName}}</span>
+               </div>
+            </div>
+         </li>
+         <li class="content-sectionhealthticket-mains">
+            <div class="col-claim-8">
+               <div class="collllencls-claim">
+                  <span>Contact :</span>
+                   
+               </div>
+               <div class="collllenclsvalue-claim">
+                  <span> <img src = "image/mail.png" [routerLink]="['/dashboard/ClaimInfoMessage']" >
+                  <a href={{adjusterNo}}>
+                  <img src = "image/telephone.png" >
+                  </a>
+                  </span>
+               </div>
+            </div>
+         </li>
+         <li class="content-sectionheadlthticket-mains">
+            <div class="col-claim-8">
+               <div class="collllencls-claim">
+                  <span>Status :</span>
+                   
+               </div>
+               <div class="collllenclsvalue-claim">
+                  <span ng-model = "claimStatus">{{claimStatus}}</span>
+               </div>
+            </div>
+         </li>
+         <div class="clear"></div>
+      </ul>
+   </div>
+   <div class="clear"></div>
+     <div style="clear:both;"></div>
+</div>
+</body>

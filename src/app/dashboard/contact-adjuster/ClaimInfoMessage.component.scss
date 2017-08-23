@@ -1,0 +1,547 @@
+.btn-cls-mesage-box{
+
+    width: 50% !important;
+    float: left !important;
+}
+
+.main-container-claim-info{
+    padding-left: 0;
+    padding-right:0;
+    padding: 10px;
+    position: inherit;
+    margin: 75px 0 0 250px !important;
+}
+section{
+    display:block;
+}
+body {
+    background-color: $bgc;
+    color: $blackcolor;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+*{
+    box-sizing:border-box;
+}
+.msg-custom-page {
+    margin-top: 15px;
+    
+    width:$width;
+    @include con-adj();
+    li{
+        list-style: none;
+        margin-bottom: 15px;
+    }
+}
+.col-claim-info-6 {
+    width: $width-h;
+    @include con-adj();
+}
+.custom-column-msg-csutom-page.md-whiteframe-z2 {
+    padding: 15px;
+    background-color: $owhite;
+    ul{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+}
+.md-whiteframe-z2 {
+    box-shadow: none !important;
+}
+
+.font-bold-claim-info{
+    font-weight: 600;
+    font-size:16px;
+    
+}
+button.md-btn.md-raised.btn-block.p-h-md {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.md-btn .md-raised .btn-block .p-h-md{
+   
+        // box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        background-color: black;
+    
+}
+
+label {
+    display: inline-block;
+        margin-bottom: 0.5rem;
+}
+.form-part {
+    outline:none;
+    width: $widthbtn !important;
+    background-color: $owhite;
+    background-image: none;
+    border: 1px solid $cc;
+    border-radius: 0.25rem;
+    color: $form;;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    display: block;
+        box-shadow: none;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+input{
+    margin:0;
+    font: inherit;
+}
+p{
+    margin-top:0;
+    margin-bottom: 1rem;
+}
+.data-re-fsb label{
+    font-size: 16px;
+    word-break: break-all;
+    display:inline-block;
+    element.style{
+        margin-bottom: 0rem;
+    }
+}
+p.data-re-fsb{
+    margin-bottom:0px !important;
+}
+b{
+    font-weight: 600;
+}
+.upload-image-section{
+   ul{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+    margin-bottom: 15px;
+}  
+}
+.listpreview1,.listpreview2{
+    
+        display:none;
+}
+.imagepreview1,.imagepreview2{
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+img{
+    border: 0 none;
+    vertical-align: middle;
+}
+.deleteImage1,.deleteImage2 {
+    float: right;
+    cursor:pointer;
+    height: 20px !important;
+    width: 20px !important;
+}
+.upd-main-sec{
+    padding:0px;
+}
+.col-claim-info-12 {
+    width: $width;
+    
+    float:left;
+    min-height:1px;
+    position:relative;
+}
+.upd-btn-atc {
+    float: left;
+    margin-right: 5px;
+    button{
+        font: inherit;
+        margin: 0;
+        overflow: visible;
+        text-transform: none;
+}
+    
+}
+.md-whiteframe-z2.glb-shd-cls .btn-claim-info {
+    background: rgba(0, 121, 53, 0.85) none repeat scroll 0 0 !important;
+    color: $owhite !important;
+}
+
+.btn-claim-info-1 {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    vertical-align: middle;
+    box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+    outline: 0 none !important;
+    white-space: nowrap;
+    background: rgba(0,121,53,0.85)!important;
+    color: $owhite; 
+  
+}
+
+.msg-img-upd {
+    float: left;
+    position: relative;
+    top: 7px;
+}
+.collapse-claim-info {
+    display: none;
+}
+.inputFileName {
+   margin-top: 15px;
+   max-width: $width;
+    overflow-wrap: break-word;
+}
+input{
+    border-radius: 0;
+    line-height: inherit;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+}
+.choosefilecontainer-claim-info{
+        margin-top: 5px;
+        element.style{
+       opacity: 0.98;
+       cursor: pointer;
+       border-radius: 3px;
+      background-color: $cc;
+      padding: 4px;
+      padding-right: 8px;
+      padding-left: 8px;
+        }
+        label{
+                display: inline-block;
+                    margin-bottom: 0.5rem;
+                        font-weight: 400;
+                        cursor:pointer;
+        }
+}
+ .disableChoose {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+}
+.unknown1 {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: 2px solid $red-col;
+    display: inline-block;
+    height: 200px;
+    margin-top: 20px;
+    width: 200px;
+}
+ .dropdown {
+    position: relative;
+ }
+ .btn-claim-info {
+    max-width: 100%;
+   
+}
+.caret-claim-info{
+        margin-left: 0;
+}
+.dropdown-menu-claim-info {
+    cursor:pointer;
+    background-clip: padding-box;
+    background-color: $owhite;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    color: $blackcolor;;
+    display: none;
+    font-size: 1rem;
+    list-style: outside none none;
+    min-width: 160px;
+    position: absolute;
+    text-align: left;
+    z-index: 1000;
+    float:left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transform-origin: left top 0;
+    li:hover{
+      background-color: $grey-hover !important;
+        background-image: none;
+       color: rgba(0, 0, 0, 0.87);
+       filter: none;
+      }
+       ul{
+       margin:0;
+       padding:0;
+       }
+    li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+    a{
+        display: inline-block;
+        width: $width;
+        color: inherit;
+        padding: 2px 16px;
+    }
+}
+
+ a {
+    text-decoration: none;
+    background-color: transparent;
+   outline: 0 none;
+ cursor: pointer;
+ -webkit-tap-highlight-color: transparent;
+}
+textarea{
+    margin:0;
+    resize:vertical;
+    font:inherit;
+        overflow: auto;
+        width:$widthbtn;
+        outline:none;
+}
+.txtlng {
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 0;
+    position: relative;
+    text-align: right;
+    top: -4px;
+    width: $widthbtn;
+}
+
+.md-btn.md-raised.btn-block.p-h-md {
+    padding: 4px 0;
+    margin-bottom: 20px;
+    background-color: $gc-in-add;
+    color: $owhite;
+    position: relative !important;
+   
+}
+.md-btn.md-raised.btn-block.p-h-md:active{
+     top: 5px !important;
+    border-bottom: 0 !important;
+}
+.md-btn.md-raised:not([disabled]) {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        transform: translateZ(0px)
+}
+.btn-block {
+    display: block;
+        width: $width;
+}
+.md-btn {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;  
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: 700;
+    line-height: inherit;
+   outline: 0 none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s, background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s, transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+}
+.font-bold{
+    font-weight:600;
+    font-size:15px;
+}
+button.md-btn-claim-info.md-raised.btn-block.c-h-md {
+    padding: 4px 0;
+    border:0 none;
+    border-radius:3px;
+    margin-bottom: 20px;
+    background-color: $clear-col;
+    color: $owhite;
+    position: relative !important;
+}
+button.md-btn-claim-info.md-raised.btn-block.c-h-md:active{
+     top: 5px !important;
+    border-bottom: 0 !important;
+}
+.button-save-msg-pg   {
+    text-align: center;
+    width: $width; 
+    margin-top: 40px;
+   display: inline-block;
+  
+}
+.button-save-msg-pg  .md-btn.md-raised.btn-block.p-h-md{
+        margin-bottom: 20px;
+        background-color: $gc-in-add;
+        color: $owhite;
+        display: inline !important;
+        width: 30%;
+        position: relative !important;
+
+}
+.button-save-msg-pg  .md-btn.md-raised.btn-block.p-h-md:active{
+    top: 5px !important;
+    border-bottom: 0 !important;
+}
+.clear{
+    display:block;
+    overflow:hidden;
+    clear:both;
+}
+.btn-lg {
+    border-radius: 0.3rem;
+    font-size: 1.25rem;
+    line-height: 1.33333;
+    padding: 0.75rem 1.25rem;
+}
+.btn-info {
+    background-color: $blue-bcg;
+    border-color: $blue-bcg;
+    color:$owhite !important;
+}
+.con-btn{
+    border: 1px solid transparent;
+   box-shadow: 0 1px 1px rgba(90, 90, 90, 0.1);
+    outline: 0 none !important;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 400;
+   text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    vertical-align: middle;
+}
+.modal {
+    text-align: center;
+    padding: 0!important;
+     bottom: 0;
+    display: none;
+    left: 0;
+    outline: 0 none;
+    position: fixed;
+    right: 0;
+    top: 0;
+        overflow: hidden;
+    z-index: 1050;
+}
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+.modal-dialog {
+    transform: translateY(-25%);
+    transition: transform 0.3s ease-out 0s, -webkit-transform 0.3s ease-out 0s;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+        position: relative;
+}
+.modal-content {
+    background-color: $owhite;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0 none;
+    position: relative;
+    background-clip: padding-box;
+}
+.modal-header {
+    border-bottom: 1px solid $footer-col;
+    padding: 15px;
+    background-color:$gc-in-add ;
+    color: $owhite !important;
+}
+.close{
+    display: none;
+    margin-top: -2px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    padding: 0;
+    color:$li-in-con-adj;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 $owhite;
+        cursor: pointer;
+            font-weight: 700;
+}
+.modal-title {
+    line-height: 1.5;
+    margin: 0;
+}
+
+h6 {
+    font-size: 1rem;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 500;
+
+}
+.modal-body {
+    padding: 15px;
+    position: relative;
+}
+.modal-footer {
+    border-top: 1px solid $footer-col;
+    padding: 15px;
+    text-align: right;
+    .btn-claim-info{
+      background-color: $gc-in-add;
+    color: $owhite !important;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 1rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    vertical-align: middle;
+}
+    
+}
+@media (max-width:544px){
+    .col-claim-info-6{
+        width:$width;
+    }
+    .col-claim-info-12{
+        width:$width;
+    }
+}
+
+   
+    @media screen and (max-width:767px){
+        .col-claim-info-6{
+        background-color: $owhite;
+        padding: 0;
+        margin-bottom:30px;
+        }
+         .msg-custom-page .col-claim-info-6{
+        margin-bottom:35px;
+    }
+    .msg-custom-page {
+    margin-top: 15px;
+    }
+       
+
+.wrapper-main-message-contracter-page{
+        margin-top:-3%;
+}
+.msg-custom-page{
+    padding: 0;
+        margin-bottom: 25%;
+}
+.col-claim-info-12{
+    width:$width;
+    float:left;
+}
+}
+
+
+
+

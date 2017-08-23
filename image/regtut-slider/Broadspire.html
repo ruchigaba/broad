@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://broadspire3a2.primussoft.com/#/dashboard/socialMedia -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta accept-encoding="gzip">
+  <title>Broadspire</title>
+  <!--<base href="/">--><base href=".">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link rel="icon" type="image/x-icon" href="http://broadspire3a2.primussoft.com/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="./Broadspire_files/font-awesome.min.css">
+     <link rel="stylesheet" type="text/css" href="./Broadspire_files/abc.css">
+
+  <!-- <link rel="stylesheet" type="text/css" href="./assets/abc-new.scss">-->
+  <style>
+  .modal {
+   text-align: center;
+   padding: 0!important;
+   }
+
+   .modal:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+   margin-right: -4px;
+   }
+
+   .modal-dialog {
+   display: inline-block;
+   text-align: left;
+   vertical-align: middle;
+   }
+
+  </style>
+<link href="./Broadspire_files/styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"><script type="text/javascript" charset="UTF-8" src="./Broadspire_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Broadspire_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Broadspire_files/stats.js.download"></script></head>
+<body id="pageHtml" waid71fa0d88-5390-4b5b-a2f4-e45fa93d85e2="SA password protect entry checker">
+
+
+
+  <!-------------------------- common popup for alerts starts-------------------------------------->
+  <button style="display:none;" id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#alrtModal">Open Modal</button>
+
+  <div class="modal fade" id="alrtModal" role="dialog" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" style="font-size:14px;">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header" id="modal-head" style="background-color:#007934; color:#fff !important;">
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+                  <h4 class="modal-title">Message!</h4>
+              </div>
+              <div class="modal-body">
+  <label id="modalLabel"></label>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" id="closeMe" class="btn btn-default closepopup" data-dismiss="modal" style="background-color:#007934; color:#fff !important;">OK</button>
+              </div>
+          </div>
+
+      </div>
+  </div>
+  <!-------------------------- common popup for alerts starts-------------------------------------->
+
+<!-- ------------------------------------loader icon for http requests---------------------- -->
+  <i id="loadingDiv" class="fa fa-spinner fa-spin icon-3x" aria-hidden="true" style="z-index: 9; display: none; margin-top: 15%; font-size: 3em; margin-left: 55%; position: absolute; color: rgb(0, 122, 51) !important;"></i>
+
+  <app-root ng-version="2.4.7">
+ 
+<router-outlet></router-outlet><dashboard-cmp><top-nav>
+
+ 
+
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top topnav">
+  <div class="collapse navbar-toggleable-xs clearfix new-text-center">
+
+
+  
+      <!--template bindings={}-->
+
+
+    <a class="navbar-brand">
+
+      
+      <img alt="." class="desktop-top-logo" src="./Broadspire_files/broadspire-logo-eufw.png" style="max-height: 58px;">
+<!--template bindings={}--><div class="logo-mobile-new">
+
+
+      <img alt="." src="./Broadspire_files/broadspire-logo-eufw.png" style="max-height: 58px;">
+      </div>
+
+
+      <span class="title-main-site-page">Social</span>
+
+
+
+      <span class="username-main-site-pages" style="float:right;font-size:15px;font-weight:500;position: relative;top: -13px;">Hi, Rahul</span></a>
+
+  </div>
+</nav>
+<div style="clear:both;"></div>
+
+
+</top-nav>
+<footer-mob>
+
+<div class="mobileFooter">
+  <div class="rowold">
+
+    <div class="hidden-content slide-up" id="togg-dv" style="float:right;">
+
+      <div class="pop-blur-dv" id="FAQ">
+
+
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/faqs">
+          <img src="./Broadspire_files/faq2_64x64.png">
+          <div style="clear:both;"></div>
+          <span>FAQ</span>
+        </a>
+
+
+
+      </div>
+
+
+      <div class="pop-blur-dv activeFooter" id="Social">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/socialMedia">
+          <img src="./Broadspire_files/social2_64x64.png">
+          <div style="clear:both;"></div>
+          <span>Social</span></a>
+      </div>
+
+
+      <div class="pop-blur-dv" id="Tutorial">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/appTutorial">
+          <img src="./Broadspire_files/tutorial_64x64.png">
+          <div style="clear:both;"></div><span>Tutorial</span></a>
+      </div>
+
+
+
+      <div class="pop-blur-dv" id="Settings">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/settingMenu">
+          <img src="./Broadspire_files/settings2_64x64.png">
+          <div style="clear:both;"></div><span>Settings</span></a>
+      </div>
+
+      <div class="pop-blur-dv">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/">
+          <img src="./Broadspire_files/logout_64x64.png">
+          <div style="clear:both;"></div><span>Logout</span></a>
+      </div>
+
+
+    </div>
+    <div style="clear:both;"></div>
+    <div class="col-md-5ths col-xs-2" id="Claims">
+
+      <div class="midd-content">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/claimpage">
+          <img src="./Broadspire_files/claim-info.png">
+
+          <div style="clear:both;">
+
+          </div><span>Claims</span></a>
+      </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="col-md-5ths col-xs-2" id="Health Ticket">
+
+      <div class="midd-content">
+
+
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/healthTicket">
+          <img src="./Broadspire_files/healthTicket.png">
+          <div style="clear:both;"></div>
+          <span>Ticket</span></a>
+
+
+      </div>
+
+
+
+
+    </div>
+    <div class="col-md-5ths col-xs-2" id="Contact">
+      <div class="midd-content">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/contactAdjuster">
+          <img src="./Broadspire_files/contactAdjuster-64x64.png">
+          <div style="clear:both;"></div>
+
+
+          <span>Contact</span></a>
+      </div>
+    </div>
+    <div class="col-md-5ths col-xs-2" id="Providers">
+      <div class="midd-content">
+        <a md-ink-ripple="" href="http://broadspire3a2.primussoft.com/#/dashboard/providers">
+          <img src="./Broadspire_files/facilitylookup2_64x64.png">
+          <div style="clear:both;"></div>
+
+          <span>Providers</span></a>
+      </div>
+    </div>
+
+    <div class="col-md-5ths col-xs-2" id="moretogg">
+      <div class="toggle-content">
+        <a><img src="./Broadspire_files/more-fill.png">
+        </a>
+        <div style="clear:both;"></div>
+        <span>More</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</footer-mob>
+<sidebar-cmp><button class="btn btn-default" id="toggle-sidebar" type="button"></button>
+<nav class="sidebar">
+    <ul class="list-group">
+    <li>
+         <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/claimpage">
+            <img class="menu-item-img-sidebar" src="./Broadspire_files/claim-info.png"><span class="menu-item-name-sidebar">Claims</span>
+        </a>
+        </li>
+        <li>
+         <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/healthTicket">
+           <img class="menu-item-img-sidebar" src="./Broadspire_files/healthTicket.png"><span class="menu-item-name-sidebar">Health Ticket</span>
+        </a>
+        </li>
+          <li>
+         <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/contactAdjuster">
+            <img class="menu-item-img-sidebar" src="./Broadspire_files/contactAdjuster-64x64.png"><span class="menu-item-name-sidebar">Contact Adjuster</span>
+        </a>
+          </li>
+
+          <li>
+         <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/providers">
+            <img class="menu-item-img-sidebar" src="./Broadspire_files/facilitylookup2_64x64.png"><span class="menu-item-name-sidebar">Providers</span>
+        </a>
+          </li>
+
+
+  <li>
+
+        <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/faqs">
+           <img class="menu-item-img-sidebar" src="./Broadspire_files/faq2_64x64.png"><span class="menu-item-name-sidebar">FAQ</span>
+        </a>
+
+        </li>
+
+
+        <li>
+       <a class="list-group-item router-link-active" href="http://broadspire3a2.primussoft.com/#/dashboard/socialMedia">
+          <img class="menu-item-img-sidebar" src="./Broadspire_files/social2_64x64.png"><span class="menu-item-name-sidebar">Social Media</span>
+      </a>
+        </li>
+        <li>
+       <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/appTutorial">
+          <img class="menu-item-img-sidebar" src="./Broadspire_files/tutorial_64x64.png"><span class="menu-item-name-sidebar">Tutorial</span>
+      </a>
+        </li>
+
+
+
+
+
+
+
+          <li>
+
+        <a class="list-group-item" href="http://broadspire3a2.primussoft.com/#/dashboard/settingMenu">
+           <img class="menu-item-img-sidebar" src="./Broadspire_files/settings2_64x64.png"><span class="menu-item-name-sidebar">Settings</span>
+       </a>
+       </li>
+
+       <li>
+
+     <a class="list-group-item">
+        <img class="menu-item-img-sidebar" src="./Broadspire_files/logout_64x64.png"><span class="menu-item-name-sidebar">Log Out</span>
+    </a>
+    </li>
+    
+
+    </ul>
+</nav>
+</sidebar-cmp>
+<section class="main-container">
+	<router-outlet></router-outlet><socal_media><div class="wrapper social-media-page">
+
+  <div class="col-lg-12 header-image-section-social">
+
+    <div class="image-container-social">
+
+      <img src="./Broadspire_files/social_2.png">
+    </div>
+  </div>
+  <div class="col-xs-12 below-header-image-section">
+
+    
+  </div>
+  <div class="main-main-contentsocial">
+
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8  main-icons-content">
+
+      <div class="col-lg-4">
+
+        <div class="icon-cls-social fb-sc">
+          <a href="https://www.facebook.com/choosebroadspire"> <img src="./Broadspire_files/facebook.png"> </a>
+        </div>
+        
+      </div>
+
+      <div class="col-lg-4">
+
+        <div class="icon-cls-social twitter-sc">
+          <a href="https://twitter.com/Broadspire1"> <img src="./Broadspire_files/twitter.png"></a>
+        </div>
+        
+      </div>
+
+
+      <div class="col-lg-4">
+
+        <div class="icon-cls-social linkedin-sc">
+          <a href="https://www.linkedin.com/company/broadspire"> <img src="./Broadspire_files/linkedin.png"> </a>
+        </div>
+
+        
+
+
+      </div>
+
+
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+  <div class="clear"></div>
+
+</div>
+</socal_media>
+</section>
+</dashboard-cmp>
+</app-root>
+<script type="text/javascript" src="./Broadspire_files/inline.bccdba76fa1471481fba.bundle.js.download"></script><script type="text/javascript" src="./Broadspire_files/polyfills.90d7317ef70ad4f1fe76.bundle.js.download"></script><script type="text/javascript" src="./Broadspire_files/vendor.1c270d6cd4319784e2e6.bundle.js.download"></script><script type="text/javascript" src="./Broadspire_files/main.f8ac2de0b3820e37c6d4.bundle.js.download"></script>
+<script src="./Broadspire_files/jquery.min.js.download"></script>
+
+<script src="./Broadspire_files/bootstrap.min.js.download" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--Google Maps-->
+
+ <script src="./Broadspire_files/js" async="" defer=""></script>
+   <!-- <script type="text/javascript" src="cordova.js"></script> -->
+
+</body></html>

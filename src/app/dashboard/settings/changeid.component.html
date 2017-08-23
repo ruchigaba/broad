@@ -1,0 +1,41 @@
+ 
+
+<div class="whiteblank-email">
+ <div class="main-security-info-email">
+   <span class="setup-email">Please enter your new email address.</span>
+  
+   <br>
+
+   <div class="CentrSpace-email">
+     <ul style="font-size: 14px !important; list-style-type:none;">
+       <li class="li-first-to-zip-email">
+        * New Email Address:
+       </li>
+       <li style="list-style: outside none none;">
+         <input class="form-control-data-email" placeholder="Enter user name" type="text" (input)="username= $event.target.value">
+       </li>
+
+       <li class="li-first-to-zip-email">
+       * Re-Enter New Email Address:
+       </li>
+       <li style="list-style: outside none none;">
+         <input class="form-control-data-email" placeholder="Re-Enter user name" type="text" (input)="username1= $event.target.value">
+       </li>
+
+       <li style="font-style:italic;" class="li-first-to-zip-email">
+        * This will serve as your userid and contact address
+       </li>
+     </ul>
+
+     <div class="button-section-email"  >
+       <div class="button-main-email left-sidebtn"  >
+           <button class="btn-save-email" (click)="changeid(username, username1)">Save</button>
+       </div>
+       <div class="button-main-email right-sidebtn"  >
+         <button class="btn-cancel-email" (click)="gotosettings()">Cancel</button>
+       </div>
+     </div>
+     <div style="clear:both;"></div>
+   </div>
+ </div>
+</div>

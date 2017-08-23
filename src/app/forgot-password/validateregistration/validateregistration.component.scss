@@ -1,0 +1,144 @@
+.vali-nn-ww {
+    padding: 15px;
+}
+
+li.vali-pad-nn {
+    margin-bottom: 5px;
+}
+
+.vali-pad-nn input[type="checkbox"] {
+    position: relative;
+    margin-right: 5px;
+    top: 2px;
+}
+
+ .whiteblank-validregistration {
+    @include commonmix22();
+    }
+
+    .sm-txt-new-validregistration {
+    font-size: 12px;
+    font-style: italic;
+    }
+    
+   .form-control-data-validregistration{
+     @include commommix();
+    }
+   
+    .desktop-logo-regist-validregistration{
+    max-height: $desktop-height;
+    margin-left: 4%;
+    margin-top: 5px;
+    }
+    
+    .text-grn-validregistration{
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: normal;
+    color: $text-color;
+    text-align: right;
+    font-family:$text-font-family;
+    font-size: 11px;
+     }
+     
+    .dd-mm-yy{
+    width:  $dd-mm-yy-width;
+    float:left;
+    margin-right: 20px;
+    }
+    
+    
+
+    .btn-continue-validregistration{
+    width: $btn-continue-width;
+    background-color:  $btn-bg-color;
+    margin-top: 20px;
+    outline: none;
+    color:$btn-continue-color;
+    @include validate();
+    }
+
+    .btn-cancel-validregistration{
+     @extend .btn-continue-validregistration;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-cancel-color;
+    float: right;
+    outline: none;
+    margin-top: -40px;
+    
+    }
+    
+    button.btn-continue-validregistration:active {
+    position:relative;
+    top: 5px;
+    }
+
+    button.btn-help-validregistration:active {
+    position:relative;
+    top: 5px;
+    }
+
+    .btn-help-validregistration{
+    background-color: $btn-help-bg-color;
+    color: $btn-help-color;
+    width:$btn-help-width;
+    margin-top: 28px;
+    outline: none;
+    @include validate();
+    }
+
+    .setup-validregistration{
+    font-weight: bold;
+    color:  $setup-color;
+    font-size: 17px;
+    text-decoration: underline;
+    }
+
+   .li-style-validregistration{
+   margin-top: 10px;
+   list-style: outside none none;
+   color:  $li-style-color;
+   font-size: 14px !important;
+   }
+
+  .class-checkbox-validregistration{
+   margin-right: 8px;
+   top: 2px;
+   z-index: 999;
+   }
+
+  .claim-no-validregistration{
+   margin-bottom: 10px;
+   margin-top: 10px;
+   list-style: outside none none;
+   }
+   
+  .li-first-to-zip-validregistration{
+    @include commonmix11();
+   }
+   
+  .claimant-info-validregistration{
+   font-weight:bold; 
+   font-size: 16px;
+   margin-top: 16px;
+   list-style: outside none none; 
+   color:$claimant-color;
+   } 
+   .registuser-validregistration{
+    font-weight: bold;
+    color: #258c52;
+    padding: 0 15px;
+  }
+
+   @media screen and (max-width: 800px){
+    .whiteblank-validregistration{
+     margin-top: 90px;
+    width:100%;
+  }
+}
+@media screen and  (min-width: 310px) and(max-width: 1020px){
+    .whiteblank-validregistration{
+     margin-top: 90px;
+    width:100%;
+  }
+  }

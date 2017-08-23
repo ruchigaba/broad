@@ -1,0 +1,211 @@
+//  @import '../../common/variables.scss';
+// @import '../../common/mixins.scss';
+
+.arrowdiv{
+    float: left;
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    top: 14px;
+    right: -74px;
+    cursor: pointer;
+    font-weight: 800;
+    }
+
+.navbarstyle{
+background-color:$navbarstyle-background-color;
+padding: 0px !important;
+margin-top: 0px;
+position: fixed;
+top: 0;
+height: 80px;
+width: 100%;
+z-index: 999;
+}
+ .logo-sec-new-one {
+    float: left;
+    width:25%;
+    color: $color-sixty;
+    height:$height-sixty;
+    vertical-align: middle;
+    min-height: 80px;
+    display: table;
+}
+.fourty{
+    float: left;
+    width:  50%;
+    text-align: center;
+    color: #ffffff;
+    height: 75px;
+    vertical-align: middle;
+    min-height: 80px;
+    display: table;
+   line-height:  69px;
+}
+
+.twenty{
+    float: left;
+    width:  25%;
+    color: #ffffff;
+    height: 80px;
+    vertical-align: middle;
+    min-height: 80px;
+    display: table;
+}
+.logoclaim {
+    display: table-cell;
+    height:$logoclaim-height;
+    min-height: 80px;
+    vertical-align: middle;
+
+    img {
+    float: left;
+    padding-left: 51px;
+    max-height: 54px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+}
+ .titltxtd {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 35px;
+    display: table-cell;
+    height: $titltxtd-height;
+    padding-left: 257px;
+    line-height:  69px;
+    min-height: 80px;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+.text-style {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    right: -122px;
+}
+
+//-------------------------------------------------------Responsive scss for Header start-----------------------------------------------------------
+@media only screen and (max-width: 800px)
+ {
+.navbarstyle .fourty {
+    float: none !important;
+      
+}
+.fourty {
+    
+    height:  69px;
+    vertical-align: middle;
+    min-height:  69px;
+    
+}
+ 
+.logo-sec-new-one {
+    
+    height:  69px;
+    
+    min-height:  69px;
+    line-height:  69px;
+    }
+.logoclaim {
+    
+    height: 69px;
+    min-height:  69px;
+    line-height:  69px;
+    vertical-align: middle;
+}
+.logo-div img {
+    float: left;
+    padding-left: 26px;
+    max-height: 38px;
+    margin-top: 15px;
+    }
+    .arrowdiv {
+    position: inherit !important;
+       
+    
+}
+.logoclaim img {
+    padding-left: 22px;
+    max-height: 39px;
+   
+}
+.back-arrow{
+    display: table;
+    height: 69px;
+    vertical-align: middle;
+    line-height: 69px;
+    margin-left: 13px;
+}
+.titltxtd {
+     
+    padding-left: 0px;
+      font-size: 18px;
+   
+}
+  
+.navbarstyle {
+    
+    height: 69px;
+    line-height:  69px;
+}
+} 
+
+@media screen and (min-width: 801px) and (max-width:1024px){
+
+ .titltxtd {
+     
+ font-size: 18px;
+   
+}  
+.arrowdiv {
+   font-size: 15px;
+    color: #fff;
+    position: relative;
+    top: 14px;
+    right: -74px;
+    cursor: pointer;
+    font-weight: 800; 
+} 
+.back-arrow{
+    
+  
+    vertical-align: middle;
+     
+}
+
+}
+
+@media screen and (min-width: 320px) and (max-width:580px){
+.arrowdiv {
+    position: inherit !important;
+     
+}
+}
+
+@media screen and (max-width:767px){
+.arrowdiv {
+    position: inherit !important;
+     
+}
+.titltxtd {
+     
+    padding-left: 0px;
+     
+    font-size: 16px;
+   
+}
+.back-arrow{
+    display: table;
+    height:69px;
+    vertical-align: middle;
+    line-height: 69px;
+    margin-left: 13px;
+}
+}
+
+
+//-------------------------------------------------------Responsive scss for Header end-----------------------------------------------------------

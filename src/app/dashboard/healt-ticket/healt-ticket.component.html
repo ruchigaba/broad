@@ -1,0 +1,292 @@
+   
+  <div class="center-header">
+  <div class="col-xs-12-headersection">
+  <div class="dropdown">
+  <label class="select">Select Claim #</label>
+
+  <button (click)="healthDropdownFunc(dropdownMenu1)" class="bbttnn-dropdown-toggle" id="dropdownMenu1" style="background: rgba(0,121,53,0.85)!important;color:#fff !important;" type="button">
+            {{healthTicketSelectedClaim}}
+  <span class="caret"></span>
+
+  </button>
+  <ul #dropdownMenu1 class="dropdown-menu health-drp-dwn" id= "dr" style="display: none;" disabled>
+        <li *ngFor="let claim of claims1"><a (click)="healthSelectedClaim(claim)">{{claim.claim_number}}</a></li>
+      </ul>
+  </div>
+  </div>
+  <div class="clear"></div>
+  </div>
+
+  <div *ngIf = "isShow && claim !== 'open'" class="wrapper healthticket-main-page ">
+  <div class="section-make-it-center">
+     <ul class="nav-lines" style="font-size: 16px;line-height: 1.029;border-color: #00db55; display:inline-block;">
+        <li class="htckt-li">
+          <a (click)="priscriptionId()" [class.active]="isActive=='1'">Prescription Drug ID Card</a>
+        </li>
+        <li class="htckt-li">
+          <a (click)="pharmacyInfo()" [class.active]="isActive=='2'">Pharmacy Info</a>
+        </li>
+      </ul>
+      <div class="clear"></div>
+  </div>
+  </div>
+  
+  <div  *ngIf = priscription  class="tickt-main-center-section" style="padding:0px;">
+  <div class="content-healthtick-page" >
+  <div class="inner-content">
+
+   <ul class="transparent">
+    
+    <li class="col-xs-12-content-section">
+       <div class="col-xs-6">
+          <span>Patient's Name :</span>
+       </div>
+       <div class="col-xs-8"  >
+          <span>{{PatientName}}</span>
+       </div>
+    </li>
+
+        <li class="col-xs-12-content-section">
+           <div class="col-xs-6" >
+             <span>Date of Injury :</span>
+           </div>
+           <div class="col-xs-8"  >
+             <span>{{DateOfInjury}}</span>
+           </div>
+        </li>
+
+        <li class="col-xs-12-content-section" >
+           <div class="col-xs-6" >
+               <span>Claim # :   </span>
+           </div>
+           <div class="col-xs-8"  >
+              <span>{{HealthTicketclaimNumber}}</span>
+           </div>
+        </li>
+
+          <li class="col-xs-12-content-section"  >
+             <div class="col-xs-6" >
+                 <span>Employer :</span>
+             </div>
+             <div class="col-xs-8"  >
+                 <span>{{Employer}}</span>
+            </div>
+           </li>
+
+          <li class="col-xs-12-content-section"  >
+             <div class="col-xs-6" >
+                 <span>Body Part :</span>
+             </div>
+             <div class="col-xs-8"  >
+                 <span>{{BodyPart}} </span>
+             </div>
+          </li>
+
+        <li class="col-xs-12-content-section" >
+          <div class="col-xs-6" >
+              <span>State of Jurisdiction :</span>
+          </div>
+          <div class="col-xs-8"  >
+              <span>{{StateOfJurisdiction}}</span>
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li>
+       <div class="labelss-mm" >
+            <h1><i style="font-style:normal !important;    font-weight: 600; font-size: 12px;">Card Valid for Date of Injury and Body Part Only</i></h1>
+       </div>
+       </li>
+       <div class="clear"></div>
+      </ul>
+ </div>
+
+
+</div>
+
+ 
+
+ <!-- Primary Cards View-->
+
+    <div  *ngIf=primary id="primaryCardView"><br>
+      <div class="col-xs-12" style="text-align:center;"><strong><u>PHARMACY INFORMATION</u></strong></div>
+
+    <!-- old html-->
+
+
+        <div class="col-lg-12 tickt-main-center-section"><div class="col-lg-12 content-healthtick-page">
+      <ul class="taspaareentt img-no-health">
+        <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+          <div class="col-xs-6">
+            <div class="col-xs-4 collllencls">
+              <span>Patient's Name</span>
+
+
+            </div>
+            <div *ngIf="PatientName !== 'null'" class="col-xs-8 collllenclsvalue">
+              <span>{{PatientName}}</span>
+
+
+            </div>
+
+          </div>
+        </li>
+        <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+          <div class="col-xs-6">
+            <div class="col-xs-4 collllencls">
+              <span>Bin</span>
+            </div>
+
+            <div *ngIf="primaryBin !== 'null'" class="col-xs-8 collllenclsvalue">
+              <span>{{primaryBin}}</span>
+            </div>
+
+          </div>
+        </li>
+        <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+          <div class="col-xs-6">
+            <div class="col-xs-4 collllencls">
+              <span>PCN</span>
+
+
+            </div>
+
+            <div *ngIf="primaryPCN !== 'null'" class="col-xs-8 collllenclsvalue">
+              <span>{{primaryPCN}}</span>
+
+
+            </div>
+
+          </div>
+        </li>
+        <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+          <div class="col-xs-6">
+            <div class="col-xs-4 collllencls">
+              <span>Group #</span>
+
+
+            </div>
+
+            <div *ngIf="primaryGroup !== 'null'" class="col-xs-8 collllenclsvalue">
+              <span>{{primaryGroup}}</span>
+
+
+            </div>
+
+          </div>
+        </li>
+
+        <div class="clear"></div>
+
+      </ul>
+
+    </div></div>
+    <div class="row" style="padding-left:5px;">
+            <div *ngIf="primaryPharmacyName !== 'null'" class="col-lg-6 col-sm-6 col-xs-6 ak-new-new" style="text-align:right;font-size:14px;"><strong>{{primaryPharmacyName}}</strong>
+            </div>
+            <div *ngIf="primary_pharm_phone_num !== 'null'" class="col-lg-6 col-sm-6 col-xs-6 ak-new-sixty" style="text-align:left;font-size:14px;">{{primary_pharm_phone_num}}</div>
+          </div>
+
+
+</div><br>
+
+      <!--Secondary card View Start-->
+
+        <div  *ngIf=ancillary id="ancillaryCardView">
+          <div class="col-xs-12" style="text-align:center;"><strong><u>PHARMACY INFORMATION</u></strong></div>
+
+        <!-- old html-->
+
+
+            <div class="col-lg-12 tickt-main-center-section"><div class="col-lg-12 content-healthtick-page">
+          <ul class="taspaareentt">
+            <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+              <div class="col-xs-6">
+                <div class="col-xs-4 collllencls">
+                  <span>Patient's Name</span>
+
+
+                </div>
+                <div *ngIf="ancillaryPharmName !== 'null'" class="col-xs-8 collllenclsvalue">
+                  <span>{{ancillaryPharmName}}</span>
+
+
+                </div>
+
+              </div>
+            </li>
+            <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+              <div class="col-xs-6">
+                <div class="col-xs-4 collllencls">
+                  <span>Bin</span>
+                </div>
+
+                <div *ngIf="ancillaryBin !== 'null'" class="col-xs-8 collllenclsvalue">
+                  <span>{{ancillaryBin}}</span>
+                </div>
+
+              </div>
+            </li>
+            <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+              <div class="col-xs-6">
+                <div class="col-xs-4 collllencls">
+                  <span>PCN</span>
+
+
+                </div>
+
+                <div *ngIf="ancillaryPCN !== 'null'" class="col-xs-8 collllenclsvalue">
+                  <span>{{ancillaryPCN}}</span>
+
+
+                </div>
+
+              </div>
+            </li>
+            <li class="col-xs-12 content-sectionheadlthticket-mains">
+
+              <div class="col-xs-6">
+                <div class="col-xs-4 collllencls">
+                  <span>Group #</span>
+
+
+                </div>
+
+                <div *ngIf="ancillaryGroup !== 'null'" class="col-xs-8 collllenclsvalue">
+                  <span>{{ancillaryGroup}}</span>
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <div class="clear"></div>
+
+          </ul>
+
+        </div></div>
+
+
+
+      </div><br>
+      <div class="col-xs-4"></div>
+              <div *ngIf=description id="cardDiscription" class="col-xs-4 helthText" style="text-align:center;">
+                <span>The Pharmacy benefit card is only to be used for medication prescribed for your work related injury.
+                 By using this card, you acknowledge and accept financial responsibility for any prescription billed
+                 under this card that is later found to be unrelated to the injury.</span>
+              </div>
+              <div class="col-xs-4"></div>
+      <!--Secondary card View End-->
+  <div class="clear"></div>
+</div>
+ 
+ 
+
+ 
