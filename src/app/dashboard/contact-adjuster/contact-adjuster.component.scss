@@ -208,7 +208,7 @@ background-clip: padding-box;
 }
 .label-text-adjuster-page {
     font-size: 14px;
-     margin-top: 5px;
+     margin-top: 0px;
      text-align: center;
       font-weight: 600;
 }
@@ -268,23 +268,16 @@ background-clip: padding-box;
             text-align: center;
             width: 100%;
     }
-    .col-con-adj-4{
-        margin-bottom: 30px;
-         width: $width;
-        display: table !important;
-        float: left !important;
-        text-align: left;
-        vertical-align: middle !important;
-    }
+   
     .image-section-con-adj{
         display: inline-block !important;
         float: none !important;
          vertical-align: middle !important;
          span{
-             padding: 0 10px !important;
+             padding: 0px 10px !important;
          }
          img{
-                 width: 100px !important;
+                 width: 100% !important;
                  max-width: 100%;
          }
     }
@@ -292,8 +285,8 @@ background-clip: padding-box;
            display: inline-block !important;
            float: none !important;
         //    font-size: 100%;
-           margin-left: 10px;
-           margin-top: 0px !important;
+           margin-left: 0px;
+           margin-top: 10px !important;
             text-align: left !important;
          vertical-align: middle !important;
         font-size:18px;
@@ -301,10 +294,10 @@ background-clip: padding-box;
     
 }
 .dropdown-menu-con-adj{
-    left:46.4%;
+    left:47.4%;
 }
 .header-adjuster-section{
-    margin-top:-13px;
+    margin-top:0px;
 }
 }
 // @media screen and (min-width:700px){
@@ -334,7 +327,7 @@ width: 100% !important;
     }
     .dropdown-menu-con-adj {
         
-      left: 42.4% !important;
+      left: 43.4% !important;
     min-width: 154px;
     top: 105% !important;
     font-size: 14px !important;
@@ -347,6 +340,7 @@ width: 100% !important;
     }
     .label-text-adjuster-page{
           font-size: 14px;
+          margin-top:0px !important;
     }
     .label-1,.label-2,.label-3 {
     font-size: 14px;
@@ -368,4 +362,37 @@ width: 100% !important;
 .main-divs-sivs-adjuster {
     margin-top: 0px;
 }
+.col-con-adj-4{
+        margin-bottom: 30px;
+         width: $width;
+        display: table !important;
+        float: left !important;
+        text-align: left;
+        vertical-align: middle !important;
+    }
+    
 }
+@media screen and (min-width:455px) and (max-width:800px){
+    .col-con-adj-4 {
+    width: 33.3333%;
+    min-height: 1px;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    position: relative;
+    float: left !important;
+    display:block !important;
+}
+ .label-text-adjuster-page{
+     margin-left:8px;
+     font-size:14px;
+ }
+ .label-1,.label-2,.label-3{
+     font-size:14px;
+ }
+}
+.image-section-con-adj{
+     span{
+         padding:15px;
+     }
+}
+

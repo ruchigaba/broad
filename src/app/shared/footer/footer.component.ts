@@ -49,8 +49,12 @@ export class FooterComponent implements OnInit {
   if (className == "hidden-content slide-up")
     document.getElementById("togg-dv").className = "hidden-content slide-down";
 }
+
 // document.getElementsByTagName('body').addEventListener('click',function(){
 	
 // }); 
+claimFooterClick(){
+      sessionStorage.setItem('pagePosition', undefined);
+  }
 
 }

@@ -74,21 +74,26 @@ ol {
   .wrapper-main-page {
       margin-bottom: 20%;
   }
-
+.panel-heading {
+    
+    padding: 0px 13px;
+}
 .main-container {
   margin: 0px;
 }
 #accordion .panel-heading.my-class:before {
     
     position: inherit;
-    margin-top: -15px;
+    margin-top: -11px;
 }
- 
+ .faqbr{
+  display: none;
+ }
 
 }
 @media screen and (min-width: 320px) and (max-width:480px){
 #accordion .panel-heading.my-class2:before {
-  margin-top: -17px;
+  margin-top: -13px;
   }
 
 }

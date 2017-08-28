@@ -314,3 +314,15 @@ color: #000;
      position: relative;
     top: 2px;
 }
+/////registration tutorial///
+@mixin registot{
+      position: absolute;
+    top: 50%;
+     background-color: #007a33;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 3px 14px 5px 15px;
+    text-align: center;
+    border: 0 none;
+    color:white;
+}

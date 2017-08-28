@@ -1,4 +1,4 @@
-// @import '../../common/variables.scss';
+ // @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 // @import '../../common/common.scss';
 
@@ -17,7 +17,7 @@ strong, b {
     font-weight: bold;
 }
  
-p {
+.wrapper1 p {
     line-height: 1.5;
     margin-bottom: 14px !important;
 }
@@ -106,7 +106,19 @@ padding-right: 5px;
     
    @media only screen and (max-width: 800px){
 
-  
+  .tt-eula {
+   width: 12.66%;
+}
+  .agree-eula {
+    width: 36%;
+    padding-left: 0px;
+    padding-right: 10px;
+    }
+    .donot-eula {
+    width: 40%;
+    padding-right: 0px;
+    padding-left: 28px;
+}
     .eula-style-data {
     
     line-height: 1;
@@ -116,13 +128,11 @@ padding-right: 5px;
 @media screen and (max-width: 700px) and (min-width: 320px){
 .agree-eula {
     width: 36%;
-    padding-left: 0px;
-    padding-right: 0px;
+    
 }
 .donot-eula {
     width: 40%;
-    padding-right: 6px;
-    padding-left: 16px;
+    
 }
 
 }

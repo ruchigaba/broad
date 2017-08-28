@@ -202,10 +202,13 @@ button#dropdownMenu1 {
     font-size: 14px;
     }
       .col-xs-6 span{
-        font-size: 12px;
+        font-size: 13px;
      }
      .col-xs-8 span{
-        font-size: 12px;
+        font-size: 13px;
+     }
+       .addcls{
+        white-space: nowrap;
      }
      
    .col-xs-12-content-section{
@@ -232,6 +235,9 @@ button#dropdownMenu1 {
     .select {
     margin-right: -1px;
     font-size: 14px;
+}
+.container-center {
+    margin-top: -13px;
 }
 .healthticket-main-page {
     margin-top: 1px;

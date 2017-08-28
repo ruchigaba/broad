@@ -4,11 +4,11 @@
     <div class="col-con-adj-12 header-adjuster-section">
       <div class="dropdown-con-adj">
         <label class="bold-cls-global-con-adj">Select Claim #</label>
-        <button  (click)="healthDropdownFunc(dropdownMenu1)"class="btn-con-adj dropdown-toggle" type="button" id="dropdownMenu1">
+        <button  (click)="healthDropdownFunc(dropdownMenu1)"class="btn-con-adj dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               {{selectedClaim}}
               <span class="caret-con-adj"></span>
               </button>
-        <ul #dropdownMenu1 class="dropdown-menu-con-adj" style="display:none;">
+        <ul #dropdownMenu1 class="dropdown-menu-con-adj" aria-labelledby="dropdownMenu1" style="display:none;">
            <li *ngFor="let claim of claims1"><a (click)="dropboxitemselected(claim,dropdownMenu1)">{{claim.claim_number}}</a></li>
         </ul>
       </div>

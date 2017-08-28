@@ -125,20 +125,20 @@ li.vali-pad-nn {
    color:$claimant-color;
    } 
    .registuser-validregistration{
-    font-weight: bold;
+    font-weight: 600;
     color: #258c52;
     padding: 0 15px;
   }
 
    @media screen and (max-width: 800px){
     .whiteblank-validregistration{
-     margin-top: 90px;
+     margin-top: 75px;
     width:100%;
   }
 }
 @media screen and  (min-width: 310px) and(max-width: 1020px){
     .whiteblank-validregistration{
-     margin-top: 90px;
+     margin-top: 75px;
     width:100%;
   }
   }

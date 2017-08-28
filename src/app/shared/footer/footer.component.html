@@ -59,15 +59,28 @@
 
     <div style="clear:both;"></div>
     <div class="main-data-div">
-    <div class="col2-xx-mm " id="Claim" [class.active]="activeFooterMenu=='Claim Info'">
-    <div class="midd-content" (click)="activeFooterMenu='Claim Info'">
-    <a md-ink-ripple="" href="#/dashboard/claims" [routerLink]="['claims']">
+    <div class="col2-xx-mm " id="Claim" [class.active]="activeFooterMenu=='Claim'">
+    <div class="midd-content"  [routerLink]="['claims']" (click)="activeFooterMenu='Claim'">
+    <a md-ink-ripple="" href="#/dashboard/claims"  [class.active]="activeFooterMenu=='Claim'" >
     <img class="menu-item-img-sidebar" src=".\image\claim-info.png" >
     <div style="clear:both;"></div>
      <span>Claims </span>
     </a>
     </div>
     </div>
+
+
+     <!--<div class="col2-xx-mm" id="Claims">
+
+      <div class="midd-content">
+        <a md-ink-ripple [routerLink]="['claims']" (click)="activeFooterMenu = 'Claim Info';claimFooterClick()">
+           <img class="menu-item-img-sidebar" src=".\image\claim-info.png" >
+
+          <div style="clear:both;">
+
+          </div><span>Claims</span></a>
+      </div>
+       </div>-->
         
 
 

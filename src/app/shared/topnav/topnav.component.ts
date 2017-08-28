@@ -28,7 +28,7 @@ data: any;
           //add title to header
           this.title = this.data.title;
           this.parents =this.data.parent;
-          // console.log(this.data);
+          console.log(this.data);
           console.log("parent"+this.parents);
 
     })

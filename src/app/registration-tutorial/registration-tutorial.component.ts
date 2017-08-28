@@ -92,6 +92,7 @@ export class RegistrationTutorialComponent implements OnInit {
     sessionStorage.setItem('registerTimeout','true');
     this._commonApiCall.getService("supportContent?Type=Registration", "", "")
     .subscribe(res=>{
+      document.getElementById("loadingDiv").style.display = "none";
       console.log(res);
       sessionStorage.setItem('registerTimeout','false');
       
@@ -112,6 +113,7 @@ export class RegistrationTutorialComponent implements OnInit {
     this.firstTimeImages();
   },
 error =>{
+  document.getElementById("loadingDiv").style.display = "none";
     sessionStorage.setItem('registerTimeout','false');
   this.commnFunc.alertPopup(error,"Tutorial");
 })

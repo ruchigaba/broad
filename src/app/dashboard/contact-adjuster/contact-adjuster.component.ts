@@ -102,9 +102,9 @@ this.categVal=mr.innerText;
 healthDropdownFunc(dropdownMenu1){
       if (dropdownMenu1.style.display=="none") {
         dropdownMenu1.style.display="block";
-      // document.getElementsByTagName("html",()=>{
-      //  dropdownMenu1.style.display="none";
-      //  })
+        window.addEventListener("click",()=>{
+      dropdownMenu1.style.display="none";
+    })
       }
       else{
         dropdownMenu1.style.display="none";

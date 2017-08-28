@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpModule, Response } from '@angular/http';
 import { CommonAPICall } from '../shared/shared.service';
 import { RouterModule, Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { CommonFunction } from '../shared/commonFunction';
   providers: [HttpModule, CommonAPICall]
   //styleUrls: ['./forgot-password.component.scss']
 })
-export class ForgotPasswordComponent implements OnDestroy {
+export class ForgotPasswordComponent implements OnInit,OnDestroy {
   commnFunc;
 
   secQuesObject: any;
@@ -23,7 +23,7 @@ export class ForgotPasswordComponent implements OnDestroy {
     secViewShow = false;
 
   constructor(private _route: Router, private _commonApiCall: CommonAPICall) {
-    document.getElementById('titleBar').style.paddingLeft="0px";
+    // document.getElementById('titleBar').style.paddingLeft="0px";
   this.commnFunc = new CommonFunction(); 
 
     if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Tablet/i)) {
@@ -34,11 +34,13 @@ export class ForgotPasswordComponent implements OnDestroy {
         this.secQuesObject = sessionStorage.getItem('secQues');
         console.log(this.secQuesObject);
         this.secQuesObj = JSON.parse(this.secQuesObject);
-        this.secQues1 = this.secQuesObj.securityquestion1;
+        // this.secQues1 = this.secQuesObj.securityquestion1;
         this.secQues2 = this.secQuesObj.securityquestion2;
         this.secQues3 = this.secQuesObj.securityquestion3;
   }
-
+ngOnInit() {
+    document.getElementById('titleBar').style.paddingLeft="0px";
+  }
   ngOnDestroy() {
  
   	//document.getElementById('titleBar').style.paddingLeft="0px";

@@ -13,7 +13,7 @@ cursor: pointer;
 { cursor: pointer;
     display: block;
     border-style: solid;
-    border-color: #ff0000 #0000ff;
+    border-color:black;
     float: left;
     z-index: 9999 !important;
     position: fixed !important;
@@ -534,6 +534,9 @@ ul{
          padding-left: 0.9375rem;
          padding-right: 0.9375rem;
     }
+    .new-add {
+           margin-top:-48px;
+    }
 
 .nav-lines a {
     padding-bottom: 0px !important;
@@ -864,7 +867,7 @@ margin-bottom: 75px;
         border: 1px solid $bcg;
         display: inline-block;
         list-style: outside none none;
-        padding: 15px 3px 15px 15px;
+        padding: 15px 11px 15px 15px;
     }
 }
 @media screen and (min-width:544px){
@@ -931,10 +934,13 @@ margin-bottom: 75px;
     left:7% !important;
     border-color:black !important;
 }
-
+ .new-add{
+        margin-top:-42px !important;
+    }
 ul.col5.tbl-data{
     padding-bottom:10px;
 }
+
 .col7 {
     font-weight:500;
 }
@@ -948,7 +954,7 @@ ul.col5.tbl-data{
     margin-top:-4%;
 }
 .back-g{
-    background-color: #efeeee;
+    background-color: $tbc;
 }
 .col8{
     margin-top:-6px;
@@ -974,7 +980,7 @@ li.col11 {
     font-weight:600;
 }
 .clm-inf-pg{
-    margin-top:-4%;
+    margin-top:0%;
    
 }
 }
@@ -1005,7 +1011,31 @@ li.col11 {
         padding-top:0px;
          padding-left:0px;
           padding-right:0px;
+          margin-top:5px;
     }
     }
-
+@media screen and (max-width: 800px){
+    .lossImg{
+        top: 30% !important;
+         width: 80% !important;
+        left: 10% !important;
+    }
+    .new-add{
+        margin-top:-48px;
+    }
+    .new-add span {
+    font-weight: 600;
+}
+.title-section-claims{
+    padding-bottom:22px;
+}
+.col7{
+    padding:12px 3px 12px 0px;
+}
+}
+@media screen and  (min-width: 450px){
+.tbl-data:hover li {
+    background-color: $bcgcolor !important;
+}
+}
  

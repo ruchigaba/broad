@@ -46,7 +46,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.0",
+      'ApplicationVersion': "3.1",
       'Platform': "native",
       'ApplicationName': 'MyClaim'
 
@@ -76,7 +76,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.0",
+      'ApplicationVersion': "3.1",
       'Platform': "native",
       'ApplicationName': 'MyClaim'
     })
@@ -108,7 +108,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.0",
+      'ApplicationVersion': "3.1",
       'Platform': "native",
       'ApplicationName': 'MyClaim'
 
@@ -131,7 +131,7 @@ this.addDivBeforeBody();
 
   // handle errors in http requests, hide loader and show error in popup
   handleError(res: any, errorHeading) {
-alert('hello');
+
     if (res.status == 500 || res.status == 0) {
       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
       this.commnFunc.alertPopup(message, errorHeading);

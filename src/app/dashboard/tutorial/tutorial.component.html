@@ -1,14 +1,9 @@
-
-<div class="loader">
-<div class="tutorial-main-slider-container"  (window:resize)="onResize($event)">
-
-
 <div class="maincontainersectionslider inner-slider-new">
-  <div class="imgmain-new-reg-subwrapp">
+  <div class="mainimg-new-reg-subwrapp">
 <a class="w3-btn-floating w5-display-left" (click)="plusDivs(-1)">&#10094;</a>
 
 <div class="w3-content w3-display-container" *ngFor="let image of images let i=index">
-  <div class="imgmain">
+  <div class="mainimg">
   <img  class="mySlides" id="mySlides{{i}}" src="{{image.base64}}" style="width:100%">
   </div>
 </div>
@@ -17,7 +12,6 @@
 
 </div>
 </div>
-</div>
-</div>
+
 
  

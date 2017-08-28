@@ -1,6 +1,13 @@
+ 
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 
+.clstext{
+position: fixed;
+    right: 20px;
+    line-height: 80px;
+
+}
 .arrowdiv{
     float: left;
     font-size: 15px;
@@ -22,7 +29,7 @@ height: 80px;
 width: 100%;
 z-index: 999;
 }
- .logo-sec-new-one {
+.logo-sec-new-one {
     float: left;
     width:25%;
     color: $color-sixty;
@@ -43,15 +50,18 @@ z-index: 999;
    line-height:  69px;
 }
 
-.twenty{
-    float: left;
-    width:  25%;
-    color: #ffffff;
+/* .twenty{
+    font-weight: 500;
+    margin-left: 35px;
+    display: table-cell;
     height: 80px;
-    vertical-align: middle;
+    padding-left: 251px;
+    line-height: 80px;
     min-height: 80px;
-    display: table;
-}
+    vertical-align: middle;
+    
+
+} */
 .logoclaim {
     display: table-cell;
     height:$logoclaim-height;
@@ -67,7 +77,7 @@ z-index: 999;
 }
 
 }
- .titltxtd {
+.titltxtd {
     font-size: 22px;
     font-weight: 600;
     margin-left: 35px;
@@ -75,34 +85,46 @@ z-index: 999;
     height: $titltxtd-height;
     padding-left: 257px;
     line-height:  69px;
-    min-height: 80px;
+    min-height: 69px;
     vertical-align: middle;
     text-transform: capitalize;
 }
 .text-style {
-    margin-top: 8px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 500;
     position: relative;
-    right: -122px;
+    float: left;
+   // width: 25%;
+    cursor: pointer;
+    color: #ffffff;
+    height: 69px;
+    vertical-align: middle;
+    min-height: 69px;
+    display: table;
 }
 
+
 //-------------------------------------------------------Responsive scss for Header start-----------------------------------------------------------
-@media only screen and (max-width: 800px)
- {
+@media only screen and (max-width: 800px){
+/*  {
 .navbarstyle .fourty {
-    float: none !important;
-      
-}
+   float: none !important;
+     
+} */
 .fourty {
     
     height:  69px;
     vertical-align: middle;
     min-height:  69px;
+        white-space: nowrap;
     
 }
- 
+.clstext {
+     font-size: 12px;
+    line-height: 70px;
+}
+
 .logo-sec-new-one {
     
     height:  69px;
@@ -146,7 +168,19 @@ z-index: 999;
       font-size: 18px;
    
 }
-  
+
+/* .twenty {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: inherit;
+    display: inherit;
+    height: inherit;
+    padding-left: inherit;
+    line-height: inherit;
+    min-height: inherit;
+    vertical-align: middle;
+}
+  */
 .navbarstyle {
     
     height: 69px;
@@ -156,7 +190,7 @@ z-index: 999;
 
 @media screen and (min-width: 801px) and (max-width:1024px){
 
- .titltxtd {
+.titltxtd {
      
  font-size: 18px;
    
@@ -207,5 +241,32 @@ z-index: 999;
 }
 }
 
+@media screen and (min-width: 768px) and (max-width:1024px){
+/* .twenty {
+     padding-left: 157px;
+    margin-left: 103px;
+}
+   */
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width:980px){
+/* .twenty {
+     padding-left: 100px;
+    margin-left: 100px;
+}
+   */
+}
+
+@media screen and (min-width: 768px) and (max-width:1380px){
+/* .twenty {
+     padding-left: 240px;
+    
+} */
+  
+
+  
+}
 
 //-------------------------------------------------------Responsive scss for Header end-----------------------------------------------------------

@@ -1,4 +1,4 @@
-
+ 
 //textting
 .cb-checkbox .cb-inner {
     top: 7px;
@@ -452,6 +452,9 @@ background-color: $input-g;
     position:relative !important;
     top: 5px;
   } 
+  .search-provider:hover:not([disabled]) {
+    transform: translate3d(0px, -1px, 0px);
+  }
 
   .dropdown-menu li:hover{
 background-color: #efeeee;
@@ -528,6 +531,12 @@ color: $li-style-color;
    width: $width;
     margin-top: 35px;
 }
+.headingprov{
+    margin-bottom: 75px;
+}
+.flex {
+   
+}
 }
 
 @media screen and  (min-width: 310px) and(max-width: 1020px){
@@ -537,18 +546,22 @@ color: $li-style-color;
 }
 
 }
-@media screen and (max-width: 1024px) and (min-width: 767px){
+@media screen and (max-width: 1024px) and (min-width: 768px){
 
 .col-ss-mm-01 {
- width:100% ;
+ width:50% ;
   margin-top: 35px;
 }
 
 .footer-x {
-  position: fixed;
+ background-color: #fff;
+    bottom: 50px;
+    left: 0;
+    padding-bottom: 20px;
+     position: fixed;
+    text-align: center;
+}
 
-  
-} 
 
 .txtright-provider {
   font-size: 15px;
@@ -583,4 +596,38 @@ color: $li-style-color;
 }
 
 }
+ @media screen and (max-width: 970px) and (min-width: 600px){
+.col-ss-mm-01 {
+ width:100% ;
+   
+}
+.footer-x {
+ background-color: #fff;
+    bottom: 0px;
+    left: 0;
+    left:260px;
+    padding-bottom: 20px;
+     position: fixed;
+    text-align: center;
+}
  
+
+
+}
+ @media screen and (max-width: 1366px) and (min-width: 768px){
+  .footer-x {
+ background-color: #fff;
+    bottom: 0px;
+    left: 0;
+    left:260px;
+    padding-bottom: 20px;
+     position: fixed;
+    text-align: center;
+}
+ 
+  }
+  @media screen and (max-width:450px){
+      .twenty {
+    font-size: 10px;
+      }
+  }

@@ -37,7 +37,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   messageLength = 40;
   inputMessage: string=""; showCameraButton = false;
 
-  //attachImg= new SharedImg();
+  // attachImg= new SharedImg();
   constructor(private route: Router,private element: ElementRef, private _commonApiCall: CommonAPICall
     , private changeDetectorRef: ChangeDetectorRef, private attachImg: SharedImg,private ComFunc:CommonFunction ) {
      if (navigator.userAgent.match(/Android/i) && typeof cordova != 'undefined') {
@@ -113,7 +113,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
     img2.src = imageData;
     obj.resize(img2, 750, 750, (resized_jpeg, before, after) => {
       // For debugging (size in bytes before and after)
-      //this.debug_size_before.push(before);
+      // this.debug_size_before.push(before);
       //this.debug_size_after.push(after);
       var image1 = this.element.nativeElement.querySelector('.unknown1');
       //alert(resized_jpeg);
@@ -591,12 +591,5 @@ if(this.profileImg.length > 1){
     };
   }
   //--------------------------------------------------------Find base64 of choose files end-------------------------------------------------------
-  //  selectedClaim = this.claims1[0].claim_number;
-  // dropboxitemselected(claim){
-
-  //     this.selectedClaim = claim.claim_number;
-  //     this.claimId = claim.claim_id;
-  //     this.contactAdjusterService();
-
-  // }
+  
 }

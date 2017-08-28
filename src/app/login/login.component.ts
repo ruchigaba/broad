@@ -91,9 +91,7 @@ ngOnDestroy(){
   var root = document.getElementsByTagName('html')[0];
   root.setAttribute('class', '');
 }
-gotoForgotPassword(){
-  this.router.navigate(['./forgotPass']);
-}
+
     loginService(user: string, pass: string) {
       sessionStorage.setItem('local_tempPassword', pass);
       //console.log(user);
@@ -152,6 +150,7 @@ gotoForgotPassword(){
                        this.getLogindata();
                      },
                      error => {
+                        document.getElementById("loadingDiv").style.display = "none";
           this._commonApi.handleError(error, "Login");
         });
                    }
@@ -343,22 +342,26 @@ gotoForgotPassword(){
           goToRegistration(){
              this.router.navigate(['Registration']);
             } 
-
+// gotoForgotPassword(){
+//   this.router.navigate(['./forgotPass']);
+// }
             // Forgot Password Method
   forgotPassword(user: string) {
-    this.router.navigate(['./forgotPass']);
+    //this.router.navigate(['./forgotPass']);
     if (user == undefined || user == '') {
-      this._commonApi.hideLoaderShowPopup("Please Enter the Username.", "Reset Password");
+      this.commnFunc.alertPopup("Please Enter the Username.", "Reset Password");
 
     }
     else {
       this._commonApi.getService("SecQuestions?userName=" + user, "", "")
         .subscribe(result => {
+          document.getElementById("loadingDiv").style.display = "none";
           sessionStorage.setItem('secQues', JSON.stringify(result.result.userSecQuestions));
           sessionStorage.setItem('userName', user);
           this.router.navigate(['./forgotPass']);
         },
         error => {
+          document.getElementById("loadingDiv").style.display = "none";
           this._commonApi.handleError(error, "Reset Password");
         })
 

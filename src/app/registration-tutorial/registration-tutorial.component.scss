@@ -1,4 +1,4 @@
-img{
+.imgmain img{
     max-width: 100%;
 }
 .w4-display-left {
@@ -32,14 +32,17 @@ img{
 }
 @media screen and (max-width: 450px){
 .w4-display-right {
-    right: 11px;
+    right: 40px;
    top: 50%;
 }
-}
-@media screen and (max-width:450px){
-    .w4-display-left{
-        left:10px;
+.w4-display-left {
+
+        left:16px;
         top: 50%;
+    }
+.imgmain{
+    width: 258px;
+    margin-left: -4px;
     }
 }
 
@@ -56,3 +59,9 @@ img{
     }
 }
 
+@media screen and (min-width:300px) and (max-width:650px){
+    .imgmain{
+    width: 258px;
+    margin-left: -4px;
+    }
+}
