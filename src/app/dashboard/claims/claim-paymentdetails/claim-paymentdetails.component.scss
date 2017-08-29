@@ -112,22 +112,20 @@ div{
     margin-top:10px;
     @include common();
 }
-.classmain-ttl{
-     @include common();
+
+.classmain-ttl-claim{
+    @include common();
      background-color:$lightgreen !important;
      border-top:medium none;
      color:$color;
      font-size: $c-font;
      padding: 0;
-     width:$width;
+     width:$width !important;
      padding-bottom: 0px;
-}
-.classmain-ttl-claim{
-    @extend .classmain-ttl;
    }
 .col12{
    @include claimpay();
-   padding:13px 12px 9px 47px;
+   padding:10px 12px 9px 47px;
     font-weight: 600;
 }
 .clm-on-desk{
@@ -254,7 +252,7 @@ li .clm-on-desk:hover {
  }
      .col12
      {
-     display:table;
+     display:inline-block;
     // height:65px;
      padding-left: 10px;
      font-size:14px !important;
@@ -273,6 +271,9 @@ li .clm-on-desk:hover {
  }
  .col11{
          padding: 12px 15px 12px 16px;
+ }
+ .classmain-ttl{
+     width:100% !important;
  }
  }
   @media (min-width:1024px){
@@ -415,13 +416,18 @@ ul.show-on-mobile-data {
    .colllvalue1{
        font-size:16px;
    }
+   .col11{
+       justify-content: center;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+   }
    }
    @media (min-width:1530px){
        li.col12{
     border: 1px solid $bcg;
-    display:table;
+    display:inline-block;
     list-style: outside none none;
-    padding: 13px 0px 10px 4px;
+    padding: 13px 6px 10px 4px;
  }
    }
 
@@ -432,6 +438,12 @@ ul.show-on-mobile-data {
     padding-bottom:10px;
         }
    }
+   @media screen and  (max-width: 800px){
+    li.col12 {
+        padding: 10px 26px 9px 25px !important;
+    }
+
+}
  
    
    
