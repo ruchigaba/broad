@@ -120,11 +120,12 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
       image1.src = resized_jpeg;
       sessionStorage.setItem('imgSrc', resized_jpeg);
       sessionStorage.setItem('imgName', "img_" + new Date());
+      alert(sessionStorage.getItem('imgName'));
       //console.log(sessionStorage.getItem('imgSrc'));
       //console.log(sessionStorage.getItem('imgName'));
       // Read the next file;
       //  obj.readFiles(files, index + 1);
-    });
+    })
 
 
 
