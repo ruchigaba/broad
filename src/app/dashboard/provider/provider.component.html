@@ -91,7 +91,7 @@
 		<div class="border">
 			 <div class="panel-heading-provider" id="heading2" role="tab">
                                    <h4 class="panel-title">
-                           <a aria-controls="collapseOne" aria-expanded="true" class="collapse-col" data-parent="#specialities" data-target="#collapse1" data-toggle="collapse" role="button">
+                           <a aria-controls="collapseOne"  class="collapse-col" data-parent="#specialities" data-target="#collapse1" data-toggle="collapse" role="button" (click)="collapse1.style.display=='block'?collapse1.style.display='none':collapse1.style.display='block'">
                               
                               Select Specialities
                            </a>
@@ -102,22 +102,13 @@
                     <label class="ui-checks" style="float:left;font-weight:600; padding-left:0px;">Providers List</label>
                     <ul class="nav" style="text-align:left;">
                          
-
-
- 
-
-
-
-
-
-
                                   <li *ngFor="let specialty of specialitesArray" class="panel-heading-provider textspce">
                                  <div style="clear:both;"></div>
                                   <div class="">
                           <label #v for="squaredOne" class="ui-checks cb-checkbox" (click)="classremoved(v)">    
 
 
-<span class="cb-inner">
+                                    <span class="cb-inner">
 
 
                                              <input type="checkbox" id="" value = "{{specialty.medical_specialty}}" (change)="folder[$event.target.getAttribute('value')]=$event.target.checked || folder['']=$event.target.unchecked" ><i></i> </span>{{specialty.medical_specialty}}

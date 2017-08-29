@@ -91,7 +91,13 @@ ngOnDestroy(){
   var root = document.getElementsByTagName('html')[0];
   root.setAttribute('class', '');
 }
-
+keyDownFunction(event,username,password){
+  if(event.keyCode == 13) {
+    this.loginService(username,password);
+    //alert('you just clicked enter');
+  }
+  
+}
     loginService(user: string, pass: string) {
       sessionStorage.setItem('local_tempPassword', pass);
       //console.log(user);

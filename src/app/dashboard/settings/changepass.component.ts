@@ -47,34 +47,34 @@ export class ChangePassComponent {
    console.log(oldPassword);
    if(oldPassword == undefined || oldPassword == ''){
      //alert("enter old password");
-     this.commnFun.alertPopup("Enter old password.", "Change Password");
+     this.commnFun.alertPopup("Enter old password.", "Password");
      console.log(oldPassword);
    }
      else if (newPassword == undefined || newPassword == ''){
        //alert("Enter new Password");
-       this.commnFun.alertPopup("Please Enter new Password.", "Change Password");
+       this.commnFun.alertPopup("Please Enter new Password.", "Password");
      }
        else if (this._commonApiCall.validatePassword(newPassword) !== undefined){
 
          //alert(this._commonApiCall.validatePassword(newPassword));
-         this.commnFun.alertPopup(this._commonApiCall.validatePassword(newPassword), "Change Password");
+         this.commnFun.alertPopup(this._commonApiCall.validatePassword(newPassword), "Password");
        }
          else if(renewPassword == undefined || renewPassword == ''){
            //alert("Please Re-enter password");
-           this.commnFun.alertPopup("Please Re-enter password.", "Change Password");
+           this.commnFun.alertPopup("Please Re-enter password.", "Password");
          }
            else{
                if(oldPassword.trim() == newPassword.trim()){
                  //alert("Old and New password cannot be same");
-                 this.commnFun.alertPopup("Old and New password cannot be same.", "Change Password");
+                 this.commnFun.alertPopup("Old and New password cannot be same.", "Password");
                }
                  else if(newPassword.trim() !=renewPassword.trim()){
                    //alert("Newpassword and re-entered password must be same");
-                   this.commnFun.alertPopup("Newpassword and re-entered password must be same.", "Change Password");
+                   this.commnFun.alertPopup("Newpassword and re-entered password must be same.", "Password");
                  }
                    else{
                      //alert("Password is Changed Successfully");
-                     this.commnFun.alertPopup("Password is Changed Successfully.", "Change Password");  
+                     this.commnFun.alertPopup("Password is Changed Successfully.", "Password");  
                    }
 
            }

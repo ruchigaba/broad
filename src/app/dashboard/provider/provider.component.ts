@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonAPICall } from '../../shared/shared.service';
-import {Router, RouteReuseStrategy} from '@angular/router';
+import {Router, RouteReuseStrategy, ActivatedRouteSnapshot,DetachedRouteHandle,NavigationEnd} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
+//import {reuse-Strategy} from '../../resue-strategy';
 
 declare var cordova: any;
 declare var plugins: any;
 declare var window: any;
 @Component({
-  selector: 'app-provider',
+  selector: 'app-prvider',
   templateUrl: './provider.component.html',
   //styleUrls: ['./provider.component.scss']
    providers: [CommonAPICall]

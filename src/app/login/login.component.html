@@ -33,7 +33,7 @@
 </div>
 
 <div class="input-section passsword">
-<input class="inp-lg" name="pass" type="password" type="{{type}}"  #myInput [(ngModel)]="password" (input)="password= $event.target.value">
+<input class="inp-lg" name="pass" type="password" type="{{type}}"  #myInput [(ngModel)]="password" (input)="password= $event.target.value" (keypress)="keyDownFunction($event,username,password)">
 </div>
 
 <div class="show-password-section">
