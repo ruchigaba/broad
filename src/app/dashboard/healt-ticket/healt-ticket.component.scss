@@ -144,15 +144,17 @@ button#dropdownMenu1 {
     li.htckt-li {
     font-size: 14px;
     }
-    /* .center-header{
-    padding: 0px 12px 0px 12px;
-    }
-    .healthticket-main-page{
-    padding: 0px 13px 0px 13px;
-    } */
+   
    .col-xs-12-content-section{
     font-size: 16px;
     }
+    .section-make-it-center {
+      margin-left: -12px;
+      margin-right: -12px;
+     }
+     .col-xs-12-headersection{
+         margin-left: -12px;
+      margin-right: -12px;
 }
  
  .dropdown-menu.health-drp-dwn li a {
@@ -166,12 +168,7 @@ button#dropdownMenu1 {
 
 
 .dropdown-menu.health-drp-dwn {
-    /* position: absolute;
-    left: 48.6%;
-    background-color: #fff;
-    min-width: 175px;
-    padding: 10px;
-    z-index: 999; */
+   
     background-clip: padding-box;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -181,7 +178,7 @@ button#dropdownMenu1 {
     min-width: 165px;
     z-index: 1000;
 }
-
+}
 
  @media only screen and (max-width: 800px) {
    .content-healthtick-page {
@@ -226,6 +223,9 @@ button#dropdownMenu1 {
 {
 .inner-content {
     border: 2px green solid;
+ margin-left: -12px;
+    margin-right: -12px;
+    background-color: white;
     }
     .content-healthtick-page {
     width: 100%;
