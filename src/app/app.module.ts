@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CustomReuseStrategy } from './reuse-strategy';
+import { RouteReuseStrategy  } from '@angular/router';
 //import { MyDatePickerModule } from 'mydatepicker';
 
 import { AppComponent } from './app.component';
@@ -67,9 +69,8 @@ import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.com
     RouterModule.forRoot(routes)
   ],
 
-providers: [{provide: LocationStrategy,useClass: HashLocationStrategy}],
-
-
+ providers: [{provide: LocationStrategy,
+        useClass: HashLocationStrategy},{provide: RouteReuseStrategy, useClass: CustomReuseStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

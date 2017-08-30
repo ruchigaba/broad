@@ -2,6 +2,8 @@ import { Router, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CustomReuseStrategy } from './reuse-strategy';
+import { RouteReuseStrategy  } from '@angular/router';
 //import { ViewClaimComponent } from './dashboard/view-claim/view-claim.component';
 //import { PieChartComponent } from './dashboard/view-claim/pie-chart/pie-chart.component';
 import { EulaComponent } from './newuser/eula/eula.component';
