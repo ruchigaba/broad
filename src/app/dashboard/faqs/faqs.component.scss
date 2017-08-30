@@ -74,26 +74,43 @@ ol {
   .wrapper-main-page {
       margin-bottom: 20%;
   }
-.panel-heading {
+/* .panel-heading {
     
     padding: 0px 13px;
-}
+} */
 .main-container {
   margin: 0px;
+}
+ 
+  
+ol li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.faqscollapse {
+    
+  
+    line-height: 1.2;
 }
 #accordion .panel-heading.my-class:before {
     
     position: inherit;
-    margin-top: -11px;
+    margin-top: -15px;
 }
  .faqbr{
   display: none;
  }
 
+.main-faq-container {
+     min-height: 0px; 
+     padding-left: 0rem; 
+     padding-right: 0rem; 
+     position: inherit; 
+}
 }
 @media screen and (min-width: 320px) and (max-width:480px){
 #accordion .panel-heading.my-class2:before {
-  margin-top: -13px;
+  margin-top: -16px;
   }
 
 }
@@ -105,7 +122,7 @@ ol {
     
  } 
  @media screen and (max-width: 768px){
- .panel-heading {
-    padding: 6px 13px;
-}
+/*  .panel-heading {
+   padding: 6px 13px;
+} */
 }
