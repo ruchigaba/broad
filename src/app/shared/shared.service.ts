@@ -47,7 +47,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.1",
-      'Platform': "native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
     })
@@ -77,7 +77,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.1",
-      'Platform': "native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
     })
 
@@ -109,7 +109,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.1",
-      'Platform': "native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
     })
@@ -131,6 +131,7 @@ this.addDivBeforeBody();
 
   // handle errors in http requests, hide loader and show error in popup
   handleError(res: any, errorHeading) {
+    //alert("error");
 
     if (res.status == 500 || res.status == 0) {
       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
@@ -274,17 +275,20 @@ this.addDivBeforeBody();
 
 selectFooterItem(page){
 
-  if(document.querySelector(".col-md-5ths.col-xs-2.activeFooter")){
-  var theElement = <HTMLElement>document.querySelector(".col-md-5ths.col-xs-2.activeFooter");
-  theElement.classList.remove("activeFooter");
+  if(document.querySelector(".col2-xx-mm.active")){
+  var theElement = <HTMLElement>document.querySelector(".col2-xx-mm.active");
+  theElement.classList.remove("active");
   }
-  if(document.querySelector(".pop-blur-dv.activeFooter")){
-    var theElement = <HTMLElement>document.querySelector(".pop-blur-dv.activeFooter");
-    theElement.classList.remove("activeFooter");
+  if(document.querySelector(".pop-blur-dv.active")){
+    var theElement = <HTMLElement>document.querySelector(".pop-blur-dv.active");
+    theElement.classList.remove("active");
   }
+  // if(document.getElementById("Social")){
+
+  // }
   if(document.getElementById(page)){
   var root = document.getElementById(page);
-  root.className += " "+"activeFooter";
+  root.className += " "+"active";
 }
 }
 

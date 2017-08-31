@@ -62,7 +62,7 @@ export const routes = [
       { path: 'contact-adjuster', component: ContactAdjusterComponent, data: { title: 'Contact'} },
       { path:'provider', component:ProviderComponent , data: {title:'Providers'} },
       { path: 'physiciansmap', component: NearbyphysiciansMapComponent, data: { title: 'Providers',parent:'provider' } },
-      { path: 'social-media', component: SocialMediaComponent, data: { title: 'Social Media' } },
+      { path: 'social-media', component: SocialMediaComponent, data: { title: 'Social' } },
       //{ path: 'leaveclaim-addedittime', component: AddEditTime, data: { title: 'Add/Edit Time',parents:'leaveclaim-details' } },
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },

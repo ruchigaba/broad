@@ -38,13 +38,13 @@ export class HelpComponent implements OnInit {
   })
   //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
 
-  //   this._commonApiCall.getService("supportContent?Type=HelpSupportEmail","","")
-  //   .subscribe(res => {
-  //     this.email = res.result[0].base64;
-  //   },
-  // error =>{
-  //   this._commonApiCall.handleError(error,"Help Email");
-  // })
+    this._commonApiCall.getService("supportContent?Type=HelpSupportEmail","","")
+    .subscribe(res => {
+       this.email = res.result[0].base64;
+     },
+   error =>{
+    this._commonApiCall.handleError(error,"Help Email");
+   })
 }
 // HELP VALIDTAION
 helpSend(){
