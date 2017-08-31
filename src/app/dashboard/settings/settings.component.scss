@@ -10,13 +10,14 @@ list-style: outside none none;
 .section-image-setting{
 float: left;
 width: 50%;
-
 img {
 padding: 5px;
 width:25%;
 }
 }
-
+.extratopcls{
+ margin-top: 50px;
+}
 .lft {
 text-align: left;
 }
@@ -38,6 +39,10 @@ text-align: right;
  .section-image-setting img {
     padding: 5px;
 }
+.extratopcls {
+    
+    padding-top: 40px;
+}
  
 }
 @media screen and (min-width: 370px) and (max-width:700px){
@@ -48,13 +53,26 @@ text-align: right;
 
 @media screen and (min-width: 310px) and (max-width:600px){
 .section-image-setting img{
-  width:65%;
+  width:60%;
  }
 }
 
-  @media screen and (max-width: 768px){
+ /*  @media screen and (max-width: 768px){
+ .section-image-setting img {
+   width: 50%;
+ }
+ }
+ */
+ @media screen and (min-width: 767px) and (max-width: 1020px){
 .section-image-setting img {
     width: 50%;
 }
+
+ }
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px){
+  	.section-image-setting img {
+    width: 43%;
 }
- 
+
+ }

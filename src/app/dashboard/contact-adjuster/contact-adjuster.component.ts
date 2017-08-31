@@ -81,7 +81,7 @@ emailSupervisor(){
 //---------------------------------OPEN DIALER-------------------------------------
 
 contact(){
-  window.open('tel:'+this.phone, '_system');
+ // window.open('tel:'+this.phone, '_system');
 }
 //-----------------------------------------ITS CALLED AFTER SELECTING OTHER CLAIM NUMBER-----------------------------
 selectedClaim = this.claims1[0].claim_number;

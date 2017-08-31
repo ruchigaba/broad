@@ -60,7 +60,7 @@
            <div style="clear:both;"></div>
          </ul>
          <ul *ngFor="let currentclaim of currentclaims" (click)="clickedItemTransNumber(currentclaim.trans_id)" class="col5 tbl-data">
-          <li class="col7 checknum" routerLink="/cpi" >{{currentclaim.trans_number}}</li>
+          <li class="col7 checknum">{{currentclaim.trans_number}}</li>
            <li class="col7 checkdate">{{currentclaim.date_of_check}}</li>
            <li class="col7 checkamnt">{{currentclaim.amount}}</li>
            <li class="col7 checkfrmto">{{currentclaim.from_date}} - {{currentclaim.to_date}}</li>

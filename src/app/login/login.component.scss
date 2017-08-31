@@ -191,8 +191,10 @@
   line-height: 25px;
   color: $igmm-color;
   }
-
-   @media screen and (max-width: 800px){
+  a {
+    background-color: transparent;
+}
+    @media screen and (max-width: 800px){
    .login-bg-image {
   height: 100%;
   background-size: cover;
@@ -289,26 +291,6 @@ font-size: 12px;
 
 }
 
- @media screen and (max-width: 768px){
-.sing-in-text {
-    text-align: center;
-    }
-    .title-section-login span {
-    font-size: 24px;
-}
-.m-ctext-md {
-    font-size: 20px;
-}
-li.user-section {
-    font-size: 16px;
-}
-.forgot-password-text-section li {
-    padding-right: 43px;
-    }
-    .lg-main {
-    width: 70%;
-  }
- }
 
 @media screen and (min-width: 801px) and (max-width:1200px){
   .login-bg-image {
@@ -320,9 +302,6 @@ li.user-section {
     width: 95%;
     box-sizing: border-box;
   } 
-  .sing-in-text {
-    text-align: center;
-    }
 .wrapper-login {
   width: 96%;
 }
@@ -383,3 +362,30 @@ li {
     font-size: 11px;
 }
 }
+
+ @media screen and (min-width: 767px) and (max-width: 1020px){
+
+.logo-section {
+    width: 25%;
+}
+.title-section-login span {
+    font-size: 25px;
+}
+.m-ctext-md {
+    font-size: 22px;
+}
+.sing-in-text {
+    text-align: center;
+}
+li.user-section {
+    font-size: 14px;
+}
+.forgot-password-text-section li {
+    padding-right: 40px;
+}
+  }
+   @media screen and (min-width: 1024px) and (max-width: 1200px){
+    .sing-in-text {
+    text-align: center;
+} 
+  }

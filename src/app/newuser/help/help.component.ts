@@ -31,9 +31,13 @@ export class HelpComponent implements OnInit {
   //-------------------------------------GET SUPPORT SUBJECT API CALL-----------------------------------
   this._commonApiCall.getService("supportContent?Type=HelpSubject", "", "")
     .subscribe(res => {
+       document.getElementById("loadingDiv").style.display = "none"; 
+
       this.subject = res.result[0].base64;
     },
   error =>{
+     document.getElementById("loadingDiv").style.display = "none"; 
+
     this._commonApiCall.handleError(error,"Help Subject");
   })
   //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
