@@ -73,7 +73,7 @@ helpSend(){
         "to_email_address": "dgupta@primussoft.com",
         "from_email_address": this.email,
         "subject_Text": this.subject,
-        "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + "Hello" + "<br/><br/>"
+        "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
         + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + "dgupta@primussoft.com" + "<br/>" + "Phone: " + this.telephone
       }
     this._commonApiCall.postService("emails/send", "", "application/json", data)

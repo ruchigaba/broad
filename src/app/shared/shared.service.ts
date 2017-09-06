@@ -306,7 +306,7 @@ if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('toke
 }
 // ----------------------------------------Add dynemic class to body tag to all  the page accordingly start--------------------------------------------------------
 addClass1 (pageName:string){
-  var root = document.getElementsByTagName('html')[0];
+   var root = document.getElementsByTagName('html')[0];
       root.setAttribute('class', pageName);
 }
 // ----------------------------------------Add dynemic class to body tag to all  the page accordingly end--------------------------------------------------------
