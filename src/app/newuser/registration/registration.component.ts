@@ -97,7 +97,7 @@ export class RegistrationComponent implements OnInit {
       this.commnFunc.alertPopup("Please fill the email in valid format","Registration");
     }
     else if (this.reEmail == "" || this.reEmail == undefined || !re.test(this.reEmail)) {
-      this.commnFunc.alertPopup("Please fill the Re-email in valid format","Registration");
+      this.commnFunc.alertPopup("Please fill the Re-Enter Email in valid format","Registration");
     }
     else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
       this.commnFunc.alertPopup("Please fill the 4 digit ssn in number format","Registration");

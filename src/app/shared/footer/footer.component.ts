@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
-  activeFooterMenu = "Claim";
+activeFooterMenu = "";
+  constructor(private route?: Router) { }
+  
   ngOnInit() {
 
     document.onclick=function() { 
@@ -22,7 +23,21 @@ export class FooterComponent implements OnInit {
     window.scrollTo(0, 0);
 
   }
+footerProviderClick(){
+  sessionStorage.setItem("refreshProviders","true");
+}
+removeMoreOptions(){
+  // hide footer  more option on every page init
+  var className = document.getElementById("togg-dv").className;
+  if (className == "hidden-content slide-down")
+    document.getElementById("togg-dv").className = "hidden-content slide-up";
+}
 
+// if claims is clicked then make page position as undefined,so page will open at top
+  claimFooterClick(){
+      sessionStorage.setItem('pagePosition', undefined);
+  }
+  // code to slide up and down more options in mobile footer
   enableToggle(event) {
   	
 
@@ -31,10 +46,10 @@ export class FooterComponent implements OnInit {
     if (className == "hidden-content slide-down")
       document.getElementById("togg-dv").className = "hidden-content slide-up";
 
-    else{
+    else
       document.getElementById("togg-dv").className = "hidden-content slide-down";
 
-}
+
 
     var theElement = document.getElementById("pageHtml");
 
@@ -43,18 +58,19 @@ export class FooterComponent implements OnInit {
     return false;
   }
 
-  removeMoreOptions(){
-  // hide footer  more option on every page init
-  var className = document.getElementById("togg-dv").className;
-  if (className == "hidden-content slide-up")
-    document.getElementById("togg-dv").className = "hidden-content slide-down";
-}
+//   removeMoreOptions(){
+//   // hide footer  more option on every page init
+//   var className = document.getElementById("togg-dv").className;
+//   if (className == "hidden-content slide-up")
+//     document.getElementById("togg-dv").className = "hidden-content slide-down";
+// }
 
 // document.getElementsByTagName('body').addEventListener('click',function(){
 	
 // }); 
-claimFooterClick(){
-      sessionStorage.setItem('pagePosition', undefined);
-  }
+changeSocialMedia(){
+
+  this.route.navigate(['./dashboard/socialMedia']);
+}
 
 }

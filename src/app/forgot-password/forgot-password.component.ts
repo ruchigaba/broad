@@ -34,7 +34,7 @@ export class ForgotPasswordComponent implements OnInit,OnDestroy {
         this.secQuesObject = sessionStorage.getItem('secQues');
         console.log(this.secQuesObject);
         this.secQuesObj = JSON.parse(this.secQuesObject);
-        // this.secQues1 = this.secQuesObj.securityquestion1;
+         this.secQues1 = this.secQuesObj.securityquestion1;
         this.secQues2 = this.secQuesObj.securityquestion2;
         this.secQues3 = this.secQuesObj.securityquestion3;
   }

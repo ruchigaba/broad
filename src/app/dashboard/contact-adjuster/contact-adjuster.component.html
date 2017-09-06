@@ -1,6 +1,6 @@
 
-  <div class="contact-adjuster-2-3"  *ngIf=isShowContact>  
-  <div class="center-the-header-width">
+
+   <div class="contact-adjuster-2-3"  *ngIf=isShowContact> 
     <div class="col-con-adj-12 header-adjuster-section">
       <div class="dropdown-con-adj">
         <label class="bold-cls-global-con-adj">Select Claim #</label>
@@ -9,7 +9,7 @@
               <span class="caret-con-adj"></span>
               </button>
         <ul #dropdownMenu1 class="dropdown-menu-con-adj" aria-labelledby="dropdownMenu1" style="display:none;">
-           <li *ngFor="let claim of claims1"><a (click)="dropboxitemselected(claim,dropdownMenu1)">{{claim.claim_number}}</a></li>
+           <li  *ngFor="let claim of claims1" ><a (click)="dropboxitemselected(claim,dropdownMenu1)" onblur="dropboxitemselected">{{claim.claim_number}}</a></li>
         </ul>
       </div>
     </div>
@@ -41,4 +41,5 @@
     </div>
    <div class="col-con-adj-1"></div>
  <div class="clear"></div>
-  </div>
+
+

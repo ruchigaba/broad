@@ -2,6 +2,8 @@ import { Router, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CustomReuseStrategy } from './reuse-strategy';
+import { RouteReuseStrategy  } from '@angular/router';
 //import { ViewClaimComponent } from './dashboard/view-claim/view-claim.component';
 //import { PieChartComponent } from './dashboard/view-claim/pie-chart/pie-chart.component';
 import { EulaComponent } from './newuser/eula/eula.component';
@@ -60,7 +62,7 @@ export const routes = [
       { path: 'contact-adjuster', component: ContactAdjusterComponent, data: { title: 'Contact'} },
       { path:'provider', component:ProviderComponent , data: {title:'Providers'} },
       { path: 'physiciansmap', component: NearbyphysiciansMapComponent, data: { title: 'Providers',parent:'provider' } },
-      { path: 'social-media', component: SocialMediaComponent, data: { title: 'Social Media' } },
+      { path: 'social-media', component: SocialMediaComponent, data: { title: 'Social' } },
       //{ path: 'leaveclaim-addedittime', component: AddEditTime, data: { title: 'Add/Edit Time',parents:'leaveclaim-details' } },
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },

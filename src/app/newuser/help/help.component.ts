@@ -31,24 +31,20 @@ export class HelpComponent implements OnInit {
   //-------------------------------------GET SUPPORT SUBJECT API CALL-----------------------------------
   this._commonApiCall.getService("supportContent?Type=HelpSubject", "", "")
     .subscribe(res => {
-       document.getElementById("loadingDiv").style.display = "none"; 
-
       this.subject = res.result[0].base64;
     },
   error =>{
-     document.getElementById("loadingDiv").style.display = "none"; 
-
     this._commonApiCall.handleError(error,"Help Subject");
   })
   //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
 
-  //   this._commonApiCall.getService("supportContent?Type=HelpSupportEmail","","")
-  //   .subscribe(res => {
-  //     this.email = res.result[0].base64;
-  //   },
-  // error =>{
-  //   this._commonApiCall.handleError(error,"Help Email");
-  // })
+    this._commonApiCall.getService("supportContent?Type=HelpSupportEmail","","")
+    .subscribe(res => {
+       this.email = res.result[0].base64;
+     },
+   error =>{
+    this._commonApiCall.handleError(error,"Help Email");
+   })
 }
 // HELP VALIDTAION
 helpSend(){
@@ -77,7 +73,7 @@ helpSend(){
         "to_email_address": "dgupta@primussoft.com",
         "from_email_address": this.email,
         "subject_Text": this.subject,
-        "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + "Hello" + "<br/><br/>"
+        "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
         + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + "dgupta@primussoft.com" + "<br/>" + "Phone: " + this.telephone
       }
     this._commonApiCall.postService("emails/send", "", "application/json", data)

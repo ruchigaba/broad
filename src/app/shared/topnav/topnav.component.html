@@ -1,25 +1,33 @@
- <nav class="navbarstyle">
+ <nav class="navbarstyle" [class.headerBack] = "parent">
    <div class="logo-div logo-sec-new-one">
-   <div class="logoclaim">
-   <img src=".\image\broadspire-logo-eufw.png">
+   <div class="logoclaim" (click)= "goBack()"  *ngIf="parent" >
+   <img alt="." src=".\image\broadspire-logo-eufw.png" style="max-height: 58px;">
 
    <div class="back-arrow">
-   <div *ngIf="parents != undefined" class="arrowdiv" (click)="backToParents()"> 
-   <i aria-hidden="true" class="fa fa-arrow-left"></i> </div>
+   <div  class="arrowdiv"> 
+   <i aria-hidden="true" class="fa fa-arrow-left"></i>
    <div style="clear:both;"></div>
+   </div> 
+   </div>
+   </div>
+    
+
+   <div class="logoclaim" *ngIf = "parent2">
+   <img alt="." src=".\image\broadspire-logo-eufw.png" style="max-height: 58px;">
+   </div>
+
    </div>
    
-   </div>
-   </div>
+
    <div class="title-div fourty">
    <div class="titltxtd" id="titleBar">{{title}}</div>
    </div>
 
-   <div class="text-style ">
-   <div class="clstext">Hi, Rahul</div>
+   <div class="text-style">
+   <div class="clstext" >{{WelcomeUsername}}</div>
    </div>
+
    </nav>
-   
    <div style="clear:both;"></div>
 
 

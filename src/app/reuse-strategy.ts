@@ -18,7 +18,7 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
    * The keys will all be a path (as in route.routeConfig.path)
    * This allows us to see if we've got a route stored for the requested path
    */
-  acceptedRoutes: string[] = ["providers"];
+  acceptedRoutes: string[] = ["provider"];
   storedRoutes : { [key: string]: RouteStorageObject } = {};
 
   /**
@@ -30,6 +30,7 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
    * @returns boolean indicating that we want to (true) or do not want to (false) store that route
    */
   shouldDetach(route: ActivatedRouteSnapshot): boolean {
+    //alert('2');
     //console.log("abc"+"//"+JSON.stringify(this.storedRoutes));
     // check to see if the route's path is in our acceptedRoutes array
     if (this.acceptedRoutes.indexOf(route.routeConfig.path) > -1) {
@@ -63,16 +64,16 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
    * @returns boolean indicating whether or not to render the stored route
    */
   shouldAttach(route: ActivatedRouteSnapshot): boolean {
-
+//alert('1');
 // if user clicks left panel option or footer providers option then page should refresh.
 
-if(sessionStorage.getItem("refreshProviders") == "true"){
+// if(sessionStorage.getItem("refreshProviders") == "true"){
 
-  sessionStorage.setItem("refreshProviders","false");
-  return false;
+//   sessionStorage.setItem("refreshProviders","false");
+//   return false;
 
-}
-else {
+// }
+// else {
       // this will be true if the route has been stored before
     let canAttach: boolean = !!route.routeConfig && !!this.storedRoutes[route.routeConfig.path];
 
@@ -95,7 +96,7 @@ else {
       return false;
     }}
 
-  }
+  
 
   /**
    * Finds the locally stored instance of the requested route, if it exists, and returns it

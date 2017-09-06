@@ -64,7 +64,7 @@
 			{{selectedItem}}
                   <span class="caret"></span>
                   </button>
-                  <ul  class="dropdown-menu" aria-labelledby="dropdownMenu1" style="display:none;    cursor: pointer;    border: 1px solid rgba(0, 0, 0, 0.15);" id="hide1" >
+                  <ul  class="dropdown-menu provider-ka-hh" aria-labelledby="dropdownMenu1" style="display:none;    cursor: pointer;    border: 1px solid rgba(0, 0, 0, 0.15);" id="hide1" >
                 <li  *ngFor="let a of radiusdistance"><a (click) ="searchRadiusdropboxitem(a);hideShowRadius()">{{a}}</a></li>
                 <div style="clear:both;"></div>
               </ul>
@@ -72,13 +72,17 @@
 		<div class="border">
 			 <div class="panel-heading-provider" id="heading2" role="tab">
                                    <h4 class="panel-title">
-                           <a aria-controls="collapseOne"  class="collapse-col" data-parent="#specialities" data-target="#collapse1" data-toggle="collapse" role="button" (click)="collapse1.style.display=='block'?collapse1.style.display='none':collapse1.style.display='block'">
+                           <a aria-controls="collapseOne"  class="collapse-col collapsed" data-parent="#specialities" data-target="#collapse1" data-toggle="collapse" role="button" >
                               
                               Select Specialities
                            </a>
+
                         </h4>
                 </div>
-                <div  class="hide-col-nn panel-collapse in" id="collapse1" aria-labelledby="#heading2" role="tabpanel">
+
+
+                <div aria-labelledby="#heading2" class="hide-col-nn panel-collapse collapse" id="collapse1" role="tabpanel" aria-expanded="false" style="height: 0px;">
+
                   <div class="panel-body-provider">
                     <label class="ui-checks" style="float:left;font-weight:600; padding-left:0px;">Providers List</label>
                     <ul class="nav" style="text-align:left;">
@@ -109,13 +113,17 @@
 	</div>
 		<div class="border">
 			<div class="panel-heading-provider" id="optionalSearch">
-				<a aria-controls="collapseOne" aria-expanded="true" class="hide-col-nn collapse-col" data-parent="#specialities" data-target="#collapse2" data-toggle="collapse" role="button">
+				<a aria-controls="collapseOne" aria-expanded="true" class="hide-col-nn collapse-col collapsed" data-parent="#specialities" data-target="#collapse2" data-toggle="collapse" role="button">
                               
                              Enter Any Optional Search Criteria
                            </a>
+
 			</div>
-			<div id="collapse2" class="hide-col-nn panel-body-col" style="text-align: left;">
+
+			<div class="hide-col-nn panel-body-col collapse" id="collapse2" style="text-align: left; height: 0px;" aria-expanded="false">
+			
                     <div class="form-group" style="margin-bottom:25px; ">
+
 			<ul>
 				<li ><label class="pinput ">Hospital/Group Name:</label></li>
 				<li style= "padding-left:20px;margin-bottom:20px;"><input class="inputt" [(ngModel)] ="hospitalGroupName" name ="hospitalGroupName" type="text" /></li>

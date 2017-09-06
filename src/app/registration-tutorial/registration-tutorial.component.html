@@ -1,16 +1,12 @@
 <app-topnav></app-topnav>
 <div class="collapse navbar-toggleable-xs clearfix new-text-center">
-
-<div  class="regestration-main-slider-container" (window:resize)="onResize($event)">
-
-
 <div class="maincontainersectionslider">
   <div class="imgmain-new-reg-subwrapp">
 <a class="w3-btn-floating w4-display-left" (click)="plusDivs(-1)">&#10094;</a>
 
 <div class="w3-content w3-display-container" *ngFor="let image of images let i=index">
   <div class="imgmain">
-  <img  class="mySlides" id="mySlides{{i}}" src="{{image.base64}}">
+  <img  class="mySlides" id="mySlides{{i}}" src="{{image.base64}}" style="width:100%">
   </div>
 </div>
 
@@ -18,7 +14,7 @@
 </div>
 </div>
 </div>
-</div>
+
 
 
 

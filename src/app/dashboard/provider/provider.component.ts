@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { CommonAPICall } from '../../shared/shared.service';
 import {Router, RouteReuseStrategy, ActivatedRouteSnapshot,DetachedRouteHandle,NavigationEnd} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
-//import {reuse-Strategy} from '../../resue-strategy';
+import {CustomReuseStrategy} from '../../reuse-strategy';
 
 declare var cordova: any;
 declare var plugins: any;

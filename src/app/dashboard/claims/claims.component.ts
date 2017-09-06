@@ -24,7 +24,7 @@ export class ClaimsComponent implements OnInit {
   date = "";
   year = "";
   claimNo = "";
-
+  abc=false;
   constructor(public _dashboardApiService: CommonAPICall, private route: Router,private ComFunc:CommonFunction) { }
 
   ngOnInit() {
@@ -190,7 +190,9 @@ getDocHeight() {
     sessionStorage.setItem("pagePosition", JSON.stringify(this.getScroll()));
 
     sessionStorage.setItem("trans_id", trans_id);
+    sessionStorage.setItem("title", "Claims1");
     this.route.navigate(['./dashboard/claim-paymentdetailspage']);
+     this.abc=true;
   }
 
   // call getCurrentClaims service when any myclaims is clicked

@@ -85,13 +85,23 @@ a.faqcollapsed p {
 .main-container {
   margin: 0px;
 }
- 
+
+.panel-body p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
   
 ol li {
     font-size: 16px;
     line-height: 1.5;
 }
 .faqscollapse {
+
+  
+    line-height: 1.2;
+}
+#accordion .panel-heading.my-class:before {
     
   
     line-height: 1.2;
@@ -99,11 +109,13 @@ ol li {
 #accordion .panel-heading.my-class:before {
     color: #000;
     position: inherit;
-    margin-top: -9px;
+
+    margin-top: -15px;
+
 }
- .faqbr{
+.faqbr{
   display: none;
- }
+}
 
 .main-faq-container {
      min-height: 0px; 
@@ -114,19 +126,43 @@ ol li {
 }
 @media screen and (min-width: 320px) and (max-width:480px){
 #accordion .panel-heading.my-class2:before {
-  margin-top: -11px;
+
+  margin-top: -16px;
+
   }
 
 }
- @media screen and (min-width: 768px) and (max-width:1024px){
+/*  @media screen and (min-width: 768px) and (max-width:1024px){
 #accordion .panel-heading.my-class2:before {
-     margin-top: -16px;
-   }
+    margin-top: -16px;
+  }
 
-    
- } 
- @media screen and (max-width: 768px){
-/*  .panel-heading {
-   padding: 6px 13px;
-} */
+   
+}  */
+  @media screen and (min-width: 767px) and (max-width: 1020px){
+   #accordion .panel-heading.my-class:before {
+    color: #000;
+    position: inherit;
+    margin-top: -16px;
 }
+    #accordion .panel-heading.my-class2:before {
+    
+
+    margin-top: -18px;
+} 
+}
+@media screen and (min-width: 500px) and (max-width:760px){
+
+    #accordion .panel-heading.my-class:before {
+    color: #000;
+    position: inherit;
+    margin-top: -16px;
+}
+    #accordion .panel-heading.my-class2:before {
+    
+    margin-top: -18px;
+} 
+
+
+ } 
+ 
