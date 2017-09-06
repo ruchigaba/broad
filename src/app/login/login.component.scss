@@ -192,6 +192,12 @@
   color: $igmm-color;
   }
 
+  a {
+    background-color: transparent;
+}
+
+
+
     @media screen and (max-width: 800px){
    .login-bg-image {
   height: 100%;

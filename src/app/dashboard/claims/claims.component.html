@@ -60,7 +60,7 @@
            <div style="clear:both;"></div>
          </ul>
          <ul *ngFor="let currentclaim of currentclaims" (click)="clickedItemTransNumber(currentclaim.trans_id)" class="col5 tbl-data">
-          <li class="col7 checknum" routerLink="/cpi" >{{currentclaim.trans_number}}</li>
+          <li class="col7 checknum">{{currentclaim.trans_number}}</li>
            <li class="col7 checkdate">{{currentclaim.date_of_check}}</li>
            <li class="col7 checkamnt">{{currentclaim.amount}}</li>
            <li class="col7 checkfrmto">{{currentclaim.from_date}} - {{currentclaim.to_date}}</li>
@@ -80,14 +80,7 @@
 
     <!-- IMAGE DIV -->
 <div *ngIf= dolImgShow class="lossImg" style="cursor: pointer;
-  display: block;
-  border-style: solid;
-  border-color:black;
-  float: left;
-  z-index: 5;
-  position: absolute;
-  right: 285px;
-  top: 50px;">
+ ">
   <div class="innnerr-divv-new">
   <button type="button" (click)="close()" class="closebutton">X</button>
   <img src={{dolImg}}/>

@@ -36,7 +36,8 @@
     display: block !important;
 }
 .main-data-div {
-    border-top: 1px solid #b7b7b7;
+    //border-top: 1px solid #b7b7b7;
+    box-shadow: 0px 0 0 0.7px rgba(0, 0, 0, 0.2);
     background: #f6f6f6 none repeat scroll 0 0;
 }
  .active {
@@ -53,7 +54,7 @@
     border-bottom: 2px solid #007934;
 }
 .col2-xx-mm span {
-    font-size: 10px !important;
+    font-size: 12px !important;
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -64,6 +65,7 @@
 }
  .mobileFooter .col2-xx-mm.active .midd-content span{
     border-bottom: 2px solid #007934;
+        //background-color: #cce4d6 !important;
 }
 // .mobileFooter .main-data-div .col2-xx-mm.activeFooter{
 //         background-color: $activeFooter-backgroud !important;

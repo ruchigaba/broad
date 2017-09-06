@@ -1,4 +1,4 @@
-import { Component, Injectable, ViewChild } from '@angular/core';
+ import { Component, Injectable, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http, Headers, Request, RequestOptions } from '@angular/http';
 import { Observable } from "rxjs/Observable";
@@ -250,22 +250,22 @@ this.addDivBeforeBody();
             return "Password must be at least 8 characters";
       }
       else if(str.search(/[a-z]/) == -1 && str.search(/[A-Z]/) == -1){
-        return "The password must have either lowercase letter or uppercase letter";
+        return "The password must have either lowercase letter or uppercase letter";
       }
       else if(str.search(/[A-Z]/) == -1 && str.search(/\d/) == -1){
-        return "The password must have either uppercase letter or number";
+        return "The password must have either uppercase letter or number";
       }
       else if(str.search(/\d/) == -1 && str.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:]/) == -1){
-        return "The password must have either number or special character";
+        return "The password must have either number or special character";
       }
       else if(str.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:]/) == -1 && str.search(/[a-z]/) == -1){
-        return "The password must have either special character or lowercase letter";
+        return "The password must have either special character or lowercase letter";
       }
       else if(str.search(/[A-Z]/) == -1 && str.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:]/) == -1){
-        return "The password must have either uppercase letter or special character";
+        return "The password must have either uppercase letter or special character";
       }
       else if(str.search(/\d/) == -1 && str.search(/[a-z]/) == -1){
-        return "The password must have either number or lowercase letter";
+        return "The password must have either number or lowercase letter";
       }
       else {
         return "";
@@ -313,7 +313,7 @@ addClass1 (pageName:string){
 
 // password validation
 validatePassword(string){
- // var p = document.getElementById('newPassword').value ,error = [];
+// var p = document.getElementById('newPassword').value ,error = [];
   if(string.search(/.{8,}/)){
     return("Your password should be of minimum length 8");
   }

@@ -20,12 +20,16 @@
 .sidebar li:hover{
 background-color: #efeeee;
 }
-.sidebar li:last-child {
+/* .sidebar li:last-child {
     border-bottom: medium none;
-}
+} */
 .sidebar .list-group li{
     outline: none;
 }
+
+.sidebar .list-group li:last-child {
+    border-bottom: medium none;
+} 
 
 .sidebar li{
     outline: none !important;

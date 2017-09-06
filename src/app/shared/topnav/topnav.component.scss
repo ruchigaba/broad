@@ -17,6 +17,7 @@ position: fixed;
     right: -74px;
     cursor: pointer;
     font-weight: 800;
+     background-color: transparent;
     }
 
 .navbarstyle{
@@ -147,7 +148,7 @@ z-index: 999;
     float: left;
     padding-left: 26px;
     max-height: 38px;
-    margin-top: 15px;
+    margin-top: 4px;
     }
     .arrowdiv {
     position: inherit !important;
@@ -209,8 +210,6 @@ z-index: 999;
     font-weight: 800; 
 } 
 .back-arrow{
-    
-  
     vertical-align: middle;
      
 }
