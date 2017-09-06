@@ -26,7 +26,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
       root.setAttribute('class', 'outerPages');
     }
     else {
-      //var root = document.getElementsByTagName('html')[0];
+      //zvar root = document.getElementsByTagName('html')[0];
       root.setAttribute('class', '');
     }
 
@@ -60,9 +60,9 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           this.title = this.data.title;
 
           // add back button to header if route has parent defined
-          // console.log(this.data.parent + "1: "+ this.data.parent2);
+           // alert(this.data.parent + "1: "+ this.data.parent2);
           if(this.data.parent != undefined && this.data.parent != ""){
-            // alert("condition true" + this.data.parent);
+             // alert("condition true" + this.data.parent);
             //console.log(this.data.parent + "2: "+ this.data.parent2);
             this.parent=true;
             this.parent2=false;

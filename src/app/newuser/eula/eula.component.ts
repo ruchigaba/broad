@@ -24,8 +24,9 @@ export class EulaComponent implements OnInit{
           console.log(x);
   //         // document.body.innerHTML = x;
       },
+      
         error => {
-          this.commnFunc.alertPopup("service failed!", "Eula");
+          this._cac.handleError(error, "Eula");
       })
     }
 
