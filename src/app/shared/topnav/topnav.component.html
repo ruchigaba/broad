@@ -1,39 +1,33 @@
- <nav class="navbarstyle" [class.headerBack] = "parent">
+<nav class="navbarstyle" [class.headerBack] = "parent">
    <div class="logo-div logo-sec-new-one">
-   
-   
-
-   <!-- <div class="back-arrow"> -->
-   <!-- //back button -->
-   <a class="navbar-item pull-left" (click)= "goBack()"  *ngIf="parent" >
+   <div class="logoclaim" (click)= "goBack()"  *ngIf="parent" >
    <img alt="." src=".\image\broadspire-logo-eufw.png" style="max-height: 58px;">
-   <!-- <div *ngIf="parents != undefined" class="arrowdiv" (click)="backToParents()"> --> 
-   <i aria-hidden="true" class="fa fa-arrow-left"></i> 
-   </a>
-   <a>
-   
+
+   <div class="back-arrow">
+   <div  class="arrowdiv"> 
+   <i aria-hidden="true" class="fa fa-arrow-left"></i>
+   <div style="clear:both;"></div>
+   </div> 
+   </div>
+   </div>
+    
+
    <div class="logoclaim" *ngIf = "parent2">
    <img alt="." src=".\image\broadspire-logo-eufw.png" style="max-height: 58px;">
    </div>
+
+   </div>
+   
+
+   <div class="title-div fourty">
    <div class="titltxtd" id="titleBar">{{title}}</div>
+   </div>
+
+   <div class="text-style">
    <div class="clstext" >{{WelcomeUsername}}</div>
-</a>
-
-   
-   
-   
-   
-   <!-- //page title -->
-   
-   <!-- <div class="titltxtd" id="titleBar">{{title}}</div> -->
-  
-
-  
-   <!-- <div class="clstext" style="float:right;font-size:15px;font-weight:500;position: relative;top: -13px;">{{WelcomeUsername}}</div> -->
    </div>
 
    </nav>
-   
    <div style="clear:both;"></div>
 
 

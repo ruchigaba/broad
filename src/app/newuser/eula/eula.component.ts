@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonAPICall } from '../../shared/shared.service';
 import {Router} from '@angular/router';
-
+import { CommonFunction } from '../../shared/commonFunction';
 
 @Component({
     selector: 'eula',
@@ -11,8 +11,10 @@ import {Router} from '@angular/router';
     providers: [CommonAPICall]
   })
 export class EulaComponent implements OnInit{
+  commnFunc;
 
   constructor(private _cac: CommonAPICall, private router: Router) {
+    this.commnFunc = new CommonFunction();
 
       this._cac.getService("users/agreements", "", "application/json")
          .subscribe(res => {
@@ -23,7 +25,7 @@ export class EulaComponent implements OnInit{
   //         // document.body.innerHTML = x;
       },
         error => {
-          alert("service failed!");
+          this.commnFunc.alertPopup("service failed!", "Eula");
       })
     }
 
