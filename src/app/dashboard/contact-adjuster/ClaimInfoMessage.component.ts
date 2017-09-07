@@ -207,9 +207,10 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
       }
     }
     else {
-      imgPhoto.src = this.transperentImg;
-      inputFileName.value = '';
-      this.ComFunc.alertPopup("File format not supported", "Message");
+      // imgPhoto.src = this.transperentImg;   //change by khushboo on 7/9/17
+      // inputFileName.value = '';
+       
+       this.ComFunc.alertPopup("File format not supported", "Message");
     }
 
   }
