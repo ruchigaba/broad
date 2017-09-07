@@ -147,7 +147,15 @@ button.btn-help-registration:active {
     color: #258c52;
     padding: 0 15px;
   }
-  
+  body .lossImg .innnerr-divv-new {
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 50%;
+}
+
+
   @media screen and (max-width: 800px){
     .whiteblank-registration{
      margin-top: 75px;
@@ -165,4 +173,23 @@ button.btn-help-registration:active {
     width:16.3% !important;
   }
 }
+@media screen and (max-width: 767px){
 
+.lossImg .innnerr-divv-new {
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 50%;
+}
+
+.closebutton {
+    float: right;
+    position: relative;
+    top: -25px;
+}
+.lossImg img {
+    max-width: 100%;
+}
+
+}
