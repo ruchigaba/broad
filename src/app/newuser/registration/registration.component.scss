@@ -1,20 +1,27 @@
 .lossImg1 {
-    cursor: pointer;
+  cursor: pointer;
     display: block;
     border-style: solid;
-    border-color:black;
+    border-color: black;
     float: left;
     z-index: 5;
-    position: fixed;
-    left: 22%;
-    top: 20%;
-    width: 54%;
+    position: absolute;
+    left: 27%;
+    top: 52%;
+    width: 46%;
 }
 .closebutton{
 
 position: absolute;
     right: 0;
   
+}
+body .lossImg .innnerr-divv-new {
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 50%;
 }
 button.btn-continue-registration:active {
     position:relative;
@@ -147,20 +154,21 @@ button.btn-help-registration:active {
     color: #258c52;
     padding: 0 15px;
   }
-  body .lossImg .innnerr-divv-new {
-    background-color: #fff;
-    border: 2px solid #000;
-    margin: 0 auto;
-    padding-top: 25px;
-    width: 50%;
+  
+.innnerr-divv-new img{
+     width:100%;
 }
-
-
   @media screen and (max-width: 800px){
     .whiteblank-registration{
      margin-top: 75px;
     width:100%;
   }
+  .lossImg1 {
+  left: 4%;
+    top: 110%;
+    width: 92%;
+
+}
 }
 @media screen and  (min-width: 310px) and(max-width: 1020px){
 .whiteblank-registration{
@@ -175,12 +183,10 @@ button.btn-help-registration:active {
 }
 @media screen and (max-width: 767px){
 
+ 
 .lossImg .innnerr-divv-new {
-    background-color: #fff;
-    border: 2px solid #000;
-    margin: 0 auto;
-    padding-top: 25px;
-    width: 50%;
+    
+    width: 100% !important;
 }
 
 .closebutton {
@@ -192,4 +198,11 @@ button.btn-help-registration:active {
     max-width: 100%;
 }
 
+}
+ @media screen and (min-width: 767px) and (max-width: 1020px){
+.lossImg1 {
+    left: 27%;
+    top: 52%;
+    width: 50%;
+}
 }

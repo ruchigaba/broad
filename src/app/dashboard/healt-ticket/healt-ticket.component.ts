@@ -142,9 +142,8 @@ export class HealtTicketComponent implements OnInit {
     healthDropdownFunc(dropdownMenu1){
     	if (dropdownMenu1.style.display=="none") {
     		dropdownMenu1.style.display="block";
-        document.addEventListener("blur", ()=>{
-  //       window.addEventListener("click",()=>{
-    dropdownMenu1.style.display="none";
+        window.addEventListener("click",()=>{
+   dropdownMenu1.style.display="none";
    })
     	}
     	else{

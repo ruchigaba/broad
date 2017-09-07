@@ -84,6 +84,7 @@ ngOnInit(){
       }
     }, false);
    sessionStorage.setItem("refreshProviders", "true");
+   // document.getElementById("loadinDiv").style.display="none";
 
 }
 

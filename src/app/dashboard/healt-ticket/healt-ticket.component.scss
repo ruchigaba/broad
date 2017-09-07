@@ -3,6 +3,15 @@ button#dropdownMenu1 {
     border: none;
     padding: 0 10px;
 }
+.dropdown-menu.health-drp-dwn{
+    position: absolute;
+    left: 48.6%;
+    background-color: #fff;
+    min-width: 165px;
+    z-index: 999;
+    text-align: center;
+    margin-top: -3px;
+}
 
    .col-xs-12-headersection{
     background-color:$col-bg-color;
@@ -237,7 +246,7 @@ button#dropdownMenu1 {
     font-size: 14px;
 }
 .container-center {
-    margin-top: -13px;
+    margin-top: 13px !important;
 }
 .healthticket-main-page {
     margin-top: 1px;

@@ -4,7 +4,7 @@
   <br>
  <div class="registuser-validregistration">Please validate your registration information </div>
  <br>
- <br>
+  
  <ul style="font-size: 14px !important; list-style-type:none;padding: 0 15px">
 
  <li class="li-first-to-zip-validregistration"> 
@@ -92,13 +92,14 @@
     </ul>
     <div class="vali-nn-ww">
 
-
-     <ul>
-          <li class="vali-pad-nn" *ngFor="let ques of questions; let i = index"><input type="checkbox" id="checkBox{{i}}" (change)="checkValue($event,i)">{{ques.question}}</li>
-          <li class="vali-pad-nn" *ngFor="let ques of questions; let i = index"><input type="text" class="form-control" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
-        </ul>
-
+      <ul *ngFor="let ques of questions let i=index" style="padding: 0px;">
+        <li class="info-securty-cls">
+          <input type="checkbox" id="checkBox{{i}}" class="mycheck" id="chk" (change)="checkValue($event,i)" > {{ques.question}} <br>
      
+        <input type="text" id="securityAns{{i}}" class="info-securty form-control-data" [(ngModel)]="inputElem[i]" style="display:none;"  >
+        </li>
+      </ul>
+
     </div>
      
   
@@ -123,16 +124,16 @@
       </div>
       </div>
       </div>
-      <!-- IMAGE DIV -->
-  <div *ngIf= dolImgHide class="lossImg"
-    >
-    <div class="innnerr-divv-new">
-      <button type="button" (click)="close()" class="closebutton">X</button>
-      <img src={{dolImg}}/>
-    </div>
-  </div>
-      </div>
-
+   <!--    IMAGE DIV
+     <div *ngIf= dolImgHide class="lossImg"
+       >
+       <div class="innnerr-divv-new">
+   <button type="button" (click)="close()" class="closebutton">X</button>
+   <img src={{dolImg}}/>
+       </div>
+     </div>
+   </div>
+    -->
        
      
    
