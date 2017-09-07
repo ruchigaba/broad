@@ -10,7 +10,7 @@
 
   </button>
   <ul #dropdownMenu1 class="dropdown-menu health-drp-dwn" id= "dr" style="display: none;" disabled>
-        <li onblur="healthSelectedClaim()"*ngFor="let claim of claims1"><a (click)="healthSelectedClaim(claim)">{{claim.claim_number}}</a></li>
+        <li *ngFor="let claim of claims1"><a (click)="healthSelectedClaim(claim)">{{claim.claim_number}}</a></li>
       </ul>
   </div>
   </div>

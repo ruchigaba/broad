@@ -46,7 +46,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.1",
+      'ApplicationVersion': "3.0",
       'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
@@ -76,7 +76,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.1",
+      'ApplicationVersion': "3.0",
       'Platform': "browser",
       'ApplicationName': 'MyClaim'
     })
@@ -108,7 +108,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.1",
+      'ApplicationVersion': "3.0",
       'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
@@ -136,16 +136,19 @@ this.addDivBeforeBody();
     if (res.status == 500 || res.status == 0) {
       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
       this.commnFunc.alertPopup(message, errorHeading);
+      document.getElementById("loadingDiv").style.display = "none";
     }
     else if (res.status == 408) {
 
       var message = "Your inquiry has experienced a delay.  Please try again later.  If problem persists, please contact our Support Center at MyClaim_SelfService_Support@broadspire.com.";
       this.commnFunc.alertPopup(message, errorHeading);
+      document.getElementById("loadingDiv").style.display = "none";
     }
     else if(res.__zone_symbol__error){
       if( res.__zone_symbol__error.message == "Timeout has occurred"){
       var message = "Your inquiry has experienced a delay.  Please try again later.  If problem persists, please contact our Support Center at MyClaim_SelfService_Support@broadspire.com.";
       this.commnFunc.alertPopup(message, errorHeading);
+      document.getElementById("loadingDiv").style.display = "none";
     }
     }
 
@@ -155,10 +158,12 @@ this.addDivBeforeBody();
         document.getElementById("loadingDiv").style.display = "none";
         sessionStorage.setItem('forgetPassFlag','firstTimeLogin');
         this.route.navigate(['firstTimeLogin']);
+        document.getElementById("loadingDiv").style.display = "none";
       }
 
       else
         this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+      document.getElementById("loadingDiv").style.display = "none";
 
     }
 
@@ -198,6 +203,7 @@ this.addDivBeforeBody();
     else {
       throw new Error("HTTP error: " + res.statusText + " (" + res.status + ")");
     }
+
 
   }
   navigate() {
