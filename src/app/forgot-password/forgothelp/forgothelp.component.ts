@@ -86,7 +86,7 @@ export class ForgothelpComponent implements OnInit {
                 })
             var data =
                 {
-                    "to_email_address": toEmail,
+                    "to_email_address": 'dgupta@primussoft.com',
                     "from_email_address": this.email,
                     "subject_Text": this.subject,
                     "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + "Hello" + "<br/><br/>"
