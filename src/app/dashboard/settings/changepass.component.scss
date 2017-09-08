@@ -46,11 +46,12 @@
     position: inherit;
     color: #333;
     font-size: 14px;
+    //vertical-align: middle;
      
     }
-   input.checkpass {
+   /* input.checkpass {
     vertical-align: middle;
-   }
+   } */
    .button-main-pass{
      width:50%;
      float:left;
@@ -58,6 +59,7 @@
    .checkpass {
     height: 15px;
     width: 15px;
+    vertical-align: middle;
 }
   .btn-save-pass {
     background-color: $continue-btn-bg-securityinfo;

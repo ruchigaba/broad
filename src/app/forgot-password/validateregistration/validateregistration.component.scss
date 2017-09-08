@@ -52,20 +52,17 @@ li.vali-pad-nn {
     .btn-continue-validregistration{
     width: $btn-continue-width;
     background-color:  $btn-bg-color;
-    margin-top: 20px;
-    outline: none;
+    float: left;
     color:$btn-continue-color;
+    outline: none;
     @include validate();
     }
 
     .btn-cancel-validregistration{
      @extend .btn-continue-validregistration;
-    background-color: $btn-cancel-bg-color;
+     background-color: $btn-cancel-bg-color;
     color: $btn-cancel-color;
-    float: right;
     outline: none;
-    margin-top: -40px;
-    
     }
     
     button.btn-continue-validregistration:active {

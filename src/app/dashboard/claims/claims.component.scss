@@ -8,19 +8,38 @@ cursor: pointer;
     position: inherit !important;
     z-index: inherit !important;
 }
-.lossImg
-{ cursor: pointer;
-    display: block;
+.lossImg3{
+ display: block;
     border-style: solid;
-    border-color:black;
+    border-color: black;
     float: left;
-    z-index: 9999 !important;
-    position: fixed !important;
-    top: 25% !important;
-    width: 54% !important;
-    left: 32% !important;
+    z-index: 5;
+    position: absolute;
+    left: 41%;
+    top: 73%;
+    width: 37%;
 
 }
+.innnerr-divv-new3 img{
+     width:100%;
+}
+
+.closebutton{
+
+position: absolute;
+    right: 0;
+  
+}
+body .lossImg .innnerr-divv-new {
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 0 auto;
+    padding-top: 25px;
+    width: 50%;
+}
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -552,6 +571,11 @@ ul{
     width: $width;
     
   }
+  .lossImg3 {
+    left: 10%;
+    top: 61%;
+    width: 80%;
+}
   .main-container {
     padding: 10px;
 }
@@ -601,22 +625,41 @@ ul{
         font-size:14px;
     }
 }
-@media screen and (max-width:767px)
-{
-    .lossImg{
-    top:27% !important;
-    width:90% !important;
-    left:5% !important;
-    border-color:black !important;
-    text-align:center;
+@media screen and (max-width: 767px){
+
+ 
+.lossImg3 .innnerr-divv-new3 {
+  width: 100% !important;
 }
+
+.closebutton {
+    float: right;
+    position: relative;
+    top: -25px;
+}
+
+.lossImg3 img {
+    max-width: 100%;
+}
+
+}
+ @media screen and (min-width: 767px) and (max-width: 1020px){
+.lossImg3 {
+    left: 27%;
+    top: 42%;
+    width: 50%;
+}
+}
+
+@media screen and (max-width:767px)
+ {
 .new-add span {
     font-weight:600;
 }
 .main-content-reset-pass-cls{
     margin-top:55px;
 }
-
+s
     .back-g{
         background-color: $tbc;
     }
@@ -930,12 +973,7 @@ margin-bottom: 75px;
 .txtright,.txtright1 {
     width: 37% !important;
 }
-.lossImg{
-    top:40% !important;
-    width:86% !important;
-    left:7% !important;
-    border-color:black !important;
-}
+ 
  .new-add{
         margin-top:-42px !important;
     }
@@ -1005,10 +1043,8 @@ li.col11 {
 
 }
 @media screen and (min-width: 800px)and (max-width:1024px){
-    .tbl-data li{
-       height:60px;
-      
-    }
+   
+    
     .col5{
         padding-top:0px;
          padding-left:0px;
@@ -1017,11 +1053,7 @@ li.col11 {
     }
     }
 @media screen and (max-width: 800px){
-    .lossImg{
-        top: 30% !important;
-         width: 80% !important;
-        left: 10% !important;
-    }
+    
     .new-add{
         margin-top:-48px;
     }
