@@ -105,7 +105,10 @@ healthDropdownFunc(dropdownMenu1){
          window.addEventListener("click",()=>{
       dropdownMenu1.style.display="none";
     })
-       
+        window.addEventListener("touchstart",()=>{
+      dropdownMenu1.style.display="none";
+    })
+        
       }
       else{
         dropdownMenu1.style.display="none";
