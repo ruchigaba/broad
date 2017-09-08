@@ -60,13 +60,17 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           this.title = this.data.title;
 
           // add back button to header if route has parent defined
-           // alert(this.data.parent + "1: "+ this.data.parent2);
+           console.log(this.data.parent + "1: "+ this.data.parent2);
           if(this.data.parent != undefined && this.data.parent != ""){
              // alert("condition true" + this.data.parent);
             //console.log(this.data.parent + "2: "+ this.data.parent2);
             this.parent=true;
             this.parent2=false;
 
+          }
+          else if (this.title=="Registration Tutorial") {
+            this.parent2=false;
+            this.parent=true;
           }
           else{
             // alert("false" + this.data.parent2);

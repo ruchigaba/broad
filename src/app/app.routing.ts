@@ -90,7 +90,7 @@ export const NavigatableComponents = [
    ProviderComponent, SocialMediaComponent, TutorialComponent, ClaimPaymentdetailsComponent, 
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
-   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent
+   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent
   // HealthTicketComponent 
 
 ];
