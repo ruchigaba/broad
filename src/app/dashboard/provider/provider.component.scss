@@ -198,12 +198,6 @@ label, output {
     position: relative;
 }
 
-
-
-
-
-
-
   .providers-button-cls .list-group-item {
    display: inline-block;
     position: relative;
@@ -334,7 +328,7 @@ a.collapsed-panel-ss{
     font-size: 16px;
     margin-bottom: 0;
     margin-top: 0;
-        font-family: inherit;
+    font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
 }
@@ -365,7 +359,7 @@ a.collapsed-panel-ss{
   }
   .spacer {
     flex: 1 0 auto;
-           margin-top: 8px;
+    margin-top: 8px;
     margin-left: 12px;
   }
   .center {
@@ -375,6 +369,7 @@ a.collapsed-panel-ss{
   .border {
     border: 1px solid $border-8;
      color: $show-color;
+     border-radius: 3px;
   }
   .footer-x {
       position: fixed;
@@ -530,7 +525,9 @@ color: $li-style-color;
           padding: 14px 24px;
         font-size: 14px;
   }
+.gmnoprint{
 
+}
 @media only screen and (max-width: 800px) {
 
   .col-ss-mm-01 {
@@ -553,7 +550,10 @@ color: $li-style-color;
 .flex {
    
 }
-    
+   .gmnoprint{
+    margin-top: -50px;
+    margin-left: -10px;
+} 
 
 }
 
@@ -655,4 +655,7 @@ color: $li-style-color;
   left: 0;
  padding-bottom: 74px;
 } 
+.gmnoprint{
+margin-left: -19px;
+}
 } 

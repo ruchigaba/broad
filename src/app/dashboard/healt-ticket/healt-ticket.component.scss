@@ -6,6 +6,8 @@ button#dropdownMenu1 {
 .dropdown-menu.health-drp-dwn{
     position: absolute;
     left: 48.6%;
+        border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #fff;
     min-width: 165px;
     z-index: 999;

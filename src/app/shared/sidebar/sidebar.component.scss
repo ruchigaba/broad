@@ -38,12 +38,13 @@ background-color: #efeeee;
 
 
 .list-group-item {
-    display: table-cell;
+    display: inline-block;
     height: $list-group-item-height;
     position: relative;
     vertical-align: middle;
     min-height: 50px;
     padding: 0px 0px 0px 40px;
+    width:100%;
 
 }
 .image-section-sidebar {
@@ -71,6 +72,10 @@ background-color: #efeeee;
     display: inline-block;
     text-decoration: none;
     font-size: 17px;
+}
+.sidebar .list-group a.router-link-active {
+    background-color: #cce4d6 !important;
+    font-weight: 600;
 }
 .active {
     background-color:$activeFooter-backgroud;
