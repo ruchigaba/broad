@@ -277,7 +277,7 @@ getDocHeight() {
 
       },
       error => {
-        // this._dashboardApiService.handleError(error, "Login");
+         this._dashboardApiService.handleError(error, "Login");
       })
   }
 

@@ -99,6 +99,10 @@ export class RegistrationComponent implements OnInit {
     else if (this.reEmail == "" || this.reEmail == undefined || !re.test(this.reEmail)) {
       this.commnFunc.alertPopup("Please fill the Re-Enter Email in valid format","Registration");
     }
+    else if( this.email != this.reEmail) { 
+   this.commnFunc.alertPopup("Your Email and Re-enter email does not match.");
+
+    }
     else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
       this.commnFunc.alertPopup("Please fill the 4 digit ssn in number format","Registration");
     }

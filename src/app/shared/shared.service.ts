@@ -47,7 +47,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "browser",
+      'Platform': "Native",
       'ApplicationName': 'MyClaim'
 
     })
@@ -76,9 +76,10 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'ApplicationVersion': "3.0",
-      'Platform': "browser",
-      'ApplicationName': 'MyClaim'
+       'ApplicationVersion': "3.0",
+       'Platform': "Native",
+       'ApplicationName': 'MyClaim',
+     
     })
 
     var options = new RequestOptions({
@@ -109,8 +110,10 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "browser",
+      'Platform': "Native",
       'ApplicationName': 'MyClaim'
+
+    
 
     })
     var options = new RequestOptions({
@@ -132,7 +135,7 @@ this.addDivBeforeBody();
   // handle errors in http requests, hide loader and show error in popup
   handleError(res: any, errorHeading) {
     //alert("error");
-
+console.log("Hello :"+res);
     if (res.status == 500 || res.status == 0) {
       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
       this.commnFunc.alertPopup(message, errorHeading);
@@ -151,7 +154,6 @@ this.addDivBeforeBody();
       document.getElementById("loadingDiv").style.display = "none";
     }
     }
-
     else if (res.json().error != null) {
       if (res.json().error_uri != undefined && res.json().error_uri == "FirstTimeLogIn" ||
         res.json().error_uri != undefined && res.json().error_uri == "PasswordExpired") {
