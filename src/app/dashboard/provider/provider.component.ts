@@ -278,6 +278,7 @@ getClaimantAddress() {
                                     route.navigate(['./dashboard/physiciansmap']);
                                 },
                                 function(error) {
+                                    alert("current location");
                                     obj.commnFunc.alertPopup("Current Location Not Available at this time.Please try again later.", "Providers");
                                 }, {
                                     maximumAge: 5 * 60 * 1000,
@@ -323,7 +324,7 @@ getClaimantAddress() {
             this.requestLocation(_route, obj);
         }
 
-        // if the app is running as ipa or apk then use diagnostic plugin
+        // if the app is running as apk then use diagnostic plugin
         else {
 
             // if device is android then this code will run

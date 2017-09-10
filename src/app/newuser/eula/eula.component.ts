@@ -26,7 +26,7 @@ export class EulaComponent implements OnInit{
       },
       
         error => {
-          this._cac.handleError(error, "Eula");
+          this._cac.handleError(error, "EULA");
       })
     }
 

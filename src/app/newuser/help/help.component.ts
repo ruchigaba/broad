@@ -12,6 +12,7 @@ import { CommonFunction } from '../../shared/commonFunction';
 })
 export class HelpComponent implements OnInit {
 	 commnFunc;
+   e:string;
 	name: string;
   email: string;
   subject: string;
@@ -71,7 +72,7 @@ helpSend(){
     var data =
       {
         "to_email_address": "dgupta@primussoft.com",
-        "from_email_address": "a4ruchi@gmail.com",
+        "from_email_address": this.e,
         "subject_Text": this.subject,
         "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
         + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + "dgupta@primussoft.com" + "<br/>" + "Phone: " + this.telephone

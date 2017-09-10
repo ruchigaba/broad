@@ -100,7 +100,7 @@ export class RegistrationComponent implements OnInit {
       this.commnFunc.alertPopup("Please fill the Re-Enter Email in valid format","Registration");
     }
     else if( this.email != this.reEmail) { 
-   this.commnFunc.alertPopup("Your Email and Re-enter email does not match.");
+   this.commnFunc.alertPopup("Your Email and Re-enter email does not match.", "Registration" );
 
     }
     else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
