@@ -109,12 +109,12 @@ ol li {
 #accordion .panel-heading.my-class:before {
     color: #000;
     position: inherit;
-    margin-top: -2px;
+    margin-top: -7px;
 
 }
-#accordion .panel-heading.my-class2:before {
+/* #accordion .panel-heading.my-class2:before {
     margin-top: -11px;
-}
+} */
 .faqbr{
   display: none;
 }
@@ -129,7 +129,7 @@ ol li {
 @media screen and (min-width: 320px) and (max-width:480px){
 #accordion .panel-heading.my-class2:before {
 
-  margin-top: -11px;
+  margin-top: -17px;
 
   }
 

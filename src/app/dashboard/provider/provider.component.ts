@@ -260,6 +260,7 @@ getClaimantAddress() {
                 //     // Secure Origin issue.
                 // },
                  { maximumAge: 5 * 60 * 1000, timeout: 25000 });
+                
             }
 
             // if cordova is defined ,then use the diagnostic plugin
@@ -278,7 +279,7 @@ getClaimantAddress() {
                                     route.navigate(['./dashboard/physiciansmap']);
                                 },
                                 function(error) {
-                                    alert("current location");
+                                    //alert("current location");
                                     obj.commnFunc.alertPopup("Current Location Not Available at this time.Please try again later.", "Providers");
                                 }, {
                                     maximumAge: 5 * 60 * 1000,

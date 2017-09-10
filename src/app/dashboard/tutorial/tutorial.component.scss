@@ -29,13 +29,13 @@
     color: white;
 }
 .maincontainersectionslider.inner-slider-new{
-    width: 80%;
+    width: 80% !important;
     margin: 0 auto;
 }
-.mainimg-new-reg-subwrapp{
+ .mainimg-new-reg-subwrapp{
     width: 100%;
     display: inline-block;
-    margin: 38px auto;
+    margin: 10px auto 0 !important;
 }
 
 @media screen and (max-width: 450px){
