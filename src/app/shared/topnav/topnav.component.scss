@@ -245,13 +245,16 @@ z-index: 999;
 }
 
 @media screen and (min-width: 768px) and (max-width:1024px){
-/* .twenty {
-     padding-left: 157px;
-    margin-left: 103px;
+ .logoclaim.mobileruc img {
+    display: none;
 }
-   */
+.arrowdiv {
+    position: relative;
+    top: 0px;
+     
+   
 }
-
+}
 
 
 @media screen and (min-width: 600px) and (max-width:980px){
@@ -268,7 +271,15 @@ z-index: 999;
     
 } */
   
-
+.logoclaim.mobileruc img {
+    display: none;
+}
+.arrowdiv {
+    position: relative;
+    top: 0px;
+     
+   
+}
   
 }
 
