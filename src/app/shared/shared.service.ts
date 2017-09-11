@@ -58,7 +58,7 @@ this.addDivBeforeBody();
     return this._http.get('https://myclaimwebapiuat.crawco.com/'+ url, options)
       .timeout(this.timeout)
       .map(resp => {
-
+    
         // code to show loader when http request is called
         this.isLoading = false;
         document.getElementById("loadingDiv").style.display = "none";
@@ -124,7 +124,7 @@ this.addDivBeforeBody();
 
         // code to show loader when http request is called
         this.isLoading = false;
-        document.getElementById("loadingDiv").style.display = "none";
+       document.getElementById("loadingDiv").style.display = "none";
         return resp.json();
       });
 
@@ -180,20 +180,16 @@ console.log("Hello :"+res);
 
 
       }, false);
-      if (res.json().errorMessage == "Authorization has been denied for this request.") {
-        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
+     if (res.json().errorMessage == "Authorization has been denied for this request.") {
+       this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
       else{
-        this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
+    this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       }
+   //--------------------Updated By Niruti do not comment pls----------------//
+      document.getElementById("loadingDiv").style.display = "none";
 
-      //document.getElementById("loadingDiv").style.display = "none";
-
-
-
-
-
-    }
+}
     else if (res.status = 400) {
       this.commnFunc.alertPopup("Bad Request", errorHeading);
 

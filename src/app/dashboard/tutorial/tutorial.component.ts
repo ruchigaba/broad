@@ -104,6 +104,7 @@ export class TutorialComponent implements OnInit {
         this.firstTimeImages();
       },
       error => {
+        
         sessionStorage.setItem('registerTimeout', 'false');
         this._commonApiCall.hideLoaderShowPopup(error, "Tutorial");
       })
