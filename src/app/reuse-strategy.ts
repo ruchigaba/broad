@@ -65,15 +65,15 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
    */
   shouldAttach(route: ActivatedRouteSnapshot): boolean {
 //alert('1');
-// if user clicks left panel option or footer providers option then page should refresh.
+ //if user clicks left panel option or footer providers option then page should refresh.
 
-// if(sessionStorage.getItem("refreshProviders") == "true"){
+ if(sessionStorage.getItem("refreshProviders") == "true"){
 
-//   sessionStorage.setItem("refreshProviders","false");
-//   return false;
+  sessionStorage.setItem("refreshProviders","false");
+   return false;
 
-// }
-// else {
+ }
+ else {
       // this will be true if the route has been stored before
     let canAttach: boolean = !!route.routeConfig && !!this.storedRoutes[route.routeConfig.path];
 
@@ -95,7 +95,7 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
     } else {
       return false;
     }}
-
+}
   
 
   /**
