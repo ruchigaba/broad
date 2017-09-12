@@ -70,7 +70,7 @@ maxlength="10" type="tel" onkeyup="this.value=this.value.replace(/[^\d]/,'')" />
 
     <div class="col-12-help" style="width:100%;">
     <div class="col-6-help" >
-    <button type="submit" (click)="helpSend()" class="btn-continue-help">Send</button>
+    <button type="submit" (click)="helpSend();clearData();" class="btn-continue-help">Send</button>
     </div>
     <div class="col-6-help">
     <button class="btn-cancel-help" (click)="helpCancel()" type="submit">Cancel</button>
