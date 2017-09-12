@@ -99,7 +99,7 @@ body .lossImg .innnerr-divv-new {
     text-align: center;
     color:$color;
     font-size:16px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 
 }
 .txtleft
@@ -138,10 +138,10 @@ body .lossImg .innnerr-divv-new {
     position:relative;
 }
 .col5{
-    padding-top:14px;
+   padding-top:10px;
     padding-left:10px;
     padding-right:10px;
-    margin-top:-10px;
+    margin-top:0px;
     width:$width;
     float:left;
     min-height:1px;
@@ -423,7 +423,9 @@ input{
     margin-top:-25px;
     padding-bottom:0px;
 }
-
+.back-g {
+    padding-bottom: 5px;
+}
 .tbl-grd1{
    
      width:$width;
@@ -438,9 +440,9 @@ input{
 }
 .clm-inf-pg{
 
-    padding-top: 15px;
+    padding-top: 10px;
     width:$width;
-      padding-top: 15px;
+    
 }
 .tbl-data li{
      outline:none;
@@ -480,7 +482,7 @@ ul{
 }
 .nav-lines li.active1 a{
   border-bottom: 2.5px solid #007a33 !important;
-  padding:5px;     //by khushboo on 11/9/17
+  padding:3px;     //by khushboo on 11/9/17
 }
 *{
     box-sizing: border-box;
@@ -572,10 +574,6 @@ ul{
 .nav-lines{
     margin-top: 15px;
 }
-.col5{
-    margin-top:-4px !important; //
-    padding-top:0px !important; //
-}
 }
 @media screen and  (min-width: 768px) and (max-width:800px){
 .col5{
@@ -623,7 +621,7 @@ ul{
         color: $clmm-tt-color;
         font-weight:500;
     font-size: 16px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     }
     .claimtop .txtright{
         display: inline-block;
@@ -1065,7 +1063,7 @@ li.col11 {
    
     
     .col5{
-        padding-top:0px;
+        padding-top:5px;
          padding-left:0px;
           padding-right:0px;
           margin-top:5px;
