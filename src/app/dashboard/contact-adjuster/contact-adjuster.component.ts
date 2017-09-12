@@ -59,7 +59,8 @@ contactAdjusterService(){
              },
            error => {
              this._commonApiCall.handleError(error,"Contact Adjuster");
-           });
+            });
+            
 }
 //---------------------------------REDIRECT ADJUSTER INFO MESSAGE METHOD-------------------------------------
 claimInfoMessage(){

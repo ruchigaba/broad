@@ -89,18 +89,27 @@ export class ForgothelpComponent implements OnInit {
                     "to_email_address": 'dgupta@primussoft.com',
                     "from_email_address": this.email,
                     "subject_Text": this.subject,
-                    "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + "" + "<br/><br/>"
+                    "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
                     + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + this.email + "<br/>" + "Phone: " + this.telephone
                 }
             this._commonApiCall.postService("emails/send", "", "application/json", data)
                 .subscribe(res => {
                     this.commnFunc.alertPopup(res.result.email_status,"Support Center");
+
                     this._route.navigate(['./createNewUser']);
                 },
                 error => {
                     this._commonApiCall.handleError(error,"Support Center");
                 })
         }
+
+    }
+
+    clearData(){
+      this.name='';
+      this.telephone='';
+      this.claimNm='';
+      this.canIHelp='';
 
     }
     // Help Cancel Button Method
