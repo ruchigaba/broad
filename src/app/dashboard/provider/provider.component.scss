@@ -554,7 +554,18 @@ color: $li-style-color;
     margin-top: -50px;
     margin-left: -10px;
 } 
-
+.dropdown-menu {
+    position: absolute;
+  left: 48.6%; 
+    background-color: #fff;
+    min-width: 91px;
+}
+.dropdown-menu.provider-ka-hh {
+    left: 51% !important;
+}
+.dropdown-menu li a {
+    font-size: 15px;
+}
 }
 
 /* @media screen and  (min-width: 310px) and(max-width: 1020px){

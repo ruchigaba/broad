@@ -30,7 +30,7 @@ position: absolute;
     right: 0;
   
 }
-body .lossImg .innnerr-divv-new {
+body .lossImg3 .innnerr-divv-new {
     background-color: #fff;
     border: 2px solid #000;
     margin: 0 auto;
@@ -592,13 +592,22 @@ ul{
   }
   .lossImg3 {
     left: 10%;
-    top: 47%;
+    top: 43%;
     width: 80%;
 }
   .main-container {
     padding: 10px;
 }
 }
+
+@media screen and  (min-width: 360px) and(max-width: 670px){
+.lossImg3 {
+    left: 10%;
+    top: 47%;
+    width: 80%;
+}
+
+  }
 @media screen and  (min-width: 310px) and(max-width: 1020px){
  .main-content-reset-pass-cls {
     width: $width;
