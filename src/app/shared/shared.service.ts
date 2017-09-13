@@ -48,7 +48,7 @@ this.addDivBeforeBody();
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
 
-      'Platform': "browser",
+      'Platform': "Native",
 
       'ApplicationName': 'MyClaim'
 
@@ -79,14 +79,12 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
 
-       'ApplicationVersion': "3.0",
-       'Platform': "browser",
-       'ApplicationName': 'MyClaim',
+       // 'ApplicationVersion': "3.0",
+       // 'Platform': "browser",
+       // 'ApplicationName': 'MyClaim',
 
 
-      //  'ApplicationVersion': "3.0",
-      //  'Platform': "Native",
-      //  'ApplicationName': 'MyClaim',
+      
 
       
 
@@ -121,7 +119,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "browser",
+      'Platform': "Native",
       'ApplicationName': 'MyClaim'
 
    
