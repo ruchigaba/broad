@@ -19,7 +19,8 @@ activeFooterMenu = "";
 
     document.onclick=function()
      { 
-       document.getElementById("togg-dv").className = "hidden-content slide-down" };
+       document.getElementById("togg-dv").className = "hidden-content slide-down" 
+     };
 
 
     window.scrollTo(0, 0);

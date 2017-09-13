@@ -48,7 +48,7 @@ this.addDivBeforeBody();
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
 
-      'Platform': "browser",
+      'Platform': "native",
 
       'ApplicationName': 'MyClaim'
 
@@ -79,9 +79,9 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
 
-       'ApplicationVersion': "3.0",
-       'Platform': "browser",
-       'ApplicationName': 'MyClaim',
+       // 'ApplicationVersion': "3.0",
+       // 'Platform': "native",
+       // 'ApplicationName': 'MyClaim',
 
 
       //  'ApplicationVersion': "3.0",
@@ -121,7 +121,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "browser",
+      'Platform': "native",
       'ApplicationName': 'MyClaim'
 
    
@@ -174,8 +174,10 @@ console.log("Hello :"+res);
         //document.getElementById("loadingDiv").style.display = "none";
       }
 
-      else
+      else if(document.getElementsByTagName("html")[0].className !== "login-bg-image") {
+
         this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+      }
       //document.getElementById("loadingDiv").style.display = "none";
 
     }
@@ -193,10 +195,14 @@ console.log("Hello :"+res);
 
 
       }, false);
-     if (res.json().errorMessage == "Authorization has been denied for this request.") {
+      //updated by ruchi(session expire popup)
+     if (res.json().errorMessage == "Authorization has been denied for this request." && 
+       document.getElementsByTagName("html")[0].className !== "login-bg-image") {
+
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
-      else{
+      else if(document.getElementsByTagName("html")[0].className !== "login-bg-image"){
+
     this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       }
    //--------------------Updated By Niruti do not comment pls----------------//
@@ -222,7 +228,7 @@ console.log("Hello :"+res);
   hideLoaderShowPopup(message, errorHeading) {
     document.getElementById("openModalButton").click();
     document.getElementById('modalLabel').innerHTML = message;
-    //document.getElementById('modal-head').innerHTML = errorHeading;
+    document.getElementById('modal-head').innerHTML = errorHeading;
     document.getElementById("loadingDiv").style.display = "none";
 
   }
@@ -310,7 +316,7 @@ selectFooterItem(page){
 // check if token is valid
 checkToken(route){
   var classname = document.getElementById("closeMe");
-if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == '') {
+if ((sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == '')) {
     this.hideLoaderShowPopup("Your session has expired - please sign in again.",
     "Settings");
     classname.addEventListener('click', function cls(event) {

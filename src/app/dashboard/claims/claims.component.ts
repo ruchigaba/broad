@@ -28,7 +28,9 @@ export class ClaimsComponent implements OnInit {
   constructor(public _dashboardApiService: CommonAPICall, private route: Router,private ComFunc:CommonFunction) { }
 
   ngOnInit() {
-
+     var routevar = this.route;
+     this._dashboardApiService.checkToken(routevar);
+  //alert("claim");
   	this.item = "2";
     this.myClaimService();
     console.log('Bearer '+sessionStorage.getItem("token"));

@@ -37,11 +37,16 @@ export class LoginComponent implements OnInit, OnDestroy{
 
     constructor(private _ls: LoginService, private router: Router, private _commonApi:CommonAPICall ) {
       //sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
+      
+      var root = document.getElementsByTagName('html')[0];
+
+root.setAttribute('class', 'login-bg-image'); 
+
       if (sessionStorage.getItem('selectedClaimClaimId') != undefined) {
       sessionStorage.setItem("selectedClaimClaimId", "");
     }
-    var root = document.getElementsByTagName('html')[0];
-    root.setAttribute('class', 'loginPage');
+    // var root = document.getElementsByTagName('html')[0];
+    // root.setAttribute('class', 'loginPage');
 
     if (sessionStorage.getItem('welcomeUsername') != undefined) {
       sessionStorage.setItem("welcomeUsername", "");
@@ -50,9 +55,9 @@ export class LoginComponent implements OnInit, OnDestroy{
       sessionStorage.setItem("token", "");
     }
 // need to replace the url code with prod url instead uat before making app live
-    if (sessionStorage.getItem('local_appUrl') == undefined) {
-      sessionStorage.setItem("local_appUrl", "https://myclaimwebapiuat.crawco.com/");
-    }
+    // if (sessionStorage.getItem('local_appUrl') == undefined) {
+    //   sessionStorage.setItem("local_appUrl", "https://myclaimwebapiuat.crawco.com/");
+    // }
     if (sessionStorage.getItem('pagePosition') != undefined) {
       sessionStorage.setItem("pagePosition", undefined);
     }
@@ -69,21 +74,22 @@ ngOnInit(){
 
   window.scrollTo(0, 0);
 
-
+var currentObject = this;
+// stop user from going back when he reaches login page(ruchi'changes)
    window.addEventListener('popstate', function(event) {
-
+       event.preventDefault();
       var len = window.history.length;
+      console.log("history len:" + window.history.length);
        window.history.go(-len);
        if (document.getElementsByTagName("html")[0].className == "login-bg-image") {
-        event.preventDefault();
-
          var url = window.location.href;
          var url2 = url.split("#");
-         console.log(url2[0]);
          history.pushState(null, null, url2[0]);
+
       }
     }, false);
    sessionStorage.setItem("refreshProviders", "true");
+   //console.log(sessionStorage.getItem("refreshProviders"));
     // document.getElementById("loadinDiv").style.display="none";
 
 }
@@ -92,6 +98,7 @@ ngOnDestroy(){
   var root = document.getElementsByTagName('html')[0];
   root.setAttribute('class', '');
 }
+//after press enter button there should be login(ruchi's change)
 keyDownFunction(event,username,password){
   if(event.keyCode == 13) {
     this.loginService(username,password);
@@ -146,7 +153,7 @@ keyDownFunction(event,username,password){
           //     this.commnFunc.alertPopup("Please enter the username.", "Login");
           //   }
             //else
-              //sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
+             // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
               var creds = 'grant_type=password&username=' + user + '&password=' + pass;
               // let creds = 'grant_type=password&username=username &password=password';
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
@@ -157,7 +164,7 @@ keyDownFunction(event,username,password){
                        this.getLogindata();
                      },
                      error => {
-                        document.getElementById("loadingDiv").style.display = "none";
+                       // document.getElementById("loadingDiv").style.display = "none";(ruchi's chnage..dnt uncomment)
           this._commonApi.handleError(error, "Login");
         });
                    }
