@@ -86,9 +86,11 @@ export class HealtTicketComponent implements OnInit {
 
   ngOnInit() {
   	window.scrollTo(0, 0);
+
       //-------------------------------------------Authentication Checking Start----------------------------------------------------
       var classname = document.getElementById("closeMe");
       var routevar = this._router;
+      this._commonApiCall.checkToken(routevar);
       if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == '') {
           this.commnFunc.alertPopup("Your session has expired - please sign in again.",
           "Health Ticket");
