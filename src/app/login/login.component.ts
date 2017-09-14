@@ -79,16 +79,19 @@ var currentObject = this;
    window.addEventListener('popstate', function(event) {
        event.preventDefault();
       var len = window.history.length;
-      console.log("history len:" + window.history.length);
+      //console.log("history len:" + window.history.length);
        window.history.go(-len);
        if (document.getElementsByTagName("html")[0].className == "login-bg-image") {
+         //alert(url);
          var url = window.location.href;
+
          var url2 = url.split("#");
+         //alert(url2[0]);
          history.pushState(null, null, url2[0]);
 
       }
     }, false);
-   sessionStorage.setItem("refreshProviders", "true");
+   //sessionStorage.setItem("refreshProviders", "true");
    //console.log(sessionStorage.getItem("refreshProviders"));
     // document.getElementById("loadinDiv").style.display="none";
 
@@ -153,7 +156,7 @@ keyDownFunction(event,username,password){
           //     this.commnFunc.alertPopup("Please enter the username.", "Login");
           //   }
             //else
-             // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
+              sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
               var creds = 'grant_type=password&username=' + user + '&password=' + pass;
               // let creds = 'grant_type=password&username=username &password=password';
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
@@ -164,7 +167,8 @@ keyDownFunction(event,username,password){
                        this.getLogindata();
                      },
                      error => {
-                       // document.getElementById("loadingDiv").style.display = "none";(ruchi's chnage..dnt uncomment)
+                        document.getElementById("loadingDiv").style.display = "none";
+                      // (ruchi's chnage..dnt uncomment)
           this._commonApi.handleError(error, "Login");
         });
                    }
@@ -380,6 +384,8 @@ keyDownFunction(event,username,password){
         })
 
     }
+
+
   }
 
     }

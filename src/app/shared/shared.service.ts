@@ -47,7 +47,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "Native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
     })
@@ -77,10 +77,10 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
 
-       // 'ApplicationVersion': "3.0",
-       // 'Platform': "native",
-       // 'Platform': "browser",
-       // 'ApplicationName': 'MyClaim',
+       'ApplicationVersion': "3.0",
+       //'Platform': "native",
+       'Platform': "browser",
+       'ApplicationName': 'MyClaim',
 
 
       
@@ -117,7 +117,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'Platform': "Native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
    
@@ -162,23 +162,26 @@ console.log("Hello :"+res);
     }
     }
     else if (res.json().error != null) {
+      //alert("nullfound");
       if (res.json().error_uri != undefined && res.json().error_uri == "FirstTimeLogIn" ||
         res.json().error_uri != undefined && res.json().error_uri == "PasswordExpired") {
         document.getElementById("loadingDiv").style.display = "none";
         sessionStorage.setItem('forgetPassFlag','firstTimeLogin');
         this.route.navigate(['firstTimeLogin']);
-        //document.getElementById("loadingDiv").style.display = "none";
+        document.getElementById("loadingDiv").style.display = "none";
       }
 
       else if(document.getElementsByTagName("html")[0].className !== "login-bg-image") {
 
         this.commnFunc.alertPopup(res.json().error_description, errorHeading);
       }
-      //document.getElementById("loadingDiv").style.display = "none";
+     document.getElementById("loadingDiv").style.display = "none";
 
     }
 
-    else if (res.json().errors !== null) {
+    else if (res.json().errors !== null  ) {
+     //alert("found:" + res.json().errors);
+      console.log(res);
       //  let classname = document.getElementsByClassName("closepopup");
       let classname = document.getElementById("closeMe");
       var routevar = this.route;
@@ -197,21 +200,28 @@ console.log("Hello :"+res);
 
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
+      
       else if(document.getElementsByTagName("html")[0].className !== "login-bg-image"){
 
     this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       }
+      //forgot password alert
+      // else if(res.json().errorMessage !== ''){
+      //   this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
+      // }  
    //--------------------Updated By Niruti do not comment pls----------------//
       document.getElementById("loadingDiv").style.display = "none";
 
 }
-    else if (res.status = 400) {
+    else if (res.status == 400) {
+      console.log(res);
       this.commnFunc.alertPopup("Bad Request", errorHeading);
 
     }
 
 
     else {
+
       throw new Error("HTTP error: " + res.statusText + " (" + res.status + ")");
     }
 
@@ -224,7 +234,7 @@ console.log("Hello :"+res);
   hideLoaderShowPopup(message, errorHeading) {
     document.getElementById("openModalButton").click();
     document.getElementById('modalLabel').innerHTML = message;
-    document.getElementById('modal-head').innerHTML = errorHeading;
+    //document.getElementById('modal-head').innerHTML = errorHeading;
     document.getElementById("loadingDiv").style.display = "none";
 
   }
