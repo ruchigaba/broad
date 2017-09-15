@@ -141,6 +141,7 @@ this.addDivBeforeBody();
 
   // handle errors in http requests, hide loader and show error in popup
   handleError(res: any, errorHeading) {
+
     //alert("error");
 console.log("Hello :"+res);
     if (res.status == 500 || res.status == 0) {
@@ -172,6 +173,12 @@ console.log("Hello :"+res);
       }
 
       else if(document.getElementsByTagName("html")[0].className !== "login-bg-image") {
+       
+
+        this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+      }
+      else if((document.getElementsByTagName("html")[0].className == "login-bg-image") && (res.json().error_description == 'The user name or password is incorrect.')) {
+       
 
         this.commnFunc.alertPopup(res.json().error_description, errorHeading);
       }
@@ -194,6 +201,7 @@ console.log("Hello :"+res);
 
 
       }, false);
+      
       //updated by ruchi(session expire popup)
      if (res.json().errorMessage == "Authorization has been denied for this request." && 
        document.getElementsByTagName("html")[0].className !== "login-bg-image") {
@@ -201,14 +209,20 @@ console.log("Hello :"+res);
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
       
-      else if(document.getElementsByTagName("html")[0].className !== "login-bg-image"){
+      else if((res.json().errorMessage !== 'Authorization has been denied for this request.') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
 
     this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       }
+       //  else if(res.json().errorMessage !== ''){
+       //  this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
+       // }  
       //forgot password alert
-      // else if(res.json().errorMessage !== ''){
-      //   this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
-      // }  
+       // else if( (document.getElementsByTagName("html")[0].className == "login-bg-image")){
+       //   this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+       // } 
+      else if((res.json().errorMessage == '') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
+        this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
+      }   
    //--------------------Updated By Niruti do not comment pls----------------//
       document.getElementById("loadingDiv").style.display = "none";
 
