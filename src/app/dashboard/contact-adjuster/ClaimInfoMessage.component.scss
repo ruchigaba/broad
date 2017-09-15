@@ -271,7 +271,7 @@ input{
     min-width: 160px;
     position: absolute;
     text-align: left;
-    z-index: 1000;
+    z-index: 999;
     float:left;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transform-origin: left top 0;
@@ -604,7 +604,18 @@ button.md-btn.md-btn-claim-info.md-raised.btn-block.c-h-md {
          margin-top:1px;
      }
      }
-
-
+ @media screen and (min-width:801px) and (max-width:899px){
+button.md-btn.md-raised.btn-block.p-h-md {
+    padding-left: 11px;
+    padding-right: 14px;
+}
+.btn-claim-info-1{
+        padding: 0.375rem 0rem !important;
+            margin-left: -12px;
+}
+.unknown1{
+        width: 182px;
+}
+}
 
 

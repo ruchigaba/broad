@@ -731,7 +731,8 @@ s
     }
     .nav-lines {
     li{
-            padding: 0 !important;
+             padding: 0 !important;
+            margin:5px !important;
     }
     a{
         margin-left: 8px !important;
@@ -1109,5 +1110,10 @@ li.col11 {
     background-color: $bcgcolor !important;
 }
 }
+@media screen and (max-width:1012px) and (min-width:970px){
+    .tbl-data li{
+        height:60px;
+    }
+    }
 
  
