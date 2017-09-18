@@ -412,9 +412,9 @@ if(this.profileImg.length > 1){
     else if (this.inputMessage == '' || this.inputMessage == undefined) {
       this.ComFunc.alertPopup("Message is required", "Message");
     }
-    // else if (this.email == '' || this.email == undefined || !re.test(this.email)) {
-    //   this.ComFunc.alertPopup("Recipient email address is missing.", "Message");
-    // }
+    else if (this.email == '' || this.email == undefined || !re.test(this.email)) {
+      this.ComFunc.alertPopup("Recipient email address is missing.", "Message");
+    }
     else {
 
       if (imgPhoto.src !== this.transperentImg) {
@@ -518,7 +518,7 @@ if(this.profileImg.length > 1){
     var data =
       {
         "email_Method": "Smart",
-        "to_email_address": "dgupta@primussoft.com",
+        "to_email_address": this.email,
         "from_email_address": this.Message_email + ' <' + this.Message_email + '>',
         "subject_Text": this.Message_subject + ' Broadspire IQ Claim #: ' + this.claimNumber,
         "body_Text": this.inputMessage + '<br/>' + '<br/>' + '<b>' + ' Contact Phone Number: ' + '</b>' + this.Message_number + '<br/>',
