@@ -15,12 +15,12 @@ activeFooterMenu = "";
 
     document.onclick=function() { 
       // alert('hello');
-      document.getElementById("togg-dv").className = "hidden-content slide-down"
+      //document.getElementById("togg-dv").className = "hidden-content slide-down"
        };
 
     document.onclick=function()
      { 
-       document.getElementById("togg-dv").className = "hidden-content slide-down" 
+     //  document.getElementById("togg-dv").className = "hidden-content slide-down" 
      };
 
 

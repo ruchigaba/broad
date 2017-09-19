@@ -141,29 +141,25 @@ this.addDivBeforeBody();
 
   // handle errors in http requests, hide loader and show error in popup
   handleError(res: any, errorHeading) {
-
-    //alert("error");
-console.log("Hello :"+res);
+    console.log(res.status);
     if (res.status == 500 || res.status == 0) {
       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
       this.commnFunc.alertPopup(message, errorHeading);
-     // document.getElementById("loadingDiv").style.display = "none";
+      document.getElementById("loadingDiv").style.display = "none";
     }
     else if (res.status == 408) {
-
       var message = "Your inquiry has experienced a delay.  Please try again later.  If problem persists, please contact our Support Center at MyClaim_SelfService_Support@broadspire.com.";
       this.commnFunc.alertPopup(message, errorHeading);
-     // document.getElementById("loadingDiv").style.display = "none";
+      document.getElementById("loadingDiv").style.display = "none";
     }
     else if(res.__zone_symbol__error){
       if( res.__zone_symbol__error.message == "Timeout has occurred"){
       var message = "Your inquiry has experienced a delay.  Please try again later.  If problem persists, please contact our Support Center at MyClaim_SelfService_Support@broadspire.com.";
       this.commnFunc.alertPopup(message, errorHeading);
-      //document.getElementById("loadingDiv").style.display = "none";
+      document.getElementById("loadingDiv").style.display = "none";
     }
     }
     else if (res.json().error != null) {
-      //alert("nullfound");
       if (res.json().error_uri != undefined && res.json().error_uri == "FirstTimeLogIn" ||
         res.json().error_uri != undefined && res.json().error_uri == "PasswordExpired") {
         document.getElementById("loadingDiv").style.display = "none";
@@ -171,24 +167,25 @@ console.log("Hello :"+res);
         this.route.navigate(['firstTimeLogin']);
         document.getElementById("loadingDiv").style.display = "none";
       }
+     else
+        this.commnFunc.alertPopup(res.json().error_description, errorHeading);
 
-      else if(document.getElementsByTagName("html")[0].className !== "login-bg-image") {
+    
+      // else if(document.getElementsByTagName("html")[0].className !== "login-bg-image") {
        
 
-        this.commnFunc.alertPopup(res.json().error_description, errorHeading);
-      }
-      else if((document.getElementsByTagName("html")[0].className == "login-bg-image") && (res.json().error_description == 'The user name or password is incorrect.')) {
+      //   this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+      // }
+      // else if((document.getElementsByTagName("html")[0].className == "login-bg-image") && (res.json().error_description == 'The user name or password is incorrect.')) {
        
 
-        this.commnFunc.alertPopup(res.json().error_description, errorHeading);
-      }
-     document.getElementById("loadingDiv").style.display = "none";
+      //   this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+      // }
+     
 
     }
 
-    else if (res.json().errors !== null  ) {
-     //alert("found:" + res.json().errors);
-      console.log(res);
+    else if (res.json().errors !== null && res.status!=400) {
       //  let classname = document.getElementsByClassName("closepopup");
       let classname = document.getElementById("closeMe");
       var routevar = this.route;
@@ -203,42 +200,47 @@ console.log("Hello :"+res);
       }, false);
       
       //updated by ruchi(session expire popup)
-     if (res.json().errorMessage == "Authorization has been denied for this request." && 
-       document.getElementsByTagName("html")[0].className !== "login-bg-image") {
-
+     if ((res.json().errorMessage == "Authorization has been denied for this request." ) && (document.getElementsByTagName("html")[0].className !== "login-bg-image")) {
+alert("authorization");
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
-      
-      else if((res.json().errorMessage !== 'Authorization has been denied for this request.') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
+else if( (document.getElementsByTagName("html")[0].className == "login-bg-image")){
+  //alert("login bg")
+          // this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+          document.getElementById("loadingDiv").style.display = "none";
+        } 
 
-    this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
-      }
+     else{
+        this.hideLoaderShowPopup(res.json().htmlErrors, errorHeading);
+      } 
+    //   else if((res.json().errorMessage !== 'Authorization has been denied for this request.') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
+
+    // this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
+    //   }
        //  else if(res.json().errorMessage !== ''){
        //  this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
        // }  
       //forgot password alert
-       // else if( (document.getElementsByTagName("html")[0].className == "login-bg-image")){
-       //   this.commnFunc.alertPopup(res.json().error_description, errorHeading);
-       // } 
-      else if((res.json().errorMessage == '') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
-        this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
-      }   
+       // 
+      // else if((res.json().errorMessage == '') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
+      //   this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
+      // }   
    //--------------------Updated By Niruti do not comment pls----------------//
       document.getElementById("loadingDiv").style.display = "none";
 
 }
     else if (res.status == 400) {
-      console.log(res);
-      this.commnFunc.alertPopup("Bad Request", errorHeading);
+      //console.log(res);
+      this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
 
     }
-
+// else if( (document.getElementsByTagName("html")[0].className !== "login-bg-image")){
+//           this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+//         } 
 
     else {
-
       throw new Error("HTTP error: " + res.statusText + " (" + res.status + ")");
     }
-
 
   }
   navigate() {
