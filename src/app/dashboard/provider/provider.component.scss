@@ -378,6 +378,7 @@ a.collapsed-panel-ss{
     bottom: 0;
     right: 0;
     left: 259px;
+    z-index: 1;
     text-align: center;
     background: white;
   }
@@ -534,7 +535,7 @@ color: $li-style-color;
    width: $width;
     margin-top: 35px;
 }
-.col-xs-ls-header-section {
+/* .col-xs-ls-header-section {
     
     margin-left: -12px;
     margin-right: -12px;
@@ -543,7 +544,7 @@ color: $li-style-color;
      
     margin-left: -12px;
     margin-right: -12px;
-  }
+  } */
 .headingprov{
     margin-bottom: 75px;
 }
@@ -581,7 +582,7 @@ color: $li-style-color;
  width:95% ;
   margin-top: 35px;
 }
-
+/* 
 .footer-x {
  background-color: #fff;
     bottom: 50px;
@@ -590,7 +591,7 @@ color: $li-style-color;
      position: fixed;
     text-align: center;
 }
-
+ */
 
 .txtright-provider {
   font-size: 15px;
@@ -601,8 +602,21 @@ color: $li-style-color;
   }
 
 }
+@media only screen and (min-width: 800px){
 
-@media screen and (max-width: 767px){
+.footer-x {
+ background-color: #fff;
+ /*    bottom: 50px;
+ left: 0; */
+    padding-bottom: 20px;
+     position: fixed;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 800px){
+
 .footer-x {
  background-color: #fff;
     bottom: 50px;
@@ -611,6 +625,17 @@ color: $li-style-color;
      position: fixed;
     text-align: center;
 }
+}
+
+@media screen and (max-width: 767px){
+/* .footer-x {
+ background-color: #fff;
+    bottom: 50px;
+    left: 0;
+    padding-bottom: 20px;
+     position: fixed;
+    text-align: center;
+} */
 .txtright-provider {
   font-size: 15px;
 }
@@ -624,7 +649,7 @@ color: $li-style-color;
 }
 
 }
-@media screen and (max-width: 676px) and (min-width: 601px){
+/* @media screen and (max-width: 676px) and (min-width: 601px){
   .footer-x {
     bottom: 0px;
     left: 0;
@@ -634,7 +659,19 @@ color: $li-style-color;
     text-align: center;
 }
  }
- 
+ @media screen and (max-width: 720px) and (min-width: 675px){
+.footer-x {
+    background-color: #fff;
+    bottom: 56px;
+    left: 0;
+    position: fixed;
+    text-align: center;
+
+}
+
+ }
+
+
 @media screen and (max-width: 1024px) and (min-width: 801px){
 
 .footer-x {
@@ -652,20 +689,7 @@ color: $li-style-color;
  
 
 
-/*  @media screen and (max-width: 970px) and (min-width: 600px){
-
-.footer-x {
-background-color: #fff;
-  bottom: 0px;
-  left: 0;
-  left:260px;
-  padding-bottom: 20px;
-   position: fixed;
-  text-align: center;
-}
-
-
-*/
+ 
 @media screen and (min-width: 767px) and (max-width: 768px){
 
  .footer-x {
@@ -691,7 +715,7 @@ background-color: #fff;
     text-align: center;
 }
  
-  }
+  } */
   @media screen and (max-width:450px){
       .twenty {
     font-size: 10px;
