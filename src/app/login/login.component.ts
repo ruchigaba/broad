@@ -365,6 +365,7 @@ keyDownFunction(event,username,password){
 // }
             // Forgot Password Method
   forgotPassword(user: string) {
+    //alert(user);
     //this.router.navigate(['./forgotPass']);
     if (user == undefined || user == '') {
       this.commnFunc.alertPopup("Please Enter the Username.", "Reset Password");
@@ -380,6 +381,7 @@ keyDownFunction(event,username,password){
         },
         error => {
           document.getElementById("loadingDiv").style.display = "none";
+          
           this._commonApi.handleError(error, "Reset Password");
         })
 

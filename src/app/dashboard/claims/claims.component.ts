@@ -441,6 +441,8 @@ getAddClaimService() {
           this.myClaimService();
         },
         error => {
+          ///-----------Updated by Niruti--------//
+           document.getElementById("loadingDiv").style.display = "none";
 
           this._dashboardApiService.handleError(error, "Claims");
         })
