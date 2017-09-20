@@ -21,6 +21,7 @@ export class ResetpasswordComponent implements OnInit {
   }
 
   ngOnInit() {
+  	document.getElementById('titleBar').style.paddingLeft="0px";
   }
 
 //-------------------------------Reset Forgot button method start------------------------------
