@@ -27,6 +27,8 @@ import { TruncatePipe } from './shared/truncate';
 import { RegistrationComponent } from './newuser/registration/registration.component';
 import { HelpComponent } from './newuser/help/help.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpassword.component';
+
 import { ValidateregistrationComponent } from './forgot-password/validateregistration/validateregistration.component'; 
 import { ClaimInfoMessageComponent } from './dashboard/contact-adjuster/claimInfoMessage.component';
 import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupervisor.component';
@@ -77,6 +79,7 @@ export const routes = [
   { path: 'createUser', component: RegistrationComponent, data: { title: 'Registration', parent:'eula' } },
   { path: 'help', component: HelpComponent, data: { title: 'Help', parent: 'createUser' } },
   { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer'} },
+  { path: 'resetPass', component: ResetpasswordComponent, data: { title: 'Reset Password', parent: 'forgotPass'} },
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } }
@@ -90,7 +93,7 @@ export const NavigatableComponents = [
    ProviderComponent, SocialMediaComponent, TutorialComponent, ClaimPaymentdetailsComponent, 
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
-   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent
+   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent
   // HealthTicketComponent 
 
 ];

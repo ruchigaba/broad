@@ -36,7 +36,8 @@ import { ValidateregistrationComponent } from './forgot-password/validateregistr
 import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupervisor.component';
 //  import { RegistrationtutorialComponent } from './registrationtutorial/registrationtutorial.component';
 import { RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component'; 
-import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
+import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component';
+import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpassword.component'; 
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.com
     EmailSupervisorComponent,
     //  RegistrationtutorialComponent,
      RegistrationTutorialComponent,
-    ForgothelpComponent 
+    ForgothelpComponent,
+    ResetpasswordComponent 
     // , DynemicUiComponent
   ],
   imports: [
