@@ -81,7 +81,7 @@ cancelSecAns() {
             this._commonApiCall.postService("secAnswers", "", "application/json", data)
                 .subscribe(res => {
                     if (res.result.secAnswersMatchedFlag == true) {
-                        this._route.navigate(['./resetForgotPassword']);
+                        this._route.navigate(['./resetPass']);
                     }
                     this.secViewShow = true;
                 },

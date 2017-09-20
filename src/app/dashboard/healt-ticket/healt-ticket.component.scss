@@ -3,17 +3,17 @@ button#dropdownMenu1 {
     border: none;
     padding: 0 10px;
 }
-.dropdown-menu.health-drp-dwn{
+   .dropdown-menu.health-drp-dwn{
     position: absolute;
     left: 48.6%;
-        border-radius: 0.25rem;
+    border-radius: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #fff;
     min-width: 165px;
     z-index: 999;
     text-align: center;
     margin-top: -3px;
-}
+   }
 
    .col-xs-12-headersection{
     background-color:$col-bg-color;
@@ -134,7 +134,7 @@ button#dropdownMenu1 {
     margin-bottom: 20px;
     margin-top: 10px;
     }
-    
+
     li .htckt-li {
     float: left;
     padding-right: 20px;
