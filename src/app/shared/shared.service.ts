@@ -47,7 +47,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "Native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
     })
@@ -77,10 +77,9 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
 
-       //'ApplicationVersion': "3.0",
-       //'Platform': "native",
-       //'Platform': "Native",
-       //'ApplicationName': 'MyClaim',
+       'ApplicationVersion': "3.0",
+       'Platform': "browser",
+       'ApplicationName': 'MyClaim',
 
 
       
@@ -117,7 +116,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'Platform': "Native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
    
@@ -230,7 +229,12 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
 
 }
     else if (res.status == 400) {
-      //console.log(res);
+     
+      if(res.json().errorMessage == "The request is invalid."){
+        
+        this.commnFunc.alertPopup(res.json().errors, errorHeading);
+      }
+      else
       this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
 
     }
