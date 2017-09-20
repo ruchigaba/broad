@@ -518,7 +518,7 @@ if(this.profileImg.length > 1){
     var data =
       {
         "email_Method": "Smart",
-        "to_email_address": this.email,
+        "to_email_address": "dgupta@primussoft.com",
         "from_email_address": this.Message_email + ' <' + this.Message_email + '>',
         "subject_Text": this.Message_subject + ' Broadspire IQ Claim #: ' + this.claimNumber,
         "body_Text": this.inputMessage + '<br/>' + '<br/>' + '<b>' + ' Contact Phone Number: ' + '</b>' + this.Message_number + '<br/>',

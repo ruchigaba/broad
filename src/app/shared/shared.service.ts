@@ -77,10 +77,10 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
 
-     //  'ApplicationVersion': "3.0",
+      //'ApplicationVersion': "3.0",
       //  //'Platform': "native",
-     //   'Platform': "browser",
-     //  'ApplicationName': 'MyClaim',
+      //  'Platform': "browser",
+      // 'ApplicationName': 'MyClaim',
 
 
       
