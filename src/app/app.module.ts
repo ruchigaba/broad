@@ -36,7 +36,8 @@ import { ValidateregistrationComponent } from './forgot-password/validateregistr
 import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupervisor.component';
 //  import { RegistrationtutorialComponent } from './registrationtutorial/registrationtutorial.component';
 import { RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component'; 
-import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
+import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component';
+import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpassword.component'; 
 
 // -------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
@@ -63,7 +64,8 @@ import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTech
     //  RegistrationtutorialComponent,
      RegistrationTutorialComponent,
     ForgothelpComponent,
-    LeaveTechPortalComponent
+    LeaveTechPortalComponent,
+    ResetpasswordComponent 
     // , DynemicUiComponent
   ],
   imports: [

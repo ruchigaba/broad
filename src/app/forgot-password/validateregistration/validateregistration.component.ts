@@ -147,9 +147,13 @@ resetNewUserInfo() {
             };
             this._commonApiCall.putService("user/validate", "", "application/json", data)
                 .subscribe(res => {
+                    ////---------Updated by Niruti--------///
+                     document.getElementById("loadingDiv").style.display = "none";
                     this._route.navigate(['./forgotPass']);
                 },
                 error => {
+                    ////--------Updated By Niruti--------////
+                     document.getElementById("loadingDiv").style.display = "none";
                     this._commonApiCall.handleError(error,"Change User Security Info");
                 })
         }
