@@ -47,7 +47,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "Native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
     })
@@ -77,10 +77,9 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
 
-       //'ApplicationVersion': "3.0",
-       //'Platform': "native",
-       //'Platform': "Native",
-       //'ApplicationName': 'MyClaim',
+       'ApplicationVersion': "3.0",
+       'Platform': "browser",
+       'ApplicationName': 'MyClaim',
 
 
       
@@ -117,7 +116,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'Platform': "Native",
+      'Platform': "browser",
       'ApplicationName': 'MyClaim'
 
    

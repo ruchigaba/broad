@@ -1,10 +1,10 @@
 <div class="mobileFooter">
 
-    <div class="hidden-content slide-down" id="togg-dv" style="float: right;font-size: 10px;line-height: 26px;width: 20%;background: #f6f6f6 none repeat scroll 0 0; display:none; ">
+    <div class="hidden-content slide-down" id="togg-dv" class= "togg-dv" style="float: right;font-size: 10px;line-height: 26px;width: 20%;background: #f6f6f6 none repeat scroll 0 0; display:none; ">
 
 <div id="FAQ" class="pop-blur-dv" [routerLink]="['faqs']" (click) = "removeMoreOptions()">
     <div class="midd-content" >
-    <a md-ink-ripple [routerLink]="['faqs']" (click)="activeFooterMenu='FAQ'; removeMoreOptions()">
+    <a href="#" md-ink-ripple [routerLink]="['faqs']" (click)="activeFooterMenu='FAQ'; removeMoreOptions()">
     <img  src=" .\image\faq2_64x64.png" [routerLink]="['faqs']" />
     <div style="clear:both;"></div>
     <span [routerLink]="['faqs']">FAQ</span></a>
@@ -61,8 +61,19 @@
     <span >Logout</span></a>
     </div>
     </div>
+
+    <div class="pop-blur-dv" id="Social" >
+    <div class="midd-content" >
+    <a md-ink-ripple [routerLink]="['leaveTechPortal']" (click)="activeFooterMenu ='Social';removeMoreOptions()">
+    <img  src=".\image\social2_64x64.png" >
+    <div style="clear:both;"></div>
+     <span  >Leavetech Portal</span></a>
+    </div>
+    </div>
+    
     </div>
 
+     
 
 
 

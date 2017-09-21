@@ -38,6 +38,10 @@ import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupe
 import { RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component'; 
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
 
+// -------------------------------------registration tutorial component starts ---------------------------
+import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
+// -------------------------------------registration tutorial component ends ---------------------------
+
 @NgModule({
   declarations: [
     AppComponent, ...NavigatableComponents, SidebarComponent, TopnavComponent, FooterComponent,
@@ -58,7 +62,8 @@ import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.com
     EmailSupervisorComponent,
     //  RegistrationtutorialComponent,
      RegistrationTutorialComponent,
-    ForgothelpComponent 
+    ForgothelpComponent,
+    LeaveTechPortalComponent
     // , DynemicUiComponent
   ],
   imports: [
