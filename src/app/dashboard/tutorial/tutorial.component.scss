@@ -29,7 +29,7 @@
     color: white;
 }
 .maincontainersectionslider.inner-slider-new{
-    width: 73% !important;
+    width: 80% !important;
     margin: 0 auto;
 }
  .mainimg-new-reg-subwrapp{
@@ -67,14 +67,11 @@
     margin-left: 0px;
 }
 }
-/* @media screen and (max-width:451px){
-.w5-display-right {
-    right:88px ;
-    top: 45%;
+//------Updated By Niruti (20th Sep)
+@media screen and (max-width:667px) and (min-width:375px)
+{
+.mainimg {
+    width: 258px;
+    margin-left: 10px;
 }
-    .w5-display-left{
-    left:50px ;
-    top: 45%;
-    }
-    }
- */
+}
