@@ -121,6 +121,17 @@
     </div>
     </a>
     </li>
+ <li>
+<a [routerLink]="['leaveTechPortal']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <div class="image-section-sidebar">
+    <img class="menu-item-img-sidebar" src=".\image\healthTicket.png">
+    </div>
+    <div class="image-section-span">
+    <span class="menu-item-img-span">Leavetech Portal</span>
+    </div>
+    </a>
+    </li>
+
 
     <a routerLink="/dashboard/home" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <!-- <i class="fa fa-fw fa-dashboard"></i> Dashboard -->

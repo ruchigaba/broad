@@ -731,7 +731,7 @@ s
     }
     .nav-lines {
     li{
-             padding: 0 !important;
+         padding: 0px !important;
             margin:5px !important;
     }
     a{
@@ -1011,6 +1011,12 @@ margin-bottom: 75px;
 .txtright,.txtright1 {
     width: 37% !important;
 }
+ .nav-lines {
+    li{
+         padding: 0px !important;
+            margin:5px !important;
+    }
+ }
  .container-center {
     
     margin-left: -12px;

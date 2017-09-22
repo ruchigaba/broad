@@ -412,9 +412,9 @@ if(this.profileImg.length > 1){
     else if (this.inputMessage == '' || this.inputMessage == undefined) {
       this.ComFunc.alertPopup("Message is required", "Message");
     }
-    // else if (this.email == '' || this.email == undefined || !re.test(this.email)) {
-    //   this.ComFunc.alertPopup("Recipient email address is missing.", "Message");
-    // }
+    else if (this.email == '' || this.email == undefined || !re.test(this.email)) {
+      this.ComFunc.alertPopup("Recipient email address is missing.", "Message");
+    }
     else {
 
       if (imgPhoto.src !== this.transperentImg) {

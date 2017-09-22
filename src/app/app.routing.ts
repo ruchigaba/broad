@@ -37,7 +37,9 @@ import {RegistrationTutorialComponent } from './registration-tutorial/registrati
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
 
 
-
+//-------------------------------------registration tutorial component starts ---------------------------
+import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
+// -------------------------------------registration tutorial component ends ---------------------------
 
  //import { HealthTicketComponent } from './dashboard/health_ticket/healthTicket.component'; 
 // import { ReturnToWorkComponent } from './dashboard/leave-claim/return-to-work.component';
@@ -70,6 +72,7 @@ export const routes = [
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
       { path: 'tutorial', component: TutorialComponent, data: { title: 'Tutorial' } },
       { path: 'ClaimInfoMessage', component: ClaimInfoMessageComponent, data: { title: 'Message',parent:'contact-adjuster' } },
+      { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'Leave Tech Portal' } },
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',parents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },
@@ -93,6 +96,7 @@ export const NavigatableComponents = [
    ProviderComponent, SocialMediaComponent, TutorialComponent, ClaimPaymentdetailsComponent, 
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
+   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent
   // HealthTicketComponent 
 
