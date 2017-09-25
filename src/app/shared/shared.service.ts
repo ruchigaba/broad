@@ -197,7 +197,7 @@ this.addDivBeforeBody();
       
       //updated by ruchi(session expire popup)
      if ((res.json().errorMessage == "Authorization has been denied for this request." ) && (document.getElementsByTagName("html")[0].className !== "login-bg-image")) {
-alert("authorization");
+
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
 else if( (document.getElementsByTagName("html")[0].className == "login-bg-image")){
