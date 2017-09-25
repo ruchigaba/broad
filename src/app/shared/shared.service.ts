@@ -55,7 +55,7 @@ this.addDivBeforeBody();
       headers: headers
     })
 
-    return this._http.get('https://myclaimwebapiuat.crawco.com/'+ url, options)
+     return this._http.get(sessionStorage.getItem('local_appUrl') + url, options)
       .timeout(this.timeout)
       .map(resp => {
     
@@ -76,14 +76,16 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
+
        'ApplicationVersion': "3.0",
        'Platform': "browser",
        'ApplicationName': 'MyClaim',
 
-      //'ApplicationVersion': "3.0",
-      //  //'Platform': "native",
-      //  'Platform': "browser",
-      // 'ApplicationName': 'MyClaim',
+
+      
+
+      
+
      
     })
 
@@ -91,7 +93,7 @@ this.addDivBeforeBody();
       headers: headers
     })
 
-    return this._http.post('https://myclaimwebapiuat.crawco.com/'+url, data, options)
+    return this._http.post(sessionStorage.getItem('local_appUrl') + url, data, options)
       // .timeout(150000, Observable.throw('Error Timeout'))
       .timeout(15000)
       .map(resp => {
@@ -116,14 +118,15 @@ this.addDivBeforeBody();
       'Content-Type': contentType,
       'Platform': "browser",
       'ApplicationName': 'MyClaim'
- 
+
+   
 
     })
     var options = new RequestOptions({
       headers: headers
     })
 
-    return this._http.put('https://myclaimwebapiuat.crawco.com/'+ url, data, options)
+   return this._http.put(sessionStorage.getItem('local_appUrl') + url, data, options)
       .timeout(15000)
       .map(resp => {
 
@@ -189,7 +192,7 @@ this.addDivBeforeBody();
       classname.addEventListener('click', function cls(event) {
         if (res.json().errorMessage == "Authorization has been denied for this request.") {
           document.getElementById("closeMe").removeEventListener('click', cls);
-          routevar.navigate(['']);
+         // routevar.navigate(['']);
         }
 
 
@@ -197,11 +200,10 @@ this.addDivBeforeBody();
       
       //updated by ruchi(session expire popup)
      if ((res.json().errorMessage == "Authorization has been denied for this request." ) && (document.getElementsByTagName("html")[0].className !== "login-bg-image")) {
-
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
 }
 else if( (document.getElementsByTagName("html")[0].className == "login-bg-image")){
-  //alert("login bg")
+ 
           // this.commnFunc.alertPopup(res.json().error_description, errorHeading);
           document.getElementById("loadingDiv").style.display = "none";
         } 
@@ -209,18 +211,7 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
      else{
         this.hideLoaderShowPopup(res.json().htmlErrors, errorHeading);
       } 
-    //   else if((res.json().errorMessage !== 'Authorization has been denied for this request.') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
-
-    // this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
-    //   }
-       //  else if(res.json().errorMessage !== ''){
-       //  this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
-       // }  
-      //forgot password alert
-       // 
-      // else if((res.json().errorMessage == '') && (document.getElementsByTagName("html")[0].className == "login-bg-image")){
-      //   this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
-      // }   
+    
    //--------------------Updated By Niruti do not comment pls----------------//
       document.getElementById("loadingDiv").style.display = "none";
 
@@ -245,7 +236,8 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
 
   }
   navigate() {
-    this.route.navigate(['']);
+    //alert('navigation')
+    //this.route.navigate(['']);
   }
   // this function is to hide loader and display error message when error has occured in http request
   hideLoaderShowPopup(message, errorHeading) {
