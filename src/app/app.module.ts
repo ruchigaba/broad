@@ -39,6 +39,10 @@ import { RegistrationTutorialComponent } from './registration-tutorial/registrat
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component';
 import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpassword.component'; 
 
+// -------------------------------------registration tutorial component starts ---------------------------
+import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
+// -------------------------------------registration tutorial component ends ---------------------------
+
 @NgModule({
   declarations: [
     AppComponent, ...NavigatableComponents, SidebarComponent, TopnavComponent, FooterComponent,
@@ -60,6 +64,7 @@ import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpas
     //  RegistrationtutorialComponent,
      RegistrationTutorialComponent,
     ForgothelpComponent,
+    LeaveTechPortalComponent,
     ResetpasswordComponent 
     // , DynemicUiComponent
   ],

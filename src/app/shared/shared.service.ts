@@ -76,16 +76,14 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-
        'ApplicationVersion': "3.0",
        'Platform': "browser",
        'ApplicationName': 'MyClaim',
 
-
-      
-
-      
-
+      //'ApplicationVersion': "3.0",
+      //  //'Platform': "native",
+      //  'Platform': "browser",
+      // 'ApplicationName': 'MyClaim',
      
     })
 
@@ -118,8 +116,7 @@ this.addDivBeforeBody();
       'Content-Type': contentType,
       'Platform': "browser",
       'ApplicationName': 'MyClaim'
-
-   
+ 
 
     })
     var options = new RequestOptions({
