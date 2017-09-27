@@ -82,7 +82,7 @@ z-index: 999;
 //     width:100%;
 // }
 .menu-item-img-span-1{
-    color:white;
+       color: rgba(0, 0, 0, 0.87);
    
 }
 // .mycomp .list-group-item-mycom a.router-link-active {
@@ -90,7 +90,8 @@ z-index: 999;
 //     font-weight: 600;
 // }
 a.list-group-item-mycom.router-link-active {
-    background-color: #cce4d6;
+        background-color: #cccccc;
+    
 }
 /* .twenty{
     font-weight: 500;
