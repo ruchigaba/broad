@@ -19,7 +19,10 @@ position: fixed;
     font-weight: 800;
    -webkit-tap-highlight-color: transparent;
     }
-
+.active2{
+    outline:none;
+    background-color: #cce4d6;
+}
 .navbarstyle{
 background-color:$navbarstyle-background-color;
 padding: 0px !important;
@@ -43,8 +46,10 @@ z-index: 999;
     .mycomp {
         /* width: 12.5%; */
         // float: left;
+ 
         margin-left: 90px;
-        line-height: 5.5;
+        line-height: 5.4;
+ 
         font-size: 15px;
         font-weight: 600;
         position: relative;
@@ -55,7 +60,9 @@ z-index: 999;
         vertical-align: middle;
         min-height: 69px;
         display: table;
+       
 }
+ 
 .fourty{
     float: left;
     width:  50%;
@@ -67,7 +74,15 @@ z-index: 999;
     display: table;
    line-height:  69px;
 }
-
+//.list-group-item-mycom{
+//   display: inline-block;
+//     height: $list-group-item-height;
+//     position: relative;
+//     vertical-align: middle;
+//     min-height: 50px;
+//     padding: 0px 0px 0px 40px;
+//     width:100%;
+//}
 /* .twenty{
     font-weight: 500;
     margin-left: 35px;
