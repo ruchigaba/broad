@@ -97,25 +97,25 @@ resetNewUserInfo() {
             this.commnFunc.alertPopup("Please fill the 4 digit ssn in number format","Change User Security Info");
         }
         else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
-          this.commnFunc.alertPopup("Invalid Month","Registration");
+          this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
         }
         else if (this.dobdate == "" || this.dobdate == undefined || parseInt(this.dobdate) >31) {
-          this.commnFunc.alertPopup("Invalid Date","Registration");
+          this.commnFunc.alertPopup("Invalid Date for date of Birth","Registration");
         }
         else if (this.dobyear == "" || this.dobyear == undefined || parseInt(this.dobyear) < 1900 || parseInt(this.dobyear) > current_year)  {
-          this.commnFunc.alertPopup("Invalid Year","Registration");
+          this.commnFunc.alertPopup("Invalid Year for date of Birth","Registration");
         }
         else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
           this.commnFunc.alertPopup("Please fill the 5 digit zip code ","Registration");
         }
         else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
-          this.commnFunc.alertPopup("Invalid Month","Registration");
+          this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
         }
         else if (this.doldate == "" || this.doldate == undefined || parseInt(this.doldate)>31) {
-          this.commnFunc.alertPopup("Invalid Date","Registration");
+          this.commnFunc.alertPopup("Invalid Date for date of loss","Registration");
         }
         else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
-          this.commnFunc.alertPopup("Invalid Year","Registration");
+          this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
         }
         else if (this.claimNo == "" || this.claimNo == undefined) {
             this.commnFunc.alertPopup("Please fill the claim number.","Change User Security Info");
