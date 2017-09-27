@@ -12,6 +12,7 @@ export class SettingsComponent implements OnInit {
   constructor(private _routes : Router) { }
 
   ngOnInit() {
+   // document.getElementById('main-container').style.marginLeft='259px';
     window.scrollTo(0, 0);
     document.getElementsByTagName("html")[0].removeAttribute("class");
   }
