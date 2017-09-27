@@ -32,12 +32,29 @@ z-index: 999;
 }
 .logo-sec-new-one {
     float: left;
-    width:25%;
+    width:27%;
     color: $color-sixty;
     height:$height-sixty;
     vertical-align: middle;
     min-height: 80px;
     display: table;
+}
+ 
+    .mycomp {
+        /* width: 12.5%; */
+        // float: left;
+        margin-left: 92px;
+        line-height: 5.5;
+        font-size: 15px;
+        font-weight: 600;
+        position: relative;
+        float: left;
+        cursor: pointer;
+        color: #ffffff;
+        height: 69px;
+        vertical-align: middle;
+        min-height: 69px;
+        display: table;
 }
 .fourty{
     float: left;
