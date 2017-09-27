@@ -1,5 +1,5 @@
 <button class="btn btn-default" id="toggle-sidebar" type="button" (click)="eventCalled()"></button>
-<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}" >
+<nav class="sidebar" id="sidebar" [ngClass]="{sidebarPushRight: isActive}" >
     <ul class="list-group" style="margin: 0;">
 <li>
 <a [routerLink]="['claims']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -9,7 +9,7 @@
     <img class="menu-item-img-sidebar" src=".\image\claim-info.png" >
     </div>
     <div class="image-section-span ">
-    <span class="menu-item-img-span" >  Claims </span>
+    <span class="menu-item-img-span" >Claims </span>
     </div>
     </a>
     </li>
@@ -22,7 +22,7 @@
     <img class="menu-item-img-sidebar" src=".\image\healthTicket.png">
     </div>
     <div class="image-section-span">
-    <span class="menu-item-img-span">  Health Ticket</span>
+    <span class="menu-item-img-span">Health Ticket</span>
     </div>
     </a>
     </li>
@@ -35,8 +35,8 @@
     <img class="menu-item-img-sidebar" src=".\image\contactAdjuster-64x64.png">
     </div>
     <div class="image-section-span">
-    <span class="menu-item-img-span"> Contact Worker's Comp Adjuster</span>
-    </div> 
+    <span class="menu-item-img-span">Contact Worker's Comp Adjuster</span>
+    </div>
     </a>
     </li>
 
@@ -98,7 +98,7 @@
 
     <!-- <li [routerLink]="['settings']" (click) = "activeFooterMenu='Settings'" [class.active]="activeFooterMenu=='Settings'">
     <a class="list-group-item"> -->
-    <!-- <li>
+ <!--    <li>
 <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">
     <div class="image-section-sidebar">
     <img class="menu-item-img-sidebar" src=".\image\settings2_64x64.png" >
@@ -111,7 +111,7 @@
 
     <!-- <li [routerLink]="['']" (click) = "activeFooterMenu='Logout'" [class.active]="activeFooterMenu=='Logout'">
     <a class="list-group-item"> -->
-    <!-- <li>
+ <!--    <li>
 <a [routerLink]="['']" [routerLinkActive]="['router-link']" class="list-group-item">
     <div class="image-section-sidebar">
     <img class="menu-item-img-sidebar" src=".\image\logout_64x64.png" >
@@ -120,9 +120,9 @@
     <span class="menu-item-img-span">Log Out</span>
     </div>
     </a>
-    </li>-->
- <li> 
-<a [routerLink]="['leaveTechPortal']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    </li> -->
+ <li>
+<a [routerLink]="['leaveTechPortal']" (click)="eventCalled();hideSidebar()" [routerLinkActive]="['router-link-active']" class="list-group-item">
     <div class="image-section-sidebar">
     <img class="menu-item-img-sidebar" src=".\image\healthTicket.png">
     </div>
