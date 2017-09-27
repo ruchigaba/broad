@@ -39,6 +39,17 @@ eventCalled() {
     }
 
   }
+
+  hideSidebar(){
+    //let flag="true";
+    //sessionStorage.setItem('sidebar', flag);
+    document.getElementById('sidebar').style.display='none';
+    this.isActive = !this.isActive;
+    
+    
+    //side.style.display="block"
+    
+    }
   addExpandClass(element: any) {
     if (element === this.showMenu) {
       this.showMenu = '0';
