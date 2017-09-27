@@ -147,8 +147,7 @@ keyDownFunction(event,username,password){
       user.toLowerCase() == 'myclaimprimus1@gmail.com' || user.toLowerCase() == 'testingbroadspireapp@gmail.com' ||
       user.toLowerCase() == 'rmazumdar@primussoft.com' || user.toLowerCase() == 'karen.hofmann@us.crawco.com' ||
       user.toLowerCase() == 'pkindig@choosebroadspire.com' || user.toLowerCase() == "kautilya.sharma6@primussoft.com" || (b != "-1" && a == "choosebroadspire.com")) {
-      //uat remove
-      sessionStorage.setItem('local_appUrl', 'https://myclaimwebapi.crawco.com/');
+      sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
 
           // else{
           //   if(user==undefined && pass!=undefined)
@@ -157,7 +156,7 @@ keyDownFunction(event,username,password){
           //     this.commnFunc.alertPopup("Please enter the username.", "Login");
           //   }
             //else
-              //sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
+             // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
               var creds = 'grant_type=password&username=' + user + '&password=' + pass;
               // let creds = 'grant_type=password&username=username &password=password';
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
@@ -174,8 +173,7 @@ keyDownFunction(event,username,password){
         });
                    }
                        else {
-                         //uat remove
-      sessionStorage.setItem('local_appUrl', 'https://myclaimwebapi.crawco.com/');
+      sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
 
       var creds = 'grant_type=password&username=' + user + '&password=' + pass;
 
