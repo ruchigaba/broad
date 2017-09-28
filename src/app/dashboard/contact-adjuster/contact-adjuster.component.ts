@@ -83,6 +83,7 @@ emailSupervisor(){
 
 contact(){
  // window.open('tel:'+this.phone, '_system');
+ this._route.navigate(['./dashboard/leaveTechPortal']);
 }
 //-----------------------------------------ITS CALLED AFTER SELECTING OTHER CLAIM NUMBER-----------------------------
 selectedClaim = this.claims1[0].claim_number;

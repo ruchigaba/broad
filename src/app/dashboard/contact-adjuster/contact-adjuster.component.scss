@@ -191,6 +191,15 @@ background-clip: padding-box;
     width: 33.3333%;
    @include con-adj();
 }
+.col-con-adj {
+    width: 50%;
+    margin-left: 517px;
+    min-height: 1px;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    position: relative;
+    float: left;
+}
 .image-section-con-adj {
     cursor: pointer;
     text-align: center;
