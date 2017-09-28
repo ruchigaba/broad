@@ -14,6 +14,8 @@ import {CommonAPICall} from '../../shared/shared.service';
 export class TopnavComponent implements OnInit {
 title = ''; parent: boolean = false;
 object: any;
+isActive = false;
+  claimClicked = false;
 parent2 = true;
 htmlElement: any; hideKeyboard: any;
 data: any;
@@ -146,5 +148,19 @@ hideFooterIOS(){
         this.hideKeyboard.blur();
       }
     }
+  }
+  eventCalled() {
+
+    sessionStorage.setItem("refreshProviders", "true");
+    document.getElementById("loadingDiv").style.display = "none";
+
+    this.isActive = !this.isActive;
+
+    // if claims is clicked then make page position as undefined,so page will open at top
+    if (this.claimClicked == true) {
+      sessionStorage.setItem('pagePosition', undefined);
+      this.claimClicked = false;
+    }
+
   }
 }
