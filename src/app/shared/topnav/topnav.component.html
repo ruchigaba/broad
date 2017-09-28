@@ -27,9 +27,11 @@
    <div class="title-div fourty">
     <!-- <div class="titltxtd" id="titleBar">{{title}}</div>  -->
    <div class="mycomp">
-   <a  [routerLink]="['claims']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
+       <a  [routerLink]="['claims']" (click) = "activeFooterMenu='Claims'" [class.active]="activeFooterMenu=='Claims'">
+   <!--<a  [routerLink]="['claims']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">-->
        <span class="menu-item-img-span-1">Worker's Comp</span> 
       </a></div>
+      
    <div class="mycomp">
        <a  [routerLink]="['leaveTechPortal']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
             <span class="menu-item-img-span-1">View Disability/Leave</span>
