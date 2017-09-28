@@ -177,7 +177,7 @@ background-clip: padding-box;
     @include con-adj();
 }
 .col-con-adj-6 {
-    width: $width-h;
+    width: 75%;
     @include con-adj();
 }
 .main-divs-sivs-adjuster {
@@ -188,18 +188,18 @@ background-clip: padding-box;
     padding-right: 0 !important;
 }
 .col-con-adj-4 {
-    width: 33.3333%;
+    width: 24.3333%;
    @include con-adj();
 }
-.col-con-adj {
-    width: 50%;
-    margin-left: 517px;
-    min-height: 1px;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    position: relative;
-    float: left;
-}
+// .col-con-adj {
+//     width: 50%;
+//     margin-left: 517px;
+//     min-height: 1px;
+//     padding-left: 0.9375rem;
+//     padding-right: 0.9375rem;
+//     position: relative;
+//     float: left;
+// }
 .image-section-con-adj {
     cursor: pointer;
     text-align: center;
@@ -262,7 +262,7 @@ background-clip: padding-box;
 @media screen and (max-width:768px){
 
     .col-con-adj-6 {
-    width: $width;
+     
     @include con-adj();
 }
 .label-1,.label-2,.label-3{
