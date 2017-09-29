@@ -147,5 +147,39 @@ hideFooterIOS(){
       }
     }
   }
+ moreDropdownFunc(){
+  // alert("Kh")
+
+   var x = document.getElementById('navbar-collapse-id-qwe')
+   console.log(x)
+  //  if(  x.style.display == "block"){
+  //      x.style.display = "none";
+  //  }
+  //  else{
+  //       x.style.display = "block";
+  //  }
+
+      if (x.style.display=="none") {
+    
+        x.style.display="block";
+    //      window.addEventListener("click",()=>{
+    //   x.style.display="none";
+    // })
+    //     window.addEventListener("touchstart",()=>{
+    //   x.style.display="none";
+    // })
+        
+      }
+      else{
+    
+        x.style.display="none";
+      }
+      
+  }
+
+  public k(){
+     var x = document.getElementById('navbar-collapse-id-qwe')
+      x.style.display="none";
+  }
   
 }
