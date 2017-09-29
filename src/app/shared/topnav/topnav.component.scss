@@ -21,7 +21,7 @@ position: fixed;
     }
 .active2{
     outline:none;
-    background-color: #cce4d6;
+    // background-color: #cce4d6;
 }
 .navbarstyle{
 background-color:$navbarstyle-background-color;
@@ -64,7 +64,7 @@ z-index: 999;
 }
 .moreobtion img{
     position: fixed;
-    width: 24px;
+    width: 20px;
     right: 10px;
     top: 27px;
 }
@@ -91,6 +91,8 @@ z-index: 999;
 // }
 .menu-item-img-span-1{
        color:white;
+       border: 1.5px solid #0a9e49;
+       padding: 5px;
 
    
 }
@@ -105,11 +107,11 @@ z-index: 999;
 //     font-weight: 600;
 // }
 a.list-group-item-mycom.router-link-active {
-        background-color: black;
+        // background-color: black;
     
 }
 a.active {
-    background-color: black;
+    // background-color: black;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #ddd;
