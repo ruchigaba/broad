@@ -21,6 +21,7 @@ htmlElement: any; hideKeyboard: any;
 data: any;
 WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
+
   constructor(private route: ActivatedRoute, private router: Router, private _location: Location, private _commonApiCall: CommonAPICall) {
   var root = document.getElementsByTagName('html')[0];
   if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
@@ -57,9 +58,13 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-
+          if(this.data.title !== 'leaveTechPortal'){
+            sessionStorage.setItem("title", this.data.title);
+          }
+          //console.log(this.data);
           //add title to header
           this.title = this.data.title;
+
 
           // add back button to header if route has parent defined
            console.log(this.data.parent + "1: "+ this.data.parent2);
@@ -148,6 +153,10 @@ hideFooterIOS(){
         this.hideKeyboard.blur();
       }
     }
+  }
+  lasttitle(){
+    console.log(sessionStorage.getItem("title"));
+    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
   }
   eventCalled() {
 
