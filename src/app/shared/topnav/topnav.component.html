@@ -48,20 +48,63 @@
 
    <div class="text-style">
    <div class="clstext" >{{WelcomeUsername}}</div>
-   <!--<span><img src=".\image\more-fill.png"></span>-->
-   </div>
+
+   <!--<div class="moreobtion" > 
+   
+   </div>-->
+
+ <div class="moreobtion"  >
+             <span><img (click)="moreDropdownFunc()" src=".\image\more.png"></span>
+            
+ 
+
    <!--for mobile-->
-   <div class="mobile" style="display:block">
+   <!--<div class="mobile" style="display:block">
    <button class="navbar-toggle" data-target="#navbar-collapse-id" data-toggle="collapse" type="button">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-   </div>
-   </nav>
-   <div style="clear:both;"></div>
+   </div>-->
+<div class="navbar-collapse collapse in" id="navbar-collapse-id-qwe" style="display:none;">
+    <ul id=dropdownMenu12 class="nav navbar-nav navbar-right"  aria-labelledby="dropdownMenu12" >
+               
+                    <!--<li>
+                        <a ng-click="back()" ng-hide="hideBack" class="" (click)="k()">
+                            <span class="glyphicon glyphicon-chevron-left"></span>&nbsp;Back
+                        </a>
+                    </li>-->
+                    <li>
+                       <a >
 
+                            <span class="gly gly-user"></span>&nbsp;{{WelcomeUsername}}
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['settings']" class="ng-scope" (click)="k()">
+                           <img src=".\image\settings2_64x64.png" >
+                            <div style="clear:both;"></div>
+                            <span class="gly gly-settings"></span>&nbsp;Settings
+                        </a>
+                    </li>
+                    <li class="">
+                        <a  [routerLink]="['']"  class="ng-binding" (click)="k()">
+                              <img src=".\image\logout_64x64.png">
+                               <div style="clear:both;"></div>
+                            <span class="gly gly-log-out"></span>&nbsp;Log Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+ <div style="clear:both;"></div>
+   </div>
+   
+ 
+
+   </nav>
+ 
 
 
 

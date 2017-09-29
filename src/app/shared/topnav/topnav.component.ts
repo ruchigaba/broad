@@ -14,8 +14,6 @@ import {CommonAPICall} from '../../shared/shared.service';
 export class TopnavComponent implements OnInit {
 title = ''; parent: boolean = false;
 object: any;
-isActive = false;
-  claimClicked = false;
 parent2 = true;
 htmlElement: any; hideKeyboard: any;
 data: any;
@@ -163,13 +161,47 @@ hideFooterIOS(){
     sessionStorage.setItem("refreshProviders", "true");
     document.getElementById("loadingDiv").style.display = "none";
 
-    this.isActive = !this.isActive;
+    //this.isActive = !this.isActive;
 
     // if claims is clicked then make page position as undefined,so page will open at top
-    if (this.claimClicked == true) {
-      sessionStorage.setItem('pagePosition', undefined);
-      this.claimClicked = false;
+   // if (this.claimClicked == true) {
+     // sessionStorage.setItem('pagePosition', undefined);
+    //  this.claimClicked = false;
     }
+ moreDropdownFunc(){
+  // alert("Kh")
 
+   var x = document.getElementById('navbar-collapse-id-qwe')
+   console.log(x)
+  //  if(  x.style.display == "block"){
+  //      x.style.display = "none";
+  //  }
+  //  else{
+  //       x.style.display = "block";
+  //  }
+
+      if (x.style.display=="none") {
+    
+        x.style.display="block";
+    //      window.addEventListener("click",()=>{
+    //   x.style.display="none";
+    // })
+    //     window.addEventListener("touchstart",()=>{
+    //   x.style.display="none";
+    // })
+        
+      }
+      else{
+    
+        x.style.display="none";
+      }
+      
   }
+
+
+   public k(){
+      var x = document.getElementById('navbar-collapse-id-qwe')
+     x.style.display="none";
+  }
+  
 }
