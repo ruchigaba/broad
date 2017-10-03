@@ -287,7 +287,7 @@ a.active {
 }
 .moreobtion img{
      
-    width: 22px;
+    width: 18px;
     // margin-bottom: -9px;
 }
 .logoclaim.mobileruc img {
@@ -333,7 +333,7 @@ a.active {
 }
 .logoclaim img {
     padding-left: 10px;
-    max-height: 35px;
+    max-height: 25px;
    
 }
 .back-arrow{
@@ -676,12 +676,12 @@ margin-left:77px ;
 
 //-------------For Mobile ---------///
 
-@media only screen and (max-width:450px){
-    .mycomp{
-        margin-left: -3px;
-    }
+// @media only screen and (max-width:450px){
+//     .mycomp{
+//         margin-left: -3px;
+//     }
 
-}
+// }
 @media only screen and (min-width:700px) and (max-width: 740px){
     .navbar-right-1{
         margin-left: 558px !important;
