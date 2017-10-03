@@ -114,7 +114,7 @@ a.list-group-item-mycom.router-link-active{
      border-bottom: none; 
 }
 .list-group-item-mycom-2{
-border:1.5px solid #0a9e49;
+// border:1.5px solid #0a9e49;
     padding:5px;
     // background-color: #007a33 !important;
     
@@ -260,7 +260,7 @@ a.active {
 .w3-dropdown-dr{
  line-height: 40px;
 }
-.potato{
+.commpaa{
     
         font-size: 12px;
     margin-top: 6px;
@@ -290,7 +290,7 @@ a.active {
 }
 .moreobtion img{
      
-    width: 22px;
+    width: 18px;
     // margin-bottom: -9px;
 }
 .logoclaim.mobileruc img {
@@ -336,7 +336,7 @@ a.active {
 }
 .logoclaim img {
     padding-left: 10px;
-    max-height: 35px;
+    max-height: 25px;
    
 }
 .back-arrow{
@@ -680,12 +680,12 @@ margin-left:77px ;
 
 //-------------For Mobile ---------///
 
-@media only screen and (max-width:450px){
-    .mycomp{
-        margin-left: -3px;
-    }
+// @media only screen and (max-width:450px){
+//     .mycomp{
+//         margin-left: -3px;
+//     }
 
-}
+// }
 @media only screen and (min-width:700px) and (max-width: 740px){
     .navbar-right-1{
         margin-left: 558px !important;
@@ -741,7 +741,7 @@ margin-left:77px ;
 .w3-dropdown-dr{
  line-height: 40px;
 }
-.potato{
+.commpaa{
     
         font-size: 12px;
     margin-top: 6px;
@@ -749,7 +749,7 @@ margin-left:77px ;
         color: black;
 }
 .navbar-right-1{
- background-color:#efeeee;
+ background-color:#f6f6f6;
    margin-left: 856px;
     width: 116%;
     margin-top: -5px ;
@@ -796,3 +796,4 @@ margin-left: 840px;
     margin-top: -6px !important;
 }
 }
+ 

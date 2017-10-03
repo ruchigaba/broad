@@ -15,7 +15,9 @@ export class TopnavComponent implements OnInit {
 title = ''; parent: boolean = false;
 object: any;
 parent2 = true;
-htmlElement: any; hideKeyboard: any;
+isActive = false;
+  claimClicked = false;
+  htmlElement: any; hideKeyboard: any;
 data: any;
 WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
@@ -56,7 +58,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings'){
             sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data);
@@ -67,8 +69,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           // add back button to header if route has parent defined
            console.log(this.data.parent + "1: "+ this.data.parent2);
           if(this.data.parent != undefined && this.data.parent != ""){
-             // alert("condition true" + this.data.parent);
-            //console.log(this.data.parent + "2: "+ this.data.parent2);
+            
             this.parent=true;
             this.parent2=false;
 
@@ -78,8 +79,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             this.parent=true;
           }
           else{
-            // alert("false" + this.data.parent2);
-            //console.log(this.data.parent + "3: "+ this.data.parent2);
+            
             this.parent2=true;
             this.parent=false;
 
@@ -177,16 +177,19 @@ hideFooterIOS(){
     sessionStorage.setItem("refreshProviders", "true");
     document.getElementById("loadingDiv").style.display = "none";
 
+
       var x =document.getElementById("worker")
      
       x.setAttribute("className","list-group-item-mycom");
       x.style.border="0px";
     //this.isActive = !this.isActive;
+    this.isActive = !this.isActive;
 
     // if claims is clicked then make page position as undefined,so page will open at top
-   // if (this.claimClicked == true) {
-     // sessionStorage.setItem('pagePosition', undefined);
-    //  this.claimClicked = false;
+  //   if (this.claimClicked == true) {
+  //     sessionStorage.setItem('pagePosition', undefined);
+  //     this.claimClicked = false;
+  // }
     }
  moreDropdownFunc(drop){
 
