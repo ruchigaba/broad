@@ -85,6 +85,7 @@ export class HealtTicketComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   	window.scrollTo(0, 0);
 
       //-------------------------------------------Authentication Checking Start----------------------------------------------------
