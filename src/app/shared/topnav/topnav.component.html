@@ -27,14 +27,17 @@
    <div class="title-div fourty">
     <!-- <div class="titltxtd" id="titleBar">{{title}}</div>  -->
    <div class="mycomp">
-       <a (click) = "activeFooterMenu='Claims';claimClicked = true;eventCalled();lasttitle()"[routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='' "  class="list-group-item-mycom">
+       <a (click) = "activeFooterMenu='Claims';claimClicked = true;eventCalled();lasttitle()"[routerLinkActive]="['router-link-active']"   class="list-group-item-mycom-2">
    <!--<a  [routerLink]="['claims']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">-->
        <span class="menu-item-img-span-1">Worker's Comp</span> 
       </a></div>
       
    <div class="mycomp">
-       <a  [routerLink]="['leaveTechPortal']" (click)="activeFooterMenu='leaveTechPortal';claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='leaveTechPortal'" class="list-group-item-mycom">
-            <span class="menu-item-img-span-1">View Disability/Leave</span>
+       <a  [routerLink]="['leaveTechPortal']" (click)="activeFooterMenu='leaveTechPorta';claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='leaveTechPortal'" class="list-group-item-mycom">
+            <span class="menu-item-img-span-1">Disability/Leave</span>
+
+       
+
          </a></div>
    <div class="mycomp">
        <a [routerLink]="['settings']" (click)="activeFooterMenu='Settings';eventCalled()" [routerLinkActive]="['router-link-active']"  [class.active]="activeFooterMenu=='Settings'" class="list-group-item-mycom">
@@ -54,7 +57,7 @@
    </div>-->
 
  <div class="moreobtion"  >
-             <span><img (click)="moreDropdownFunc()" src=".\image\more.png"></span>
+             <span (click)="moreDropdownFunc(drop)"><img src=".\image\more.png"></span>
             
  
 
@@ -67,36 +70,61 @@
                     <span class="icon-bar"></span>
                 </button>
    </div>-->
-<div class="navbar-collapse collapse in" id="navbar-collapse-id-qwe" style="display:none;">
-    <ul id=dropdownMenu12 class="nav navbar-nav navbar-right"  aria-labelledby="dropdownMenu12" >
-               
+<div #drop class="w3-dropdown" id="navbar-collapse-id-qwe" style="display:none;">
+    <ul id=dropdownMenu12 class="navbar-right-1"  aria-labelledby="dropdownMenu12" >
+                
+   
+    <div class="w3-dropdown-dr">
+          <li> 
+           <div class="menu-icon">
+           <img src=".\image\user-icon.png" >
+            </div>     
+      <span  class="potato">{{WelcomeUsername}}</span>
+     
+          </li>
+          
+          <li>
+      <a [routerLink]="['settings']" class="w3-bar-item w3-button" (click)="k()">
+            <div class="menu-icon">
+           <img src=".\image\settings2_64x64.png" >
+            </div>
+         <span class="potato">Settings</span></a>
+          </li>
+
+          <li>
+      <a [routerLink]="['']" class="w3-bar " (click)="k()">
+            <div class="menu-icon">
+        <img  class="abc" src=".\image\logout_64x64.png">
+            </div>
+        <span class="potato"> Log Out</span></a>
+          </li>
+    </div>
+  
                     <!--<li>
                         <a ng-click="back()" ng-hide="hideBack" class="" (click)="k()">
                             <span class="glyphicon glyphicon-chevron-left"></span>&nbsp;Back
                         </a>
                     </li>-->
-                    <li>
-                       <a >
-
-                            <span class="gly gly-user"></span>&nbsp;{{WelcomeUsername}}
-                        </a>
-                    </li>
-                    <li>
+                   
+                    <!--<li>
                         <a [routerLink]="['settings']" class="ng-scope" (click)="k()">
                            <img src=".\image\settings2_64x64.png" >
                             <div style="clear:both;"></div>
                             <span class="gly gly-settings"></span>&nbsp;Settings
                         </a>
-                    </li>
-                    <li class="">
+                    </li>-->
+                    <!--<li class="">
                         <a  [routerLink]="['']"  class="ng-binding" (click)="k()">
-                              <img src=".\image\logout_64x64.png">
+                              <img  class="abc" src=".\image\logout_64x64.png">
                                <div style="clear:both;"></div>
                             <span class="gly gly-log-out"></span>&nbsp;Log Out
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
+                 <div style="clear:both;"></div>
             </div>
+            <div style="clear:both;"></div> 
+
             </div>
  <div style="clear:both;"></div>
    </div>
