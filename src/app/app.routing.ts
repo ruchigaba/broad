@@ -65,7 +65,7 @@ export const routes = [
       { path: 'change-password', component: ChangePassComponent, data: { title: 'Password',parent:'settings' } },
       { path: 'contact-adjuster', component: ContactAdjusterComponent, data: { title: 'contact-adjuster'} },
       { path:'provider', component:ProviderComponent , data: {title:'provider'} },
-      { path: 'physiciansmap', component: NearbyphysiciansMapComponent, data: { title: 'provider',parent:'provider' } },
+      { path: 'physiciansmap', component: NearbyphysiciansMapComponent, data: { title: 'physiciansmap',parent:'provider' } },
       { path: 'social-media', component: SocialMediaComponent, data: { title: 'social-media' } },
       //{ path: 'leaveclaim-addedittime', component: AddEditTime, data: { title: 'Add/Edit Time',parents:'leaveclaim-details' } },
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },

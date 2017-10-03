@@ -56,7 +56,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings'){
             sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data);
