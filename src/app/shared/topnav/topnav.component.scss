@@ -653,12 +653,12 @@ margin-left:77px ;
 
 //-------------For Mobile ---------///
 
-@media only screen and (max-width:450px){
-    .mycomp{
-        margin-left: -3px;
-    }
+// @media only screen and (max-width:450px){
+//     .mycomp{
+//         margin-left: -3px;
+//     }
 
-}
+// }
 @media only screen and (min-width:700px) and (max-width: 740px){
     .navbar-right-1{
         margin-left: 558px !important;
@@ -769,10 +769,4 @@ margin-left: 840px;
     margin-top: -6px !important;
 }
 }
-
-//------Updated By Niruti(iphone 5)-------//
-// @media only screen and (min-width:320px) and (max-width:568px){
-//     .mycomp{
-//         margin-left: -10px;
-//     }
-// }
+ 
