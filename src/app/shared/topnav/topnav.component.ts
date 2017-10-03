@@ -165,12 +165,22 @@ hideFooterIOS(){
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
     this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+      var x =document.getElementById("worker")
+      console.log(x);
+      x.setAttribute("className","list-group-item-mycom router-link-active");
+    
+      x.style.border="1.5px solid #0a9e49";
+    //  x.style.borderColor="green";
   }
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
     document.getElementById("loadingDiv").style.display = "none";
 
+      var x =document.getElementById("worker")
+     
+      x.setAttribute("className","list-group-item-mycom");
+      x.style.border="0px";
     //this.isActive = !this.isActive;
 
     // if claims is clicked then make page position as undefined,so page will open at top
