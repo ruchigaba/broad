@@ -1,4 +1,4 @@
-//our root app component
+   //our root app component
 import { Component, ElementRef, OnInit, OnDestroy } from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {DomSanitizer} from "@angular/platform-browser";

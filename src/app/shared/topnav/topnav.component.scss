@@ -581,7 +581,82 @@ a.list-group-item-mycom.router-link-active{
     .moreobtion{
         display:none; 
     }
+}
+////---------Updated By Niruti-------/////
+@media only screen and (min-width:580px) and (max-width:680px){
+    .mycomp{
+            margin-left: 35px;
+    }
+}
 
+@media only screen and (min-width:681px) and (max-width:800px){
+    .mycomp{
+ margin-left:40px;
+    }
+}
+
+@media only screen and (min-width:801px) and (max-width:832px){
+    .mycomp{
+margin-left:79px;
+    }
+}
+@media only screen and (min-width:833px) and (max-width:848px){
+    .mycomp{
+margin-left:85px;
+    }
+}
+
+@media only screen and (min-width:849px) and (max-width:920px){
+    .mycomp{
+margin-left:88px;
+    }
+}
+
+@media only screen and (min-width:921px) and (max-width:956px){
+    .mycomp{
+margin-left:70px;
+    }
+}
+
+///----------Logout setup--------/////
+@media only screen and (min-width:1025px) and (max-width:1108px){
+    .mycomp{
+margin-left:24px !important;
+    }
+}
+
+@media only screen and (min-width:1109px) and (max-width:1176px){
+    .mycomp{
+margin-left:35px !important;
+    }
+}
+
+@media only screen and (min-width:1177px) and (max-width:1268px){
+    .mycomp{
+margin-left:43px !important;
+    }
+}
+
+
+@media only screen and (min-width:1269) and (max-width:1449px){
+    .mycomp{
+margin-left:55px ;
+    }
+}
+
+
+@media only screen and (min-width:1450px) and (max-width:1540px){
+    .mycomp{
+margin-left:77px ;
+    }
+}
+
+//-------------For Mobile ---------///
+
+@media only screen and (max-width:450px){
+    .mycomp{
+        margin-left: -3px;
+    }
 
 }
 @media only screen and (min-width:700px) and (max-width: 740px){
@@ -693,4 +768,11 @@ margin-left: 840px;
     
     margin-top: -6px !important;
 }
+}
+
+//------Updated By Niruti(iphone 5)-------//
+@media only screen and (min-width:320px) and (max-width:568px){
+    .mycomp{
+        margin-left: -10px;
+    }
 }
