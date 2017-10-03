@@ -28,6 +28,9 @@ position: fixed;
     outline:none;
     // background-color: #cce4d6;
 }
+.active{
+    background-color: none;
+}
 .navbarstyle{
 background-color:$navbarstyle-background-color;
 padding: 0px !important;
@@ -52,7 +55,7 @@ z-index: 999;
         /* width: 12.5%; */
         // float: left;
  
-        margin-left: 90px;
+        margin-left: 87px;
         line-height: 5.4;
  
         font-size: 15px;
@@ -66,6 +69,10 @@ z-index: 999;
         min-height: 69px;
         display: table;
        outline:none;
+}
+a.list-group-item-mycom-2.router-link-active{
+    border: 1.5px solid #0a9e49;
+    padding: 5px;
 }
 .moreobtion img{
     position: fixed;
@@ -98,9 +105,25 @@ z-index: 999;
        color:white;
     //  border: 1.5px solid #0a9e49;
     //    padding: 5px;
+    padding: 5px;
+    background-color: #007a33 !important;
 
    
 }
+.active span {
+     border-bottom: none; 
+}
+.list-group-item-mycom-2{
+border:1.5px solid #0a9e49;
+    padding:5px;
+    background-color: #007a33 !important;
+    
+}
+// a.list-group-item-mycom {
+  //  border: 1.5px solid #0a9e49;
+    // padding: 5px;
+    //  background-color: #007a33 !important;
+// }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #888 !important;
 }
@@ -124,7 +147,7 @@ a.list-group-item-mycom.router-link-active {
 a.active {
     // background-color: black;
 
-     border:1.5px solid #0a9e49;
+   //  border:1.5px solid #0a9e49;
     // padding:5px;
     
 
@@ -489,9 +512,9 @@ a.active {
          display:none;
      }
 }
-a.list-group-item-mycom.router-link-active{
-    border:none;
-}
+// a.list-group-item-mycom.router-link-active{
+//     border:none;
+// }
 .navbar-default .navbar-collapse {
     border-color: #e7e7e7;
 }
