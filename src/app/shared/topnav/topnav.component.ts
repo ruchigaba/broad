@@ -19,6 +19,7 @@ htmlElement: any; hideKeyboard: any;
 data: any;
 WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
+
   constructor(private route: ActivatedRoute, private router: Router, private _location: Location, private _commonApiCall: CommonAPICall) {
   var root = document.getElementsByTagName('html')[0];
   if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
@@ -55,9 +56,13 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-
+          if(this.data.title !== 'leaveTechPortal'){
+            sessionStorage.setItem("title", this.data.title);
+          }
+          //console.log(this.data);
           //add title to header
           this.title = this.data.title;
+
 
           // add back button to header if route has parent defined
            console.log(this.data.parent + "1: "+ this.data.parent2);
@@ -156,7 +161,25 @@ hideFooterIOS(){
       }
     }
   }
+
+  lasttitle(){
+    console.log(sessionStorage.getItem("title"));
+    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+  }
+  eventCalled() {
+
+    sessionStorage.setItem("refreshProviders", "true");
+    document.getElementById("loadingDiv").style.display = "none";
+
+    //this.isActive = !this.isActive;
+
+    // if claims is clicked then make page position as undefined,so page will open at top
+   // if (this.claimClicked == true) {
+     // sessionStorage.setItem('pagePosition', undefined);
+    //  this.claimClicked = false;
+    }
  moreDropdownFunc(drop){
+
   // alert("Kh")
   console.log(window);
   
@@ -196,9 +219,10 @@ if (drop.style.display=="none") {
       
   }
 
-  public k(){
-     var x = document.getElementById('navbar-collapse-id-qwe')
-      x.style.display="none";
+
+   public k(){
+      var x = document.getElementById('navbar-collapse-id-qwe')
+     x.style.display="none";
   }
   
 }
