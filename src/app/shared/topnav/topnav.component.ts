@@ -86,6 +86,15 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
     })
 
 
+  // document.getElementsByTagName("Html")[0].addEventListener("click",()=>{
+  //   if (document.getElementById("navbar-collapse-id-qwe").style.display=="block") {
+  //   document.getElementById("navbar-collapse-id-qwe").style.display="none";
+  //   // alert("hello");
+  // }
+  // })
+// }
+
+
   }
   goBack() {
     document.getElementById("loadingDiv").style.display = "none";
@@ -147,11 +156,21 @@ hideFooterIOS(){
       }
     }
   }
- moreDropdownFunc(){
+ moreDropdownFunc(drop){
   // alert("Kh")
-
-   var x = document.getElementById('navbar-collapse-id-qwe')
-   console.log(x)
+  console.log(window);
+  
+if (drop.style.display=="none") {
+  drop.style.display="block";
+  // window.addEventListener("click",()=>{
+  //     drop.style.display="none";
+  //   });
+} else{
+  drop.style.display="none";
+}
+// document.getElementsByTagName("LI")
+  //  var x = document.getElementById('navbar-collapse-id-qwe')
+  //  console.log(x)
   //  if(  x.style.display == "block"){
   //      x.style.display = "none";
   //  }
@@ -159,21 +178,21 @@ hideFooterIOS(){
   //       x.style.display = "block";
   //  }
 
-      if (x.style.display=="none") {
+    //   if (x.style.display=="block") {
     
-        x.style.display="block";
-    //      window.addEventListener("click",()=>{
+    //     x.style.display="none";
+    //      document.addEventListener("click",()=>{
     //   x.style.display="none";
     // })
-    //     window.addEventListener("touchstart",()=>{
+    //     document.addEventListener("touchstart",()=>{
     //   x.style.display="none";
     // })
         
-      }
-      else{
+    //   }
+    //   else{
     
-        x.style.display="none";
-      }
+    //     x.style.display="block";
+    //   }
       
   }
 
