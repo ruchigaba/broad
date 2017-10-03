@@ -332,7 +332,7 @@ selectFooterItem(page){
 checkToken(route){
   var classname = document.getElementById("closeMe");
 if ((sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == '')) {
-    this.hideLoaderShowPopup("Your session has expired - please sign in again.",
+    this.commnFunc.alertPopup("Your session has expired - please sign in again.",
     "Settings");
     classname.addEventListener('click', function cls(event) {
       document.getElementById("closeMe").removeEventListener('click', cls);
