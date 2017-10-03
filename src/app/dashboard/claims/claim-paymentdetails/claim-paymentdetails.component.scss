@@ -65,7 +65,7 @@ div{
     margin-top:-7px;
 }
 .colll{
-    width:$width-h;
+    width:25%;
     padding-right:10px;
     text-align:right;
     min-height:1px;
@@ -167,7 +167,7 @@ li .clm-on-desk:hover {
 .col11{
     padding-left: 0.9375rem;
      padding-right: 0.9375rem;
-     width:$width-h-h;
+     width:25%;
      background-color:$bcw;
      color:$txtcol;
      text-align:center;
@@ -231,9 +231,7 @@ li .clm-on-desk:hover {
     margin: 0;
     padding: 0;
  }
- .col11{
-    // height:70px;
- }
+ 
  li.col9{
      background-color: $white-bg-color;
      color: $txtcol;
