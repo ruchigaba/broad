@@ -35,7 +35,7 @@ import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupe
 
 import {RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component';
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
-
+import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
 
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';

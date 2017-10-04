@@ -275,6 +275,23 @@ color: #000;
     margin-top: 6%;
     margin-bottom: 15px;
 }
+
+@mixin commonmix000(){
+    background-color: $white-bg-color;
+    width:$white-width;
+    margin:0 auto;
+    margin-top: 6%;
+    margin-bottom: 15px;
+}
+
+
+@mixin commonmix0011(){
+    background-color: $white-bg-color;
+    width:$white-width;
+    margin:0 auto;
+    margin-top: 6%;
+    margin-bottom: 15px;
+}
 ////settings//
 @mixin commommix33(){
     background-color: $white-bg-color;
