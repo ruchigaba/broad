@@ -43,7 +43,7 @@ export class RegistrationComponent implements OnInit {
    }
 
   ngOnInit() {
-    document.getElementById('titleBar').style.paddingLeft="0px";
+   // document.getElementById('titleBar').style.paddingLeft="0px";
   }
   question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")

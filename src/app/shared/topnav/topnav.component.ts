@@ -25,6 +25,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   constructor(private route: ActivatedRoute, private router: Router, private _location: Location, private _commonApiCall: CommonAPICall) {
   var root = document.getElementsByTagName('html')[0];
   if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
+   
       var root = document.getElementsByTagName('html')[0];
       root.setAttribute('class', 'outerPages');
     }
@@ -98,7 +99,14 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   // }
   // })
 // }
-
+ if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
+    document.getElementById("toshow").style.display = 'none';
+    // document.getElementById("titleBar").style.display = 'block';
+ }
+ else{
+   document.getElementById("toshow").style.display = 'block';
+    document.getElementById("titleBar").style.display = 'none';
+ }
 
   }
   goBack() {

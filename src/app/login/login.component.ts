@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit, OnDestroy{
    @ContentChild('showhideinput') input;
 
     constructor(private _ls: LoginService, private router: Router, private _commonApi:CommonAPICall ) {
-      //sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
+      sessionStorage.setItem("local_appUrl", "https://myclaimwebapiuat.crawco.com/");
       
       var root = document.getElementsByTagName('html')[0];
 

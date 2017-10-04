@@ -23,9 +23,9 @@
 
    </div>
    
-
-   <div class="title-div fourty">
-    <!-- <div class="titltxtd" id="titleBar">{{title}}</div>  -->
+  <div class="titltxtd" id="titleBar">{{title}}</div>
+   <div class="title-div fourty" id="toshow">
+     
    <div class="mycomp">
 
        <a  id="worker" (click) = "claimClicked = false;eventCalled();lasttitle()" [routerLinkActive]="['router-link-active']"   class="list-group-item-mycom-2">
@@ -38,14 +38,14 @@
       </a></div>
       
    <div class="mycomp">
-       <a  [routerLink]="['leaveTechPortal']" (click)="activeFooterMenu='leaveTechPortal';claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='leaveTechPortal'" class="list-group-item-mycom">
+       <a  [routerLink]="['leaveTechPortal']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
             <span class="menu-item-img-span-1">Disability/Leave</span>
 
        
 
          </a></div>
    <div class="mycomp">
-       <a [routerLink]="['settings']" (click)="activeFooterMenu='Settings';eventCalled()" [routerLinkActive]="['router-link-active']"  [class.active]="activeFooterMenu=='Settings'" class="list-group-item-mycom">
+       <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']"     class="list-group-item-mycom">
             <span class="menu-2">Settings</span>
            </a></div>
    <div class="mycomp">
