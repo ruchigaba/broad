@@ -28,9 +28,9 @@ position: fixed;
     outline:none;
     // background-color: #cce4d6;
 }
-.active{
-    background-color: transparent;
-}
+// .activeFooterMenu{
+//     background-color: transparent;
+// }
 .navbarstyle{
 background-color:$navbarstyle-background-color;
 padding: 0px !important;
@@ -223,16 +223,18 @@ a.active {
 
 }
 .titltxtd {
-    font-size: 22px;
+   font-size: 22px;
     font-weight: 600;
-    margin-left: 35px;
+    color: white;
+    margin-left: 43px;
     display: table-cell;
-    height: $titltxtd-height;
-    padding-left: 257px;
-    line-height:  69px;
+    height: 84px;
+    padding-left: 330px;
+    line-height: 69px;
     min-height: 69px;
     vertical-align: middle;
     text-transform: capitalize;
+
 }
 .text-style {
 
@@ -472,7 +474,7 @@ a.active {
      }
      a.list-group-item-mycom.router-link-active {
   
-    padding: 0px;
+    padding: 5px;
      
 }
 }
