@@ -101,7 +101,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 // }
  if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
     document.getElementById("toshow").style.display = 'none';
-    // document.getElementById("titleBar").style.display = 'block';
+   //  document.getElementById("titleBar").style.display = 'block';
  }
  else{
    document.getElementById("toshow").style.display = 'block';
