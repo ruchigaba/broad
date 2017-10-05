@@ -18,6 +18,7 @@ ClaimNumber="";
  createNewUser12(){
   // alert("kh");
    let a = this.ClaimNumber;
+  // let a = sessionStorage.getItem("ClaimNumber");
   
 if (a.charAt(0).match(/[a-z]/i)){
    this.router.navigate(['./leaveregistration']);
@@ -26,5 +27,11 @@ if (a.charAt(0).match(/[a-z]/i)){
 else{
    this.router.navigate(['./createUser']);
 }
+  }
+    gotoHelp() {
+    this.router.navigate(['./help']);
+  }
+  goToLogin() {
+    this.router.navigate(['']);
   }
 }
