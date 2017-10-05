@@ -23,7 +23,7 @@ ClaimNumber="";
   // let a = sessionStorage.getItem("ClaimNumber");
   
 if (a.charAt(0).match(/[a-z]/i)){
-   this.router.navigate(['./leaveregistration']);
+   this.router.navigate(['./lregistration']);
   
 }
 else{
