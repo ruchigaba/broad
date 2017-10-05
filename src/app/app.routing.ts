@@ -36,7 +36,7 @@ import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupe
 import {RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component';
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
-
+import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 // -------------------------------------registration tutorial component ends ---------------------------
@@ -86,7 +86,9 @@ export const routes = [
   { path: 'resetPass', component: ResetpasswordComponent, data: { title: 'Reset Password', parent: 'forgotPass'} },
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
-  { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } }
+  { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
+     { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Registration', parent:'eula' } },
+ 
 
 ];
 
@@ -98,7 +100,8 @@ export const NavigatableComponents = [
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
-   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent
+   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
+   LOBRegistrationComponent
   // HealthTicketComponent 
 
 ];
