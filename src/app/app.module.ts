@@ -43,6 +43,7 @@ import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpas
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
 import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
+import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
 // -------------------------------------registration tutorial component ends ---------------------------
 
 @NgModule({
@@ -69,7 +70,8 @@ import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registr
     LeaveTechPortalComponent,
     ResetpasswordComponent,
     WorkerCompComponent,
-    LOBRegistrationComponent 
+    LOBRegistrationComponent,
+    LDRegistrationComponent 
     // , DynemicUiComponent
   ],
   imports: [

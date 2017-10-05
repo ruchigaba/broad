@@ -1,34 +1,49 @@
- 
+  
 <app-topnav></app-topnav>
-<div class="whiteblank-registration-lob"> 
+<div class="whiteblank-registration-ldregist"> 
   <br>
- <span class="registuser-registration-lob">REGISTERING USER</span>
+ <span class="registuser-registration-ldregist">REGISTERING USER</span>
  <br>
  <br>
  <ul style="font-size: 14px !important; list-style-type:none;padding: 0 15px;
  ">
  <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
-   Enter the Claim Number provided in your confirmation email
+  First Name
 </li>
 <li style="list-style: outside none none;">
 <input class="form-control-data-registration"   type="email" id="Re-email" [(ngModel)]="reEmail" />
 </li>
 
  <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
-   Enter the email address from which you received your claim confirmation
+  Last Name
  </li>
  <li><input type="email" id="email" oncopy="return false"  class="form-control-data-registration" [(ngModel)]="email" /></li>
 
  <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
-    Re-enter email address
+    Enter the Email Address where you received your claim confirmation
  </li>
  <li style="list-style: outside none none;">
  <input class="form-control-data-registration"  style="margin-bottom:20px;" type="email" id="Re-email" [(ngModel)]="reEmail" />
  </li>
+
+ <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
+   Re-enter the Email Address
+</li>
+<li style="list-style: outside none none;">
+<input class="form-control-data-registration"  style="margin-bottom:20px;" type="email" id="Re-email" [(ngModel)]="reEmail" />
+</li>
+
+
+<li class="li-first-to-zip-registration" style="margin-top: 10px;" >
+   Claim Number
+</li>
+<li style="list-style: outside none none;">
+<input class="form-control-data-registration"  style="margin-bottom:20px;" type="email" id="Re-email" [(ngModel)]="reEmail" />
+</li>
  </ul>
 
-  <!-- <div class="col-xs-12-lob tititile-lob">
-    <div class="setup-registration-lob">Setup Online Reset Information (Select any 3)</div>
+   <div class="col-xs-12-ldregist tititile-ldregist">
+    <div class="setup-registration-ldregist">Setup Online Reset Information (Select any 3)</div>
  
     <ul class="new-user-ul-li-section" *ngFor="let ques of questions; let i = index">
 
@@ -36,21 +51,21 @@
           <li><input type="text" class="form-control-data-registration" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
 
         </ul>
-        </div>  -->
+        </div> 
 
         <div style="padding: 0px 15px 0 15px;">
-            <div class="col-12-registration-lob" style="width:100%;">
-            <div class="col-6-registration-lob" >
+            <div class="col-12-registration-ldregist" style="width:100%;">
+            <div class="col-6-registration-ldregist" >
             <button (click)="createNewUser1()" class="btn-continue-registration">Continue</button>
             </div>
-            <div class="col-6-registration-lob">
+            <div class="col-6-registration-ldregist">
             <button (click)="goToLogin()"  class="btn-cancel-registration">Cancel</button>
             </div>
             </div>
         
-            <div class="col-15-registration-lob">
-              <div class="col-16-registration-lob">
-             <button class="btn-help-registration-lob" (click)="gotoHelp()" >Help</button>
+            <div class="col-15-registration-ldregist">
+              <div class="col-16-registration-ldregist">
+             <button class="btn-help-registration-ldregist" (click)="gotoHelp()" >Help</button>
               </div>
               </div>
               </div>
