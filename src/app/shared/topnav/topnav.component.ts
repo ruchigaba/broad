@@ -105,7 +105,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
    //  document.getElementById("titleBar").style.display = 'block';
  }
  else{
-  // document.getElementById("toshow").style.display = 'block';
+ 
+  //document.getElementById("toshow").style.display = 'block';
+ 
+ 
     document.getElementById("titleBar").style.display = 'none';
  }
 
