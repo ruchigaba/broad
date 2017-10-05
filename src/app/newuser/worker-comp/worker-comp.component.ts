@@ -16,6 +16,7 @@ ClaimNumber="";
 
 }
  createNewUser12(){
+   
   // alert("kh");
    let a = this.ClaimNumber;
    sessionStorage.setItem("claimno",a);
