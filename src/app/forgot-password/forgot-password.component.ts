@@ -39,7 +39,7 @@ export class ForgotPasswordComponent implements OnInit,OnDestroy {
         this.secQues3 = this.secQuesObj.securityquestion3;
   }
 ngOnInit() {
-    //document.getElementById('titleBar').style.paddingLeft="300px";
+    document.getElementById('titleBar').style.paddingLeft="245px";
   }
   ngOnDestroy() {
  
