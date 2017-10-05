@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
   dolyear:string;
   inputElem: any= [];
   index: any = [];
-
+claimnum:string;
   dolImgHide = false;
   dolImg: string;
 
@@ -44,6 +44,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
    // document.getElementById('titleBar').style.paddingLeft="0px";
+   this.claimnum= sessionStorage.getItem("claimno");
   }
   question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")
