@@ -44,7 +44,7 @@ export class ValidateregistrationComponent implements OnInit {
    }
 
   ngOnInit() {
-  	//document.getElementById('titleBar').style.paddingLeft="300px";
+  	document.getElementById('titleBar').style.paddingLeft="230px";
   }
   question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")
