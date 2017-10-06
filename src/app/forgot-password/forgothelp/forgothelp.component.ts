@@ -32,7 +32,7 @@ export class ForgothelpComponent implements OnInit {
           })}
 
   ngOnInit() {
-   document.getElementById('titleBar').style.paddingLeft="330px";
+   document.getElementById('titleBar').style.paddingLeft="330px !important" ;
   	window.scrollTo(0, 0);
       this.supportContent();
   }

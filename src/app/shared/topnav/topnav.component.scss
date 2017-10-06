@@ -804,3 +804,15 @@ margin-left: 840px;
         padding-left:102px;
     }
 }
+
+@media only screen and (max-width:800px){
+    .titltxtd{
+        padding-left:20px !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .titltxtd{
+        padding-left:97px !important;
+    }
+}
