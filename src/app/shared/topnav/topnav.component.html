@@ -38,7 +38,7 @@
       </a></div>
       
    <div class="mycomp">
-       <a  [routerLink]="['leaveTechPortal']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
+       <a  (click)="claimClicked = true;eventCalled();nav()" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
             <span class="menu-item-img-span-1">Disability/Leave</span>
 
        
@@ -84,9 +84,13 @@
            <div class="menu-icon">
            <img src=".\image\user-icon.png" >
             </div>     
+<<<<<<< HEAD
+      <span  class="potato">{{WelcomeUsername}}</span>
+=======
 
       <span  class="commpaa">Rahul</span>
 
+>>>>>>> 8b2850f7a8e42ceed0a5bec34ac81e8e512e28b6
      
           </li>
           
@@ -95,7 +99,7 @@
             <div class="menu-icon">
            <img src=".\image\settings2_64x64.png" >
             </div>
-         <span class="commpaa">Settings</span></a>
+         <span class="potato">Settings</span></a>
           </li>
 
           <li>
@@ -103,7 +107,7 @@
             <div class="menu-icon">
         <img  class="abc" src=".\image\logout_64x64.png">
             </div>
-        <span class="commpaa"> Log Out</span></a>
+        <span class="potato"> Log Out</span></a>
           </li>
     </div>
   

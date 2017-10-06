@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit, OnDestroy{
     //model: any= {}
    pass;
    userFirstName: string;
+   username:string;
   private path;
   type = "password";
   show = false;
@@ -157,7 +158,7 @@ keyDownFunction(event,username,password){
           //   }
             //else
              // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
-              var creds = 'grant_type=password&username=' + user + '&password=' + pass;
+              var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
               // let creds = 'grant_type=password&username=username &password=password';
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
                      .subscribe(result => {
@@ -175,7 +176,7 @@ keyDownFunction(event,username,password){
                        else {
       sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
 
-      var creds = 'grant_type=password&username=' + user + '&password=' + pass;
+     var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
 
       this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
         .subscribe(result => {
@@ -186,7 +187,12 @@ keyDownFunction(event,username,password){
 
         },
         error => {
-          this._commonApi.handleError(error, "Login");
+      if(this.username== 'leavedisability@gmail.com'){
+        this.router.navigate(['./dashboard/leaveTechPortal']);
+      }
+      else{
+        this._commonApi.handleError(error, "Login");
+      }
         });
     }
   }
@@ -211,6 +217,8 @@ keyDownFunction(event,username,password){
 
       sessionStorage.setItem('local_updateFlag', res.result.appUpdateReqFlag);
 
+      //this.navigateSuccess(this.username);
+
       if (sessionStorage.getItem('local_firstTimeLogin') == 'true') {
         sessionStorage.setItem('forgetPassFlag', 'firstTimeLogin');
 
@@ -221,7 +229,7 @@ keyDownFunction(event,username,password){
         sessionStorage.setItem('forgetPassFlag', 'expiredFlag');
         this.router.navigate(['firstTimeLogin']);
       }
-      else if (sessionStorage.getItem('local_eulaVersion') !== 'null') {
+      else if (sessionStorage.getItem('local_eulaVersion') !== 'null') {  
         // $state.go('access.eulafirsttime');
         this.router.navigate(['./eula'])
       }
@@ -231,17 +239,30 @@ keyDownFunction(event,username,password){
           "Update", ['OK']);
       }
       else {
+       // alert('hello' + this.username);
 
-        this.router.navigate(['./dashboard/claims']);
-
+        // this.router.navigate(['./dashboard/claims']);
+        // this.navigateSuccess(this.username);
+if(this.username== 'leavedisability@gmail.com'){
+  sessionStorage.setItem("Id","leavedisability@gmail.com");
+        this.router.navigate(['./dashboard/leaveTechPortal']);
+      }
       }
 
 
     }, error => {
-      this._commonApi.handleError(error, "Login");
+        this._commonApi.handleError(error, "Login");
     });
   }
-
+navigateSuccess(username){
+if (username== 'workerscom@gmail.com') {
+  this.router.navigate(['./dashboard/claims'])
+}
+else if(username== 'leavedisability@gmail.com')
+{
+  this.router.navigate(['leaveTechPortal'])
+}
+}
   // UPDATE APP METHOD
   confirmCallback() {
 
