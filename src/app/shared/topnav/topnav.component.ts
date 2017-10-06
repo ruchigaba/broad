@@ -25,6 +25,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   constructor(private route: ActivatedRoute, private router: Router, private _location: Location, private _commonApiCall: CommonAPICall) {
   var root = document.getElementsByTagName('html')[0];
   if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
+   
       var root = document.getElementsByTagName('html')[0];
       root.setAttribute('class', 'outerPages');
     }
@@ -58,7 +59,8 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !== 'Leave/Disability Registration'){
+            // alert(" Hi :"+sessionStorage.getItem('token'));
             sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data);
@@ -98,7 +100,18 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   // }
   // })
 // }
-
+ if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
+    document.getElementById("toshow").style.display = 'none';
+     document.getElementById("tohide").style.display = 'none';
+   //  document.getElementById("titleBar").style.display = 'block';
+ }
+ else{
+ 
+  //document.getElementById("toshow").style.display = 'block';
+ 
+ 
+    document.getElementById("titleBar").style.display = 'none';
+ }
 
   }
   goBack() {
@@ -161,23 +174,47 @@ hideFooterIOS(){
       }
     }
   }
-
+nav(){
+  if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+    this.router.navigate(['./dashboard/leaveTechPortal']);
+  } else {
+    this.router.navigate(['leaveregistration']);
+  }
+   }
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
-    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+    if (sessionStorage.getItem("title")) {
+     
+      this.router.navigate(['createUser']);
+    }
+    else{
+      this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+      var x =document.getElementById("worker")
+      console.log(x);
+      x.setAttribute("className","list-group-item-mycom router-link-active");
+    
+      x.style.border="1.5px solid #0a9e49";
+    }
+    //  x.style.borderColor="green";
   }
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
     document.getElementById("loadingDiv").style.display = "none";
 
+
+      var x =document.getElementById("worker")
+     
+      x.setAttribute("className","list-group-item-mycom");
+      x.style.border="0px";
+    //this.isActive = !this.isActive;
     this.isActive = !this.isActive;
 
     // if claims is clicked then make page position as undefined,so page will open at top
-    if (this.claimClicked == true) {
-      sessionStorage.setItem('pagePosition', undefined);
-      this.claimClicked = false;
-  }
+  //   if (this.claimClicked == true) {
+  //     sessionStorage.setItem('pagePosition', undefined);
+  //     this.claimClicked = false;
+  // }
     }
  moreDropdownFunc(drop){
 

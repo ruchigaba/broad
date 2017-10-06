@@ -31,6 +31,8 @@ addDivBeforeBody(){
 
   // Get service implementation.
   getService(url: string, headerToken: string, contentType: string) {
+
+    console.log(sessionStorage.getItem('local_appUrl'),  url);
     //------------------------------------------------------Incresing time limit for tutorials start--------------------------------------------------------------------
     if(sessionStorage.getItem('registerTimeout') == 'true'){
       this.timeout = 60000;
@@ -54,6 +56,7 @@ this.addDivBeforeBody();
     var options = new RequestOptions({
       headers: headers
     })
+
 
      return this._http.get(sessionStorage.getItem('local_appUrl') + url, options)
       .timeout(this.timeout)
@@ -140,13 +143,13 @@ this.addDivBeforeBody();
 
   // handle errors in http requests, hide loader and show error in popup
   handleError(res: any, errorHeading) {
-    console.log(res.status);
+   console.log(res.status);
     if (res.status == 500 || res.status == 0) {
       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
       this.commnFunc.alertPopup(message, errorHeading);
       document.getElementById("loadingDiv").style.display = "none";
     }
-    else if (res.status == 408) {
+     if (res.status == 408) {
       var message = "Your inquiry has experienced a delay.  Please try again later.  If problem persists, please contact our Support Center at MyClaim_SelfService_Support@broadspire.com.";
       this.commnFunc.alertPopup(message, errorHeading);
       document.getElementById("loadingDiv").style.display = "none";

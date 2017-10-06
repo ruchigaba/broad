@@ -22,6 +22,7 @@ export class EulaComponent implements OnInit{
           document.getElementById("heading").style.display='block';
           document.getElementById("abc").innerHTML=x;
           console.log(x);
+          
   //         // document.body.innerHTML = x;
       },
       
@@ -32,12 +33,13 @@ export class EulaComponent implements OnInit{
 
     ngOnInit() {
       window.scrollTo(0, 0);
-      document.getElementById('titleBar').style.paddingLeft="0px";
+     // document.getElementById('titleBar').style.paddingLeft="0px";
       this._cac.addClass1("eula");
       console.log(sessionStorage.getItem("token"));
        
     }
     navigatetoreg() {
-      this.router.navigate(['./createUser']);
+      this.router.navigate(['./worker-comp']);
     }
+    
 }

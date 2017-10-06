@@ -35,8 +35,8 @@ import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupe
 
 import {RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component';
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
-
-
+import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
+import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 // -------------------------------------registration tutorial component ends ---------------------------
@@ -80,12 +80,15 @@ export const routes = [
   },
   { path: 'eula', component: EulaComponent, data: { title: 'EULA'} },
   { path: 'createUser', component: RegistrationComponent, data: { title: 'Registration', parent:'eula' } },
+   { path: 'worker-comp', component: WorkerCompComponent, data: { title: 'Registration', parent:'eula' } },
   { path: 'help', component: HelpComponent, data: { title: 'Help', parent: 'createUser' } },
   { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer'} },
   { path: 'resetPass', component: ResetpasswordComponent, data: { title: 'Reset Password', parent: 'forgotPass'} },
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
-  { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } }
+  { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
+     { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
+ 
 
 ];
 
@@ -97,7 +100,8 @@ export const NavigatableComponents = [
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
-   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent
+   ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
+   LOBRegistrationComponent
   // HealthTicketComponent 
 
 ];

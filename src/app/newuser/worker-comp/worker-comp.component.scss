@@ -1,0 +1,85 @@
+
+
+  button.btn-continue-registration-comp:active {
+    position:relative;
+    top: 5px;
+  }
+button.btn-help-registration-comp:active {
+    position:relative;
+    top: 5px;
+  }
+     .whiteblank-registration-comp{
+     @include commonmix0011();
+    }
+
+ 
+    .btn-continue-registration-comp{
+    width: $btn-continue-width;
+    background-color:  $btn-bg-color;
+    float: left;
+    color:$btn-continue-color;
+    outline: none;
+    @include validate();
+     }
+
+    .btn-cancel-registration-comp{
+     @extend .btn-continue-registration;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-cancel-color;
+    outline: none;
+    
+    }
+
+    .btn-help-registration-comp{
+    background-color: $btn-help-bg-color;
+    color: $btn-help-color;
+    width:$btn-help-width;
+    margin-top: 28px;
+   outline: none;
+    @include validate();
+    }
+
+    .setup-registration-comp{
+     font-weight: 600;
+    color:  $setup-color;
+    font-size: 17px;
+    text-decoration: underline;
+    padding-left: 15px;
+    }
+
+   .li-style-registration-comp{
+   margin-top: 10px;
+   list-style: outside none none;
+   color:  $li-style-color;
+   font-size: 14px !important;
+   }
+
+   
+  
+   
+  .li-first-to-zip-registration{
+   @include commonmix11();
+   }
+   
+  
+   .registuser-registration-comp{ 
+        font-size: 18px;
+       font-weight: 600;
+    color: #258c52;
+    padding: 0 15px;
+  }
+  
+
+  @media screen and (max-width: 800px){
+    .whiteblank-registration-comp{
+     margin-top: 75px;
+    width:100%;
+  }
+ 
+}
+@media screen and  (min-width: 310px) and(max-width: 1020px){
+.whiteblank-registration-comp{
+     margin-top: 75px;
+    width:100%;
+  }
+}
