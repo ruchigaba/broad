@@ -26,7 +26,7 @@
   <div class="titltxtd" id="titleBar">{{title}}</div>
    <div class="title-div fourty" id="toshow">
      
-   <div class="mycomp">
+   <div class="mycomp-tp">
 
        <a  id="worker" (click) = "claimClicked = false;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']"   class="list-group-item-mycom-2">
    <!--<a  [routerLink]="['']" (click)="claimClicked = true;eventCalled();lasttitle()" [routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='leaveTechPortal'" class="list-group-item-mycom">-->
@@ -37,18 +37,21 @@
        <span class="menu-item-img-span-1">Worker's Comp</span> 
       </a></div>
       
-   <div class="mycomp">
-       <a  (click)="claimClicked = true;eventCalled();navchange();" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
+ 
+   <div class="mycomp-tp">
+       <a  (click)="claimClicked = true;eventCalled();nav()" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
+ 
+  
             <span class="menu-item-img-span-1">Disability/Leave</span>
 
        
 
          </a></div>
-   <div class="mycomp">
+   <div class="mycomp-tp">
        <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']"     class="list-group-item-mycom">
             <span class="menu-2">Settings</span>
            </a></div>
-   <div class="mycomp">
+   <div class="mycomp-tp">
        <a [routerLink]="['']" [routerLinkActive]="['router-link']" class="list-group-item-mycom">
             <span class="menu-2">Log Out</span>
            </a></div>
@@ -85,10 +88,10 @@
            <img src=".\image\user-icon.png" >
             </div>     
  
-      <span  class="potato">{{WelcomeUsername}}</span>
+      <!-- <span  class="potato">{{WelcomeUsername}}</span> -->
  
 
-      <!-- <span  class="commpaa">Rahul</span> -->
+       <span  class="commpaa">Rahul</span> 
 
  
      
@@ -99,7 +102,7 @@
             <div class="menu-icon">
            <img src=".\image\settings2_64x64.png" >
             </div>
-         <span class="potato">Settings</span></a>
+         <span class="commpaa">Settings</span></a>
           </li>
 
           <li>
@@ -107,7 +110,7 @@
             <div class="menu-icon">
         <img  class="abc" src=".\image\logout_64x64.png">
             </div>
-        <span class="potato"> Log Out</span></a>
+        <span class="commpaa"> Log Out</span></a>
           </li>
     </div>
   
