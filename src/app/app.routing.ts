@@ -38,8 +38,10 @@ import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.com
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
 import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
+import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disability.component';
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
+
 // -------------------------------------registration tutorial component ends ---------------------------
 
  //import { HealthTicketComponent } from './dashboard/health_ticket/healthTicket.component'; 
@@ -90,7 +92,8 @@ export const routes = [
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
      { path: 'newuser/leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
-
+     { path: 'leavedisability', component: LeaveDisabilityComponent, data: { title: 'Registration',  } },
+     
 ];
 
 export const NavigatableComponents = [
@@ -102,7 +105,7 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent,LDRegistrationComponent
+   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent
   // HealthTicketComponent 
 
 ];
