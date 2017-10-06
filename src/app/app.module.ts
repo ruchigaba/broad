@@ -44,6 +44,7 @@ import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTech
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
 import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
+import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disability.component';
 // -------------------------------------registration tutorial component ends ---------------------------
 
 @NgModule({
@@ -71,7 +72,8 @@ import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistrati
     ResetpasswordComponent,
     WorkerCompComponent,
     LOBRegistrationComponent,
-    LDRegistrationComponent 
+    LDRegistrationComponent,
+    LeaveDisabilityComponent 
     // , DynemicUiComponent
   ],
   imports: [
