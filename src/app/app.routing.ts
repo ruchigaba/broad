@@ -92,7 +92,7 @@ export const routes = [
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
      { path: 'newuser/leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
-     { path: 'leavedisability', component: LeaveDisabilityComponent, data: { title: 'Registration',  } },
+     { path: 'newuser/workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  } },
      
 ];
 

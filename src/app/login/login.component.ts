@@ -243,13 +243,16 @@ keyDownFunction(event,username,password){
 
         // this.router.navigate(['./dashboard/claims']);
         // this.navigateSuccess(this.username);
-if(this.username== 'leavedisability@gmail.com'){
+    if(this.username== 'leavedisability@gmail.com'){
   sessionStorage.setItem("Id","leavedisability@gmail.com");
         this.router.navigate(['./dashboard/leaveTechPortal']);
       }
     else if(this.username== 'workerscom@gmail.com'){
     sessionStorage.setItem("Id1","workerscom@gmail.com");
         this.router.navigate(['./dashboard/claims']);
+      }
+      else{
+       this.router.navigate(['./dashboard/claims']);
       }
       }
 

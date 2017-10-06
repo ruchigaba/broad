@@ -186,27 +186,20 @@ hideFooterIOS(){
 //   }
 //    }
 navchange(){
-   
+ //  alert("hello");
   let b=sessionStorage.getItem("Id1");
-
-           if(b=='workerscom@gmail.com' && this.b!=='leavedisability@gmail.com'){
-           
-              this.router.navigate(['./newuser/leaveregistration'])
-           
-           }
+ if(b=='workerscom@gmail.com'){
+           this.router.navigate(['./newuser/leaveregistration'])
+            }
            else {
-            
              this.router.navigate(['./dashboard/claims']);
            }
   }
     newformat(){
-      alert("kh");
-  let a=sessionStorage.getItem("Id");
-  alert(a);
-           if(a=='leavedisability@gmail.com'&& this.a!=='workerscom@gmail.com'){
-
-             alert("ky");
-              this.router.navigate(['./newuser/createUser'])
+   //   alert("kh");
+     let a=sessionStorage.getItem("Id");
+  if(a=='leavedisability@gmail.com'){
+    this.router.navigate(['./newuser/workercomp'])
            }
            else {
              this.router.navigate(['./dashboard/leaveTechPortal']);
@@ -215,20 +208,36 @@ navchange(){
 
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
-    if (sessionStorage.getItem("title")) {
+  
+    // if (sessionStorage.getItem("title")) {
+      let a=sessionStorage.getItem("Id");
+  if(a=='leavedisability@gmail.com'){
      
       this.router.navigate(['createUser']);
+     
     }
     else{
       this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+      //  alert("kh");
       var x =document.getElementById("worker")
       console.log(x);
       x.setAttribute("className","list-group-item-mycom router-link-active");
     
       x.style.border="1.5px solid #0a9e49";
+        
     }
     //  x.style.borderColor="green";
   }
+
+  // clickDisability(){
+  //   let a=sessionStorage.getItem("Id");
+  //   if(a=='leavedisability@gmail.com'){
+  //     this.router.navigate(['./dashboard/leaveTechPortal']);
+  //   }
+  //   else{
+  //     this.router.navigate(['./newuser/leaveregistration']);
+  //   }
+  // }
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
