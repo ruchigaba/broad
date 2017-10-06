@@ -51,7 +51,7 @@ z-index: 999;
     display: table;
 }
  
-    .mycomp {
+    .mycomp-tp {
         /* width: 12.5%; */
         // float: left;
  
@@ -460,7 +460,7 @@ a.active {
   
 }
 @media only screen and (min-width: 450px) and (max-width: 920px){
-     .mycomp {
+     .mycomp-tp {
      margin-left: 18px;
     font-size: 13px;
     margin-top: 4px;
@@ -488,7 +488,7 @@ a.active {
 }
 
 @media only screen and (max-width: 450px){
-     .mycomp {
+     .mycomp-tp {
      margin-left: -11px; 
      font-size: 11px;
      margin-top:10px;
@@ -507,7 +507,7 @@ a.active {
      
 }
 @media only screen and (min-width: 1025px) and (max-width:1450px){
-.mycomp {
+.mycomp-tp {
     margin-left: 35px;
 }
 }
@@ -612,69 +612,69 @@ a.active {
 ////---------Updated By Niruti-------/////
 
 @media only screen and (min-width:580px) and (max-width:680px){
-    .mycomp{
+    .mycomp-tp{
             margin-left: 35px;
     }
 }
 
 @media only screen and (min-width:681px) and (max-width:800px){
-    .mycomp{
+    .mycomp-tp{
  margin-left:40px;
     }
 }
 
 @media only screen and (min-width:801px) and (max-width:832px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:79px;
     }
 }
 @media only screen and (min-width:833px) and (max-width:848px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:85px;
     }
 }
 
 @media only screen and (min-width:849px) and (max-width:920px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:88px;
     }
 }
 
 @media only screen and (min-width:921px) and (max-width:956px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:70px;
     }
 }
 
 ///----------Logout setup--------/////
 @media only screen and (min-width:1025px) and (max-width:1108px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:24px !important;
     }
 }
 
 @media only screen and (min-width:1109px) and (max-width:1176px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:35px !important;
     }
 }
 
 @media only screen and (min-width:1177px) and (max-width:1268px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:43px !important;
     }
 }
 
 
 @media only screen and (min-width:1269) and (max-width:1449px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:55px ;
     }
 }
 
 
 @media only screen and (min-width:1450px) and (max-width:1540px){
-    .mycomp{
+    .mycomp-tp{
 margin-left:77px ;
     }
 }
@@ -816,16 +816,19 @@ margin-left: 840px;
 @media only screen and (min-width:350px) and (max-width:650px){
     .titltxtd{
         padding-left:63px !important;
+        vertical-align: 0 ;
     }
 }
  @media only screen and (min-width:320px) and (max-width:570px){
     .titltxtd{
         padding-left:58px !important;
+        vertical-align: 0 ;
     }
  }
 
  @media only screen and (min-width:768px) and (max-width:1024px){
     .titltxtd{
         padding-left:160px !important;
+        vertical-align: 0;
     }
 }

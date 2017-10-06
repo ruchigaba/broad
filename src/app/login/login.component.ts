@@ -249,6 +249,10 @@ var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&pas
   sessionStorage.setItem("Id","leavedisability@gmail.com");
         this.router.navigate(['./dashboard/leaveTechPortal']);
       }
+
+      else{
+      this.router.navigate(['./dashboard/claims']);
+
     else if(this.username== 'workerscom@gmail.com'){
     sessionStorage.setItem("Id","workerscom@gmail.com");
         this.router.navigate(['./dashboard/claims']);
@@ -258,22 +262,14 @@ var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&pas
        this.router.navigate(['./dashboard/claims']);
       }
       }
-
+}
 
     }, error => {
         this._commonApi.handleError(error, "Login");
     });
   }
-//  navigateSuccess(username){
-// if (username== 'workerscom@gmail.com') {
-//   sessionStorage.setItem("Id1","workerscom@gmail.com");
-//   this.router.navigate(['./dashboard/claims'])
-// }
-// else if(username== 'leavedisability@gmail.com')
-// {
-//   this.router.navigate(['leaveTechPortal'])
-// }
-// }
+
+
   // UPDATE APP METHOD
   confirmCallback() {
 
