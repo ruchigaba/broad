@@ -19,6 +19,8 @@ isActive = false;
   claimClicked = false;
   htmlElement: any; hideKeyboard: any;
 data: any;
+a;
+b;
 WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
 
@@ -70,6 +72,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
           // add back button to header if route has parent defined
            console.log(this.data.parent + "1: "+ this.data.parent2);
+         
           if(this.data.parent != undefined && this.data.parent != ""){
             
             this.parent=true;
@@ -118,6 +121,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
     document.getElementById("loadingDiv").style.display = "none";
     this._location.back();
   }
+ 
   enableToggle(event) {
 
     var className = document.getElementById("togg-dv").className;
@@ -174,29 +178,66 @@ hideFooterIOS(){
       }
     }
   }
-nav(){
-  if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
-    this.router.navigate(['./dashboard/leaveTechPortal']);
-  } else {
-    this.router.navigate(['leaveregistration']);
+// nav(){
+//   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+//     this.router.navigate(['./dashboard/leaveTechPortal']);
+//   } else {
+//     this.router.navigate(['leaveregistration']);
+//   }
+//    }
+navchange(){
+ //  alert("hello");
+  let b=sessionStorage.getItem("Id1");
+ if(b=='workerscom@gmail.com'){
+           this.router.navigate(['./newuser/leaveregistration'])
+            }
+           else {
+             this.router.navigate(['./dashboard/claims']);
+           }
   }
-   }
+    newformat(){
+   //   alert("kh");
+     let a=sessionStorage.getItem("Id");
+  if(a=='leavedisability@gmail.com'){
+    this.router.navigate(['./newuser/workercomp'])
+           }
+           else {
+             this.router.navigate(['./dashboard/leaveTechPortal']);
+           }
+  }
+
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
-    if (sessionStorage.getItem("title")) {
+  
+    // if (sessionStorage.getItem("title")) {
+      let a=sessionStorage.getItem("Id");
+  if(a=='leavedisability@gmail.com'){
      
       this.router.navigate(['createUser']);
+     
     }
     else{
       this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+      //  alert("kh");
       var x =document.getElementById("worker")
       console.log(x);
       x.setAttribute("className","list-group-item-mycom router-link-active");
     
       x.style.border="1.5px solid #0a9e49";
+        
     }
     //  x.style.borderColor="green";
   }
+
+  // clickDisability(){
+  //   let a=sessionStorage.getItem("Id");
+  //   if(a=='leavedisability@gmail.com'){
+  //     this.router.navigate(['./dashboard/leaveTechPortal']);
+  //   }
+  //   else{
+  //     this.router.navigate(['./newuser/leaveregistration']);
+  //   }
+  // }
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
