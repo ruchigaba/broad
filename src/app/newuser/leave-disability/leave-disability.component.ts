@@ -22,7 +22,18 @@ questions: any = [];
    
   }
  ngOnInit() {
-  }
+//     if (sessionStorage.getItem('Id') == 'leavedisability@gmail.com')  {
+//     document.getElementById("toshow").style.display = 'none';
+//       document.getElementById("titleBar").style.display = 'block';
+//   }
+//    else{
+ 
+//   //document.getElementById("toshow").style.display = 'block';
+ 
+ 
+//     //document.getElementById("titleBar").style.display = 'none';
+//  }
+ }
 gotoHelp() {
     this.router.navigate(['./help']);
   }

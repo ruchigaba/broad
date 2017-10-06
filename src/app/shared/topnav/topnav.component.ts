@@ -186,24 +186,41 @@ hideFooterIOS(){
 //   }
 //    }
 navchange(){
- //  alert("hello");
-  let b=sessionStorage.getItem("Id1");
- if(b=='workerscom@gmail.com'){
-           this.router.navigate(['./newuser/leaveregistration'])
-            }
-           else {
-             this.router.navigate(['./dashboard/claims']);
-           }
+
+//   let b=sessionStorage.getItem("Id1");
+//  if(b=='workerscom@gmail.com'){
+//            this.router.navigate(['./newuser/leaveregistration'])
+//             }
+//            else {
+//              this.router.navigate(['./dashboard/claims']);
+//            }
+           if (sessionStorage.getItem("Id")=="workerscom@gmail.com") { //workerscomp@gmail.com
+        //this.router.navigate(['./dashboard/leaveTechPortal']);
+        this.router.navigate(['./newuser/leaveregistration']);
+      } else {
+        this.router.navigate(['./dashboard/leaveTechPortal']);
+        //this.router.navigate(['leaveregistration']);
+        //this.router.navigate(['./dashboard/claims']);
+      }
+
   }
-    newformat(){
-   //   alert("kh");
-     let a=sessionStorage.getItem("Id");
-  if(a=='leavedisability@gmail.com'){
-    this.router.navigate(['./newuser/workercomp'])
-           }
-           else {
-             this.router.navigate(['./dashboard/leaveTechPortal']);
-           }
+    newformat(){   
+    
+  //    let a=sessionStorage.getItem("Id");
+  // if(a=='leavedisability@gmail.com'){
+  //   this.router.navigate(['./newuser/workercomp'])
+  //          }
+  //          else {
+  //            this.router.navigate(['./dashboard/leaveTechPortal']);
+  //          }
+
+  if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+        this.router.navigate(['./newuser/workercomp']);
+      } 
+    else{
+        this.router.navigate(['./dashboard/claims']);
+    }
+
   }
 
   lasttitle(){

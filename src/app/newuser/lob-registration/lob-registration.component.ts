@@ -22,6 +22,17 @@ export class LOBRegistrationComponent implements OnInit {
   }
 
   ngOnInit() {
+//      if (sessionStorage.getItem('Id1') == 'workerscom@gmail.com')  {
+//     document.getElementById("toshow").style.display = 'none';
+//       document.getElementById("titleBar").style.display = 'block';
+//   }
+//    else{
+ 
+//   //document.getElementById("toshow").style.display = 'block';
+ 
+ 
+//     //document.getElementById("titleBar").style.display = 'none';
+//  }
   }
 gotoHelp() {
     this.router.navigate(['./help']);
