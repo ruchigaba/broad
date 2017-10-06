@@ -37,6 +37,7 @@ import {RegistrationTutorialComponent } from './registration-tutorial/registrati
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
 import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
+import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 // -------------------------------------registration tutorial component ends ---------------------------
@@ -88,7 +89,7 @@ export const routes = [
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
      { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
- 
+     { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
 
 ];
 
@@ -101,7 +102,7 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent
+   LOBRegistrationComponent,LDRegistrationComponent
   // HealthTicketComponent 
 
 ];

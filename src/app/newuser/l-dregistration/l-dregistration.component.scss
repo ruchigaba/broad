@@ -1,0 +1,131 @@
+
+
+  button.btn-continue-registration-ldregist:active {
+    position:relative;
+    top: 5px;
+  }
+button.btn-help-registration-ldregist:active {
+    position:relative;
+    top: 5px;
+  }
+     .whiteblank-registration-ldregist{
+     @include commonmix0202();
+    }
+
+    .sm-txt-new-registration {
+    font-size: 12px;
+    font-style: italic;
+    }
+    
+    
+   
+    .desktop-logo-regist-registration{
+    max-height: $desktop-height;
+    margin-left: 4%;
+    margin-top: 5px;
+    }
+    
+.new-user-ul-li-section li {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.new-user-ul-li-section li input[type="checkbox"] {
+  margin-right: 5px;
+  position: relative;
+ /*  top: 3px; */
+
+}
+    
+.new-user-ul-li-section li input[type="text"] {
+  width: 98%;
+}
+ 
+    
+
+    .btn-continue-registration-ldregist{
+    width: $btn-continue-width;
+    background-color:  $btn-bg-color;
+    float: left;
+    color:$btn-continue-color;
+    outline: none;
+    @include validate();
+     }
+
+    .btn-cancel-registration-ldregist{
+     @extend .btn-continue-registration;
+    background-color: $btn-cancel-bg-color;
+    color: $btn-cancel-color;
+    outline: none;
+    
+    }
+
+    .btn-help-registration-ldregist{
+    background-color: $btn-help-bg-color;
+    color: $btn-help-color;
+    width:$btn-help-width;
+    margin-top: 28px;
+   outline: none;
+    @include validate();
+    }
+
+    .setup-registration-ldregist{
+     font-weight: 600;
+    color:  $setup-color;
+    font-size: 17px;
+    text-decoration: underline;
+    padding-left: 15px;
+    }
+
+   .li-style-registration-ldregist{
+   margin-top: 10px;
+   list-style: outside none none;
+   color:  $li-style-color;
+   font-size: 14px !important;
+   }
+
+  .class-checkbox-registration-ldregist{
+   margin-right: 8px;
+   top: 2px;
+   z-index: 999;
+   }
+
+  .claim-no-registration-ldregist{
+   margin-bottom: 10px;
+   margin-top: 10px;
+   list-style: outside none none;
+   }
+   
+  .li-first-to-zip-registration{
+   @include commonmix11();
+   }
+   
+  .claimant-info-registration-ldregist{
+       font-weight: 600;
+   font-size: 16px;
+   margin-top: 16px;
+   list-style: outside none none; 
+   color:$claimant-color;
+   }
+   .registuser-registration-ldregist{ 
+        font-size: 18px;
+       font-weight: 600;
+    color: #258c52;
+    padding: 0 15px;
+  }
+  
+
+  @media screen and (max-width: 800px){
+    .whiteblank-registration-ldregist{
+     margin-top: 75px;
+    width:100%;
+  }
+ 
+}
+@media screen and  (min-width: 310px) and(max-width: 1020px){
+.whiteblank-registration-ldregist{
+     margin-top: 75px;
+    width:100%;
+  }
+}

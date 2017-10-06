@@ -3,25 +3,26 @@ import {Router} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
 import { CommonAPICall } from '../../shared/shared.service';
 @Component({
-  selector: 'app-lob-registration',
-  templateUrl: './lob-registration.component.html',
+  selector: 'app-l-dregistration',
+  templateUrl: './l-dregistration.component.html',
    providers: [CommonAPICall]
- // styleUrls: ['./lob-registration.component.scss']
+ // styleUrls: ['./l-dregistration.component.scss']
 })
-export class LOBRegistrationComponent implements OnInit {
- questions: any = [];
+export class LDRegistrationComponent implements OnInit {
+questions: any = [];
  commnFunc;
  checkedQues = false;
  inputElem: any= [];
   index: any = [];
    count: number = 0;
+   claimnum:string;
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
      this.question();
      this.commnFunc = new CommonFunction();
    
   }
-
   ngOnInit() {
+     this.claimnum= sessionStorage.getItem("claimno");
   }
 gotoHelp() {
     this.router.navigate(['./help']);

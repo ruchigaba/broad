@@ -26,7 +26,7 @@ export class HelpComponent implements OnInit {
   ngOnInit() {
   	window.scrollTo(0, 0);
     this.supportContent();
-  // document.getElementById('titleBar').style.paddingLeft="0px";
+   document.getElementById('titleBar').style.paddingLeft="300px";
   }
   supportContent(){
   //-------------------------------------GET SUPPORT SUBJECT API CALL-----------------------------------
