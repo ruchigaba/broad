@@ -247,6 +247,10 @@ if(this.username== 'leavedisability@gmail.com'){
   sessionStorage.setItem("Id","leavedisability@gmail.com");
         this.router.navigate(['./dashboard/leaveTechPortal']);
       }
+    else if(this.username== 'workerscom@gmail.com'){
+    sessionStorage.setItem("Id1","workerscom@gmail.com");
+        this.router.navigate(['./dashboard/claims']);
+      }
       }
 
 
@@ -254,15 +258,16 @@ if(this.username== 'leavedisability@gmail.com'){
         this._commonApi.handleError(error, "Login");
     });
   }
-navigateSuccess(username){
-if (username== 'workerscom@gmail.com') {
-  this.router.navigate(['./dashboard/claims'])
-}
-else if(username== 'leavedisability@gmail.com')
-{
-  this.router.navigate(['leaveTechPortal'])
-}
-}
+//  navigateSuccess(username){
+// if (username== 'workerscom@gmail.com') {
+//   sessionStorage.setItem("Id1","workerscom@gmail.com");
+//   this.router.navigate(['./dashboard/claims'])
+// }
+// else if(username== 'leavedisability@gmail.com')
+// {
+//   this.router.navigate(['leaveTechPortal'])
+// }
+// }
   // UPDATE APP METHOD
   confirmCallback() {
 

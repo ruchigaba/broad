@@ -19,9 +19,9 @@ activeFooterMenu = "";
 
     document.onclick=function()
      { 
-       if (document.getElementById("togg-dv").className!==null) {
-         document.getElementById("togg-dv").className = "hidden-content slide-down";
-       }
+      if (document.getElementById("togg-dv").className!==null) {
+        document.getElementById("togg-dv").className = "hidden-content slide-down";
+      }
      };
 
 

@@ -28,7 +28,7 @@
      
    <div class="mycomp">
 
-       <a  id="worker" (click) = "claimClicked = false;eventCalled();lasttitle()" [routerLinkActive]="['router-link-active']"   class="list-group-item-mycom-2">
+       <a  id="worker" (click) = "claimClicked = false;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']"   class="list-group-item-mycom-2">
    <!--<a  [routerLink]="['']" (click)="claimClicked = true;eventCalled();lasttitle()" [routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='leaveTechPortal'" class="list-group-item-mycom">-->
 
        <!--<a [routerLink]="['claims']" (click) = "claimClicked = true;eventCalled();lasttitle()"[routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">-->
@@ -38,7 +38,7 @@
       </a></div>
       
    <div class="mycomp">
-       <a  (click)="claimClicked = true;eventCalled();nav()" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
+       <a  (click)="claimClicked = true;eventCalled();navchange();" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
             <span class="menu-item-img-span-1">Disability/Leave</span>
 
        
