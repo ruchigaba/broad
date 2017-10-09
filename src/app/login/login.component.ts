@@ -250,9 +250,7 @@ var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&pas
         this.router.navigate(['./dashboard/leaveTechPortal']);
       }
 
-      else{
-      this.router.navigate(['./dashboard/claims']);
-
+    
     else if(this.username== 'workerscom@gmail.com'){
     sessionStorage.setItem("Id","workerscom@gmail.com");
         this.router.navigate(['./dashboard/claims']);
@@ -262,7 +260,7 @@ var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&pas
        this.router.navigate(['./dashboard/claims']);
       }
       }
-}
+
 
     }, error => {
         this._commonApi.handleError(error, "Login");
