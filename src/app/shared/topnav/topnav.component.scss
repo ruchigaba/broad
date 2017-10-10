@@ -493,7 +493,7 @@ a.active {
 
     .headerBack .logo-div.logo-sec-new-one {
         width: 20%;
-        display: flex !important;
+        display: flex;
         align-items: center !important;
         justify-content: center;
         height: 70px !important;
@@ -504,7 +504,7 @@ a.active {
 
     .headerBack .titltxtd {
     width: 60%;
-    display: flex !important;
+    display: flex;
     align-items: center !important;
     justify-content: center;
     height: 70px !important;
@@ -745,7 +745,7 @@ margin-left:77px ;
 @media only screen and (max-width:450px){
      .navbar-right-1{
         margin-left: 272px !important;
-        margin-top: -10px !important;
+        margin-top: 0px !important;
     }
 }
 
@@ -781,7 +781,7 @@ margin-left:77px ;
  background-color:#f6f6f6;
    margin-left: 856px;
     width: 116%;
-    margin-top: -69px ;
+    margin-top: -5px ;
 }
 .menu-icon img {
     position: inherit;
