@@ -194,10 +194,15 @@ navchange(){
 //            else {
 //              this.router.navigate(['./dashboard/claims']);
 //            }
+             //   var x =document.getElementById("leave")
+       //     x.setAttribute("className","list-group-item-my123 router-link-active");
+          // x.style.border="1.5px solid #0a9e49";   
            if (sessionStorage.getItem("Id")=="workerscom@gmail.com") { //workerscomp@gmail.com
         //this.router.navigate(['./dashboard/leaveTechPortal']);
+         
         this.router.navigate(['./leaveregistration']);
       } else {
+          // x.style.border="0px";
         this.router.navigate(['./dashboard/leaveTechPortal']);
         //this.router.navigate(['leaveregistration']);
         //this.router.navigate(['./dashboard/claims']);
@@ -213,14 +218,23 @@ navchange(){
   //          else {
   //            this.router.navigate(['./dashboard/leaveTechPortal']);
   //          }
-
+       // var x =document.getElementById("worker")
+      //  x.setAttribute("className","list-group-item-my123 router-link-active");
+      //  x.style.border="1.5px solid #0a9e49";
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+   
         this.router.navigate(['./workercomp']);
       } 
     else{
+      // x.style.border="0px";
         this.router.navigate(['./dashboard/claims']);
     }
 
+  }
+  eventCalled12(){
+    // var x =document.getElementById("settings")
+      //  x.setAttribute("className","list-group-item-my123 router-link-active");
+       // x.style.border="1.5px solid #0a9e49";
   }
 
   lasttitle(){
@@ -236,11 +250,11 @@ navchange(){
     else{
       this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
       //  alert("kh");
-      var x =document.getElementById("worker")
-      console.log(x);
-      x.setAttribute("className","list-group-item-mycom router-link-active");
+     // var x =document.getElementById("worker")
+    // console.log(x);
+    // x.setAttribute("className","activ-me-new");
     
-      x.style.border="1.5px solid #0a9e49";
+      //x.style.border="1.5px solid #0a9e49";
         
     }
     //  x.style.borderColor="green";
@@ -261,12 +275,12 @@ navchange(){
     document.getElementById("loadingDiv").style.display = "none";
 
 
-      var x =document.getElementById("worker")
+    //  var x =document.getElementById("worker")
      
-      x.setAttribute("className","list-group-item-mycom");
-      x.style.border="0px";
+    //  x.setAttribute("className","list-group-item-mycom");
+   //   x.style.border="0px";
     //this.isActive = !this.isActive;
-    this.isActive = !this.isActive;
+   // this.isActive = !this.isActive;
 
     // if claims is clicked then make page position as undefined,so page will open at top
   //   if (this.claimClicked == true) {

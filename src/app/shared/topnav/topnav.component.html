@@ -28,28 +28,23 @@
      
    <div class="mycomp-tp">
 
-       <a  id="worker" (click) = "claimClicked = false;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']"   class="list-group-item-mycom-2">
-   <!--<a  [routerLink]="['']" (click)="claimClicked = true;eventCalled();lasttitle()" [routerLinkActive]="['router-link-active']" [class.active]="activeFooterMenu=='leaveTechPortal'" class="list-group-item-mycom">-->
-
-       <!--<a [routerLink]="['claims']" (click) = "claimClicked = true;eventCalled();lasttitle()"[routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">-->
-   <!--<a  [routerLink]="['claims']" (click)="claimClicked = true;eventCalled();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">-->
-
-       <span class="menu-item-img-span-abc">Worker's Comp</span> 
+       <a  id="worker" [routerLink]="['./claims']" (click) = "claimClicked = true;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
+      <span class="menu-item-img-span-abc">Worker's Comp</span> 
       </a></div>
       
  
    <div class="mycomp-tp">
- <a [routerLink]="['leaveTechPortal']"(click)="claimClicked = true;eventCalled();navchange()" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
+ <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="claimClicked = true;eventCalled();navchange();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
   <span class="menu-item-img-span-abc">Disability/Leave</span>
  </a></div>
 
      
    <div class="mycomp-tp">
-       <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']"     class="list-group-item-mycom">
+       <a [routerLink]="['./settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
             <span class="menu-2">Settings</span>
            </a></div>
    <div class="mycomp-tp">
-       <a [routerLink]="['']" [routerLinkActive]="['router-link']" class="list-group-item-mycom">
+       <a [routerLink]="['']" (click)="eventCalled();"[routerLinkActive]="['router-link']" class="list-group-item-mycom">
             <span class="menu-2">Log Out</span>
            </a></div>
    </div>

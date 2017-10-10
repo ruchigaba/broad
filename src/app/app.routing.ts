@@ -81,8 +81,10 @@ export const routes = [
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',parents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },
+      
     ]
   },
+  
   { path: 'eula', component: EulaComponent, data: { title: 'EULA'} },
   { path: 'createUser', component: RegistrationComponent, data: { title: 'Registration', parent:'eula' } },
    { path: 'worker-comp', component: WorkerCompComponent, data: { title: 'Registration', parent:'eula' } },
@@ -92,7 +94,7 @@ export const routes = [
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
-     { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'claims' } },
+      { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'claims' } },
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
      { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'leaveTechPortal' } },
       { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
