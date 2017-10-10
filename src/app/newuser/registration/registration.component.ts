@@ -183,6 +183,9 @@ export class RegistrationComponent implements OnInit {
   goToLogin() {
     this._route.navigate(['']);
   }
+   createNewUser12() {
+     this._route.navigate(['./securityquestions']);
+   }
   //-------------------------------------GET SUPPORT DATE OF LOSS INFO API CALL-----------------------------------
 
   dateOfLossInfo() {

@@ -3,12 +3,12 @@ import {Router} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
 import { CommonAPICall } from '../../shared/shared.service';
 @Component({
-  selector: 'app-l-dregistration',
-  templateUrl: './l-dregistration.component.html',
-   providers: [CommonAPICall]
- // styleUrls: ['./l-dregistration.component.scss']
+  selector: 'app-security-questions',
+  templateUrl: './security-questions.component.html',
+     providers: [CommonAPICall]
+  //styleUrls: ['./security-questions.component.scss']
 })
-export class LDRegistrationComponent implements OnInit {
+export class SecurityQuestionsComponent implements OnInit {
 questions: any = [];
  commnFunc;
  checkedQues = false;
@@ -19,13 +19,9 @@ questions: any = [];
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
      this.question();
      this.commnFunc = new CommonFunction();
-   
   }
+
   ngOnInit() {
-     this.claimnum= sessionStorage.getItem("claimno");
-  }
-  createNewUser12(){
-      this.router.navigate(['./securityquestions']);
   }
 gotoHelp() {
     this.router.navigate(['./help']);

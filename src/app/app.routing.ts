@@ -39,6 +39,8 @@ import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component
 import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
 import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disability.component';
+import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
+
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 
@@ -90,10 +92,10 @@ export const routes = [
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
-     { path: 'newuser/leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'claims' } },
+     { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'claims' } },
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
-     { path: 'newuser/workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'leaveTechPortal' } },
-     
+     { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'leaveTechPortal' } },
+      { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
 ];
 
 export const NavigatableComponents = [
@@ -105,7 +107,7 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent
+   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent
   // HealthTicketComponent 
 
 ];
