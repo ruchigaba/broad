@@ -24,6 +24,9 @@ questions: any = [];
   ngOnInit() {
      this.claimnum= sessionStorage.getItem("claimno");
   }
+  createNewUser12(){
+      this.router.navigate(['./securityquestions']);
+  }
 gotoHelp() {
     this.router.navigate(['./help']);
   }

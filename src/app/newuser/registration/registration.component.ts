@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
   dolyear:string;
   inputElem: any= [];
   index: any = [];
-claimnum:string;
+  claimnum:string;
   dolImgHide = false;
   dolImg: string;
 
@@ -183,6 +183,9 @@ claimnum:string;
   goToLogin() {
     this._route.navigate(['']);
   }
+   createNewUser12() {
+     this._route.navigate(['./securityquestions']);
+   }
   //-------------------------------------GET SUPPORT DATE OF LOSS INFO API CALL-----------------------------------
 
   dateOfLossInfo() {
