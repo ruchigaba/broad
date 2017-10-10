@@ -74,19 +74,19 @@
 
  .mobileFooter .col2-xx-mm.active .midd-content span{
     border-bottom: 2px solid #007934;
-        //background-color: #cce4d6 !important;
+        background-color: #cce4d6 !important;
 }
-// .mobileFooter .main-data-div .col2-xx-mm.activeFooter{
-//         background-color: $activeFooter-backgroud !important;
-// }
-// .mobileFooter .main-data-div .col2-xx-mm.activeFooter{
-//         background-color:none;
-//         display:block;
-//          border-bottom: 0px solid #007934;
-// }
-// .activeFooter{
-//       background-color: $activeFooter-backgroud !important;
-// }
+.mobileFooter .main-data-div .col2-xx-mm.activeFooter{
+        background-color: $activeFooter-backgroud !important;
+}
+.mobileFooter .main-data-div .col2-xx-mm.activeFooter{
+        background-color:none;
+        display:block;
+         border-bottom: 0px solid #007934;
+}
+.activeFooter{
+      background-color: $activeFooter-backgroud !important;
+}
 
 //-------------------------------------------------------Responsive scss for footer start-----------------------------------------------------------
 @media only screen and (min-width: 800px)

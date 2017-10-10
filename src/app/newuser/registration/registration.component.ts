@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
   dolyear:string;
   inputElem: any= [];
   index: any = [];
-claimnum:string;
+  claimnum:string;
   dolImgHide = false;
   dolImg: string;
 

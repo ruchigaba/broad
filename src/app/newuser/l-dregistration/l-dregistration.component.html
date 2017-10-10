@@ -41,19 +41,7 @@
 <input class="form-control-data-registration"  style="margin-bottom:20px;" type="email" id="Re-email"  [(ngModel)]="claimnum" />
 </li>
  </ul>
-
-   <div class="col-xs-12-ldregist tititile-ldregist">
-    <div class="setup-registration-ldregist">Setup Online Reset Information (Select any 3)</div>
- 
-    <ul class="new-user-ul-li-section" *ngFor="let ques of questions; let i = index">
-
-          <li><input type="checkbox" id="checkBox{{i}}" (change)="checkValue($event,i)">{{ques.question}}</li>
-          <li><input type="text" class="form-control-data-registration" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
-
-        </ul>
-        </div> 
-
-        <div style="padding: 0px 15px 0 15px;">
+  <div style="padding: 0px 15px 0 15px;">
             <div class="col-12-registration-ldregist" style="width:100%;">
             <div class="col-6-registration-ldregist" >
             <button (click)="createNewUser1()" class="btn-continue-registration">Continue</button>

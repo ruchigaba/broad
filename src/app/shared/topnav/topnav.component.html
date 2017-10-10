@@ -39,14 +39,9 @@
       
  
    <div class="mycomp-tp">
-       <a  (click)="claimClicked = true;eventCalled();nav()" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
- 
-  
-            <span class="menu-item-img-span-1">Disability/Leave</span>
-
-       
-
-         </a></div>
+       <a [routerLink]="['leaveTechPortal']"(click)="claimClicked = true;eventCalled();navchange()" [routerLinkActive]="['router-link-active']"  class="list-group-item-mycom">
+  <span class="menu-item-img-span-1">Disability/Leave</span>
+ </a></div>
    <div class="mycomp-tp">
        <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']"     class="list-group-item-mycom">
             <span class="menu-2">Settings</span>
