@@ -45,6 +45,7 @@ import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component
 import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
 import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disability.component';
+import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
 // -------------------------------------registration tutorial component ends ---------------------------
 
 @NgModule({
@@ -73,7 +74,8 @@ import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disab
     WorkerCompComponent,
     LOBRegistrationComponent,
     LDRegistrationComponent,
-    LeaveDisabilityComponent 
+    LeaveDisabilityComponent,
+    SecurityQuestionsComponent 
     // , DynemicUiComponent
   ],
   imports: [
