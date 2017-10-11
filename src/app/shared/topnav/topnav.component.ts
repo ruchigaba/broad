@@ -199,7 +199,7 @@ navchange(){
            if (sessionStorage.getItem("Id")=="workerscomp@gmail.com") { //workerscomp@gmail.com
         //this.router.navigate(['./dashboard/leaveTechPortal']);
          
-        this.router.navigate(['./leaveregistration']);
+        this.router.navigate(['./dashboard/leaveregistration']);
       } else {
           // x.style.border="0px";
         this.router.navigate(['./dashboard/leaveTechPortal']);
@@ -222,7 +222,7 @@ navchange(){
       //  x.style.border="1.5px solid #0a9e49";
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
    
-        this.router.navigate(['./workercomp']);
+        this.router.navigate(['./dashboard/workercomp']);
       } 
     else{
       // x.style.border="0px";
