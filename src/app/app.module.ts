@@ -42,9 +42,9 @@ import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpas
 // -------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
-import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
+import { LOBRegistrationComponent } from './dashboard/lob-registration/lob-registration.component';
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
-import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disability.component';
+import { LeaveDisabilityComponent } from './dashboard/leave-disability/leave-disability.component';
 import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
 // -------------------------------------registration tutorial component ends ---------------------------
 
