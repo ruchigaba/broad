@@ -36,9 +36,9 @@ import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupe
 import {RegistrationTutorialComponent } from './registration-tutorial/registration-tutorial.component';
 import { ForgothelpComponent } from './forgot-password/forgothelp/forgothelp.component'; 
 import { WorkerCompComponent } from './newuser/worker-comp/worker-comp.component';
-import { LOBRegistrationComponent } from './newuser/lob-registration/lob-registration.component';
+import { LOBRegistrationComponent } from './dashboard/lob-registration/lob-registration.component';
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
-import { LeaveDisabilityComponent } from './newuser/leave-disability/leave-disability.component';
+import { LeaveDisabilityComponent } from './dashboard/leave-disability/leave-disability.component';
 import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
 
 //-------------------------------------registration tutorial component starts ---------------------------
@@ -81,7 +81,9 @@ export const routes = [
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',parents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },
-      
+       { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
+        { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
+
     ]
   },
   
@@ -94,10 +96,9 @@ export const routes = [
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
-      { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'claims' } },
+     
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
-     { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'leaveTechPortal' } },
-      { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
+          { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
 ];
 
 export const NavigatableComponents = [
