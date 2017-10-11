@@ -111,9 +111,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
  else{
  
   //document.getElementById("toshow").style.display = 'block';
- 
- 
-    document.getElementById("titleBar").style.display = 'none';
+  document.getElementById("titleBar").style.display = 'none';
  }
 
   }
@@ -197,7 +195,7 @@ navchange(){
              //   var x =document.getElementById("leave")
        //     x.setAttribute("className","list-group-item-my123 router-link-active");
           // x.style.border="1.5px solid #0a9e49";   
-           if (sessionStorage.getItem("Id")=="workerscom@gmail.com") { //workerscomp@gmail.com
+           if (sessionStorage.getItem("Id")=="workerscomp@gmail.com") { //workerscomp@gmail.com
         //this.router.navigate(['./dashboard/leaveTechPortal']);
          
         this.router.navigate(['./leaveregistration']);
