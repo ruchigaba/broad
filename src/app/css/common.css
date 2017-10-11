@@ -2478,7 +2478,16 @@ footer.foot {
     display: none; } }
 @media only screen and (max-width: 800px) {
   .mobileFooter {
-    display: block; }
+    display: block;
+  
+  
+  
+  }
+  .leave-portal .mobileFooter {
+    display: none !important;
+}
+
+
 
   .active {
     background-color: #cce4d6; } }
