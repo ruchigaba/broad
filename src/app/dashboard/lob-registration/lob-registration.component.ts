@@ -15,6 +15,8 @@ export class LOBRegistrationComponent implements OnInit {
  inputElem: any= [];
   index: any = [];
    count: number = 0;
+   title = '';
+   data: any;
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
      this.question();
      this.commnFunc = new CommonFunction();
@@ -33,7 +35,11 @@ export class LOBRegistrationComponent implements OnInit {
  
 //     //document.getElementById("titleBar").style.display = 'none';
 //  }
+ document.body.className = 'leave-registration';
   }
+   ngOnDestroy(){
+    document.body.className = '';
+}
 gotoHelp() {
     this.router.navigate(['./help']);
   }
