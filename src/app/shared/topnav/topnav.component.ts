@@ -50,12 +50,12 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
     .subscribe(event =>{
       this.hideFooterIOS();
       //alert("ruchi");
-      // if (document.getElementById("togg-dv")) {
-      //     var className = document.getElementById("togg-dv").className;
-      //     if (className == "hidden-content slide-down")
-      //       document.getElementById("togg-dv").className = "hidden-content slide-up";
+      if (document.getElementById("togg-dv")) {
+           var className = document.getElementById("togg-dv").className;
+          if (className == "hidden-content slide-down")
+            document.getElementById("togg-dv").className = "hidden-content slide-up";
 
-      //   }
+        }
       let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -68,6 +68,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           //console.log(this.data);
           //add title to header
           this.title = this.data.title;
+          sessionStorage.setItem("footerHide",this.title);
 
 
           // add back button to header if route has parent defined
@@ -198,7 +199,7 @@ navchange(){
            if (sessionStorage.getItem("Id")=="workerscomp@gmail.com") { //workerscomp@gmail.com
         //this.router.navigate(['./dashboard/leaveTechPortal']);
          
-        this.router.navigate(['./leaveregistration']);
+        this.router.navigate(['./dashboard/leaveregistration']);
       } else {
           // x.style.border="0px";
         this.router.navigate(['./dashboard/leaveTechPortal']);
@@ -221,7 +222,7 @@ navchange(){
       //  x.style.border="1.5px solid #0a9e49";
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
    
-        this.router.navigate(['./workercomp']);
+        this.router.navigate(['./dashboard/workercomp']);
       } 
     else{
       // x.style.border="0px";

@@ -1,8 +1,9 @@
-<div class="mobileFooter" id="hide">
+<div class="mobileFooter" id="hide" >
 
     <div class="hidden-content slide-down" id="togg-dv" class= "togg-dv" style="float: right;font-size: 10px;line-height: 26px;width: 20%;background: #f6f6f6 none repeat scroll 0 0; display:none; ">
-
-<div id="FAQ" class="pop-blur-dv" [routerLink]="['faqs']" (click) = "removeMoreOptions()">
+<!-- [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' " //active the footer menu(ruchi) -->
+<div id="FAQ" class="pop-blur-dv" [routerLink]="['faqs']" (click) = "removeMoreOptions()"
+ [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' ">
     <div class="midd-content" >
     <a href="#" md-ink-ripple [routerLink]="['faqs']" (click)="activeFooterMenu='FAQ'; removeMoreOptions()">
     <img  src=" .\image\faq2_64x64.png" [routerLink]="['faqs']" />
@@ -11,7 +12,7 @@
     </div>
     </div>
 
-     <div class="pop-blur-dv" id="Social" >
+     <div class="pop-blur-dv" id="Social" [ngClass]="activeFooterMenu =='Social' ? 'activeFooter' :'' ">
     <div class="midd-content" >
     <a md-ink-ripple [routerLink]="['social-media']" (click)="activeFooterMenu ='Social';removeMoreOptions()">
     <img  src=".\image\social2_64x64.png" >
@@ -33,7 +34,7 @@
 
 
 
-    <div class="pop-blur-dv" id="Tutorial">
+    <div class="pop-blur-dv" id="Tutorial" [ngClass]="activeFooterMenu =='Tutorial' ? 'activeFooter' :'' ">
     <div class="midd-content" >
     <a md-ink-ripple [routerLink]="['tutorial']" (click)="activeFooterMenu = 'Tutorial'; removeMoreOptions()">
     <img  src=".\image\tutorial_64x64.png" >
@@ -80,7 +81,7 @@
 
     <div style="clear:both;"></div>
     <div class="main-data-div" >
-    <div class="col2-xx-mm activeFooter" id="Claims" >
+    <div class="col2-xx-mm " id="Claims" [ngClass]="activeFooterMenu =='Claim Info' ? 'activeFooter' :'' " >
     <div class="midd-content"  >
     <a md-ink-ripple [routerLink]="['claims']" (click)="activeFooterMenu='Claim Info';claimFooterClick()">
     <img class="menu-item-img-sidebar" src=".\image\claim-info.png" >
@@ -106,9 +107,9 @@
 
 
 
-    <div class="col2-xx-mm"  id="Health Ticket" >
+    <div class="col2-xx-mm"  id="Health Ticket" [ngClass]="activeFooterMenu =='Health Ticket' ? 'activeFooter' :'' " >
     <div class="midd-content" >
-    <a md-ink-ripple [routerLink]="['healthTicket']" (click)="activeFooterMenu = 'Health Ticket'">
+    <a md-ink-ripple [routerLink]="['healthTicket']" (click)="activeFooterMenu = 'Health Ticket' ">
     <img src=".\image\healthTicket.png">
     <div style="clear:both;"></div>
     <span>Ticket</span>
@@ -116,7 +117,7 @@
     </div>
 
 
-    <div class="col2-xx-mm"  id="Contact">
+    <div class="col2-xx-mm"  id="Contact" [ngClass]="activeFooterMenu =='Contact Adjuster' ? 'activeFooter' :'' ">
     <div class="midd-content"  >
     <a md-ink-ripple [routerLink]="['contact-adjuster']" (click)="activeFooterMenu = 'Contact Adjuster'">
     <img src=".\image\contactAdjuster-64x64.png" />
@@ -125,7 +126,7 @@
     </div>
     </div>
 
-    <div class="col2-xx-mm"  id="Providers">
+    <div class="col2-xx-mm"  id="Providers" [ngClass]="activeFooterMenu =='Facility Lookup' ? 'activeFooter' :'' ">
     <div class="midd-content">
     <a md-ink-ripple [routerLink]="['provider']" (click)="activeFooterMenu = 'Facility Lookup';footerProviderClick()">
     <img src=".\image\facilitylookup2_64x64.png">
