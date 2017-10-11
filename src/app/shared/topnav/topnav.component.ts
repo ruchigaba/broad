@@ -50,12 +50,12 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
     .subscribe(event =>{
       this.hideFooterIOS();
       //alert("ruchi");
-      // if (document.getElementById("togg-dv")) {
-      //     var className = document.getElementById("togg-dv").className;
-      //     if (className == "hidden-content slide-down")
-      //       document.getElementById("togg-dv").className = "hidden-content slide-up";
+      if (document.getElementById("togg-dv")) {
+           var className = document.getElementById("togg-dv").className;
+          if (className == "hidden-content slide-down")
+            document.getElementById("togg-dv").className = "hidden-content slide-up";
 
-      //   }
+        }
       let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -68,6 +68,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           //console.log(this.data);
           //add title to header
           this.title = this.data.title;
+          sessionStorage.setItem("footerHide",this.title);
 
 
           // add back button to header if route has parent defined

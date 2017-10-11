@@ -101,7 +101,14 @@
     .mobileFooter {
     display: block ;
 
+
+    
 }
+.leave-portal .mobileFooter {
+    display: none !important;
+}
+
+
 .active {
     background-color:$activeFooter-backgroud;
 }

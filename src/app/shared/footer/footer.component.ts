@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   encapsulation: ViewEncapsulation.None
 })
 export class FooterComponent implements OnInit {
-activeFooterMenu = "";
+activeFooterMenu = "Claim Info";
   constructor(private route?: Router) { }
   
   ngOnInit() {
