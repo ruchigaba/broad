@@ -195,16 +195,20 @@ navchange(){
 //            }
              //   var x =document.getElementById("leave")
        //     x.setAttribute("className","list-group-item-my123 router-link-active");
-          // x.style.border="1.5px solid #0a9e49";   
+          // x.style.border="1.5px solid #0a9e49"; 
+            var x =document.getElementById("leave")  
            if (sessionStorage.getItem("Id")=="workerscomp@gmail.com") { //workerscomp@gmail.com
-        //this.router.navigate(['./dashboard/leaveTechPortal']);
-         
-        this.router.navigate(['./dashboard/leaveregistration']);
-      } else {
-          // x.style.border="0px";
-        this.router.navigate(['./dashboard/leaveTechPortal']);
-        //this.router.navigate(['leaveregistration']);
-        //this.router.navigate(['./dashboard/claims']);
+          x.setAttribute("className","list-group-item-mycom router-link-active");
+          x.style.border="1.5px solid #0a9e49";
+          x.style.padding="5px";
+          this.router.navigate(['./dashboard/leaveregistration']);
+      } 
+      else 
+      {
+          this.router.navigate(['./dashboard/leaveTechPortal']);
+           x.style.border="1.5px solid #0a9e49";
+           x.style.padding="5px";
+       
       }
 
   }
@@ -220,21 +224,22 @@ navchange(){
        // var x =document.getElementById("worker")
       //  x.setAttribute("className","list-group-item-my123 router-link-active");
       //  x.style.border="1.5px solid #0a9e49";
-  if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
-   
+       var x =document.getElementById("worker")
+      if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+        x.setAttribute("className","list-group-item-mycom");
+        x.style.border="1.5px solid #0a9e49";
+        x.style.padding="5px";
         this.router.navigate(['./dashboard/workercomp']);
-      } 
+        } 
     else{
-      // x.style.border="0px";
         this.router.navigate(['./dashboard/claims']);
+        x.style.border="1.5px solid #0a9e49";
+        x.style.padding="5px";
     }
 
   }
-  eventCalled12(){
-    // var x =document.getElementById("settings")
-      //  x.setAttribute("className","list-group-item-my123 router-link-active");
-       // x.style.border="1.5px solid #0a9e49";
-  }
+  
+   
 
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
@@ -279,8 +284,16 @@ navchange(){
     //  x.setAttribute("className","list-group-item-mycom");
    //   x.style.border="0px";
     //this.isActive = !this.isActive;
-   // this.isActive = !this.isActive;
-
+   this.isActive = !this.isActive;
+ var x =document.getElementById("leave") ;
+ var y= document.getElementById("worker")
+            console.log(x);
+       x.style.border="0px";
+      y.style.border="0px";
+         
+        //this.router.navigate(['leaveregistration']);
+        //this.router.navigate(['./dashboard/claims']);
+      
     // if claims is clicked then make page position as undefined,so page will open at top
   //   if (this.claimClicked == true) {
   //     sessionStorage.setItem('pagePosition', undefined);
