@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import {Router} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
 import { CommonAPICall } from '../../shared/shared.service';
@@ -8,11 +8,20 @@ import { CommonAPICall } from '../../shared/shared.service';
    providers: [CommonAPICall]
   //styleUrls: ['./leave-disability.component.scss']
 })
-export class LeaveDisabilityComponent implements OnInit {
+export class LeaveDisabilityComponent implements OnInit, OnDestroy {
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
     
   }
  ngOnInit() {
+ document.body.className = 'leaave-disablity';
+     // this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
+  }
+  ngOnDestroy(){
+    document.body.className = '';
+
+  }
+
+
 //     if (sessionStorage.getItem('Id') == 'leavedisability@gmail.com')  {
 //     document.getElementById("toshow").style.display = 'none';
 //       document.getElementById("titleBar").style.display = 'block';
@@ -24,7 +33,12 @@ export class LeaveDisabilityComponent implements OnInit {
  
 //     //document.getElementById("titleBar").style.display = 'none';
 //  }
- }
+ 
+
+
+
+
+
 gotoHelp() {
     this.router.navigate(['./help']);
   }
