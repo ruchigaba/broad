@@ -12,6 +12,7 @@ import {CommonAPICall} from '../../shared/shared.service';
   providers: [CommonAPICall]
 })
 export class TopnavComponent implements OnInit {
+
 title = ''; parent: boolean = false;
 object: any;
 parent2 = true;
@@ -68,7 +69,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           //console.log(this.data);
           //add title to header
           this.title = this.data.title;
-          sessionStorage.setItem("footerHide",this.title);
+          //sessionStorage.setItem("footerHide",this.title);
 
 
           // add back button to header if route has parent defined
@@ -224,17 +225,30 @@ navchange(){
        // var x =document.getElementById("worker")
       //  x.setAttribute("className","list-group-item-my123 router-link-active");
       //  x.style.border="1.5px solid #0a9e49";
-       var x =document.getElementById("worker")
-      if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
-        x.setAttribute("className","list-group-item-mycom");
-        x.style.border="1.5px solid #0a9e49";
-        x.style.padding="5px";
-        this.router.navigate(['./dashboard/workercomp']);
-        } 
+
+  if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+     this.router.navigate(['./dashboard/workercomp'])
+   
+        //this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+      } 
     else{
-        this.router.navigate(['./dashboard/claims']);
-        x.style.border="1.5px solid #0a9e49";
-        x.style.padding="5px";
+      // x.style.border="0px";
+        //this.router.navigate(['./dashboard/claims']);
+        //state preserve(ruchi)
+        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+
+    //    var x =document.getElementById("worker")
+    //   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+    //     x.setAttribute("className","list-group-item-mycom");
+    //     x.style.border="1.5px solid #0a9e49";
+    //     x.style.padding="5px";
+    //     this.router.navigate(['./dashboard/workercomp']);
+    //     } 
+    // else{
+    //     this.router.navigate(['./dashboard/claims']);
+    //     x.style.border="1.5px solid #0a9e49";
+    //     x.style.padding="5px";
+
     }
 
   }
@@ -272,7 +286,7 @@ navchange(){
   //   else{
   //     this.router.navigate(['./newuser/leaveregistration']);
   //   }
-  // }
+   //}
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
