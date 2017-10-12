@@ -68,7 +68,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           //console.log(this.data);
           //add title to header
           this.title = this.data.title;
-          sessionStorage.setItem("footerHide",this.title);
+          //sessionStorage.setItem("footerHide",this.title);
 
 
           // add back button to header if route has parent defined
@@ -222,11 +222,13 @@ navchange(){
       //  x.style.border="1.5px solid #0a9e49";
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
    
-        this.router.navigate(['./dashboard/workercomp']);
+        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
       } 
     else{
       // x.style.border="0px";
-        this.router.navigate(['./dashboard/claims']);
+        //this.router.navigate(['./dashboard/claims']);
+        //state preserve(ruchi)
+        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
     }
 
   }
@@ -267,7 +269,7 @@ navchange(){
   //   else{
   //     this.router.navigate(['./newuser/leaveregistration']);
   //   }
-  // }
+   //}
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
