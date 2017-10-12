@@ -12,6 +12,7 @@ import {CommonAPICall} from '../../shared/shared.service';
   providers: [CommonAPICall]
 })
 export class TopnavComponent implements OnInit {
+
 title = ''; parent: boolean = false;
 object: any;
 parent2 = true;
@@ -226,8 +227,9 @@ navchange(){
       //  x.style.border="1.5px solid #0a9e49";
 
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+     this.router.navigate(['./dashboard/workercomp'])
    
-        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+        //this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
       } 
     else{
       // x.style.border="0px";
