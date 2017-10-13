@@ -43,8 +43,14 @@ export class LOBRegistrationComponent implements OnInit {
 gotoHelp() {
     this.router.navigate(['./help']);
   }
-  goToLogin() {
-    this.router.navigate(['']);
+  goToWorkersComp() {
+    var x =document.getElementById("worker")
+     var y= document.getElementById("leave")
+      x.setAttribute("className","list-group-item-mycom");
+        x.style.border="1.5px solid #0a9e49";
+        x.style.padding="5px";
+          y.style.border="0px";
+         this.router.navigate(['./dashboard/claims']);
   }
    question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")

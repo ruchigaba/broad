@@ -15,6 +15,8 @@ questions: any = [];
  inputElem: any= [];
   index: any = [];
    count: number = 0;
+   ClaimNumber="";
+  
    claimnum:string;
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
      this.question();
@@ -26,9 +28,25 @@ questions: any = [];
 gotoHelp() {
     this.router.navigate(['./help']);
   }
-  goToLogin() {
-    this.router.navigate(['']);
+  goToRegistration() {
+    let a="";
+    // this.claimnum= sessionStorage.getItem("claimno");
+  //  sessionStorage.setItem("claimno",a);
+   this.claimnum= sessionStorage.getItem("claimno");
+   a= this.claimnum;
+  // let a = sessionStorage.getItem("ClaimNumber");
+  
+if (a.charAt(0).match(/[a-z]/i)){
+   this.router.navigate(['./lregistration']);
+ 
+}
+else{
+   this.router.navigate(['./createUser']);
+   
+}
   }
+    
+  
    question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")
       .subscribe(res => {

@@ -159,7 +159,7 @@ keyDownFunction(event,username,password){
             //else
              // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
               var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
-           //   var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
+            //  var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
               // let creds = 'grant_type=password&username=username &password=password';
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
                      .subscribe(result => {

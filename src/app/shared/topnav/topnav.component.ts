@@ -12,11 +12,13 @@ import {CommonAPICall} from '../../shared/shared.service';
   providers: [CommonAPICall]
 })
 export class TopnavComponent implements OnInit {
+routerLinkActive="";
 title = ''; parent: boolean = false;
+claimClicked = false;
 object: any;
 parent2 = true;
 isActive = false;
-  claimClicked = false;
+ 
   htmlElement: any; hideKeyboard: any;
 data: any;
 a;
@@ -298,7 +300,7 @@ navchange(){
   //   if (this.claimClicked == true) {
   //     sessionStorage.setItem('pagePosition', undefined);
   //     this.claimClicked = false;
-  // }
+  //  }
     }
  moreDropdownFunc(drop){
 
