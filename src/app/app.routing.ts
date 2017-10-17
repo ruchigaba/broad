@@ -56,6 +56,9 @@ import { FirstTimePasswordComponent } from './login/first-time-password/first-ti
 
 export const routes = [
   { path: '', component:  LoginComponent   },
+  { path: 'firstTimeLogin', component: FirstTimePasswordComponent },
+
+
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
@@ -109,7 +112,7 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent
+   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent
   // HealthTicketComponent 
 
 ];
