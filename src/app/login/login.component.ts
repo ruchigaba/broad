@@ -39,16 +39,15 @@ export class LoginComponent implements OnInit, OnDestroy{
     constructor(private _ls: LoginService, private router: Router, private _commonApi:CommonAPICall ) {
       sessionStorage.setItem("local_appUrl", "https://myclaimwebapiuat.crawco.com/");
       
-      var root = document.getElementsByTagName('html')[0];
+      var root = document.getElementsByTagName('html')[0];
 
-root.setAttribute('class', 'login-bg-image'); 
+root.setAttribute('class', 'login-bg-image'); 
 
       if (sessionStorage.getItem('selectedClaimClaimId') != undefined) {
       sessionStorage.setItem("selectedClaimClaimId", "");
     }
     // var root = document.getElementsByTagName('html')[0];
     // root.setAttribute('class', 'loginPage');
-
     if (sessionStorage.getItem('welcomeUsername') != undefined) {
       sessionStorage.setItem("welcomeUsername", "");
     }
@@ -72,7 +71,6 @@ ngOnInit(){
     this._commonApi.addClass1("login-bg-image");
   }
  //this.login('testingbroadspireapp@gmail.com', 'august@2017');
-
   window.scrollTo(0, 0);
 
 var currentObject = this;
@@ -95,7 +93,6 @@ var currentObject = this;
    //sessionStorage.setItem("refreshProviders", "true");
    //console.log(sessionStorage.getItem("refreshProviders"));
     // document.getElementById("loadinDiv").style.display="none";
-
 }
 
 ngOnDestroy(){
@@ -151,7 +148,10 @@ keyDownFunction(event,username,password){
       user.toLowerCase() == 'rmazumdar@primussoft.com' || user.toLowerCase() == 'karen.hofmann@us.crawco.com' ||
       user.toLowerCase() == 'pkindig@choosebroadspire.com' || user.toLowerCase() == "kautilya.sharma6@primussoft.com" || (b != "-1" && a == "choosebroadspire.com")) {
       sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
+
+
 console.log("else if" + user);
+
           // else{
           //   if(user==undefined && pass!=undefined)
           //   {
@@ -159,11 +159,17 @@ console.log("else if" + user);
           //     this.commnFunc.alertPopup("Please enter the username.", "Login");
           //   }
             //else
+             // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
+            //  var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
+            //  var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
+            
+              // let creds = 'grant_type=password&username=username &password=password';
              
               //var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
            //   var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
                let creds = 'grant_type=password&username=' + user + '&password=' + pass;
                console.log("creds" + creds);
+
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
                      .subscribe(result => {
                       
@@ -181,9 +187,11 @@ console.log("else if" + user);
                        else {
       sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
 
-var creds = 'grant_type=password&username=' + user + '&password=' + pass;
-//var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
 
+//var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
+var creds = 'grant_type=password&username=' + user + '&password=' + pass;
+
+//var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
       this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
         .subscribe(result => {
           sessionStorage.setItem('userName', user);
@@ -224,7 +232,6 @@ var creds = 'grant_type=password&username=' + user + '&password=' + pass;
       sessionStorage.setItem('local_updateFlag', res.result.appUpdateReqFlag);
 
       //this.navigateSuccess(this.username);
-
       if (sessionStorage.getItem('local_firstTimeLogin') == 'true') {
         sessionStorage.setItem('forgetPassFlag', 'firstTimeLogin');
 
@@ -246,7 +253,6 @@ var creds = 'grant_type=password&username=' + user + '&password=' + pass;
       }
       else {
        // alert('hello' + this.username);
-
         // this.router.navigate(['./dashboard/claims']);
         // this.navigateSuccess(this.username);
     if(this.username== 'leavedisability@gmail.com'){
@@ -286,13 +292,11 @@ else if(this.username== 'workerscomp@gmail.com'){
                       //  this.router.navigate(['./dashboard/claims']);
                         // var x = sessionStorage.getItem(token1);
                         // console.log(x);
-
                     // },
                     // error => {
                     //     alert("Login failed");
                     // })
                 //  alert("You are being redirected to the leave and disability page");
-
 
 
 
@@ -307,7 +311,6 @@ else if(this.username== 'workerscomp@gmail.com'){
     //             //alert("Login failed");
     //         })
     // }
-
     toggleShow()
     {
 
@@ -323,7 +326,6 @@ else if(this.username== 'workerscomp@gmail.com'){
       // this.pass.setAttribute(type, "text");
 
 
-
         }
         //
         newUser(){
@@ -333,7 +335,6 @@ else if(this.username== 'workerscomp@gmail.com'){
 
         dynemicPopup(title, message, btnArr){
           // alert("hello");
-
           let mainDiv = document.createElement('div');
           let subDiv = document.createElement('div');
           let thirdDiv = document.createElement('div');
@@ -385,7 +386,6 @@ else if(this.username== 'workerscomp@gmail.com'){
           //     sessionStorage.setItem('token','Bearer '+res.access_token);
           //   })
           // }
-
           goToRegistration(){
              this.router.navigate(['Registration']);
             } 
