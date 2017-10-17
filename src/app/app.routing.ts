@@ -43,7 +43,7 @@ import { SecurityQuestionsComponent } from './newuser/security-questions/securit
 
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
-
+import { FirstTimePasswordComponent } from './login/first-time-password/first-time-password.component';
 // -------------------------------------registration tutorial component ends ---------------------------
 
  //import { HealthTicketComponent } from './dashboard/health_ticket/healthTicket.component'; 
@@ -55,7 +55,7 @@ import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTech
 
 
 export const routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component:  LoginComponent   },
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
@@ -96,7 +96,6 @@ export const routes = [
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
-     
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
           { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
 ];

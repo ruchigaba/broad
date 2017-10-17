@@ -30,7 +30,6 @@
 @import '../dashboard/lob-registration/lob-registration.component.scss';
 @import '../newuser/worker-comp/worker-comp.component.scss';
 @import '../newuser/security-questions/security-questions.component.scss';
-
 @import '../dashboard/provider/nearbyphysicians-map/nearbyphysicians-map.component';  
 @import '../forgot-password/forgot-password.component.scss';
 @import '../forgot-password/forgothelp/forgothelp.component.scss'; 
@@ -38,12 +37,7 @@
 @import '../forgot-password/validateregistration/validateregistration.component.scss'; 
 @import '../dashboard/contact-adjuster/ClaimInfoMessage.component.scss';
 @import '../dashboard/contact-adjuster/contact-adjuster.component.scss';
-
 @import '../registration-tutorial/registration-tutorial.component.scss';
-
-
-
-
 
 .leave-portal .sidebar{
   display: none;
@@ -70,9 +64,9 @@ font-family: 'Open Sans', sans-serif;
  }
  body{
 // font-family: $body-font;
-font-family: 'Open Sans', sans-serif;
+font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;;
  font-size: 1rem;
- line-height: 1.8;
+ line-height: 1.5;
  margin: 0px;
  padding: 0px;
  background-color: $background-color-main;

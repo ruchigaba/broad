@@ -16,7 +16,7 @@ export class RegistrationComponent implements OnInit {
   checkedQues = false;
   securityAns: any;
   count: number = 0;
-
+  fname1:string;
   firstName: string;
   lastName: string;
   email: string;
@@ -38,7 +38,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private _commonApiCall: CommonAPICall, private _route: Router) {
     window.scrollTo(0, 0);
-    this.question();
+   // this.question();
     this.commnFunc = new CommonFunction();
    }
 
@@ -46,44 +46,44 @@ export class RegistrationComponent implements OnInit {
    // document.getElementById('titleBar').style.paddingLeft="0px";
    this.claimnum= sessionStorage.getItem("claimno");
   }
-  question(): any {
-    this._commonApiCall.getService("SecQuestions", "", "")
-      .subscribe(res => {
-        this.questions = res.result.secquestions;
-      },
-    error => {
-      this._commonApiCall.handleError(error,"Security questions");
-    });
-  }
-  customTrackBy(index: number, obj: any): any {
-    return index;
-  }
-  checkValue(e: any, i: any) {
-    this.checkedQues = e.target.checked;
+  // question(): any {
+  //   this._commonApiCall.getService("SecQuestions", "", "")
+  //     .subscribe(res => {
+  //       this.questions = res.result.secquestions;
+  //     },
+  //   error => {
+  //     this._commonApiCall.handleError(error,"Security questions");
+  //   });
+  // }
+  // customTrackBy(index: number, obj: any): any {
+  //   return index;
+  // }
+  // checkValue(e: any, i: any) {
+  //   this.checkedQues = e.target.checked;
 
-    if (this.checkedQues) {
-      this.index.push(i);
-      console.log("push  "+i);
-      console.log("indexlength  " + this.index.length);
-      this.count++;
-      document.getElementById("securityAns" + i).style.display = '';
-      if (this.count > 3) {
-        this.count--;
-          this.index.splice(this.index.indexOf(i),1);
-        console.log("indexlength  " + this.index.length);
-        e.target.checked = false;
-        document.getElementById("securityAns" + i).style.display = 'none';
-        this.commnFunc.alertPopup("Select not more than 3 Questions","Registration");
-      }
-    }
-    else {
-      this.index.splice(this.index.indexOf(i), 1);
-      console.log("pop  "+i);
-      console.log("indexlength  " + this.index.length);
-      this.count--;
-      document.getElementById("securityAns" + i).style.display = 'none';
-    }
-  }
+  //   if (this.checkedQues) {
+  //     this.index.push(i);
+  //     console.log("push  "+i);
+  //     console.log("indexlength  " + this.index.length);
+  //     this.count++;
+  //     document.getElementById("securityAns" + i).style.display = '';
+  //     if (this.count > 3) {
+  //       this.count--;
+  //         this.index.splice(this.index.indexOf(i),1);
+  //       console.log("indexlength  " + this.index.length);
+  //       e.target.checked = false;
+  //       document.getElementById("securityAns" + i).style.display = 'none';
+  //       this.commnFunc.alertPopup("Select not more than 3 Questions","Registration");
+  //     }
+  //   }
+  //   else {
+  //     this.index.splice(this.index.indexOf(i), 1);
+  //     console.log("pop  "+i);
+  //     console.log("indexlength  " + this.index.length);
+  //     this.count--;
+  //     document.getElementById("securityAns" + i).style.display = 'none';
+  //   }
+  // }
     createNewUser1() {
     // Validation For All the input field.
     var current_year=new Date().getFullYear();
@@ -128,54 +128,64 @@ export class RegistrationComponent implements OnInit {
     else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
       this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
     }
-    else if (this.claimNo == "" || this.claimNo == undefined) {
-      this.commnFunc.alertPopup("Please fill the claim number.","Registration");
-    }
-    else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
-      this.commnFunc.alertPopup("Security answers are required","Registration");
-    }
-    else if (this.inputElem[this.index[1]] == "" || this.inputElem[this.index[1]] == undefined) {
-      this.commnFunc.alertPopup("Security answers are required","Registration");
-    }
-    else if (this.inputElem[this.index[2]] == "" || this.inputElem[this.index[2]] == undefined) {
-      this.commnFunc.alertPopup("Security answers are required","Registration");
-    }
+    // else if (this.claimNo == "" || this.claimNo == undefined) {
+    //   this.commnFunc.alertPopup("Please fill the claim number.","Registration");
+    // }
+    // else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
+    //   this.commnFunc.alertPopup("Security answers are required","Registration");
+    // }
+    // else if (this.inputElem[this.index[1]] == "" || this.inputElem[this.index[1]] == undefined) {
+    //   this.commnFunc.alertPopup("Security answers are required","Registration");
+    // }
+    // else if (this.inputElem[this.index[2]] == "" || this.inputElem[this.index[2]] == undefined) {
+    //   this.commnFunc.alertPopup("Security answers are required","Registration");
+    // }
     else {
 
       var data = {
         "firstName": this.firstName,
+      
         "lastName": this.lastName,
         "username": this.email,
-        "securityQuestion1": this.questions[this.index[0]].question,
-        "securityAnswer1": this.inputElem[this.index[0]],
-        "securityQuestion2": this.questions[this.index[1]].question,
-        "securityAnswer2": this.inputElem[this.index[1]],
-        "securityQuestion3": this.questions[this.index[2]].question,
-        "securityAnswer3": this.inputElem[this.index[2]],
+        // "securityQuestion1": this.questions[this.index[0]].question,
+        // "securityAnswer1": this.inputElem[this.index[0]],
+        // "securityQuestion2": this.questions[this.index[1]].question,
+        // "securityAnswer2": this.inputElem[this.index[1]],
+        // "securityQuestion3": this.questions[this.index[2]].question,
+        // "securityAnswer3": this.inputElem[this.index[2]],
         "ssn": this.ssn,
-        "claim_Number": this.claimNo,
+       // "claim_Number": this.claimNo,
         "date_of_Birth": this.dobmonth+"-"+this.dobdate+"-"+this.dobyear,
         "zip_Code": this.hzc,
-        "dateOfLoss": this.dolmonth+"-"+this.doldate+"-"+this.dolyear
-
+        "dateOfLoss": this.dolmonth+"-"+this.doldate+"-"+this.dolyear,
+        
       };
-      this._commonApiCall.postService("users", "", "application/json", data)
-        .subscribe(res => {
-           document.getElementById("loadingDiv").style.display = "none"; 
+        sessionStorage.setItem("firstName",this.firstName),
+          sessionStorage.setItem("lastName",this.lastName),
+            sessionStorage.setItem("username",this.email),
+              sessionStorage.setItem("ssn",this.ssn),
+                sessionStorage.setItem("date_of_Birth",this.dobmonth+"-"+this.dobdate+"-"+this.dobyear),
+                  sessionStorage.setItem("zip_Code",this.hzc),
+                    sessionStorage.setItem("dateOfLoss",this.dolmonth+"-"+this.doldate+"-"+this.dolyear),
 
+      // this._commonApiCall.postService("users", "", "application/json", data)
+      //   .subscribe(res => {
+      //      document.getElementById("loadingDiv").style.display = "none"; 
+              this._route.navigate(['./securityquestions']);
 
-          this.commnFunc.alertPopup(res.result,"Registration");
-          alert(res.errors);
-          this._route.navigate(['']);
-        },
-        error => {
-           document.getElementById("loadingDiv").style.display = "none"; 
+      //     this.commnFunc.alertPopup(res.result,"Registration");
+      //     alert(res.errors);
+      //     this._route.navigate(['']);
+      //   },
+      //   error => {
+      //      document.getElementById("loadingDiv").style.display = "none"; 
 
-          // alert('error :'+error.errors);
-          this._commonApiCall.handleError(error,"Registration");
-        })
-        // console.log('hello');
-    }
+      //     // alert('error :'+error.errors);
+      //     this._commonApiCall.handleError(error,"Registration");
+      //   })
+        console.log('hello');
+     }
+    
   }
   gotoHelp() {
     this._route.navigate(['./help']);
@@ -183,9 +193,7 @@ export class RegistrationComponent implements OnInit {
   goToLogin() {
     this._route.navigate(['']);
   }
-   createNewUser12() {
-     this._route.navigate(['./securityquestions']);
-   }
+  
   //-------------------------------------GET SUPPORT DATE OF LOSS INFO API CALL-----------------------------------
 
   dateOfLossInfo() {

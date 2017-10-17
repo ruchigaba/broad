@@ -101,10 +101,11 @@ export class HealtTicketComponent implements OnInit {
 
           });
       }
+      console.log('welcome', this.claims1);
   }
   healthService() {
         this.isActive = "1";
-        this.isShow = true
+        this.isShow = true;
         this.primary = false;
         this.ancillary = false;
         this.description = false;
@@ -113,12 +114,14 @@ export class HealtTicketComponent implements OnInit {
         this.isActive = "2";
         if(this.primaryPharmacyName != "null" || this.primaryBin != "null" || this.primaryPCN != "null"
         || this.primaryGroup != "null" ||  this.primary_pharm_phone_num != "null"){
+          //alert("Hello");
           this.priscription = false;
           this.primary = true;
           this.description = true;
         }
         else if(this.ancillaryPharmName != "null" || this.ancillaryBin != "null" || this.ancillaryPCN != "null"
         || this.ancillaryGroup != "null"){
+          alert("Hello1");
           this.priscription = false;
           this.ancillary = true;
           this.description = true;
@@ -142,21 +145,21 @@ export class HealtTicketComponent implements OnInit {
         this.description = false;
     }
 
-    healthDropdownFunc(dropdownMenu1){
-    	if (dropdownMenu1.style.display=="none") {
-    		dropdownMenu1.style.display="block";
-        window.addEventListener("click",()=>{
-   dropdownMenu1.style.display="none";
-  })
-   window.addEventListener("touchstart",()=>{
-      dropdownMenu1.style.display="none";
-    })
+  //   healthDropdownFunc(dropdownMenu1){
+  //   	if (dropdownMenu1.style.display=="none") {
+  //   		dropdownMenu1.style.display="block";
+  //       window.addEventListener("click",()=>{
+  //  dropdownMenu1.style.display="none";
+  // })
+  //  window.addEventListener("touchstart",()=>{
+  //     dropdownMenu1.style.display="none";
+  //   })
         
-    	}
-    	else{
-    		dropdownMenu1.style.display="none";
-    	}
+  //   	}
+  //   	else{
+  //   		dropdownMenu1.style.display="none";
+  //   	}
     	
-    }
+  //   }
 
 }

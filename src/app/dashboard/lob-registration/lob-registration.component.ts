@@ -17,6 +17,8 @@ export class LOBRegistrationComponent implements OnInit {
    count: number = 0;
    title = '';
    data: any;
+   email: string;
+    claimNo: string;
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
      this.question();
      this.commnFunc = new CommonFunction();
@@ -89,5 +91,17 @@ gotoHelp() {
       this.count--;
       document.getElementById("securityAns" + i).style.display = 'none';
     }
+  }
+  createNewUser1()
+  {
+     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     if (this.claimNo == "" || this.claimNo == undefined) {
+      this.commnFunc.alertPopup("Please fill the claim number.","Registration");
+    }
+     else if (this.email == "" || this.email == undefined || !re.test(this.email)) {
+      this.commnFunc.alertPopup("Please fill the email in valid format","Registration");
+    }
+  
+  else{ }
   }
 }
