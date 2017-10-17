@@ -27,7 +27,7 @@ export class RegistrationTutorialComponent implements OnInit {
 
   //-----------------------------------------------------------OnInit Method Start-----------------------------------------------------
   ngOnInit(){
-    this.getTutorial();
+    //this.getTutorial();
   //  document.getElementById('titleBar').style.paddingLeft="0px";  
 
   }
