@@ -46,17 +46,23 @@ contactAdjusterService(){
             .subscribe(res => {
               console.log(res);
               
+        
                 this.claimServicers = res.result.claimServicers,
                 this.claimNumber = res.result.claimNumber,
                 this.name = res.result.claimServicers[0].name,
                 this.phone=res.result.claimServicers[0].phone;
                 this.email = res.result.claimServicers[0].email;
-                this.superName = res.result.claimServicers[1].name;
-                this.superEmail = res.result.claimServicers[1].email;
                 sessionStorage.setItem('claim_number',this.claimNumber);
                 this.isShowContact = true;
-
-             },
+            if(res.result.claimServicers[1].name=="undefined" ||  res.result.claimServicers[1].name=="null"||  res.result.claimServicers[1].email=="undefined" ||res.result.claimServicers[1].email=="null"){
+             this.superName ="";
+               this.superEmail ="";
+               }
+               else{
+                this.superName = res.result.claimServicers[1].name;
+                this.superEmail = res.result.claimServicers[1].email;
+               }
+              },
            error => {
              this._commonApiCall.handleError(error,"Contact Adjuster");
             });

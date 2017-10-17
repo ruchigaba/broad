@@ -26,7 +26,7 @@ export class TutorialComponent implements OnInit {
 
     var routevar = this._route;
     this._commonApiCall.checkToken(routevar);
-    this.getTutorial();
+    //this.getTutorial();
   }
   firstTimeImages() {
     if (this.landscapeImages.length > 0 && this.landscapeImages[0].fileName.indexOf('Landscape') >= 0) {

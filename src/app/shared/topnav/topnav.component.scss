@@ -2,6 +2,9 @@
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 
+.topnav .navbar-right-1{
+    
+}
 
 .menu-icon img {
     width: 32px;
@@ -13,7 +16,14 @@ position: fixed;
     line-height: 80px;
 
 }
-
+.mycomp-tp:first-child .list-group-item-mycom.sjsj{
+    border:1.5px solid #0a9e49;
+    padding:5px;
+}
+.mycomp-tp:first-child .list-group-item-mycom{
+    border:0px;
+    padding:0px;
+}
 
 .arrowdiv{
     float: left;
