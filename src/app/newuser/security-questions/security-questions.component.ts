@@ -127,7 +127,7 @@ else{
         .subscribe(res => {
            document.getElementById("loadingDiv").style.display = "none"; 
        this.commnFunc.alertPopup(res.result,"Registration");
-          alert(res.errors);
+        //  alert(res.errors);
           this.router.navigate(['']);
         },
         error => {

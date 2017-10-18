@@ -183,7 +183,7 @@ export class RegistrationComponent implements OnInit {
       //     // alert('error :'+error.errors);
       //     this._commonApiCall.handleError(error,"Registration");
       //   })
-        console.log('hello');
+       // console.log('hello');
      }
     
   }
