@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent implements OnInit {
-activeFooterMenu="Claim";
+
 isActive = false;
   claimClicked = false;
   showMenu: string = '';

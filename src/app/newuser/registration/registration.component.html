@@ -107,11 +107,18 @@
    <span (click)="claimNoInfo()" class="text-grn-registration">Where do I find my Claim Number?</span><br>
     </ul>
     <br>
+     <div class="col-xs-12 tititile">
+    <div class="setup-registration">Setup Online Reset Information (Select any 3)</div>
+    <ul class="new-user-ul-li-section" *ngFor="let ques of questions; let i = index">
+    <li><input type="checkbox" id="checkBox{{i}}" (change)="checkValue($event,i)">{{ques.question}}</li>
+    <li><input type="text" class="form-control-data-registration" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
+      </ul>
+        </div>
     
     <div style="padding: 0px 15px 0 15px;">
     <div class="col-12-registration" style="width:100%;">
     <div class="col-6-registration" >
-    <button (click)="createNewUser12()" class="btn-continue-registration">Continue</button>
+    <button (click)="createNewUser1()" class="btn-continue-registration">Continue</button>
     </div>
     <div class="col-6-registration">
     <button (click)="goToLogin()"  class="btn-cancel-registration">Cancel</button>

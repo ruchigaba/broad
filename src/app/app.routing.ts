@@ -56,6 +56,9 @@ import { FirstTimePasswordComponent } from './login/first-time-password/first-ti
 
 export const routes = [
   { path: '', component:  LoginComponent   },
+  { path: 'firstTimeLogin', component: FirstTimePasswordComponent },
+
+
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
@@ -96,8 +99,7 @@ export const routes = [
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
-     
-     { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'eula' } },
+     { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Absence/Disability Registration', parent:'eula' } },
           { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
 ];
 
@@ -110,7 +112,7 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent
+   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent
   // HealthTicketComponent 
 
 ];
