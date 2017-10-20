@@ -47,11 +47,17 @@
     left: 26px;
     top: 45%;
     }
+    .mySlides{
+        display: none !important;
+    }
     }
 @media screen and (min-width:455px) and (max-width:770px){
     .w5-display-left{
         top: 45%;
         left: 77px;
+    }
+    .mySlides{
+        display: none !important;
     }
 }
 @media screen and (min-width:455px) and (max-width:770px){
@@ -73,5 +79,10 @@
 .mainimg {
     width: 258px;
     margin-left: 10px;
+}
+@media screen and (min-width: 1024px){
+    .mySlidesmobile{
+        display: none !important;
+    }
 }
 }

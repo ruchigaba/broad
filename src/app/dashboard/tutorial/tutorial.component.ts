@@ -113,6 +113,10 @@ export class TutorialComponent implements OnInit {
   plusDivs(n) {
     this.showDivs(this.slideIndex += n);
   }
+  mobileShow(n){
+    this.showMob(this.slideIndex +=n);
+
+  }
   showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
@@ -127,5 +131,15 @@ export class TutorialComponent implements OnInit {
     document.getElementById("mySlides" + (this.slideIndex - 1)).style.display = "block";
 
   }
+  showMob(n){
+   var j;
+   var y= document.getElementsByClassName("mySlidesmobile");
+   if(n > y.length) {this.slideIndex =1}
+     if(n < 1) {this.slideIndex = y.length}
+       for(j=0; j<y.length; j++){
+         document.getElementById("mobile"+j).style.display = "none";
+       }
+       document.getElementById("mobile"+(this.slideIndex-1)).style.display = "block";
+ }
 }
 
