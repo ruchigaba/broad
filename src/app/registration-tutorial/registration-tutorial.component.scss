@@ -52,6 +52,12 @@
         display: none !important;
     }
 }
+@media screen and (min-width: 1024px){
+    .mySlidesmob{
+        display:none !important;
+    }
+    }
+
 
 @media screen and (min-width:455px) and (max-width:770px){
     .w4-display-left{
