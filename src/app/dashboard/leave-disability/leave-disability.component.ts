@@ -34,7 +34,7 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
   createNewUser1(){
     var current_year=new Date().getFullYear();
      if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
-      this.commnFunc.alertPopup("Please fill the 4 digit ssn in number format","Registration");
+      this.commnFunc.alertPopup("Please enter the 4 digit ssn in number format","Registration");
     }
     else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
       this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
@@ -46,7 +46,7 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
       this.commnFunc.alertPopup("Invalid Year for date of Birth","Registration");
     }
       else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
-      this.commnFunc.alertPopup("Please fill the 5 digit zip code ","Registration");
+      this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Registration");
     }
      else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
       this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
@@ -58,7 +58,7 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
       this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
     }
      else if (this.claimNo == "" || this.claimNo == undefined) {
-      this.commnFunc.alertPopup("Please fill the claim number.","Registration");
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
     else{
  

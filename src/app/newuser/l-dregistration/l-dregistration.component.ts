@@ -31,16 +31,16 @@ questions: any = [];
   createNewUser12(){
      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (this.firstName == "" || this.firstName == undefined) {
-      this.commnFunc.alertPopup("Please fill the First Name","Registration");
+      this.commnFunc.alertPopup("Please enter the First Name","Registration");
     }
     else if (this.lastName == "" || this.lastName == undefined) {
-      this.commnFunc.alertPopup("Please fill the Last Name","Registration");
+      this.commnFunc.alertPopup("Please enter the Last Name","Registration");
     }
     else if (this.email == "" || this.email == undefined || !re.test(this.email)) {
-      this.commnFunc.alertPopup("Please fill the email in valid format","Registration");
+      this.commnFunc.alertPopup("Please enter the email in valid format","Registration");
     }
     else if (this.reEmail == "" || this.reEmail == undefined || !re.test(this.reEmail)) {
-      this.commnFunc.alertPopup("Please fill the Re-Enter Email in valid format","Registration");
+      this.commnFunc.alertPopup("Please enter the Re-Enter Email in valid format","Registration");
     }
     else if( this.email != this.reEmail) { 
    this.commnFunc.alertPopup("Your Email and Re-enter email does not match.", "Registration" );
