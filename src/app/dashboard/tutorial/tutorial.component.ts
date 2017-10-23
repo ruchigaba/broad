@@ -19,6 +19,7 @@ export class TutorialComponent implements OnInit {
   isShow = false;
 
   slideIndex = 1;
+  mobileIndex=1;
   constructor(private _commonApiCall?: CommonAPICall, private element?: ElementRef,private _route?: Router) { }
 
   //-----------------------------------------------------------OnInit Method Start-----------------------------------------------------
@@ -114,7 +115,7 @@ export class TutorialComponent implements OnInit {
     this.showDivs(this.slideIndex += n);
   }
   mobileShow(n){
-    this.showMob(this.slideIndex +=n);
+    this.showMob(this.mobileIndex +=n);
 
   }
   showDivs(n) {
@@ -134,12 +135,12 @@ export class TutorialComponent implements OnInit {
   showMob(n){
    var j;
    var y= document.getElementsByClassName("mySlidesmobile");
-   if(n > y.length) {this.slideIndex =1}
-     if(n < 1) {this.slideIndex = y.length}
+   if(n > y.length) {this.mobileIndex =1}
+     if(n < 1) {this.mobileIndex = y.length}
        for(j=0; j<y.length; j++){
          document.getElementById("mobile"+j).style.display = "none";
        }
-       document.getElementById("mobile"+(this.slideIndex-1)).style.display = "block";
+       document.getElementById("mobile"+(this.mobileIndex-1)).style.display = "block";
  }
 }
 
