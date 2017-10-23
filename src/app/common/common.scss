@@ -42,7 +42,9 @@
 .leave-portal .sidebar{
   display: none;
 }
-
+.navbar-fixed-top {
+    top: none;
+}
 .leave-portal .main-container{
   margin-left: 0px;
 }
