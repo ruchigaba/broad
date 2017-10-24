@@ -27,7 +27,7 @@ commnFunc;
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
    if (this.ClaimNumber == "" || this.ClaimNumber == undefined) {
-      this.commnFunc.alertPopup("Please fill the claim number.","Registration");
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
   
 else if (a.charAt(0).match(/[a-z]/i)){

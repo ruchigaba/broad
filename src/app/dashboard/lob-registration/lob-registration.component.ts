@@ -96,10 +96,10 @@ gotoHelp() {
   {
      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
      if (this.claimNo == "" || this.claimNo == undefined) {
-      this.commnFunc.alertPopup("Please fill the claim number.","Registration");
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
      else if (this.email == "" || this.email == undefined || !re.test(this.email)) {
-      this.commnFunc.alertPopup("Please fill the email in valid format","Registration");
+      this.commnFunc.alertPopup("Please enter the email in valid format","Registration");
     }
   
   else{ }
