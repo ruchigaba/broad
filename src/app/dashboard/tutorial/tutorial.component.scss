@@ -40,11 +40,11 @@
 
 @media screen and (max-width: 450px){
 .w5-display-right {
-    right: 26px;
+    right: 6px;
     top: 45%;
 }
     .w5-display-left{
-    left: 26px;
+    left: 6px;
     top: 45%;
     }
     .mySlides{
@@ -84,5 +84,54 @@
 @media screen and (min-width: 1024px){
     .mySlidesmobile{
         display: none !important;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:940px){
+    
+    .w4-display-left {
+    position: absolute;
+     left: 97px;
+}
+ .w4-display-right{
+         
+    position: absolute;
+     right: 97px;
+    }
+}
+
+@media screen and  (min-width: 1024px) and(max-width: 1366px){
+    .mySlides{
+        display: none !important;
+    }
+    .w4-display-right {
+        position: absolute;
+    
+        right: 121px;
+    }
+    .w4-display-left {
+     
+        left: 120px;
+    }
+}
+
+
+@media screen and  (min-width: 414px) and(max-width: 736px){
+    .w4-display-right {
+        right: 63px;
+    }
+
+    .w4-display-left {
+
+    position: absolute;
+     left: 64px;
+}
+}
+@media screen and (min-width: 800px) and(max-width: 1024px){
+    .w5-display-right{
+        right:40px;
+    }
+    .w5-display-left{
+        left:296px;
     }
 }

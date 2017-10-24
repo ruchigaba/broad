@@ -496,13 +496,17 @@ a.active {
          height:0px !important;
      }
      a.list-group-item-mycom.router-link-active {
-  
-    padding: 5px;
+    border:0;
+    //padding: 5px;
      
 }
 }
 
-
+@media only screen and (max-width: 450px){
+     a.list-group-item-mycom.router-link-active {
+    border:0;
+}
+}
      
 @media only screen and (min-width: 800px) and (max-width: 1024px){
      .menu-2{
@@ -538,7 +542,7 @@ a.active {
     }
 
      .mycomp-tp {
-     margin-left: -11px; 
+     margin-left: 0px; 
      font-size: 11px;
     //  margin-top:10px;
 display: flex !important;
@@ -546,7 +550,7 @@ align-items: center;
      }
      
      .list-group-item-mycom{
-         margin-left:19px;
+         //margin-left:19px;
      }
      .menu-2{
          display:none;
@@ -757,7 +761,7 @@ margin-left:77px ;
 @media only screen and (min-width:500px) and (max-width:575px){
 .navbar-right-1{
         margin-left: 390px !important;
-            margin-top: -6px !important;
+            margin-top: -76px !important;
     }
 }
 @media only screen and (min-width:450px) and (max-width:500px){
@@ -844,7 +848,7 @@ margin-left: 840px;
 @media only screen and (min-width:800px)and(max-width: 850px){
      .navbar-right-1{
     margin-left: 704px !important;
-     margin-top: -66px !important;
+     margin-top: 0px !important;
      }
 }
 @media only screen and (min-width:700px)and(max-width: 800px){

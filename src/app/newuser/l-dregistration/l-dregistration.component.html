@@ -23,7 +23,7 @@
     Enter the Email Address where you received your claim confirmation
  </li>
  <li style="list-style: outside none none;">
- <input class="form-control-data-registration"  style="margin-bottom:20px;" type="email" id="email" oncopy="return false" onpaste="return false" [(ngModel)]="Email" />
+ <input class="form-control-data-registration"  style="margin-bottom:20px;" type="email" id="email" oncopy="return false" onpaste="return false" [(ngModel)]="email" />
  </li>
 
  <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
@@ -37,8 +37,9 @@
 <li class="li-first-to-zip-registration" style="margin-top: 10px;" >
    Claim Number
 </li>
-<li style="list-style: outside none none;">
-<input class="form-control-data-registration"  style="margin-bottom:20px;" type="text" id="claimNumber"  [(ngModel)]="claimnum" />
+<li class="form-control-data-registration" style="list-style: outside none none;">
+<!--<input class="form-control-data-registration"  style="margin-bottom:20px;" type="text" id="claimNumber"  [(ngModel)]="claimnum" />-->
+<span [(ngModel)]="claimnum" ngDefaultControl>{{claimnum}}</span>
 </li>
  </ul>
   <div class="col-xs-12 tititile">
