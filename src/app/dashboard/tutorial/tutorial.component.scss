@@ -127,3 +127,11 @@
      left: 64px;
 }
 }
+@media screen and (min-width: 800px) and(max-width: 1024px){
+    .w5-display-right{
+        right:40px;
+    }
+    .w5-display-left{
+        left:296px;
+    }
+}
