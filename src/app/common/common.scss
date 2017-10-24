@@ -38,13 +38,25 @@
 @import '../dashboard/contact-adjuster/ClaimInfoMessage.component.scss';
 @import '../dashboard/contact-adjuster/contact-adjuster.component.scss';
 @import '../registration-tutorial/registration-tutorial.component.scss';
-
+@import '../dashboard/leavetech-portal/leavetech-portal.component.scss';
 .leave-portal .sidebar{
   display: none;
 }
+ 
 .navbar-fixed-top {
     top: none;
 }
+ 
+.leave-portal .navbar-fixed-top{
+    top: none;
+}
+.leave-portal .container-fluid{
+     display:none !important;
+}
+.leave-portal.navbar.navbar-default.navbar-fixed-top.hidden-xs.ng-scope{
+    display:none;
+}
+ 
 .leave-portal .main-container{
   margin-left: 0px;
 }
