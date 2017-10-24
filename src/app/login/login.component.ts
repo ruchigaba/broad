@@ -265,28 +265,35 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
        // alert('hello' + this.username);
         // this.router.navigate(['./dashboard/claims']);
         // this.navigateSuccess(this.username);
-    if(this.username== 'leavedisability@gmail.com'){
+if(this.username== 'leavedisability@gmail.com'){
   sessionStorage.setItem("Id","leavedisability@gmail.com");
         this.router.navigate(['./dashboard/leaveTechPortal']);
       }
+
 else if(this.username== 'workerscomp@gmail.com'){
     sessionStorage.setItem("Id","workerscomp@gmail.com");
-        this.router.navigate(['./dashboard/claims']);
+    this.router.navigate(['./dashboard/claims']);
       }
       else{
          sessionStorage.setItem("Id","");
        this.router.navigate(['./dashboard/claims']);
       }
- }
-
+      }
 
 
     }, error => {
         this._commonApi.handleError(error, "Login");
     });
   }
-
-
+navigateSuccess(username){
+if (username== 'workerscom@gmail.com') {
+  this.router.navigate(['./dashboard/claims'])
+}
+else if(username== 'leavedisability@gmail.com')
+{
+  this.router.navigate(['leaveTechPortal'])
+}
+}
   // UPDATE APP METHOD
   confirmCallback() {
 

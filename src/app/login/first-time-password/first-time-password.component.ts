@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginComponent } from '../login.component';
 import { CommonAPICall } from '../../shared/shared.service';
+import { CommonFunction } from '../../shared/commonFunction';
 
 @Component({
   selector: 'app-first-time-password',
@@ -11,10 +12,13 @@ import { CommonAPICall } from '../../shared/shared.service';
 })
 export class FirstTimePasswordComponent implements OnInit {
 	type= "password";
+  commnFunc;
 	show=false;
     passResetMsg = sessionStorage.getItem('forgetPassFlag');
 
-  constructor(private _route: Router, private _commonApiCall: CommonAPICall) { }
+  constructor(private _route: Router, private _commonApiCall: CommonAPICall) { 
+     this.commnFunc = new CommonFunction();
+  }
 
   ngOnInit() {
   }
@@ -26,19 +30,19 @@ export class FirstTimePasswordComponent implements OnInit {
       // }
       if (newPassword == undefined || newPassword == '') {
 
-          this._commonApiCall.hideLoaderShowPopup("Enter New Password", "Reset Password");
+          this.commnFunc.alertPopup("Enter New Password", "Reset Password");
       }
       else if(this._commonApiCall.checkPwd(newPassword) != ""){
-        this._commonApiCall.hideLoaderShowPopup(this._commonApiCall.checkPwd(newPassword),"Reset Password");
+        this.commnFunc.alertPopup(this._commonApiCall.checkPwd(newPassword),"Reset Password");
       }
       else if (reNewPassword == undefined || reNewPassword == '') {
 
-          this._commonApiCall.hideLoaderShowPopup("Enter New Password", "Reset Password");
+          this.commnFunc.alertPopup("Enter New Password", "Reset Password");
       }
       else {
           if (newPassword.trim() !== reNewPassword.trim()) {
 
-              this._commonApiCall.hideLoaderShowPopup("Passwords must be same.", "Reset Password");
+              this.commnFunc.alertPopup("Passwords must be same.", "Reset Password");
           }
           else {
               var token = sessionStorage.getItem('token');
@@ -51,7 +55,7 @@ export class FirstTimePasswordComponent implements OnInit {
               this._commonApiCall.putService("users/passwords/firsttime", "Bearer " + token, "application/json", data)
                   .subscribe(res => {
 
-                    this._commonApiCall.hideLoaderShowPopup(res.result, "Reset Password");
+                    this.commnFunc.alertPopup(res.result, "Reset Password");
                   //  this._route.navigate(['']);
                    // var loginObject = new LoginComponent(this._route,this._commonApiCall);
                    // loginObject.loginService(sessionStorage.getItem('userName'),newPassword);
