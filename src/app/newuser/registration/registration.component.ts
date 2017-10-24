@@ -16,7 +16,7 @@ export class RegistrationComponent implements OnInit {
   checkedQues = false;
   securityAns: any;
   count: number = 0;
-
+  fname1:string;
   firstName: string;
   lastName: string;
   email: string;
@@ -89,23 +89,22 @@ export class RegistrationComponent implements OnInit {
     var current_year=new Date().getFullYear();
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (this.firstName == "" || this.firstName == undefined) {
-      this.commnFunc.alertPopup("Please fill the First Name","Registration");
+      this.commnFunc.alertPopup("Please enter the First Name","Registration");
     }
     else if (this.lastName == "" || this.lastName == undefined) {
-      this.commnFunc.alertPopup("Please fill the Last Name","Registration");
+      this.commnFunc.alertPopup("Please enter the Last Name","Registration");
     }
     else if (this.email == "" || this.email == undefined || !re.test(this.email)) {
-      this.commnFunc.alertPopup("Please fill the email in valid format","Registration");
+      this.commnFunc.alertPopup("Please enter the email in valid format","Registration");
     }
     else if (this.reEmail == "" || this.reEmail == undefined || !re.test(this.reEmail)) {
-      this.commnFunc.alertPopup("Please fill the Re-Enter Email in valid format","Registration");
+      this.commnFunc.alertPopup("Please enter the Re-Enter Email in valid format","Registration");
     }
     else if( this.email != this.reEmail) { 
    this.commnFunc.alertPopup("Your Email and Re-enter email does not match.", "Registration" );
-
     }
     else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
-      this.commnFunc.alertPopup("Please fill the 4 digit ssn in number format","Registration");
+      this.commnFunc.alertPopup("Please enter the 4 digit ssn in number format","Registration");
     }
     else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
       this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
@@ -117,7 +116,7 @@ export class RegistrationComponent implements OnInit {
       this.commnFunc.alertPopup("Invalid Year for date of Birth","Registration");
     }
     else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
-      this.commnFunc.alertPopup("Please fill the 5 digit zip code ","Registration");
+      this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Registration");
     }
     else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
       this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
@@ -128,9 +127,9 @@ export class RegistrationComponent implements OnInit {
     else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
       this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
     }
-    else if (this.claimNo == "" || this.claimNo == undefined) {
-      this.commnFunc.alertPopup("Please fill the claim number.","Registration");
-    }
+    // else if (this.claimNo == "" || this.claimNo == undefined) {
+    //   this.commnFunc.alertPopup("Please enter the claim number.","Registration");
+    // }
     else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
       this.commnFunc.alertPopup("Security answers are required","Registration");
     }
@@ -153,29 +152,38 @@ export class RegistrationComponent implements OnInit {
         "securityQuestion3": this.questions[this.index[2]].question,
         "securityAnswer3": this.inputElem[this.index[2]],
         "ssn": this.ssn,
-        "claim_Number": this.claimNo,
+        "claim_Number": this.claimnum,
         "date_of_Birth": this.dobmonth+"-"+this.dobdate+"-"+this.dobyear,
         "zip_Code": this.hzc,
-        "dateOfLoss": this.dolmonth+"-"+this.doldate+"-"+this.dolyear
-
+        "dateOfLoss": this.dolmonth+"-"+this.doldate+"-"+this.dolyear,
+        
       };
-      this._commonApiCall.postService("users", "", "application/json", data)
+        // sessionStorage.setItem("firstName",this.firstName),
+        //   sessionStorage.setItem("lastName",this.lastName),
+        //     sessionStorage.setItem("username",this.email),
+        //       sessionStorage.setItem("ssn",this.ssn),
+        //         sessionStorage.setItem("date_of_Birth",this.dobmonth+"-"+this.dobdate+"-"+this.dobyear),
+        //           sessionStorage.setItem("zip_Code",this.hzc),
+        //             sessionStorage.setItem("dateOfLoss",this.dolmonth+"-"+this.doldate+"-"+this.dolyear),
+
+       this._commonApiCall.postService("users", "", "application/json", data)
         .subscribe(res => {
            document.getElementById("loadingDiv").style.display = "none"; 
+            
 
+           this.commnFunc.alertPopup(res.result,"Registration");
+          // alert(res.errors);
+           this._route.navigate(['']);
+         },
+         error => {
+            document.getElementById("loadingDiv").style.display = "none"; 
 
-          this.commnFunc.alertPopup(res.result,"Registration");
-          alert(res.errors);
-          this._route.navigate(['']);
-        },
-        error => {
-           document.getElementById("loadingDiv").style.display = "none"; 
-
-          // alert('error :'+error.errors);
-          this._commonApiCall.handleError(error,"Registration");
-        })
-        // console.log('hello');
-    }
+           // alert('error :'+error.errors);
+           this._commonApiCall.handleError(error,"Registration");
+         })
+       // console.log('hello');
+     }
+    
   }
   gotoHelp() {
     this._route.navigate(['./help']);
@@ -183,9 +191,7 @@ export class RegistrationComponent implements OnInit {
   goToLogin() {
     this._route.navigate(['']);
   }
-   createNewUser12() {
-     this._route.navigate(['./securityquestions']);
-   }
+  
   //-------------------------------------GET SUPPORT DATE OF LOSS INFO API CALL-----------------------------------
 
   dateOfLossInfo() {

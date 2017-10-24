@@ -114,7 +114,7 @@ export class HealtTicketComponent implements OnInit {
         this.isActive = "2";
         if(this.primaryPharmacyName != "null" || this.primaryBin != "null" || this.primaryPCN != "null"
         || this.primaryGroup != "null" ||  this.primary_pharm_phone_num != "null"){
-          alert("Hello");
+          //alert("Hello");
           this.priscription = false;
           this.primary = true;
           this.description = true;

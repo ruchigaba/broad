@@ -9,30 +9,64 @@ import { CommonAPICall } from '../../shared/shared.service';
   //styleUrls: ['./leave-disability.component.scss']
 })
 export class LeaveDisabilityComponent implements OnInit, OnDestroy {
+   dolImgHide = false;
+    commnFunc;
+  dolImg: string;
+   ssn: string;
+  hzc: string;
+  claimNo: string;
+  dobmonth:string;
+  dobdate:string;
+  dobyear:string;
+  dolmonth:string;
+  doldate:string;
+  dolyear:string;
   constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
-    
+     this.commnFunc = new CommonFunction();
   }
  ngOnInit() {
  document.body.className = 'leaave-disablity';
-     // this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
-  }
+    }
   ngOnDestroy(){
     document.body.className = '';
 
   }
+  createNewUser1(){
+    var current_year=new Date().getFullYear();
+     if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
+      this.commnFunc.alertPopup("Please enter the 4 digit ssn in number format","Registration");
+    }
+    else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
+      this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
+    }
+    else if (this.dobdate == "" || this.dobdate == undefined || parseInt(this.dobdate) >31) {
+      this.commnFunc.alertPopup("Invalid Date for date of Birth","Registration");
+    }
+    else if (this.dobyear == "" || this.dobyear == undefined || parseInt(this.dobyear) < 1900 || parseInt(this.dobyear) > current_year)  {
+      this.commnFunc.alertPopup("Invalid Year for date of Birth","Registration");
+    }
+      else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
+      this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Registration");
+    }
+     else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
+      this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
+    }
+    else if (this.doldate == "" || this.doldate == undefined || parseInt(this.doldate)>31) {
+      this.commnFunc.alertPopup("Invalid Date for date of loss","Registration");
+    }
+    else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
+      this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
+    }
+     else if (this.claimNo == "" || this.claimNo == undefined) {
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
+    }
+    else{
+ 
+    }
+  }
 
 
-//     if (sessionStorage.getItem('Id') == 'leavedisability@gmail.com')  {
-//     document.getElementById("toshow").style.display = 'none';
-//       document.getElementById("titleBar").style.display = 'block';
-//   }
-//    else{
- 
-//   //document.getElementById("toshow").style.display = 'block';
- 
- 
-//     //document.getElementById("titleBar").style.display = 'none';
-//  }
+
  
 
 
@@ -42,7 +76,39 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
 gotoHelp() {
     this.router.navigate(['./help']);
   }
-  goToLogin() {
-    this.router.navigate(['']);
+  goToLeaveDisability() {
+     var x =document.getElementById("worker")
+     var y= document.getElementById("leave")
+      x.setAttribute("className","list-group-item-mycom");
+        y.style.border="1.5px solid #0a9e49";
+        y.style.padding="5px";
+          x.style.border="0px";
+        this.router.navigate(['./dashboard/leaveTechPortal']);
+  }
+   dateOfLossInfo() {
+
+    this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
+      .subscribe(res => {
+        //console.log(res.result[0].base64);
+        this.dolImg = res.result[0].base64;
+        //console.log(this.dolImg);
+        this.dolImgHide = true;
+      },
+    error =>{
+      this._commonApiCall.handleError(error,"Help Date Of Loss");
+    })
+  }
+
+  claimNoInfo() {
+
+    this._commonApiCall.getService("supportContent?Type=HelpClaimNumber", "", "")
+      .subscribe(res => {
+        //console.log(res.result[0].base64);
+        this.dolImg = res.result[0].base64;
+        this.dolImgHide = true;
+      },
+    error =>{
+      this._commonApiCall.handleError(error,"Help Claim Number");
+    })
   }
   }

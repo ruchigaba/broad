@@ -27,7 +27,7 @@ export class RegistrationTutorialComponent implements OnInit {
 
   //-----------------------------------------------------------OnInit Method Start-----------------------------------------------------
   ngOnInit(){
-    this.getTutorial();
+    //this.getTutorial();
   //  document.getElementById('titleBar').style.paddingLeft="0px";  
 
   }
@@ -123,6 +123,10 @@ error =>{
   plusDivs(n) {
     this.showDivs(this.slideIndex += n);
   }
+  mobileShow(n){
+    this.showMob(this.slideIndex +=n);
+
+  }
   showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
@@ -130,7 +134,20 @@ error =>{
     if (n < 1) {this.slideIndex = x.length}
     for (i = 0; i < x.length; i++) {
       document.getElementById("mySlides"+i).style.display = "none";
+      // document.getElementById("mySlides123"+i).style.display = "none";
 }
 document.getElementById("mySlides"+(this.slideIndex-1)).style.display = "block";
+// document.getElementById("mySlides123"+(this.slideIndex-1)).style.display = "block";
+ }
+
+ showMob(n){
+   var j;
+   var y= document.getElementsByClassName("mySlidesmob");
+   if(n > y.length) {this.slideIndex =1}
+     if(n < 1) {this.slideIndex = y.length}
+       for(j=0; j<y.length; j++){
+         document.getElementById("mobile"+j).style.display = "none";
+       }
+       document.getElementById("mobile"+(this.slideIndex-1)).style.display = "block";
  }
 }

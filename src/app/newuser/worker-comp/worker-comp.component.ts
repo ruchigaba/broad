@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { CommonFunction } from '../../shared/commonFunction';
+
 @Component({
   selector: 'app-worker-comp',
   templateUrl: './worker-comp.component.html',
@@ -9,7 +11,10 @@ export class WorkerCompComponent implements OnInit {
 //  claimNum = "";
 //  claimNumber = "";
 ClaimNumber="";
-  constructor(private router: Router) { }
+commnFunc;
+  constructor(private router: Router) {
+    this.commnFunc = new CommonFunction();
+   }
 
   ngOnInit() {
    
@@ -21,8 +26,11 @@ ClaimNumber="";
    let a = this.ClaimNumber;
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
+   if (this.ClaimNumber == "" || this.ClaimNumber == undefined) {
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
+    }
   
-if (a.charAt(0).match(/[a-z]/i)){
+else if (a.charAt(0).match(/[a-z]/i)){
    this.router.navigate(['./lregistration']);
   
 }

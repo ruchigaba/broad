@@ -91,10 +91,10 @@ resetNewUserInfo() {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if (this.email == "" || !re.test(this.email) || this.email == undefined) {
-            this.commnFunc.alertPopup("Please fill the email in valid format","Change User Security Info");
+            this.commnFunc.alertPopup("Please enter the email in valid format","Change User Security Info");
         }
         else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length !== 4) {
-            this.commnFunc.alertPopup("Please fill the 4 digit ssn in number format","Change User Security Info");
+            this.commnFunc.alertPopup("Please enter the 4 digit ssn in number format","Change User Security Info");
         }
         else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
           this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
@@ -106,7 +106,7 @@ resetNewUserInfo() {
           this.commnFunc.alertPopup("Invalid Year for date of Birth","Registration");
         }
         else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
-          this.commnFunc.alertPopup("Please fill the 5 digit zip code ","Registration");
+          this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Registration");
         }
         else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
           this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
@@ -118,7 +118,7 @@ resetNewUserInfo() {
           this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
         }
         else if (this.claimNo == "" || this.claimNo == undefined) {
-            this.commnFunc.alertPopup("Please fill the claim number.","Change User Security Info");
+            this.commnFunc.alertPopup("Please enter the claim number.","Change User Security Info");
         }
         else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
             this.commnFunc.alertPopup("Security answers are required","Change User Security Info");

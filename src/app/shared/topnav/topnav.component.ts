@@ -12,12 +12,13 @@ import {CommonAPICall} from '../../shared/shared.service';
   providers: [CommonAPICall]
 })
 export class TopnavComponent implements OnInit {
-
+routerLinkActive="";
 title = ''; parent: boolean = false;
+claimClicked = false;
 object: any;
 parent2 = true;
 isActive = false;
-  claimClicked = false;
+ 
   htmlElement: any; hideKeyboard: any;
 data: any;
 a;
@@ -46,6 +47,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
+     document.body.className = 'topnav';
+   
+  
+ 
     window.scrollTo(0, 0);
     this.router.events
     .subscribe(event =>{
@@ -115,6 +120,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   //document.getElementById("toshow").style.display = 'block';
   document.getElementById("titleBar").style.display = 'none';
  }
+
+  }
+   ngOnDestroy(){
+    document.body.className = '';
 
   }
   goBack() {
@@ -225,8 +234,12 @@ navchange(){
        // var x =document.getElementById("worker")
       //  x.setAttribute("className","list-group-item-my123 router-link-active");
       //  x.style.border="1.5px solid #0a9e49";
-
+ var x =document.getElementById("worker")
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+     x.setAttribute("className","list-group-item-mycom");
+        x.style.border="1.5px solid #0a9e49";
+        x.style.padding="5px";
+    
      this.router.navigate(['./dashboard/workercomp'])
    
         //this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
@@ -236,7 +249,8 @@ navchange(){
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
         this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
-
+          x.style.border="1.5px solid #0a9e49";
+        x.style.padding="5px";
     //    var x =document.getElementById("worker")
     //   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
     //     x.setAttribute("className","list-group-item-mycom");
@@ -312,7 +326,7 @@ navchange(){
   //   if (this.claimClicked == true) {
   //     sessionStorage.setItem('pagePosition', undefined);
   //     this.claimClicked = false;
-  // }
+  //  }
     }
  moreDropdownFunc(drop){
 
@@ -321,7 +335,7 @@ navchange(){
   
 if (drop.style.display=="none") {
   drop.style.display="block";
-  // window.addEventListener("click",()=>{
+  // window.addEventListener("blur",()=>{
   //     drop.style.display="none";
   //   });
 } else{
