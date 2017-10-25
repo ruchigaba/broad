@@ -90,7 +90,7 @@
           </li>
           
           <li>
-      <a [routerLink]="['settings']" class="w3-bar-item w3-button" (click)="k()">
+               <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="w3-bar-item w3-button" (click)="k()">
             <div class="menu-icon">
            <img src=".\image\settings2_64x64.png" >
             </div>

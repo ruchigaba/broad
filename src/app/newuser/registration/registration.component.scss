@@ -44,7 +44,10 @@ button.btn-help-registration:active {
    .form-control-data-registration{
     @include commommix();
     }
-   
+   .form-control-data-registration-bcg{
+    @include commommix();
+    background-color: #efeeee;
+    }
     .desktop-logo-regist-registration{
     max-height: $desktop-height;
     margin-left: 4%;
