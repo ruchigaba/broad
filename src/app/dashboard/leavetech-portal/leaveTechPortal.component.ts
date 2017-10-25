@@ -28,8 +28,7 @@ export class LeaveTechPortalComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(){
     document.body.className = '';
-
-  }
+   }
 }
 
 // @NgModule({

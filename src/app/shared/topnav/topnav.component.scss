@@ -540,7 +540,10 @@ a.active {
     float: left;
 
     }
-
+// .moreobtion{
+//     background: transparent;
+  
+// }
      .mycomp-tp {
      margin-left: 0px; 
      font-size: 11px;
@@ -892,5 +895,11 @@ margin-left: 840px;
     .titltxtd{
         padding-left:160px !important;
         vertical-align: 0;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width:1024px){
+    a.list-group-item-mycom.router-link-active {
+    border: 0;
     }
 }

@@ -33,7 +33,7 @@ button.btn-help-registration:active {
     top: 5px;
   }
      .whiteblank-registration{
-     @include commonmix22(); @include commonmix22();
+     @include commonmix22();  
     }
 
     .sm-txt-new-registration {
@@ -44,7 +44,10 @@ button.btn-help-registration:active {
    .form-control-data-registration{
     @include commommix();
     }
-   
+   .form-control-data-registration-bcg{
+    @include commommix();
+    background-color: #efeeee;
+    }
     .desktop-logo-regist-registration{
     max-height: $desktop-height;
     margin-left: 4%;

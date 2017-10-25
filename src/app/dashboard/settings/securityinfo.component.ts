@@ -41,6 +41,12 @@ export class SecurityAnswerComponent {
     })
 
   }
+  ngOnInit(){
+		 document.body.className = 'securityinfo';
+	}
+    ngOnDestroy(){
+    document.body.className = '';
+    }
 
 //Method to restrict number of selected checkboxes to 3
 

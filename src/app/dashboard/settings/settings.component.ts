@@ -13,8 +13,18 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
    // document.getElementById('main-container').style.marginLeft='259px';
+   if(document.getElementById("worker").className=="list-group-item-mycom sjsj"){
+      var x= document.getElementById("worker")
+            console.log(x);
+       x.style.border="0px";
+   }
+    document.body.className = 'settings';
     window.scrollTo(0, 0);
     document.getElementsByTagName("html")[0].removeAttribute("class");
+  }
+    ngOnDestroy(){
+    document.body.className = '';
+
   }
 securityinfo(){
   this._routes.navigate(['./dashboard/securityinfo']);
