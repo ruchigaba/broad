@@ -21,7 +21,12 @@ export class ChangePassComponent {
   type="password";
   show=false;
   commnFun = new CommonFunction();
-
+ngOnInit(){
+		 document.body.className = 'changepass';
+	}
+    ngOnDestroy(){
+    document.body.className = '';
+    }
 //function to hide/show password
 
   toggleShow()
