@@ -42,9 +42,16 @@
 .leave-portal .sidebar{
   display: none;
 }
+
 .settings .sidebar{
   display: none;
 }
+
+ 
+.navbar-fixed-top {
+    top: none;
+}
+ 
 .leave-portal .navbar-fixed-top{
     top: none;
 }
@@ -54,7 +61,7 @@
 .leave-portal.navbar.navbar-default.navbar-fixed-top.hidden-xs.ng-scope{
     display:none;
 }
-
+ 
 .leave-portal .main-container{
   margin-left: 0px;
 }

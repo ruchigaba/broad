@@ -49,11 +49,11 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   ngOnInit() {
      document.body.className = 'topnav';
      
-       window.addEventListener("click",()=>{
-         if (document.getElementById("navbar-collapse-id-qwe").style.display=='block') {
-      document.getElementById("navbar-collapse-id-qwe").style.display="none";
-         }
-    });
+    //    window.addEventListener("click",()=>{
+    //      if (document.getElementById("navbar-collapse-id-qwe").style.display=='block') {
+    //   document.getElementById("navbar-collapse-id-qwe").style.display="none";
+    //      }
+    // });
    
   
  
@@ -336,7 +336,7 @@ navchange(){
     }
  moreDropdownFunc(drop){
 
-  alert("Kh");
+  //alert("Kh");
   console.log(window);
   
 if (drop.style.display=="none") {
