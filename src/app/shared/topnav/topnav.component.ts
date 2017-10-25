@@ -58,8 +58,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
       //alert("ruchi");
       if (document.getElementById("togg-dv")) {
            var className = document.getElementById("togg-dv").className;
-          if (className == "hidden-content slide-down")
-            document.getElementById("togg-dv").className = "hidden-content slide-up";
+          if (className == "hidden-content slide-down"){
+            //provider map page more option popup in footer
+            //document.getElementById("togg-dv").className = "hidden-content slide-up";
+          }
 
         }
       let currentRoute = this.route.root;
