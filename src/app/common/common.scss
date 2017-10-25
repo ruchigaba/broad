@@ -46,6 +46,18 @@
 .settings .sidebar{
   display: none;
 }
+.aboutapp .sidebar{
+  display: none;
+}
+.securityinfo .sidebar{
+  display: none;
+}
+.changeid .sidebar{
+  display: none;
+}
+.changepass .sidebar{
+  display: none;
+}
 
  
 .navbar-fixed-top {
@@ -173,7 +185,18 @@ img {
 .settings .mobileFooter{
 display:none;
 }
- 
+.aboutapp .mobileFooter{
+  display: none;
+}
+.securityinfo .mobileFooter{
+  display: none;
+}
+.changeid .mobileFooter{
+  display: none;
+}
+.changepass .mobileFooter{
+  display: none;
+} 
  
     
 } 

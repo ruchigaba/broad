@@ -20,7 +20,12 @@ export class ChangeIdComponent {
 reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
  constructor(private _routes : Router)
   {window.scrollTo(0, 0);}
-
+ngOnInit(){
+		 document.body.className = 'changeid';
+	}
+    ngOnDestroy(){
+    document.body.className = '';
+    }
 // headertoken;
 // data;
 // usrname;

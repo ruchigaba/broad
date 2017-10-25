@@ -39,9 +39,11 @@ export class AboutAppComponent implements OnInit {
 	}
 
 	ngOnInit(){
-		
+		 document.body.className = 'aboutapp';
 	}
-
+    ngOnDestroy(){
+    document.body.className = '';
+    }
 	
 
 	orderDate(char:string){
