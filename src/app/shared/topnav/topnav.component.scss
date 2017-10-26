@@ -753,7 +753,7 @@ margin-left:77px ;
 @media only screen and (min-width:620px) and (max-width: 700px){
 .navbar-right-1{
         margin-left: 510px !important;
-            margin-top: 0px !important;
+            margin-top: -77px !important;
     }
 }
 @media only screen and (min-width:575px)and (max-width:620px){
@@ -818,7 +818,7 @@ margin-left:77px ;
  background-color:#f6f6f6;
    margin-left: 856px;
     width: 116%;
-    margin-top: -5px ;
+    margin-top: -70px ;
 }
 .menu-icon img {
     position: inherit;
@@ -851,7 +851,12 @@ margin-left: 840px;
 @media only screen and (min-width:800px)and(max-width: 850px){
      .navbar-right-1{
     margin-left: 704px !important;
-     margin-top: 0px !important;
+     margin-top: -65px !important;
+     }
+}
+@media only screen and (min-width:450px)and(max-width: 625px){
+     .navbar-right-1{
+  margin-top: -5px !important;
      }
 }
 @media only screen and (min-width:700px)and(max-width: 800px){
@@ -859,7 +864,7 @@ margin-left: 840px;
 
    margin-left: 612px !important;
     
-    margin-top: 0px !important;
+    margin-top: -77px !important;
 }
 }
 /* 

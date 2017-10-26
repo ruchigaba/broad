@@ -577,7 +577,9 @@ color: $li-style-color;
 
 } */
 @media screen and (max-width: 1024px) and (min-width: 801px){
-
+    .search-select {
+        width: 24%;
+    }
 .col-ss-mm-01 {
  width:95% ;
   margin-top: 35px;
@@ -624,6 +626,10 @@ color: $li-style-color;
     padding-bottom: 20px;
      position: fixed;
     text-align: center;
+}
+
+.search-select {
+    width: 23%;
 }
 }
 

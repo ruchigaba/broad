@@ -109,7 +109,7 @@ keyDownFunction(event,username,password){
 }
     loginService(user: string, pass: string) {
       sessionStorage.setItem('local_tempPassword', pass);
-      //console.log(user);
+      console.log(user);
       //console.log(pass);
         if(user==undefined )
       {
@@ -118,6 +118,7 @@ keyDownFunction(event,username,password){
         return false;
       }
       if (typeof user !== "undefined") {
+        console.log(user);
 
       sessionStorage.setItem('userName', user);
       var usernameSplit = user.split("@");
@@ -138,6 +139,7 @@ keyDownFunction(event,username,password){
       return false;
     }
      else if (pass == undefined || pass == '') {
+
       this.commnFunc.alertPopup("Please enter the password.", "Login");
     }
     else if (user.toLowerCase() == 'gdeepika87@gmail.com' || user.toLowerCase() == 'anuj.kumar@primussoft.com' ||
@@ -148,9 +150,7 @@ keyDownFunction(event,username,password){
       sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
 
 
-
-
-
+console.log("else if" + user);
 
           // else{
           //   if(user==undefined && pass!=undefined)
@@ -160,7 +160,6 @@ keyDownFunction(event,username,password){
           //   }
             //else
              // sessionStorage.setItem("local_appUrl", "https://myclaimwebapi.crawco.com/");
-
             //  var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
             //  var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
             
@@ -168,23 +167,19 @@ keyDownFunction(event,username,password){
              
               //var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
            //   var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
-              // let creds = 'grant_type=password&username=' + user + '&password=' + pass;
-               //console.log("creds" + creds);
-
-
-              var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
-           //   var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
-              // let creds = 'grant_type=password&username=username &password=password';
+               let creds = 'grant_type=password&username=' + user + '&password=' + pass;
+               console.log("creds" + creds);
 
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
                      .subscribe(result => {
-                       document.getElementById("loadingDiv").style.display = "none";
+                      
                        // sessionStorage.setItem('userName', user );
                        sessionStorage.setItem('token', result.access_token)
+                        document.getElementById("loadingDiv").style.display = "none";
                        this.getLogindata();
                      },
                      error => {
-                        document.getElementById("loadingDiv").style.display = "none";
+                        
                       // (ruchi's chnage..dnt uncomment)
           this._commonApi.handleError(error, "Login");
         });
@@ -193,13 +188,8 @@ keyDownFunction(event,username,password){
       sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
 
 
-
 //var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
-//var creds = 'grant_type=password&username=' + user + '&password=' + pass;
-
-var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' + '&password=' + 'MyClaim@2017';
-//var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
-
+var creds = 'grant_type=password&username=' + user + '&password=' + pass;
 
 //var creds = 'grant_type=password&username=' + 'kim_hodges@us.crawco.com' + '&password=' + 'Snickers1';
       this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
@@ -265,35 +255,28 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
        // alert('hello' + this.username);
         // this.router.navigate(['./dashboard/claims']);
         // this.navigateSuccess(this.username);
-if(this.username== 'leavedisability@gmail.com'){
+    if(this.username== 'leavedisability@gmail.com'){
   sessionStorage.setItem("Id","leavedisability@gmail.com");
         this.router.navigate(['./dashboard/leaveTechPortal']);
       }
-
 else if(this.username== 'workerscomp@gmail.com'){
     sessionStorage.setItem("Id","workerscomp@gmail.com");
-    this.router.navigate(['./dashboard/claims']);
+        this.router.navigate(['./dashboard/claims']);
       }
       else{
          sessionStorage.setItem("Id","");
        this.router.navigate(['./dashboard/claims']);
       }
-      }
+ }
+
 
 
     }, error => {
         this._commonApi.handleError(error, "Login");
     });
   }
-navigateSuccess(username){
-if (username== 'workerscom@gmail.com') {
-  this.router.navigate(['./dashboard/claims'])
-}
-else if(username== 'leavedisability@gmail.com')
-{
-  this.router.navigate(['leaveTechPortal'])
-}
-}
+
+
   // UPDATE APP METHOD
   confirmCallback() {
 
@@ -415,9 +398,37 @@ else if(username== 'leavedisability@gmail.com')
     //this.router.navigate(['./forgotPass']);
     if (user == undefined || user == '') {
       this.commnFunc.alertPopup("Please Enter the Username.", "Reset Password");
+      return false;
 
     }
+
     else {
+      var aliasUser = user.toLowerCase();
+      if (typeof user !== "undefined") {
+
+      sessionStorage.setItem('userName', user);
+      var usernameSplit = user.split("@");
+      var a = ""; var b = "";
+      a = usernameSplit[1];
+
+      var nameCheck = "BSI_MyClaim_Demo";
+      var finalName = nameCheck.toLowerCase();
+      var firstString = usernameSplit[0].toLowerCase();
+      b = firstString.indexOf(finalName).toFixed(2);
+
+    }
+    var atpos = user.indexOf('@');
+    var dotpos= user.lastIndexOf(".");
+    if(atpos<1 || dotpos< atpos + 2 || dotpos + 2 >= user.length){
+      this.commnFunc.alertPopup("Please Enter The Email In Valid Format.", "Login");
+      return false;
+    }
+    else if(aliasUser == 'akshay301090@gmail.com' || aliasUser == 'myclaimprimus@gmail.com' ||
+      aliasUser == 'myclaimprimus1@gmail.com' || aliasUser == 'testingbroadspireapp@gmail.com' ||
+      aliasUser == 'rmazumdar@primussoft.com' || aliasUser == 'karen.hofmann@us.crawco.com' ||
+      aliasUser== 'pkindig@choosebroadspire.com' || aliasUser == "kautilya.sharma6@primussoft.com" || (b != "-1" && a == "choosebroadspire.com")){
+      sessionStorage.setItem('local_appUrl', 'https://myclaimwebapiuat.crawco.com/');
+
       this._commonApi.getService("SecQuestions?userName=" + user, "", "")
         .subscribe(result => {
           document.getElementById("loadingDiv").style.display = "none";
@@ -430,10 +441,20 @@ else if(username== 'leavedisability@gmail.com')
           
           this._commonApi.handleError(error, "Reset Password");
         })
-
+      }
+      else{
+        sessionStorage.setItem('local_appUrl', 'https://myclaimwebapi.crawco.com/');
+        this._commonApi.getService("SecQuestions?userName=" + user, "", "")
+        .subscribe(result =>{
+          sessionStorage.setItem('secQues', JSON.stringify(result.result.userSecQuestions));
+          sessionStorage.setItem('userName', user);
+          this.router.navigate(['./forgotPass']);
+        },
+        error=>{
+          this._commonApi.handleError(error, "Reset Password");
+        })
+      }
     }
-
-
   }
 
     }
