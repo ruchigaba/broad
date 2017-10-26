@@ -338,17 +338,24 @@ navchange(){
   //     this.claimClicked = false;
   //  }
     }
+
+   
  moreDropdownFunc(drop){
 
   //alert("Kh");
-  console.log(window);
+  console.log(drop);
   
 if (drop.style.display=="none") {
-  drop.style.display="block";
-  // window.addEventListener("click",()=>{
-  //     drop.style.display="none";
-  //   });
+
+  window.addEventListener("click",()=>{
+    // alert("Kh");
+      drop.style.display="none";
+    });
+    setTimeout(()=>{
+      drop.style.display="block";
+    },100)
 } else{
+  // alert("KH2")
   drop.style.display="none";
 }
 // document.getElementsByTagName("LI")
