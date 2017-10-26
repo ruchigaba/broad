@@ -13,11 +13,11 @@ activeFooterMenu = "Claim Info";
   
   ngOnInit() {
 
-    // document.onclick=function() { 
-    //   document.getElementById("togg-dv").className = "hidden-content slide-down"
-    //    };
+     // document.onclick=function() { 
+     //   document.getElementById("togg-dv").className = "hidden-content slide-down"
+     //   };
 
-    document.onclick=function()
+    document.onclick=()=>
      { 
       if (document.getElementById("togg-dv").className!==null) {
         document.getElementById("togg-dv").className = "hidden-content slide-down";
@@ -29,7 +29,7 @@ activeFooterMenu = "Claim Info";
 
   }
 footerProviderClick(){
-  sessionStorage.setItem("refreshProviders","true");
+ sessionStorage.setItem("refreshProviders","true");
 }
 removeMoreOptions(){
   // hide footer  more option on every page init

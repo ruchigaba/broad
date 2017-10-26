@@ -64,8 +64,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
       //alert("ruchi");
       if (document.getElementById("togg-dv")) {
            var className = document.getElementById("togg-dv").className;
-          if (className == "hidden-content slide-down")
-            document.getElementById("togg-dv").className = "hidden-content slide-up";
+          if (className == "hidden-content slide-down"){
+            //provider map page more option popup in footer
+            //document.getElementById("togg-dv").className = "hidden-content slide-up";
+          }
 
         }
       let currentRoute = this.route.root;
@@ -334,17 +336,24 @@ navchange(){
   //     this.claimClicked = false;
   //  }
     }
+
+   
  moreDropdownFunc(drop){
 
   //alert("Kh");
-  console.log(window);
+  console.log(drop);
   
 if (drop.style.display=="none") {
-  drop.style.display="block";
-  // window.addEventListener("click",()=>{
-  //     drop.style.display="none";
-  //   });
+
+  window.addEventListener("click",()=>{
+    // alert("Kh");
+      drop.style.display="none";
+    });
+    setTimeout(()=>{
+      drop.style.display="block";
+    },100)
 } else{
+  // alert("KH2")
   drop.style.display="none";
 }
 // document.getElementsByTagName("LI")
