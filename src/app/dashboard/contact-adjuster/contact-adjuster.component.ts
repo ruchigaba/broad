@@ -109,13 +109,23 @@ this.categVal=mr.innerText;
 
 healthDropdownFunc(dropdownMenu1){
       if (dropdownMenu1.style.display=="none") {
-        dropdownMenu1.style.display="block";
          window.addEventListener("click",()=>{
-      dropdownMenu1.style.display="none";
+               dropdownMenu1.style.display="none";
     })
-        window.addEventListener("touchstart",()=>{
-      dropdownMenu1.style.display="none";
-    })
+    //  window.addEventListener("touchstart",()=>{
+    //  dropdownMenu1.style.display="none";
+    // })
+     setTimeout(()=>{
+      dropdownMenu1.style.display="block";
+    },100)
+
+        // dropdownMenu1.style.display="block";
+    //      window.addEventListener("click",()=>{
+    //   dropdownMenu1.style.display="none";
+    // })
+    //     window.addEventListener("touchstart",()=>{
+    //   dropdownMenu1.style.display="none";
+    // })
         
       }
       else{

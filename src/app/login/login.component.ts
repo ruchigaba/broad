@@ -172,16 +172,16 @@ console.log("else if" + user);
 
                 this._commonApi.postService("authenticate", "", "application/x-www-form-urlencoded", creds)
                      .subscribe(result => {
-                      
+                        document.getElementById("loadingDiv").style.display = "none";/// updated by khushboo
                        // sessionStorage.setItem('userName', user );
                        sessionStorage.setItem('token', result.access_token)
-                        document.getElementById("loadingDiv").style.display = "none";
+                       // document.getElementById("loadingDiv").style.display = "none";
                        this.getLogindata();
                      },
                      error => {
-                        
+                         document.getElementById("loadingDiv").style.display = "none"; ///updated by khushboo
                       // (ruchi's chnage..dnt uncomment)
-          this._commonApi.handleError(error, "Login");
+                        this._commonApi.handleError(error, "Login");
         });
                    }
                        else {
