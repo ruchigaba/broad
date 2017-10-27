@@ -348,7 +348,11 @@ if (drop.style.display=="none") {
   window.addEventListener("click",()=>{
     // alert("Kh");
       drop.style.display="none";
-    });
+    })
+    //  window.addEventListener("touchstart",()=>{
+    // // alert("Kh");
+    //   drop.style.display="none";
+    // })
     setTimeout(()=>{
       drop.style.display="block";
     },100)
