@@ -75,8 +75,8 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !== 'Leave/Disability Registration'){
-            // alert(" Hi :"+sessionStorage.getItem('token'));
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info'){
+             //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data);
@@ -231,7 +231,7 @@ navchange(){
 
   }
     newformat(){   
-    
+   // alert("worker");
   //    let a=sessionStorage.getItem("Id");
   // if(a=='leavedisability@gmail.com'){
   //   this.router.navigate(['./newuser/workercomp'])
@@ -253,6 +253,8 @@ navchange(){
         //this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
       } 
     else{
+      //alert("else");
+      //alert(sessionStorage.getItem("title"));
       // x.style.border="0px";
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
