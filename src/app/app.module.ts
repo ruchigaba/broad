@@ -47,6 +47,7 @@ import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistrati
 import { LeaveDisabilityComponent } from './dashboard/leave-disability/leave-disability.component';
 import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
 import { FirstTimePasswordComponent } from './login/first-time-password/first-time-password.component';
+import { ValidateForgotpassComponent } from './forgot-password/validate-forgotpass/validate-forgotpass.component';
 // -------------------------------------registration tutorial component ends ---------------------------
 
 @NgModule({
@@ -77,7 +78,8 @@ import { FirstTimePasswordComponent } from './login/first-time-password/first-ti
     LDRegistrationComponent,
     LeaveDisabilityComponent,
     SecurityQuestionsComponent,
-    FirstTimePasswordComponent 
+    FirstTimePasswordComponent,
+    ValidateForgotpassComponent 
     // , DynemicUiComponent
   ],
   imports: [
