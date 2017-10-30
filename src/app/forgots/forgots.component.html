@@ -1,0 +1,38 @@
+
+<app-topnav></app-topnav>
+<div class="whiteblank-registration-comp"> 
+  <br>
+ <span class="registuser-registration-comp">REGISTERING USER</span>
+ <br>
+ <br>
+ <ul style="font-size: 14px !important; list-style-type:none;padding: 0 15px;padding-bottom: 40px; ">
+   
+
+  <li class="li-first-to-zip-registration" style="margin-top: 10px;"> 
+       What is your claim number?
+       <span class="sm-txt-new-registration">( Enter Your Claim Number Exactly As Shown on Correspondence from Broadspire )</span>
+   </li>
+  <li>
+     <input type="text" id="firstName" class="form-control-data-registration" [(ngModel)]="ClaimNumber" />
+  </li>
+
+
+   </ul>
+
+   <div style="padding: 0px 15px 0px 15px;">
+      <div class="col-12-registration-comp" style="width:100%;">
+      <div class="col-6-registration-comp" >
+      <button (click)="createNewUser12()" class="btn-continue-registration">Continue</button>
+      </div>
+      <div class="col-6-registration-comp">
+      <button (click)="goToLogin()"  class="btn-cancel-registration">Cancel</button>
+      </div>
+      </div>
+  
+      <div class="col-15-registration-comp">
+        <div class="col-16-registration-comp">
+       <button class="btn-help-registration-comp" (click)="gotoHelp()" >Help</button>
+        </div>
+        </div>
+        </div>
+        </div>

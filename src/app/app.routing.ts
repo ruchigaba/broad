@@ -40,7 +40,7 @@ import { LOBRegistrationComponent } from './dashboard/lob-registration/lob-regis
 import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistration.component';
 import { LeaveDisabilityComponent } from './dashboard/leave-disability/leave-disability.component';
 import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
-
+import { ForgotsComponent } from './forgots/forgots.component'; 
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 import { FirstTimePasswordComponent } from './login/first-time-password/first-time-password.component';
@@ -80,13 +80,13 @@ export const routes = [
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
       { path: 'tutorial', component: TutorialComponent, data: { title: 'tutorial' } },
       { path: 'ClaimInfoMessage', component: ClaimInfoMessageComponent, data: { title: 'Message',parent:'contact-adjuster' } },
-      { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal' } },
+      { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal',parent:'leaveTechPortal' } },
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',parents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },
        { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
         { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
-
+           
     ]
   },
   
@@ -96,11 +96,12 @@ export const routes = [
   { path: 'help', component: HelpComponent, data: { title: 'Help', parent: 'createUser' } },
   { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer'} },
   { path: 'resetPass', component: ResetpasswordComponent, data: { title: 'Reset Password', parent: 'forgotPass'} },
-  { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotPass' } },
+  { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotsecurity' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
   { path: 'forgotHelp', component: ForgothelpComponent, data: { title: 'Help', parent: 'validate' } },
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Registration', parent:'eula' } },
           { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
+           { path: 'forgotsecurity', component: ForgotsComponent, data: { title: 'Validate Registration',  parent:'forgotPass' } },
 ];
 
 export const NavigatableComponents = [
@@ -112,7 +113,7 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent
+   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent
   // HealthTicketComponent 
 
 ];

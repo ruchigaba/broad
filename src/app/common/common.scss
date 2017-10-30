@@ -206,4 +206,8 @@ display:none;
         
   }
   }
- 
+ @media screen and (min-width: 1024px){
+.leave-portal .arrowdiv{
+    display:none;
+}
+ }
