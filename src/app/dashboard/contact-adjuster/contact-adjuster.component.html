@@ -9,7 +9,7 @@
               <span class="caret-con-adj"></span>
               </button>
         <ul #dropdownMenu1 class="dropdown-menu-con-adj" aria-labelledby="dropdownMenu1" style="display:none;">
-           <li  *ngFor="let claim of claims1" ><a (click)="dropboxitemselected(claim,dropdownMenu1)">{{claim.claim_number}}</a></li>
+           <li  *ngFor="let claim of claims1" (click)="dropboxitemselected(claim,dropdownMenu1)"><a >{{claim.claim_number}}</a></li>
         </ul>
       </div>
     </div>

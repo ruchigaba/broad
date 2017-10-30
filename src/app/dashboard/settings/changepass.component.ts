@@ -75,7 +75,7 @@ ngOnInit(){
                }
                  else if(newPassword.trim() !=renewPassword.trim()){
                    //alert("Newpassword and re-entered password must be same");
-                   this.commnFun.alertPopup("Newpassword and re-entered password must be same.", "Password");
+                   this.commnFun.alertPopup("New password and Re-entered password must be same.", "Password");
                  }
                    else{
                      //alert("Password is Changed Successfully");
