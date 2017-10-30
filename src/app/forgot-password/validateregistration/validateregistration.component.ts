@@ -94,7 +94,7 @@ resetNewUserInfo() {
             this.commnFunc.alertPopup("Please enter the email in valid format","Change User Security Info");
         }
         else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length !== 4) {
-            this.commnFunc.alertPopup("Please enter the 4 digit ssn in number format","Change User Security Info");
+            this.commnFunc.alertPopup("Please enter the 4 digit SSN in number format","Change User Security Info");
         }
         else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
           this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
