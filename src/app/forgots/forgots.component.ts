@@ -28,7 +28,7 @@ createNewUser12(){
     }
   
 else if (a.charAt(0).match(/[a-z]/i)){
-   this.router.navigate(['./lregistration']);
+   this.router.navigate(['./validate-forgotpass']);
   
 }
 else{

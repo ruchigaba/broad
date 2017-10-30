@@ -30,6 +30,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetpasswordComponent } from './forgot-password/resetpassword/resetpassword.component';
 
 import { ValidateregistrationComponent } from './forgot-password/validateregistration/validateregistration.component'; 
+import { ValidateForgotpassComponent } from './forgot-password/validate-forgotpass/validate-forgotpass.component'; 
 import { ClaimInfoMessageComponent } from './dashboard/contact-adjuster/claimInfoMessage.component';
 import { EmailSupervisorComponent } from './dashboard/contact-adjuster/EmailSupervisor.component';
 
@@ -102,6 +103,7 @@ export const routes = [
      { path: 'lregistration', component: LDRegistrationComponent, data: { title: 'Registration', parent:'eula' } },
           { path: 'securityquestions', component: SecurityQuestionsComponent, data: { title: 'Registration', parent:'createUser' } },
            { path: 'forgotsecurity', component: ForgotsComponent, data: { title: 'Validate Registration',  parent:'forgotPass' } },
+            { path: 'validate-forgotpass', component: ValidateForgotpassComponent, data: { title: 'Validate Registration',  parent:'forgotPass' } },
 ];
 
 export const NavigatableComponents = [
@@ -113,7 +115,8 @@ export const NavigatableComponents = [
    TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
-   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent
+   LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
+   ValidateForgotpassComponent
   // HealthTicketComponent 
 
 ];
