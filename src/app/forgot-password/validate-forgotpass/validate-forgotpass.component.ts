@@ -13,17 +13,22 @@ import { CommonFunction } from '../../shared/commonFunction';
 export class ValidateForgotpassComponent implements OnInit {
  commnFunc;
   questions: any = [];
-    checkedQues = false;
-    index: any = [];
-     count: number = 0;
-        inputElem: any= [];
+  checkedQues = false;
+  index: any = [];
+   email: string;
+   claimNo: string;
+    claimnum:string;
+   count: number = 0;
+  inputElem: any= [];
   constructor(private _commonApiCall: CommonAPICall,private router: Router) {
     this.commnFunc = new CommonFunction();
-        window.scrollTo(0, 0);
-        this.question();
+    window.scrollTo(0, 0);
+    this.question();
+    this.email = sessionStorage.getItem('userName');
    }
 
   ngOnInit() {
+    this.claimnum= sessionStorage.getItem("claimno");
   }
    question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")
@@ -68,5 +73,24 @@ export class ValidateForgotpassComponent implements OnInit {
   }
   goToLogin() {
     this.router.navigate(['']);
+  }
+  createNewUser12(){
+     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (this.email == "" || !re.test(this.email) || this.email == undefined) {
+            this.commnFunc.alertPopup("Please enter the email in valid format","Change User Security Info");
+        }
+         else if (this.claimNo == "" || this.claimNo == undefined) {
+            this.commnFunc.alertPopup("Please enter the claim number.","Change User Security Info");
+        }
+        else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
+            this.commnFunc.alertPopup("Security answers are required","Change User Security Info");
+        }
+        else if (this.inputElem[this.index[1]] == "" || this.inputElem[this.index[1]] == undefined) {
+            this.commnFunc.alertPopup("Security answers are required","Change User Security Info");
+        }
+        else if (this.inputElem[this.index[2]] == "" || this.inputElem[this.index[2]] == undefined) {
+            this.commnFunc.alertPopup("Security answers are required","Change User Security Info");
+        }
   }
 }

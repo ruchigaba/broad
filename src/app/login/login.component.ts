@@ -179,7 +179,7 @@ console.log("else if" + user);
                        this.getLogindata();
                      },
                      error => {
-                        
+                       document.getElementById("loadingDiv").style.display = "none";  
                       // (ruchi's chnage..dnt uncomment)
           this._commonApi.handleError(error, "Login");
         });
