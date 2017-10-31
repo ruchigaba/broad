@@ -277,14 +277,30 @@ navchange(){
 
   }
   logo(){
-      var className = document.getElementById("logo").className;
+   
+
+    try{
+        var className = document.getElementById("portal").className;
+    }catch(ex){
+        var className = ""
+    }
+    
+     
+      console.log(className)
        var x =document.getElementById("menu");
-       if (className == "logo-id"){
+      //  if (!className){
+      //   x.style.display="none";
+      //  }
+       if(className=="leavetech"){
+      
        x.style.display="block";
-       }
-    else
+    }
+      else{
+
        x.style.display="none";
-       }
+      }
+
+      }
   
    
 
