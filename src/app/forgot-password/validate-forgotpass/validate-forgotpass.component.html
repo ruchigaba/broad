@@ -13,14 +13,12 @@
     <li style="list-style: outside none none;">
         <input class="form-control-data-validregistration" id="email" [(ngModel)]="email" style="padding: 10px; font-size: 16px;" type="email">
         </li>
-
-        
-   <li class="claim-no-validregistration"> 
+     <li class="claim-no-validregistration">
       Claim Number 
-      <span class="sm-txt-new-validregistration">(exactly as shown on the Claim Letter)</span>
-    </li>
-    <li style="list-style: outside none none;">
-    <input class="form-control-data-validregistration" id="claimNo" [(ngModel)]="claimNo" type="text" />
+     <span class="sm-txt-new-validregistration">(exactly as shown on the Claim Letter)</span>
+     </li>
+   <li class="form-control-data-validregistration-bcg" id="claimNo" style="list-style: outside none none;">
+        <span [(ngModel)]="claimnum" ngDefaultControl>{{claimnum}}</span>
     </li>
     </ul>
    <br>
