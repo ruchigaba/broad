@@ -222,16 +222,22 @@ label#modalLabel {
 
   </style>
   <script type="text/javascript">
-  document.addEventListener("backbutton", onBackKeyDown, false);
+  function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+  function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
 
-function onBackKeyDown() {
-  //alert('hello');
-  //document.getElementById("fade-me").style.display="none";
-    // Handle the back button
-} 
+    // Handle the back button
+    //
+    function onBackKeyDown() {
+    document.getElementById("closePop").click();
+    }
 </script>
 </head>
-<body id="pageHtml" >
+<body id="pageHtml" onload="onLoad()" >
 
   <div id="alertPop" class="modal fade in" style="display: none; padding-right: 16px;">
 
