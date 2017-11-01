@@ -81,7 +81,7 @@ export const routes = [
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
       { path: 'tutorial', component: TutorialComponent, data: { title: 'tutorial' } },
       { path: 'ClaimInfoMessage', component: ClaimInfoMessageComponent, data: { title: 'Message',parent:'contact-adjuster' } },
-      { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal',parent:'leaveTechPortal' } },
+      { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal' } },
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',parents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },

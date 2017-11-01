@@ -276,31 +276,31 @@ navchange(){
     }
 
   }
-  logo(){
+  // logo(){
    
 
-    try{
-        var className = document.getElementById("portal").className;
-    }catch(ex){
-        var className = ""
-    }
+  //   try{
+  //       var className = document.getElementById("portal").className;
+  //   }catch(ex){
+  //       var className = ""
+  //   }
     
      
-      console.log(className)
-       var x =document.getElementById("menu");
-      //  if (!className){
-      //   x.style.display="none";
-      //  }
-       if(className=="leavetech"){
+  //     console.log(className)
+  //      var x =document.getElementById("menu");
+  //     //  if (!className){
+  //     //   x.style.display="none";
+  //     //  }
+  //      if(className=="leavetech"){
       
-       x.style.display="block";
-    }
-      else{
+  //      x.style.display="block";
+  //   }
+  //     else{
 
-       x.style.display="none";
-      }
+  //      x.style.display="none";
+  //     }
 
-      }
+  //     }
   
    
 
@@ -336,6 +336,30 @@ navchange(){
   //     this.router.navigate(['./newuser/leaveregistration']);
   //   }
    //}
+  //  new1(){
+      
+  //     try{
+  //       var className = document.getElementById("portal").className;
+  //   }catch(ex){
+  //       var className = ""
+  //   }
+    
+     
+  //     console.log(className)
+  //      var x =document.getElementById("portal");
+  //     //  if (!className){
+  //     //   x.style.display="none";
+  //     //  }
+  //      if(className=="leavetech"){
+   
+  //      x.style.display="none";
+  //   }
+  //     else{
+  //         alert(sessionStorage.getItem("title"));
+  // alert(className)
+  //      x.style.display="block";
+  //     }
+  //  }
   eventCalled() {
 
     sessionStorage.setItem("refreshProviders", "true");
