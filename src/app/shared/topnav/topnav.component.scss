@@ -15,14 +15,7 @@
     max-width: 150px;
      
 }
-.menu-icon-green-logo{
-    text-align: center;
-}
-.menu-icon-green-logo img {
-    width: 32px;
-    vertical-align: middle;
-    
-}
+ 
 .clstext{
 position: fixed;
     right: 20px;
@@ -77,12 +70,7 @@ z-index: 999;
 }
  
     .mycomp-tp {
-        /* width: 12.5%; */
-        // float: left;
- 
-        margin-left: 87px;
         line-height: 5.4;
- 
         font-size: 15px;
         font-weight: 600;
         position: relative;
@@ -119,19 +107,9 @@ a.list-group-item-mycom.router-link-active {
     display: table;
    line-height:  69px;
 }
-// .list-group-item-mycom{
-//   display: inline-block;
-//     height: $list-group-item-height;
-//     position: relative;
-//     vertical-align: middle;
-//     min-height: 50px;
-//     padding: 0px 0px 0px 40px;
-//     width:100%;
-// }
+ 
 .menu-item-img-span-abc{
-       color:white;
-    //  border: 1.5px solid #0a9e49;
-    //    padding: 5px;
+    color:white;
     padding: 5px;
     background-color: #007a33 !important;
 
@@ -140,12 +118,7 @@ a.list-group-item-mycom.router-link-active {
 .a.list-group-item-mycom-2.router-link-active {
     border: 1.5px solid #0a9e49;
 }
-// .menu-item-img-span-123{
-//     color: white;
-//     padding: 5px;
-//     border: 1.5px solid #fff;
-//     background-color: #007a33 !important;
-// }
+ 
 .active span {
      border-bottom: none; 
 }
@@ -155,21 +128,14 @@ a.list-group-item-mycom.router-link-active {
     // background-color: #007a33 !important;
     
 }
-// a.list-group-item-mycom {
-  //  border: 1.5px solid #0a9e49;
-    // padding: 5px;
-    //  background-color: #007a33 !important;
-// }
+ 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #888 !important;
 }
 .menu-2{
        color:white;
 }
-// .mycomp .list-group-item-mycom a.router-link-active {
-//     background-color: #cce4d6 !important;
-//     font-weight: 600;
-// }
+ 
 a.list-group-item-mycom.router-link-active {
 
     // border:1.5px solid #0a9e49;
@@ -226,23 +192,7 @@ a.active {
     clip: rect(0,0,0,0);
     border: 0;
 }
-// .navbar-default .navbar-toggle .icon-bar {
-//     background-color: #888;
-// }
-
  
-/* .twenty{
-    font-weight: 500;
-    margin-left: 35px;
-    display: table-cell;
-    height: 80px;
-    padding-left: 251px;
-    line-height: 80px;
-    min-height: 80px;
-    vertical-align: middle;
-    
-
-} */
 .logoclaim {
     display: table-cell;
     height:$logoclaim-height;
@@ -290,20 +240,15 @@ a.active {
 
 //-------------------------------------------------------Responsive scss for Header start-----------------------------------------------------------
 @media only screen and (max-width: 800px){
-/*  {
-.navbarstyle .fourty {
-   float: none !important;
-     
-} */
+ 
 .w3-dropdown-dr{
  line-height: 40px;
 }
 .commpaa{
-    
-        font-size: 12px;
+    font-size: 12px;
     margin-top: 6px;
     margin-left: 5px;
-        color: black;
+    color: black;
 }
 .navbar-right-1{
  background-color:#efeeee;
@@ -318,12 +263,7 @@ a.active {
     margin-left: 6px;
 }
 
-.menu-icon-green-logo img {
-    position: inherit;
-    width: 55px !important;
-    vertical-align: middle;
-//     margin-left: 30px;
- }
+ 
 .menu-icon{
  
     display: inline-block;
@@ -342,27 +282,23 @@ a.active {
     display: none;
 }
 .fourty {
-    
     height:  69px;
     vertical-align: middle;
     min-height:  69px;
-        white-space: nowrap;
-    
-}
+    white-space: nowrap;
+    }
+
 .clstext {
      font-size: 12px;
     line-height: 70px;
 }
 
 .logo-sec-new-one {
-    
-    height:  69px;
-    
-    min-height:  69px;
-    line-height:  69px;
+     height:  69px;
+     min-height:  69px;
+     line-height:  69px;
     }
 .logoclaim {
-    
     height: 69px;
     min-height:  69px;
     line-height:  69px;
@@ -506,7 +442,7 @@ a.active {
      .mycomp-tp {
      margin-left: 18px;
     font-size: 13px;
-    margin-top: 4px;
+    //margin-top: 4px;
      }
      .menu-2{
          display:none;
@@ -534,7 +470,7 @@ a.active {
      }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 1024px){
 
   
 
@@ -571,9 +507,7 @@ a.active {
     align-items: center;
      }
      
-     .list-group-item-mycom{
-         //margin-left:19px;
-     }
+     
      .menu-2{
          display:none;
      }
@@ -593,9 +527,7 @@ a.active {
          display:none;
      }
 }
-// a.list-group-item-mycom.router-link-active{
-//     border:none;
-// }
+ 
 .navbar-default .navbar-collapse {
     border-color: #e7e7e7;
 }
@@ -658,35 +590,14 @@ a.active {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
-// .navbar-collapse:before,.nav:before{
-//     display: table;
-//     content: " ";
-// }
-// .glyphicon-chevron-left:before {
-//     content: "\e079";
-// }
-// .glyphicon-home:before {
-//     content: "\e021";
-// }
-// .glyphicon-user:before {
-//     content: "\e008";
-// }
-// .glyphicon-log-out:before {
-//     content: "\e163";
-// }
-// .navbar-collapse:after,.nav:before{
-//         clear: both;
-//         display: table;
-//     content: " ";
-    
-
+ 
 
 @media only screen and (min-width: 1024px){
     .moreobtion{
         display:none; 
     }
 }
-////---------Updated By Niruti-------/////
+ 
 
 @media only screen and (min-width:580px) and (max-width:680px){
     .mycomp-tp{
@@ -810,12 +721,7 @@ margin-left:77px ;
     margin-top: 0px !important;
 }
 }
-@media only screen and (max-width: 1024px){
-/*  {
-.navbarstyle .fourty {
-   float: none !important;
-     
-} */
+ 
 .w3-dropdown-dr{
  line-height: 40px;
 }
@@ -853,7 +759,7 @@ margin-left:77px ;
     width:10px;
     float:left;
 }
-}
+
 @media only screen and (min-width:920px)and(max-width: 1024px){
 .navbar-right-1{
     margin-left: 840px;
@@ -909,24 +815,7 @@ a.list-group-item-mycom.router-link-active {
     border: 0;
     }
 }
-
-// @media only screen and (min-width:375px) and (max-width:667px){
-// .navbar-right-1 {
-//     margin-left: 269px !important;
-// }
-// }dia only screen and (min-width:375px) and (max-width:667px){
-// .navbar-right-1 {
-//     margin-left: 269px !important;
-// }
-// }
-
-
-// @media only screen and (min-width:414px) and (max-width:736px){
-//     .navbar-right-1 {
-//     margin-left: 218px !important;
-    
-// }
-// }
+ 
 @media only screen and  (max-width:370px){
     .navbar-right-1{
         max-width: 100px;
@@ -936,30 +825,30 @@ a.list-group-item-mycom.router-link-active {
 
 
 // TOP NAV SCSS
-@media only screen and  (max-width:479px){
+@media only screen and  (max-width:767px){
 .leave-portal{
      .fa-arrow-left:before{
          font-size:13px;
      }
     .headerBack .logo-div.logo-sec-new-one{
-        width:32%;
+        width:30%;
     }
     .logo-div img{
          margin-top:19px;
     }
     #toshow{
-        padding-left: 8px;
+        padding-left: 15px;
         box-sizing: border-box;
     }
     .menu-item-img-span-abc{
          padding:3px;
-         font-size:10px;
+         font-size:9px;
     }
  }
 }
-@media only screen and  (max-width:767px){
+@media only screen and  (max-width:1024px){
         .logo-div{
-         display:flex;
+         //display:flex;
        //  flex-flow:column;
           .mobileruc{
              order:2;
@@ -968,3 +857,25 @@ a.list-group-item-mycom.router-link-active {
           }
     }
 }
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .leave-portal{
+        .logoclaim img{
+            margin-top:19px;
+       }
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .leave-portal{
+    .logoab , .backbutton{
+        display: none;
+    }
+  }
+
+}
+
+// @media only screen and (min-width: 1025px){
+       
+// }
+
