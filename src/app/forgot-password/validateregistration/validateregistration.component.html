@@ -79,14 +79,15 @@
    <li class="claim-no-validregistration"> 
      Claim Number 
      <span class="sm-txt-new-validregistration">(exactly as shown on the Claim Letter)</span>
+   
    </li>
-   <li style="list-style: outside none none;">
-   <input class="form-control-data-validregistration" id="claimNo" [(ngModel)]="claimNo" type="text" />
+ <li class="form-control-data-validregistration-bcg" id="claimNo" style="list-style: outside none none;">
+    <span [(ngModel)]="claimnum" ngDefaultControl>{{claimnum}}</span>
    </li>
 
    <span (click)="claimNoInfo()" class="text-grn-validregistration">Where do I find my Claim Number?</span><br>
     <br>
-    <br>
+   
     <span class="setup-validregistration">Setup Online Reset Information (Select any 3)</span>
  
     </ul>
@@ -103,10 +104,6 @@
     </div>
      
   
-     
-   
-    
-   
 
     <div style="padding: 0px 15px 0 15px;">
     <div class="col-12-validregistration" style="width:100%;">

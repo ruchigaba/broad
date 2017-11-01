@@ -1,0 +1,49 @@
+<app-topnav></app-topnav>
+<div class="whiteblank-validregistration"> 
+    <br>
+   <div class="registuser-validregistration">Please validate your registration information </div>
+   <br>
+    
+   <ul style="font-size: 14px !important; list-style-type:none;padding: 0 15px">
+  
+   <li class="li-first-to-zip-validregistration"> 
+       User ID 
+       
+    </li>
+    <li style="list-style: outside none none;">
+        <input class="form-control-data-validregistration" id="email" [(ngModel)]="email" style="padding: 10px; font-size: 16px;" type="email">
+        </li>
+     <li class="claim-no-validregistration">
+      Claim Number 
+     <span class="sm-txt-new-validregistration">(exactly as shown on the Claim Letter)</span>
+     </li>
+   <li class="form-control-data-validregistration-bcg" id="claimNo" style="list-style: outside none none;">
+        <span [(ngModel)]="claimnum" ngDefaultControl>{{claimnum}}</span>
+    </li>
+    </ul>
+   <br>
+    <div class="col-xs-12 tititile">
+        <div class="setup-registration">Setup Online Reset Information (Select any 3)</div>
+     <ul class="new-user-ul-li-section" *ngFor="let ques of questions; let i = index">
+       <li><input type="checkbox" id="checkBox{{i}}" (change)="checkValue($event,i)">{{ques.question}}</li>
+              <li><input type="text" class="form-control-data-registration" id="securityAns{{i}}" [(ngModel)]="inputElem[i]" style="display:none" /></li>
+       </ul>
+            
+      <div style="padding: 0px 15px 0 15px;">
+                <div class="col-12-registration-ldregist" style="width:100%;">
+                <div class="col-6-registration-ldregist" >
+                <button (click)="createNewUser12()" class="btn-continue-registration">Continue</button>
+                </div>
+                <div class="col-6-registration-ldregist">
+                <button (click)="goToLogin()"  class="btn-cancel-registration">Cancel</button>
+                </div>
+                </div>
+            
+                <div class="col-15-registration-ldregist">
+                  <div class="col-16-registration-ldregist">
+                 <button class="btn-help-registration-ldregist" (click)="gotoHelp()" >Help</button>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>

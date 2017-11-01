@@ -195,3 +195,16 @@ background-color: $btn-cancel-color;
     
 } 
 }
+
+
+
+/****** MAP UPDATED SCSS ********/
+
+.providers-button-cls{
+    text-align:right !important;
+    float:none;
+    margin-top:90px !important;
+     .btnprov{
+          float: none !important;
+     }
+}

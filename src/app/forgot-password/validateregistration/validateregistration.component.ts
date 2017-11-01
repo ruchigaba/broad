@@ -31,9 +31,8 @@ export class ValidateregistrationComponent implements OnInit {
     dolyear:string;
     inputElem: any= [];
     index: any = [];
-
-
-    dolImgHide = false;
+     claimnum:string;
+     dolImgHide = false;
     dolImg: string;
 
   constructor(private _commonApiCall: CommonAPICall, private _route: Router) {
@@ -45,6 +44,7 @@ export class ValidateregistrationComponent implements OnInit {
 
   ngOnInit() {
   	document.getElementById('titleBar').style.paddingLeft="230px";
+      this.claimnum= sessionStorage.getItem("claimno");
   }
   question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")

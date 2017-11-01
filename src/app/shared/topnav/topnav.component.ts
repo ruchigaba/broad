@@ -276,6 +276,15 @@ navchange(){
     }
 
   }
+  logo(){
+      var className = document.getElementById("logo").className;
+       var x =document.getElementById("menu");
+       if (className == "logo-id"){
+       x.style.display="block";
+       }
+    else
+       x.style.display="none";
+       }
   
    
 

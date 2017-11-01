@@ -48,7 +48,7 @@ ngOnInit() {
         root.setAttribute('class', '');
   }
   gotovalidate() {
-  	this._route.navigate(['./validate']);
+  	this._route.navigate(['./forgotsecurity']);
   }
   //-----------------------------------CANCEL SECURITY ANSWER BUTTON-----------------------------
 cancelSecAns() {

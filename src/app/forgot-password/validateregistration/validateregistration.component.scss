@@ -24,6 +24,10 @@ li.vali-pad-nn {
    .form-control-data-validregistration{
      @include commommix();
     }
+    .form-control-data-validregistration-bcg{
+          @include commommix();
+           background-color: #efeeee;
+    }
    
     .desktop-logo-regist-validregistration{
     max-height: $desktop-height;
