@@ -8,8 +8,8 @@
 
   
 
-   <div class="back-arrow">
-   <div  class="arrowdiv"> 
+   <div class="back-arrow ">
+   <div  class="arrowdiv backbutton"> 
    <i aria-hidden="true" class="fa fa-arrow-left"></i>
    <div style="clear:both;"></div>
    </div> 
@@ -17,7 +17,7 @@
    </div>
     
 
-   <div class="logoclaim" *ngIf = "parent2">
+   <div class="logoclaim logoab" *ngIf = "parent2">
    <img alt="." src=".\image\broadspire-logo-eufw.png" >
    </div>
 
@@ -28,13 +28,13 @@
      
    <div class="mycomp-tp">
 
-       <a  id="worker"  (click) = "claimClicked = true;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
+       <a  id="worker"  (click) = "claimClicked = true;eventCalled();lasttitle();newformat()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
       <span class="menu-item-img-span-abc">Worker's Comp</span> 
       </a></div>
       
  
    <div class="mycomp-tp">
- <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="eventCalled();navchange();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
+ <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="eventCalled();navchange();new1()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
   <span class="menu-item-img-span-abc">Absence/Disability</span>
  </a></div>
 
@@ -59,7 +59,7 @@
    </div>-->
 
  <div class="moreobtion" id="tohide" >
-             <span (click)="moreDropdownFunc(drop);logo()"><img src=".\image\more.png"></span>
+             <span (click)="moreDropdownFunc(drop)"><img src=".\image\more.png"></span>
             
  
 
@@ -77,9 +77,9 @@
                 
    
     <div class="w3-dropdown-dr">
-        <div class="menu-icon-green-logo" id="menu" style="display:none;">
+        <!-- <div class="menu-icon-green-logo" id="menu" style="display:none;">
             <img src=".\image\green_logo.png" >
-             </div>
+             </div> -->
             
          <li> 
            <div class="menu-icon">
