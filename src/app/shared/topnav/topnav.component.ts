@@ -98,6 +98,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             this.parent2=false;
             this.parent=true;
           }
+          else if(this.title=="leaveTechPortal"){
+            this.parent2=true;
+            this.parent=true;
+          }
           else{
             
             this.parent2=true;

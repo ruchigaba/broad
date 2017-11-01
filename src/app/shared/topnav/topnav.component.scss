@@ -933,3 +933,38 @@ a.list-group-item-mycom.router-link-active {
          
     }
 }
+
+
+// TOP NAV SCSS
+@media only screen and  (max-width:479px){
+.leave-portal{
+     .fa-arrow-left:before{
+         font-size:13px;
+     }
+    .headerBack .logo-div.logo-sec-new-one{
+        width:32%;
+    }
+    .logo-div img{
+         margin-top:19px;
+    }
+    #toshow{
+        padding-left: 8px;
+        box-sizing: border-box;
+    }
+    .menu-item-img-span-abc{
+         padding:3px;
+         font-size:10px;
+    }
+ }
+}
+@media only screen and  (max-width:767px){
+        .logo-div{
+         display:flex;
+       //  flex-flow:column;
+          .mobileruc{
+             order:2;
+             -webkit-order:2;
+             -moz-order:2;
+          }
+    }
+}
