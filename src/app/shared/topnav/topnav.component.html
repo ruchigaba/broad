@@ -77,9 +77,9 @@
                 
    
     <div class="w3-dropdown-dr">
-        <div class="menu-icon-green-logo" id="menu" style="display:none;">
+        <!-- <div class="menu-icon-green-logo" id="menu" style="display:none;">
             <img src=".\image\green_logo.png" >
-             </div>
+             </div> -->
             
          <li> 
            <div class="menu-icon">
@@ -96,12 +96,13 @@
           </li>
           
           <li>
+          <div class="menu-icon">
                <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="w3-bar-item w3-button" (click)="k()">
-            <div class="menu-icon">
+            
            <img src=".\image\settings2_64x64.png" >
-            </div>
-         <span class="commpaa">Settings</span></a>
+         <span class="commpaa">Settings</span></a> </div>
           </li>
+           
 
           <li>
       <a [routerLink]="['']" class="w3-bar " (click)="k()">
