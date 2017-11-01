@@ -2,10 +2,15 @@
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 
-.topnav .navbar-right-1{
-    
-}
 
+a.w3-bar-item.w3-button {
+    display: inline-block;
+    width: 100%;
+}
+a.w3-bar {
+    display: inline-block;
+    width: 100%;
+}
 .menu-icon img {
     width: 32px;
     vertical-align: middle;
