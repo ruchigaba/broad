@@ -18,6 +18,7 @@ claimClicked = false;
 object: any;
 parent2 = true;
 isActive = false;
+flag=false;
  
   htmlElement: any; hideKeyboard: any;
 data: any;
@@ -306,7 +307,28 @@ navchange(){
 
   //     }
   
+//    new1(){
    
+//   let a=  (sessionStorage.getItem("title"));
+//  this.flag=true;
+//   if(a==(sessionStorage.getItem("title"))){
+//     {
+//        alert("hi")
+//       if(this.flag==true){
+//  this.router.navigate(['dashboard/leaveTechPortal']);
+
+//       }
+//     }
+     
+
+
+// }
+// else{
+ 
+//    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+
+// }
+//    }
 
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
