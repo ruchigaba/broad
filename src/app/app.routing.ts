@@ -95,7 +95,7 @@ export const routes = [
   { path: 'createUser', component: RegistrationComponent, data: { title: 'Registration', parent:'eula' } },
    { path: 'worker-comp', component: WorkerCompComponent, data: { title: 'Registration', parent:'eula' } },
   { path: 'help', component: HelpComponent, data: { title: 'Help', parent: 'createUser' } },
-  { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer'} },
+  { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer',  parent: ''} },
   { path: 'resetPass', component: ResetpasswordComponent, data: { title: 'Reset Password', parent: 'forgotPass'} },
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotsecurity' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
