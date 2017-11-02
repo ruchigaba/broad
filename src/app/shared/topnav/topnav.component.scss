@@ -1,4 +1,4 @@
- 
+  
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 
@@ -11,22 +11,12 @@ a.w3-bar {
     display: inline-block;
     width: 200%;
 }
+.topnav .navbar-right-1{
+}
+
 .menu-icon img {
     width: 32px;
     vertical-align: middle;
-}
- 
-.navbar-right-1{
-    max-width: 150px;
-     
-}
-.menu-icon-green-logo{
-    text-align: center;
-}
-.menu-icon-green-logo img {
-    width: 32px;
-    vertical-align: middle;
-    
 }
 .clstext{
 position: fixed;
@@ -80,14 +70,14 @@ z-index: 999;
     min-height: 80px;
     display: table;
 }
- 
+
     .mycomp-tp {
         /* width: 12.5%; */
         // float: left;
- 
+
         margin-left: 87px;
         line-height: 5.4;
- 
+
         font-size: 15px;
         font-weight: 600;
         position: relative;
@@ -112,7 +102,7 @@ a.list-group-item-mycom.router-link-active {
     right: 10px;
     top: 27px;
 }
- 
+
 .fourty{
     float: left;
     width:  51%;
@@ -155,7 +145,7 @@ a.list-group-item-mycom.router-link-active {
      border-bottom: none; 
 }
 .list-group-item-mycom-2{
- //border:1.5px solid #0a9e49;
+//border:1.5px solid #0a9e49;
     padding:5px;
     // background-color: #007a33 !important;
     
@@ -235,7 +225,7 @@ a.active {
 //     background-color: #888;
 // }
 
- 
+
 /* .twenty{
     font-weight: 500;
     margin-left: 35px;
@@ -301,7 +291,7 @@ a.active {
      
 } */
 .w3-dropdown-dr{
- line-height: 40px;
+line-height: 40px;
 }
 .commpaa{
     
@@ -311,7 +301,7 @@ a.active {
         color: black;
 }
 .navbar-right-1{
- background-color:#efeeee;
+background-color:#efeeee;
    margin-left: 650px;
     width: 100%;
     margin-top: 0px;
@@ -322,15 +312,8 @@ a.active {
     vertical-align: middle;
     margin-left: 6px;
 }
-
-.menu-icon-green-logo img {
-    position: inherit;
-    width: 55px !important;
-    vertical-align: middle;
-//     margin-left: 30px;
- }
 .menu-icon{
- 
+
     display: inline-block;
      
 }
@@ -362,8 +345,7 @@ a.active {
 .logo-sec-new-one {
     
     height:  69px;
-    
-    min-height:  69px;
+   min-height:  69px;
     line-height:  69px;
     }
 .logoclaim {
@@ -474,7 +456,7 @@ a.active {
 }
 
 @media screen and (min-width: 768px) and (max-width:1024px){
- .logoclaim.mobileruc img {
+.logoclaim.mobileruc img {
     display: none;
 }
 .arrowdiv {
@@ -571,9 +553,10 @@ a.active {
 // }
      .mycomp-tp {
      margin-left: 0px; 
-     font-size: 11px;
-    display: flex !important;
-    align-items: center;
+     font-size: 10px;
+    //  margin-top:10px;
+display: flex !important;
+align-items: center;
      }
      
      .list-group-item-mycom{
@@ -604,7 +587,7 @@ a.active {
 .navbar-default .navbar-collapse {
     border-color: #e7e7e7;
 }
- .container-fluid>.navbar-collapse {
+.container-fluid>.navbar-collapse {
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -686,7 +669,7 @@ a.active {
     
 
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1025px){
     .moreobtion{
         display:none; 
     }
@@ -701,7 +684,7 @@ a.active {
 
 @media only screen and (min-width:681px) and (max-width:800px){
     .mycomp-tp{
- margin-left:40px;
+margin-left:40px;
     }
 }
 
@@ -761,7 +744,14 @@ margin-left:77px ;
     }
 }
 
+//-------------For Mobile ---------///
 
+// @media only screen and (max-width:450px){
+//     .mycomp{
+//         margin-left: -3px;
+//     }
+
+// }
 @media only screen and (min-width:700px) and (max-width: 740px){
     .navbar-right-1{
         margin-left: 558px !important;
@@ -770,7 +760,7 @@ margin-left:77px ;
 @media only screen and (min-width:620px) and (max-width: 700px){
 .navbar-right-1{
         margin-left: 510px !important;
-            // margin-top: -77px !important;
+            margin-top: -77px !important;
     }
 }
 @media only screen and (min-width:575px)and (max-width:620px){
@@ -786,7 +776,7 @@ margin-left:77px ;
 }
 @media only screen and (min-width:450px) and (max-width:500px){
     .navbar-right-1{
-        margin-left: 350px !important;
+       margin-left: 350px !important;
     }
 }
 @media only screen and (max-width:450px){
@@ -811,7 +801,7 @@ margin-left:77px ;
 }
 @media only screen and (max-width:345px){
     .navbar-right-1 {
-    margin-left: 218px !important;
+    margin-left: 228px !important;
     margin-top: 0px !important;
 }
 }
@@ -822,7 +812,7 @@ margin-left:77px ;
      
 } */
 .w3-dropdown-dr{
- line-height: 40px;
+line-height: 40px;
 }
 .commpaa{
     
@@ -832,10 +822,10 @@ margin-left:77px ;
         color: black;
 }
 .navbar-right-1{
- background-color:#f6f6f6;
+background-color:#f6f6f6;
    margin-left: 856px;
     width: 116%;
-    // margin-top: -70px ;
+    margin-top: -70px ;
 }
 .menu-icon img {
     position: inherit;
@@ -843,14 +833,8 @@ margin-left:77px ;
     vertical-align: middle;
     margin-left: 6px;
 }
-.menu-icon-green-logo img {
-    position: inherit;
-    width: 55px !important;
-    vertical-align: middle;
-    // margin-left: 30px;
-}
 .menu-icon{
- 
+
     display: inline-block;
      
 }
@@ -860,109 +844,117 @@ margin-left:77px ;
 }
 }
 @media only screen and (min-width:920px)and(max-width: 1024px){
-.navbar-right-1{
-    margin-left: 840px;
+    .navbar-right-1{
+margin-left: 840px;
     }
-}
+    }
 @media only screen and (min-width:851px)and(max-width: 920px){
-.navbar-right-1{
+        .navbar-right-1{
     margin-left: 730px !important;
+   
     margin-top: -66px !important;
-    }
+        }
 }
 @media only screen and (min-width:800px)and(max-width: 850px){
-.navbar-right-1{
-     margin-left: 704px !important;
+     .navbar-right-1{
+    margin-left: 704px !important;
      margin-top: -65px !important;
      }
 }
 @media only screen and (min-width:450px)and(max-width: 625px){
-.navbar-right-1{
-     margin-top: -5px !important;
+     .navbar-right-1{
+  margin-top: -5px !important;
      }
 }
 @media only screen and (min-width:700px)and(max-width: 800px){
 .navbar-right-1{
+
    margin-left: 612px !important;
-   margin-top: -77px !important;
+    
+    margin-top: -77px !important;
 }
+}
+/* 
+//------Updated By Niruti(Eula Page)-----//
+@media only screen and (max-width:767px){
+    .titltxtd{
+        padding-left:102px !important;
+    }
 }
 
+@media only screen and (max-width:800px){
+    .titltxtd{
+        padding-left:20px !important;
+    }
+}
+*/
+
+//-------Updated By Niruti (Eula Responsive)-----//
 @media only screen and (min-width:350px) and (max-width:650px){
-.titltxtd{
-    padding-left:63px !important;
-    vertical-align: 0 ;
+    .titltxtd{
+        padding-left:63px !important;
+        vertical-align: 0 ;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:570px){
+    .titltxtd{
+        padding-left:58px !important;
+        vertical-align: 0 ;
     }
 }
 
- @media only screen and (min-width:320px) and (max-width:570px){
-.titltxtd{
-     padding-left:58px !important;
-     vertical-align: 0 ;
-    }
- }
-
- @media only screen and (min-width:768px) and (max-width:1024px){
-.titltxtd{
-     padding-left:160px !important;
-    vertical-align: 0;
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .titltxtd{
+        padding-left:160px !important;
+        vertical-align: 0;
     }
 }
 
 @media only screen and (min-width:900px) and (max-width:1024px){
-a.list-group-item-mycom.router-link-active {
+    a.list-group-item-mycom.router-link-active {
     border: 0;
     }
 }
 
-// @media only screen and (min-width:375px) and (max-width:667px){
-// .navbar-right-1 {
-//     margin-left: 269px !important;
-// }
-// }dia only screen and (min-width:375px) and (max-width:667px){
-// .navbar-right-1 {
-//     margin-left: 269px !important;
-// }
-// }
 
-
-// @media only screen and (min-width:414px) and (max-width:736px){
-//     .navbar-right-1 {
-//     margin-left: 218px !important;
-    
-// }
-// }
-@media only screen and  (max-width:370px){
-    .navbar-right-1{
-        max-width: 100px;
-         
+//UPDATED ///
+@media only screen and (min-width: 1025px){
+    .leave-portal{
+    .logoab {
+        display: none;
     }
+  }
+
 }
 
 
-// TOP NAV SCSS
-@media only screen and  (max-width:479px){
-.leave-portal{
-     .fa-arrow-left:before{
-         font-size:13px;
-     }
-    .headerBack .logo-div.logo-sec-new-one{
-        width:32%;
-    }
-    .logo-div img{
-         margin-top:19px;
-    }
-    #toshow{
-        padding-left: 8px;
-        box-sizing: border-box;
-    }
-    .menu-item-img-span-abc{
-         padding:3px;
-         font-size:10px;
-    }
- }
-}
 @media only screen and  (max-width:767px){
+    .leave-portal{
+         .fa-arrow-left:before{
+             font-size:13px;
+         }
+        .headerBack .logo-div.logo-sec-new-one{
+            width:30%;
+        }
+        #toshow{
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+        .menu-item-img-span-abc{
+             padding:3px;
+             font-size:9px;
+        }
+     }
+     .navbar-right-1{
+           margin-top:0 !important;
+     }
+     .logo-div img{
+        margin-top:19px;
+      }
+    }
+
+
+    @media only screen and  (max-width:1024px){
         .logo-div{
          display:flex;
        //  flex-flow:column;
@@ -971,5 +963,38 @@ a.list-group-item-mycom.router-link-active {
              -webkit-order:2;
              -moz-order:2;
           }
+    }
+    .navbar-right-1{
+         margin-top:-58px;
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .leave-portal{
+        .logoclaim.mobileruc{
+              display:none;
+        }
+     
+        .menu-item-img-span-abc{
+          padding:3px;
+          font-size:14px;
+      }
+    }
+    .back-arrow{
+        display: table;
+        height: 69px;
+        vertical-align: middle;
+        line-height: 69px;
+        margin-left: 13px;
+    }
+    .logoclaim img{
+        margin-top:19px;
+   }
+}
+
+@media only screen and (min-width:768px) and (max-width:800px){
+    .navbar-right-1{
+         margin-top:-10px !important;
     }
 }

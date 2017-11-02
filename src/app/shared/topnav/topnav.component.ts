@@ -12,6 +12,8 @@ import {CommonAPICall} from '../../shared/shared.service';
   providers: [CommonAPICall]
 })
 export class TopnavComponent implements OnInit {
+
+
 routerLinkActive="";
 title = ''; parent: boolean = false;
 claimClicked = false;
@@ -48,7 +50,13 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
-     document.body.className = 'topnav';
+
+  
+     // if(this.title=="forgotPass"){
+     //   alert(this.title);
+
+     //    document.body.className= 'cnt-ttl-frt-pss';
+     // }
      
     //    window.addEventListener("click",()=>{
     //      if (document.getElementById("navbar-collapse-id-qwe").style.display=='block') {
@@ -83,8 +91,27 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           //console.log(this.data);
           //add title to header
           this.title = this.data.title;
+          //alert(this.title);
           //sessionStorage.setItem("footerHide",this.title);
+if(this.title== "Validate Security Answer"){ 
 
+
+ 
+
+ //alert(this.title);
+
+ document.body.classList.add('topnav-main-new');
+ //document.body.addClass = ('topnav-main-new');
+
+//document.body.className = '';
+
+}
+
+else{
+
+   document.body.className = 'topnav';
+
+}
 
           // add back button to header if route has parent defined
            console.log(this.data.parent + "1: "+ this.data.parent2);
@@ -96,6 +123,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
           }
           else if (this.title=="Registration Tutorial") {
+            alert(this.title);
             this.parent2=false;
             this.parent=true;
           }

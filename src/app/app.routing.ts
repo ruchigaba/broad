@@ -95,7 +95,7 @@ export const routes = [
   { path: 'createUser', component: RegistrationComponent, data: { title: 'Registration', parent:'eula' } },
    { path: 'worker-comp', component: WorkerCompComponent, data: { title: 'Registration', parent:'eula' } },
   { path: 'help', component: HelpComponent, data: { title: 'Help', parent: 'createUser' } },
-  { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer'} },
+  { path: 'forgotPass', component: ForgotPasswordComponent, data: { title: 'Validate Security Answer',  parent: ''} },
   { path: 'resetPass', component: ResetpasswordComponent, data: { title: 'Reset Password', parent: 'forgotPass'} },
   { path: 'validate', component: ValidateregistrationComponent, data: { title: 'Validate Registration', parent: 'forgotsecurity' } },
   { path : 'Registration' , component:RegistrationTutorialComponent , data: {title: 'Registration Tutorial', parent: ''} },
@@ -109,10 +109,11 @@ export const routes = [
 export const NavigatableComponents = [
   LoginComponent, DashboardComponent, EulaComponent, FaqComponent,
   SettingsComponent, SecurityAnswerComponent, ChangeIdComponent, ChangePassComponent,
+  TruncatePipe,
    AboutAppComponent, ClaimsComponent, HealtTicketComponent,
    ProviderComponent, SocialMediaComponent, TutorialComponent, ClaimPaymentdetailsComponent, 
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
-   TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
+   RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
    LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
