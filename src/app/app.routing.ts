@@ -109,10 +109,11 @@ export const routes = [
 export const NavigatableComponents = [
   LoginComponent, DashboardComponent, EulaComponent, FaqComponent,
   SettingsComponent, SecurityAnswerComponent, ChangeIdComponent, ChangePassComponent,
+  TruncatePipe,
    AboutAppComponent, ClaimsComponent, HealtTicketComponent,
    ProviderComponent, SocialMediaComponent, TutorialComponent, ClaimPaymentdetailsComponent, 
    ClaimInfoComponent, ContactAdjusterComponent, EmailSupervisorComponent, NearbyphysiciansMapComponent,
-   TruncatePipe,RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
+   RegistrationComponent,HelpComponent, ForgotPasswordComponent, ValidateregistrationComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
    LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
