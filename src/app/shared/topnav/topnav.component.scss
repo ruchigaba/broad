@@ -2,8 +2,16 @@
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 
+
+a.w3-bar-item.w3-button {
+    display: inline-block;
+    width: 200%;
+}
+a.w3-bar {
+    display: inline-block;
+    width: 200%;
+}
 .topnav .navbar-right-1{
-    
 }
 
 .menu-icon img {
@@ -987,6 +995,6 @@ margin-left: 840px;
 
 @media only screen and (min-width:768px) and (max-width:800px){
     .navbar-right-1{
-         margin-top: -10px !important;
+         margin-top:-10px !important;
     }
 }
