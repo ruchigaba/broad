@@ -77,6 +77,27 @@
 .leave-portal .main-container{
   margin-left: 0px;
 }
+@media only screen and  (max-width:767px){
+.leave-portal{
+     .fa-arrow-left:before{
+         font-size:13px;
+     }
+    .headerBack .logo-div.logo-sec-new-one{
+        width:30%;
+    }
+    .logo-div img{
+         margin-top:19px;
+    }
+    #toshow{
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+    .menu-item-img-span-abc{
+         padding:3px;
+         font-size:9px;
+    }
+ }
+}
  
 /* .mycontain {
     margin: 100px 12px 15px 12px;

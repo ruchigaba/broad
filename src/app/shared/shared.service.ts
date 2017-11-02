@@ -49,7 +49,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-      'Platform': "Browser",
+      'Platform': "native",
       'ApplicationName': 'MyClaim'
 
     })
@@ -80,7 +80,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       'ApplicationVersion': "3.0",
-       'Platform': "Browser",
+       'Platform': "native",
        'ApplicationName': 'MyClaim',
 
 
@@ -119,7 +119,7 @@ this.addDivBeforeBody();
     var headers = new Headers({
       'Authorization': headerToken,
       'Content-Type': contentType,
-      'Platform': "Browser",
+      'Platform': "native",
       'ApplicationName': 'MyClaim'
 
    
@@ -195,7 +195,7 @@ this.addDivBeforeBody();
       classname.addEventListener('click', function cls(event) {
         if (res.json().errorMessage == "Authorization has been denied for this request.") {
           document.getElementById("closeMe").removeEventListener('click', cls);
-         // routevar.navigate(['']);
+          routevar.navigate(['']);
         }
 
 
@@ -204,6 +204,7 @@ this.addDivBeforeBody();
       //updated by ruchi(session expire popup)
      if ((res.json().errorMessage == "Authorization has been denied for this request." ) && (document.getElementsByTagName("html")[0].className !== "login-bg-image")) {
        this.commnFunc.alertPopup("Your session has expired - please sign in again.", errorHeading);
+       routevar.navigate(['']);
 }
 else if( (document.getElementsByTagName("html")[0].className == "login-bg-image")){
  

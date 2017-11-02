@@ -92,25 +92,25 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           this.title = this.data.title;
           //alert(this.title);
           //sessionStorage.setItem("footerHide",this.title);
-if(this.title== "Validate Security Answer"){ 
+//if(this.title== "Validate Security Answer"){ 
 
 
  
 
  //alert(this.title);
 
- document.body.classList.add('topnav-main-new');
+ //document.body.classList.add('topnav-main-new');
  //document.body.addClass = ('topnav-main-new');
 
 //document.body.className = '';
 
-}
+//}
 
-else{
+// else{
 
-   document.body.className = 'topnav';
+//    document.body.className = 'topnav';
 
-}
+// }
 
           // add back button to header if route has parent defined
            console.log(this.data.parent + "1: "+ this.data.parent2);
@@ -122,7 +122,6 @@ else{
 
           }
           else if (this.title=="Registration Tutorial") {
-            alert(this.title);
             this.parent2=false;
             this.parent=true;
           }
