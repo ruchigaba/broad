@@ -129,7 +129,54 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           else if(this.title=="leaveTechPortal"){
             this.parent2=true;
             this.parent=true;
-          }
+            this.flag=true;
+          //  if(this.flag==false)
+          //    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]); 
+          //    else{
+          //         this.router.navigate(['./dashboard/leaveTechPortal']);
+       
+          //    }
+  // //             try{
+  //            var className = document.getElementById("claimspagediv").className;
+  //           }catch(ex){
+  //            var className = ""
+  //          }
+    
+   
+  // // //     console.log(className)
+  //       var y =document.getElementById("leave")  ;
+  // //     //  if (!className){
+  // //     //   x.style.display="none";
+  // //     //  }
+  // //       if(className=="leavetech"){
+         
+  // //       y.style.border="1.5px solid #0a9e49";
+  // //         y.style.padding="5px";
+  // //         // y.style.border="0px";
+  // //              }
+  // //           else{
+  // //              y.style.border="0px";
+  // //               alert(className)
+             
+  // //                }
+  // if(className=="wrapper-claims"){
+  //    y.setAttribute("className","list-group-item-mycom router-link-active");
+  //  // alert("hi")
+   
+  //        y.style.border="0px";
+  // }
+  //          else{
+  //            //  alert(className)
+  //             // alert("hi");
+  //               y.style.border="1.5px solid #0a9e49";
+  //          y.style.padding="5px";
+  
+  // }
+  }
+              
+            
+    
+        
           else{
             
             this.parent2=true;
@@ -251,6 +298,7 @@ navchange(){
           x.setAttribute("className","list-group-item-mycom router-link-active");
           x.style.border="1.5px solid #0a9e49";
           x.style.padding="5px";
+          this.flag=true;
           this.router.navigate(['./dashboard/leaveregistration']);
       } 
       else 
