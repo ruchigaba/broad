@@ -80,11 +80,11 @@ export const routes = [
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
       { path: 'tutorial', component: TutorialComponent, data: { title: 'tutorial' } },
-      { path: 'ClaimInfoMessage', component: ClaimInfoMessageComponent, data: { title: 'Message',parent:'contact-adjuster' } },
+      { path: 'ClaimInfoMessage', component: ClaimInfoMessageComponent, data: { title: 'ClaimInfoMessage',parent:'contact-adjuster' } },
       { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal' } },
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',par,parent:'leaveTechPortal'ents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
-       { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },
+       { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'EmailSupervisor',parents:'contact-adjuster' } },
        { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
         { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
            
