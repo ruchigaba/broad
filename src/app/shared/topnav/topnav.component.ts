@@ -235,26 +235,26 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 //   }
 
 // }
-backarr(){
-  //alert(sessionStorage.getItem("parent"));
-  if (sessionStorage.getItem("parent")=="settings" || sessionStorage.getItem("parent")==""){
+// backarr(){
+//   //alert(sessionStorage.getItem("parent"));
+//   if (sessionStorage.getItem("parent")=="settings" || sessionStorage.getItem("parent")==""){
  
-    document.getElementById("set_id").className+=" aclass1";
-    document.getElementById("leave").classList.remove("aclass1");
-    document.getElementById("worker").classList.remove("aclass1");
-  } else if(sessionStorage.getItem("parent")=="leaveTechPortal" || sessionStorage.getItem("parent")=="") {
-   // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
-    //ELEMENT.classList.remove("active-class1"); 
-    document.getElementById("leave").className+=" aclass1";
-    document.getElementById("worker").classList.remove("aclass1");
-    document.getElementById("set_id").classList.remove("aclass1");
-  }
-  else{
-    document.getElementById("worker").className+=" aclass1";
-     document.getElementById("leave").classList.remove("aclass1");
-    document.getElementById("set_id").classList.remove("aclass1");
-  }
-}
+//     document.getElementById("set_id").className+=" aclass1";
+//     document.getElementById("leave").classList.remove("aclass1");
+//     document.getElementById("worker").classList.remove("aclass1");
+//   } else if(sessionStorage.getItem("parent")=="leaveTechPortal" || sessionStorage.getItem("parent")=="") {
+//    // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
+//     //ELEMENT.classList.remove("active-class1"); 
+//     document.getElementById("leave").className+=" aclass1";
+//     document.getElementById("worker").classList.remove("aclass1");
+//     document.getElementById("set_id").classList.remove("aclass1");
+//   }
+//   else{
+//     document.getElementById("worker").className+=" aclass1";
+//      document.getElementById("leave").classList.remove("aclass1");
+//     document.getElementById("set_id").classList.remove("aclass1");
+//   }
+// }
 hideFooterIOS(){
 
   var theElement = document.getElementById("pageHtml");
