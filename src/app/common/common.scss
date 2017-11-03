@@ -39,6 +39,13 @@
 @import '../dashboard/contact-adjuster/contact-adjuster.component.scss';
 @import '../registration-tutorial/registration-tutorial.component.scss';
 @import '../dashboard/leavetech-portal/leavetech-portal.component.scss';
+
+
+.aclass1{
+  border:1.5px solid #0a9e49  !important;
+  padding:5px !important;
+}
+
 .leave-portal .sidebar{
   display: none;
 }

@@ -20,7 +20,6 @@ claimClicked = false;
 object: any;
 parent2 = true;
 isActive = false;
-flag=false;
  
   htmlElement: any; hideKeyboard: any;
 data: any;
@@ -51,7 +50,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
   ngOnInit() {
 
-  
+ 
      // if(this.title=="forgotPass"){
      //   alert(this.title);
 
@@ -88,10 +87,12 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
              //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
-          //console.log(this.data);
-          //add title to header
+          //console.log(this.data
+          console.log(this.data.parent,"Hello");
+          sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
           this.title = this.data.title;
-          //alert(this.title);
+          //alert(this.data.parent);
           //sessionStorage.setItem("footerHide",this.title);
 //if(this.title== "Validate Security Answer"){ 
 
@@ -123,12 +124,27 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
           }
           else if (this.title=="Registration Tutorial") {
+    
             this.parent2=false;
             this.parent=true;
           }
           else if(this.title=="leaveTechPortal"){
             this.parent2=true;
             this.parent=true;
+          //   if(this.parent==true){
+              //alert(this.parent);
+          //     var x =document.getElementById("leave");  
+          // x.setAttribute("className","list-group-item-mycom router-link-active");
+          // x.style.border="1.5px solid #0a9e49";
+          // x.style.padding="5px";
+         
+          //     //this.navchange();
+          //   }
+          //   else{
+          //      var y =document.getElementById("worker");
+          // y.setAttribute("className","list-group-item-mycom router-link-active");
+          // y.style.border="1.5px solid #0a9e49";
+          //   }
           }
           else{
             
@@ -166,10 +182,12 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
     document.body.className = '';
 
   }
+
   goBack() {
     document.getElementById("loadingDiv").style.display = "none";
     this._location.back();
   }
+ 
  
   enableToggle(event) {
 
@@ -217,6 +235,26 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 //   }
 
 // }
+backarr(){
+  //alert(sessionStorage.getItem("parent"));
+  if (sessionStorage.getItem("parent")=="settings" || sessionStorage.getItem("parent")==""){
+ 
+    document.getElementById("set_id").className+=" aclass1";
+    document.getElementById("leave").classList.remove("aclass1");
+    document.getElementById("worker").classList.remove("aclass1");
+  } else if(sessionStorage.getItem("parent")=="leaveTechPortal" || sessionStorage.getItem("parent")=="") {
+   // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
+    //ELEMENT.classList.remove("active-class1"); 
+    document.getElementById("leave").className+=" aclass1";
+    document.getElementById("worker").classList.remove("aclass1");
+    document.getElementById("set_id").classList.remove("aclass1");
+  }
+  else{
+    document.getElementById("worker").className+=" aclass1";
+     document.getElementById("leave").classList.remove("aclass1");
+    document.getElementById("set_id").classList.remove("aclass1");
+  }
+}
 hideFooterIOS(){
 
   var theElement = document.getElementById("pageHtml");
@@ -334,28 +372,7 @@ navchange(){
 
   //     }
   
-//    new1(){
    
-//   let a=  (sessionStorage.getItem("title"));
-//  this.flag=true;
-//   if(a==(sessionStorage.getItem("title"))){
-//     {
-//        alert("hi")
-//       if(this.flag==true){
-//  this.router.navigate(['dashboard/leaveTechPortal']);
-
-//       }
-//     }
-     
-
-
-// }
-// else{
- 
-//    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
-
-// }
-//    }
 
   lasttitle(){
     console.log(sessionStorage.getItem("title"));
