@@ -10,3 +10,32 @@
 .navbar.navbar-default.navbar-fixed-top.hidden-xs.ng-scope {
     top: -78px;
 }
+
+
+
+/******  IFRAME SCSS  *******/
+
+html{
+    height:100%;
+}
+
+.leave-portal{
+      height:100%;
+        .clear{
+            display:none;
+        }
+      div , css-carousel , .main-container{
+          height:100%;
+      }
+      .leavetech{
+          overflow:hidden;
+      }
+    }
+    @media screen and (min-width:1025px){
+        .leave-portal div{
+              height:auto;
+        }
+        .leave-portal iframe{
+            height:700px;
+        }
+    }
