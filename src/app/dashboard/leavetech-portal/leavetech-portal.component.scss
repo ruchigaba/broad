@@ -31,17 +31,24 @@ html{
           overflow:hidden;
       }
     }
-    @media screen and (max-width:1025px){
-        .leave-portal {
+    @media screen and (max-width:1024px){
+    .leave-portal {
+        overflow: hidden;
 
-overflow: hidden;
+        div{
+              height:auto;
+        }
+         iframe{
+            height:700px;
+        }
 
-div{
-    height:100%;
-}
-.leave-portal iframe{
-  height:700px;
-}
-
+       }
     }
-}
+    @media screen and (min-width:1025px){
+        .leave-portal div{
+            height:auto;
+        }
+        .leave-portal iframe{
+            height:700px;
+        }
+    }
