@@ -32,23 +32,24 @@ html{
       }
     }
     @media screen and (max-width:1024px){
-    .leave-portal {
-        overflow: hidden;
-
-        div{
-              height:auto;
+        .leave-portal {
+            overflow: hidden;
+    
+            div{
+                  height:auto;
+            }
+             iframe{
+                height:700px;
+                overflow: scroll;
+            }
+    
+           }
         }
-         iframe{
-            height:700px;
+        @media screen and (min-width:1025px){
+            .leave-portal div{
+                height:auto;
+            }
+            .leave-portal iframe{
+                height:700px;
+            }
         }
-
-       }
-    }
-    @media screen and (min-width:1025px){
-        .leave-portal div{
-            height:auto;
-        }
-        .leave-portal iframe{
-            height:700px;
-        }
-    }
