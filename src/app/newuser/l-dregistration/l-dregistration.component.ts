@@ -45,6 +45,9 @@ questions: any = [];
     else if( this.email != this.reEmail) { 
    this.commnFunc.alertPopup("Your Email and Re-enter email does not match.", "Registration" );
     }
+     else if (this.claimnum == "" || this.claimnum == undefined) {
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
+    }
     else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
       this.commnFunc.alertPopup("Security answers are required","Registration");
     }

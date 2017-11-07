@@ -40,10 +40,11 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   // attachImg= new SharedImg();
   constructor(private route: Router,private element: ElementRef, private _commonApiCall: CommonAPICall
     , private changeDetectorRef: ChangeDetectorRef, private attachImg: SharedImg,private ComFunc:CommonFunction ) {
-     if (navigator.userAgent.match(/Android/i) && typeof cordova != 'undefined') {
+     if (navigator.userAgent.match(/Android/i) && typeof cordova != 'undefined' ) {
        this.showCameraButton = true;
      }
-  }
+    }
+  
 
   ngOnInit() {
     this.claimNumber=sessionStorage.getItem('claim_number');
@@ -76,12 +77,13 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   //----------- open camera using cordova plugin  only in android starts------------------------------
 
   openCameraAndroid() {
+   
     if (this.profileImg.length < 2) {
       var object = this;
       cordova.plugins.diagnostic.requestCameraAuthorization(function(status) {
 
         if (cordova.plugins.diagnostic.permissionStatus.GRANTED) {
-
+          
           navigator.camera.getPicture(function(imageData) {
             object.onSuccess(imageData, object);
           }, object.onFail, {
@@ -92,6 +94,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
 
         }
         else if (cordova.plugins.diagnostic.permissionStatus.DENIED) {
+          
           console.log("denied");
         }
 
@@ -111,6 +114,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
     this.pdfImg = false;
     var img2 = document.createElement("img");
     img2.src = imageData;
+
     obj.resize(img2, 750, 750, (resized_jpeg, before, after) => {
       // For debugging (size in bytes before and after)
       // this.debug_size_before.push(before);
@@ -143,6 +147,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   //------------------------------CHANGE PROFILE IMAGE FUNCTION-----------------------------------
 
   profileImgChange(input) {
+   
   //  alert(input.files[0]);
     var imgPhoto = this.element.nativeElement.querySelector('.unknown1');
     var inputFileName = this.element.nativeElement.querySelector('.inputFileName');
@@ -156,6 +161,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
         this.pdfImg = false;
         if (this.profileImg.length < 2) {
           this.readFiles(input.files);
+        
         }
         else {
           this.ComFunc.alertPopup("You can not add more than 2 attachments", "Message");
@@ -163,9 +169,11 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
       }
       else {
         if (this.profileImg.length < 2) {
+        
           if (input.files.length > 0 && size < 1) {
             this.getBase64(input.files[0]);
             sessionStorage.setItem('imgName', input.files[0].name);
+          
             let image1 = this.element.nativeElement.querySelector('.unknown1');
             switch (fileFormat) {
               case "pdf":
@@ -200,7 +208,9 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
           }
         }
         else {
+          
           imgPhoto.src = this.transperentImg;
+         
           inputFileName.value = '';
           this.ComFunc.alertPopup("You can not add more than 2 attachments", "Message");
         }
@@ -239,7 +249,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
         sessionStorage.setItem('imgName', files[index].name);
         var img = document.createElement("img");
         img.src = result;
-
+   
         // Send this img to the resize function (and wait for callback)
         this.resize(img, 750, 750, (resized_jpeg, before, after) => {
           // For debugging (size in bytes before and after)
@@ -247,6 +257,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
           //this.debug_size_after.push(after);
           let image1 = this.element.nativeElement.querySelector('.unknown1');
           image1.src = resized_jpeg;
+       
           sessionStorage.setItem('imgSrc', resized_jpeg);
           //console.log(before+" ,"+after);
           // Add the resized jpeg img source to a list for preview

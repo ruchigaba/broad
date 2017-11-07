@@ -12,9 +12,18 @@ float: left;
 width: 50%;
 img {
 padding: 5px;
-width:25%;
+width:20%;
 }
 }
+
+.settings , .securityinfo , .changepass , .aboutapp , .changeid {
+    #main-container{
+      margin-left:0;
+    }
+     
+  } 
+
+
 .extratopcls{
  margin-top: 50px;
 }

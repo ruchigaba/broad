@@ -80,7 +80,7 @@ export class ValidateForgotpassComponent implements OnInit {
     if (this.email == "" || !re.test(this.email) || this.email == undefined) {
             this.commnFunc.alertPopup("Please enter the email in valid format","Change User Security Info");
         }
-         else if (this.claimNo == "" || this.claimNo == undefined) {
+         else if (this.claimnum == "" || this.claimnum == undefined) {
             this.commnFunc.alertPopup("Please enter the claim number.","Change User Security Info");
         }
         else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {

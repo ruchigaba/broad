@@ -117,7 +117,7 @@ resetNewUserInfo() {
         else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
           this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
         }
-        else if (this.claimNo == "" || this.claimNo == undefined) {
+        else if (this.claimnum == "" || this.claimnum == undefined) {
             this.commnFunc.alertPopup("Please enter the claim number.","Change User Security Info");
         }
         else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
@@ -133,7 +133,7 @@ resetNewUserInfo() {
 
             var data = {
                 "username": this.email,
-                "claim_Number": this.claimNo,
+                "claim_Number":  this.claimnum,
                 "loss_Date": this.dolmonth+"-"+this.doldate+"-"+this.dolyear,
                 "ssn": this.ssn,
                 "date_of_Birth": this.dobmonth+"-"+this.dobdate+"-"+this.dobyear,
@@ -164,14 +164,26 @@ resetNewUserInfo() {
     //-------------------------------------GET SUPPORT DATE OF LOSS INFO API CALL-----------------------------------
 
     dateOfLossInfo() {
+       
+        // this.dolImgHide = true;
+        // this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
+        //     .subscribe(res => {
+        //         this.dolImg = res.result[0].base64;
+        //     },
+        //   error =>{
+        //     this._commonApiCall.handleError(error,"Help Date Of Loss");
+        //   })
+       
+    this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
+      .subscribe(res => {
+        //console.log(res.result[0].base64);
+        this.dolImg = res.result[0].base64;
+        //console.log(this.dolImg);
         this.dolImgHide = true;
-        this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
-            .subscribe(res => {
-                this.dolImg = res.result[0].base64;
-            },
-          error =>{
-            this._commonApiCall.handleError(error,"Help Date Of Loss");
-          })
+      },
+    error =>{
+      this._commonApiCall.handleError(error,"Help Date Of Loss");
+    }) 
     }
     close() {
         this.dolImgHide = false;

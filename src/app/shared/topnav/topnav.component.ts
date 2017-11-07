@@ -194,7 +194,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
           // y.setAttribute("className","list-group-item-mycom router-link-active");
           // y.style.border="1.5px solid #0a9e49";
           //   }
-          }
+         }
 
           else{
             
@@ -285,28 +285,29 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 //   }
 
 // }
-backarr(){
-  //alert(sessionStorage.getItem("parent"));
-  if (sessionStorage.getItem("parent")=="settings"){
- alert("hi")
-    document.getElementById("set_id").className+=" aclass1";
-    document.getElementById("leave").classList.remove("aclass1");
-    document.getElementById("worker").classList.remove("aclass1");
-  } else if(sessionStorage.getItem("parent")=="leaveTechPortal") {
-    alert("bie")
-   // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
-    //ELEMENT.classList.remove("active-class1"); 
-    document.getElementById("leave").className+=" aclass1";
-    document.getElementById("worker").classList.remove("aclass1");
-    document.getElementById("set_id").classList.remove("aclass1");
-  }
-  else{
-    alert("yo")
-    document.getElementById("worker").className+=" aclass1";
-     document.getElementById("leave").classList.remove("aclass1");
-    document.getElementById("set_id").classList.remove("aclass1");
-  }
-}
+
+
+// backarr(){
+//   //alert(sessionStorage.getItem("parent"));
+//   if (sessionStorage.getItem("parent")=="settings" || sessionStorage.getItem("parent")==""){
+ 
+//     document.getElementById("set_id").className+=" aclass1";
+//     document.getElementById("leave").classList.remove("aclass1");
+//     document.getElementById("worker").classList.remove("aclass1");
+//   } else if(sessionStorage.getItem("parent")=="leaveTechPortal" || sessionStorage.getItem("parent")=="") {
+//    // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
+//     //ELEMENT.classList.remove("active-class1"); 
+//     document.getElementById("leave").className+=" aclass1";
+//     document.getElementById("worker").classList.remove("aclass1");
+//     document.getElementById("set_id").classList.remove("aclass1");
+//   }
+//   else{
+//     document.getElementById("worker").className+=" aclass1";
+//      document.getElementById("leave").classList.remove("aclass1");
+//     document.getElementById("set_id").classList.remove("aclass1");
+//   }
+// }
+
 hideFooterIOS(){
 
   var theElement = document.getElementById("pageHtml");

@@ -617,5 +617,10 @@ button.md-btn.md-raised.btn-block.p-h-md {
         width: 182px;
 }
 }
+ @media screen and (max-width:450px){
+     .button-save-msg-pg{
+         margin-top:0px;
+     }
+ }
 
 
