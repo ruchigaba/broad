@@ -59,22 +59,22 @@ export class ForgothelpComponent implements OnInit {
     helpSend() {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (this.name == undefined || this.name == '') {
-            this.commnFunc.alertPopup("Enter Name","Support Center");
+            this.commnFunc.alertPopup("Enter Name","Help");
         }
         else if (this.email == undefined || this.email == ''||!re.test(this.email)) {
             this.commnFunc.alertPopup("Enter Email in valid format.","Help");
         }
         else if (this.subject == undefined || this.subject == '') {
-            this.commnFunc.alertPopup("Enter Subject","Support Center");
+            this.commnFunc.alertPopup("Enter Subject","Help");
         }
         else if (this.telephone == undefined || this.telephone == ''||this.telephone.toString().length < 10) {
-            this.commnFunc.alertPopup("Contact Number should be of 10 digits.","Support Center");
+            this.commnFunc.alertPopup("Contact Number should be of 10 digits.","Help");
         }
         else if (this.claimNm == undefined || this.claimNm == '') {
-            this.commnFunc.alertPopup("Enter Claim Number","Support Center");
+            this.commnFunc.alertPopup("Enter Claim Number","Help");
         }
         else if (this.canIHelp == undefined || this.canIHelp == '') {
-            this.commnFunc.alertPopup("Enter Description How to Help you","Support Center");
+            this.commnFunc.alertPopup("Enter Description How to Help you","Help");
         }
         else {
             //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
@@ -94,12 +94,12 @@ export class ForgothelpComponent implements OnInit {
                 }
             this._commonApiCall.postService("emails/send", "", "application/json", data)
                 .subscribe(res => {
-                    this.commnFunc.alertPopup(res.result.email_status,"Support Center");
+                    this.commnFunc.alertPopup(res.result.email_status,"Help");
 
                     this._route.navigate(['./createNewUser']);
                 },
                 error => {
-                    this._commonApiCall.handleError(error,"Support Center");
+                    this._commonApiCall.handleError(error,"Help");
                 })
         }
 
