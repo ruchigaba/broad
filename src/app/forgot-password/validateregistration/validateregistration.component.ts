@@ -45,6 +45,7 @@ export class ValidateregistrationComponent implements OnInit {
   ngOnInit() {
   	document.getElementById('titleBar').style.paddingLeft="230px";
       this.claimnum= sessionStorage.getItem("claimno");
+        localStorage.setItem("Help","validate-Registration");
   }
   question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")
@@ -119,6 +120,7 @@ resetNewUserInfo() {
         }
         else if (this.claimnum == "" || this.claimnum == undefined) {
             this.commnFunc.alertPopup("Please enter the claim number.","Validate Registration");
+
         }
         else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
             this.commnFunc.alertPopup("Security answers are required","Validate Registration");
@@ -200,7 +202,7 @@ resetNewUserInfo() {
           })
     }
   gotoHelp() {
-  	this._route.navigate(['forgotHelp']);
+  	this._route.navigate(['./forgotHelp']);
   }
 
 }

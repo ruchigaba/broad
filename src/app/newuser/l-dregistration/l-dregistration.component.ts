@@ -27,6 +27,7 @@ questions: any = [];
   }
   ngOnInit() {
      this.claimnum= sessionStorage.getItem("claimno");
+      localStorage.setItem("Help","leavedisability-Registration");
   }
   createNewUser12(){
      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

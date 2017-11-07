@@ -29,6 +29,7 @@ export class ValidateForgotpassComponent implements OnInit {
 
   ngOnInit() {
     this.claimnum= sessionStorage.getItem("claimno");
+      localStorage.setItem("Help","validateforgot-Registration");
   }
    question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")
@@ -69,7 +70,7 @@ export class ValidateForgotpassComponent implements OnInit {
         }
     }
  gotoHelp() {
-    this.router.navigate(['./help']);
+    this.router.navigate(['./forgotHelp']);
   }
   goToLogin() {
     this.router.navigate(['']);

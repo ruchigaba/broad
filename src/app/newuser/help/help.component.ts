@@ -80,7 +80,22 @@ helpSend(){
     this._commonApiCall.postService("emails/send", "", "application/json", data)
       .subscribe(res => {
         this.commnFunc.alertPopup(res.result.email_status,"Help");
-        this._route.navigate(['./createUser']);
+      if(localStorage.getItem("Help")=="workercomp-Registration")
+                    {  
+                    this._route.navigate(['./createUser']);
+                   }
+            else if(localStorage.getItem("Help")=="Registration"){
+                        this._route.navigate(['./worker-comp']); 
+                   }
+                    else if(localStorage.getItem("Help")=="leavedisability-Registration"){
+                        this._route.navigate(['./lregistration']); 
+                   }
+                    else if(localStorage.getItem("Help")=="Leave-Registration"){
+                        this._route.navigate(['./dashboard/workercomp']); 
+                   }
+                   else if(localStorage.getItem("Help")=="Worker-Registration"){
+                        this._route.navigate(['./dashboard/leaveregistration']); 
+                   }       
       },
       error => {
         this._commonApiCall.handleError(error,"Help");
@@ -92,6 +107,22 @@ helpSend(){
 }
 // Help Cancel Button Method
 helpCancel() {
-  this._route.navigate(['./createUser']);
+   if(localStorage.getItem("Help")=="workercomp-Registration")
+                    {  
+                    this._route.navigate(['./createUser']);
+                   }
+            else if(localStorage.getItem("Help")=="Registration"){
+                        this._route.navigate(['./worker-comp']); 
+                   }
+                    else if(localStorage.getItem("Help")=="leavedisability-Registration"){
+                        this._route.navigate(['./lregistration']); 
+                   }
+                    else if(localStorage.getItem("Help")=="Leave-Registration"){
+                        this._route.navigate(['./dashboard/workercomp']); 
+                   }
+                   else if(localStorage.getItem("Help")=="Worker-Registration"){
+                        this._route.navigate(['./dashboard/leaveregistration']); 
+                   }   
+  
 }
 }

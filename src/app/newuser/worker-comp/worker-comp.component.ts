@@ -17,7 +17,7 @@ commnFunc;
    }
 
   ngOnInit() {
-   
+     localStorage.setItem("Help","Registration");
 
 }
  createNewUser12(){
