@@ -90,7 +90,7 @@ cancelSecAns() {
                 error => {
                   //-------Updated By Niruti-----//
                    document.getElementById("loadingDiv").style.display = "none";
-                    this._commonApiCall.handleError(error,"Validate User Security Answer");
+                    this._commonApiCall.handleError(error,"Validate Security Answer");
                 })
         }
         //END SECURITY ANSWER MACHING SERVICE

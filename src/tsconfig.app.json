@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "angular.module": "es2015",
+    "paths": { "@angular/*": ["../node_modules/@angular/*"] },
     "baseUrl": "",
     "types": []
   },

@@ -91,49 +91,48 @@ resetNewUserInfo() {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if (this.email == "" || !re.test(this.email) || this.email == undefined) {
-            this.commnFunc.alertPopup("Please enter the email in valid format","Change User Security Info");
+            this.commnFunc.alertPopup("Please enter the email in valid format","Validate Registration");
         }
         else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length !== 4) {
-            this.commnFunc.alertPopup("Please enter the 4 digit SSN in number format","Change User Security Info");
+            this.commnFunc.alertPopup("Please enter the 4 digit SSN in number format","Validate Registration");
         }
         else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
-          this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
+          this.commnFunc.alertPopup("Invalid Month for date of Birth","Validate Registration");
         }
         else if (this.dobdate == "" || this.dobdate == undefined || parseInt(this.dobdate) >31) {
-          this.commnFunc.alertPopup("Invalid Date for date of Birth","Registration");
+          this.commnFunc.alertPopup("Invalid Date for date of Birth","Validate Registration");
         }
         else if (this.dobyear == "" || this.dobyear == undefined || parseInt(this.dobyear) < 1900 || parseInt(this.dobyear) > current_year)  {
-          this.commnFunc.alertPopup("Invalid Year for date of Birth","Registration");
+          this.commnFunc.alertPopup("Invalid Year for date of Birth","Validate Registration");
         }
         else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
-          this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Registration");
+          this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Validate Registration");
         }
         else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
-          this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
+          this.commnFunc.alertPopup("Invalid Month for date of loss","Validate Registration");
         }
         else if (this.doldate == "" || this.doldate == undefined || parseInt(this.doldate)>31) {
-          this.commnFunc.alertPopup("Invalid Date for date of loss","Registration");
+          this.commnFunc.alertPopup("Invalid Date for date of loss","Validate Registration");
         }
         else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
-          this.commnFunc.alertPopup("Invalid Year for date of loss","Registration");
+          this.commnFunc.alertPopup("Invalid Year for date of loss","Validate Registration");
         }
         else if (this.claimNo == "" || this.claimNo == undefined) {
-            this.commnFunc.alertPopup("Please enter the claim number.","Change User Security Info");
-        }
+            this.commnFunc.alertPopup("Please enter the claim number.","Validate Registration");     }
         else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
-            this.commnFunc.alertPopup("Security answers are required","Change User Security Info");
+            this.commnFunc.alertPopup("Security answers are required","Validate Registration");
         }
         else if (this.inputElem[this.index[1]] == "" || this.inputElem[this.index[1]] == undefined) {
-            this.commnFunc.alertPopup("Security answers are required","Change User Security Info");
+            this.commnFunc.alertPopup("Security answers are required","Validate Registration");
         }
         else if (this.inputElem[this.index[2]] == "" || this.inputElem[this.index[2]] == undefined) {
-            this.commnFunc.alertPopup("Security answers are required","Change User Security Info");
+            this.commnFunc.alertPopup("Security answers are required","Validate Registration");
         }
         else {
 
             var data = {
                 "username": this.email,
-                "claim_Number": this.claimNo,
+                "claim_Number":  this.claimnum,
                 "loss_Date": this.dolmonth+"-"+this.doldate+"-"+this.dolyear,
                 "ssn": this.ssn,
                 "date_of_Birth": this.dobmonth+"-"+this.dobdate+"-"+this.dobyear,
@@ -154,7 +153,7 @@ resetNewUserInfo() {
                 error => {
                     ////--------Updated By Niruti--------////
                      document.getElementById("loadingDiv").style.display = "none";
-                    this._commonApiCall.handleError(error,"Change User Security Info");
+                    this._commonApiCall.handleError(error,"Validate Registration");
                 })
         }
     }
@@ -164,14 +163,26 @@ resetNewUserInfo() {
     //-------------------------------------GET SUPPORT DATE OF LOSS INFO API CALL-----------------------------------
 
     dateOfLossInfo() {
+       
+        // this.dolImgHide = true;
+        // this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
+        //     .subscribe(res => {
+        //         this.dolImg = res.result[0].base64;
+        //     },
+        //   error =>{
+        //     this._commonApiCall.handleError(error,"Help Date Of Loss");
+        //   })
+       
+    this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
+      .subscribe(res => {
+        //console.log(res.result[0].base64);
+        this.dolImg = res.result[0].base64;
+        //console.log(this.dolImg);
         this.dolImgHide = true;
-        this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
-            .subscribe(res => {
-                this.dolImg = res.result[0].base64;
-            },
-          error =>{
-            this._commonApiCall.handleError(error,"Help Date Of Loss");
-          })
+      },
+    error =>{
+      this._commonApiCall.handleError(error,"Help Date Of Loss");
+    }) 
     }
     close() {
         this.dolImgHide = false;

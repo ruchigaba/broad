@@ -2,7 +2,6 @@
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 
-
 a.w3-bar-item.w3-button {
     display: inline-block;
     width: 200%;
@@ -46,7 +45,7 @@ position: fixed;
     }
 .active2{
     outline:none;
-    // background-color: #cce4d6;
+   // background-color: #cce4d6;
 }
 // .activeFooterMenu{
 //     background-color: transparent;
@@ -185,11 +184,10 @@ a.active {
     // padding:5px;
     
 
-
 }
 .abc{
     width:20px;
-    float:left;
+   float:left;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #ddd;
@@ -224,7 +222,6 @@ a.active {
 // .navbar-default .navbar-toggle .icon-bar {
 //     background-color: #888;
 // }
-
 
 /* .twenty{
     font-weight: 500;
@@ -283,7 +280,6 @@ a.active {
     min-height: 69px;
     display: table;
 }
-
 
 //-------------------------------------------------------Responsive scss for Header start-----------------------------------------------------------
 @media only screen and (max-width: 800px){
@@ -470,7 +466,6 @@ background-color:#efeeee;
     top: 0px;   
 }
 }
-
 
 @media screen and (min-width: 600px) and (max-width:980px){
 /* .twenty {
@@ -674,7 +669,6 @@ align-items: center;
 //     content: " ";
     
 
-
 @media only screen and (min-width: 1025px){
     .moreobtion{
         display:none; 
@@ -736,13 +730,11 @@ margin-left:43px !important;
     }
 }
 
-
 @media only screen and (min-width:1269) and (max-width:1449px){
     .mycomp-tp{
 margin-left:55px ;
     }
 }
-
 
 @media only screen and (min-width:1450px) and (max-width:1540px){
     .mycomp-tp{
@@ -922,7 +914,6 @@ margin-left: 840px;
     }
 }
 
-
 //UPDATED ///
 @media only screen and (min-width: 1025px){
     .leave-portal{
@@ -932,7 +923,6 @@ margin-left: 840px;
   }
 
 }
-
 
 @media only screen and  (max-width:767px){
     .leave-portal{
@@ -959,7 +949,6 @@ margin-left: 840px;
       }
     }
 
-
     @media only screen and  (max-width:1024px){
         .logo-div{
          display:flex;
@@ -974,7 +963,6 @@ margin-left: 840px;
          margin-top:-58px;
     }
 }
-
 
 @media only screen and (min-width:768px) and (max-width:1024px){
     .leave-portal{
@@ -1004,3 +992,5 @@ margin-left: 840px;
          margin-top:-10px !important;
     }
 }
+
+

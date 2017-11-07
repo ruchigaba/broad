@@ -11,8 +11,6 @@
     top: -78px;
 }
 
-
-
 /******  IFRAME SCSS  *******/
 
 html{
@@ -40,7 +38,7 @@ html{
             }
              iframe{
                 height:700px;
-                overflow: scroll;
+                // overflow: scroll;
             }
     
            }
@@ -52,4 +50,10 @@ html{
             .leave-portal iframe{
                 height:700px;
             }
+
         }
+
+
+
+        
+
