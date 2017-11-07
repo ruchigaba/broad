@@ -117,8 +117,10 @@ resetNewUserInfo() {
         else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
           this.commnFunc.alertPopup("Invalid Year for date of loss","Validate Registration");
         }
-        else if (this.claimNo == "" || this.claimNo == undefined) {
-            this.commnFunc.alertPopup("Please enter the claim number.","Validate Registration");     }
+        else if (this.claimnum == "" || this.claimnum == undefined) {
+            this.commnFunc.alertPopup("Please enter the claim number.","Validate Registration");
+
+        }
         else if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
             this.commnFunc.alertPopup("Security answers are required","Validate Registration");
         }
