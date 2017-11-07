@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, Event } from '@angular/router';
 import {Location} from '@angular/common';
 import {CommonAPICall} from '../../shared/shared.service';
 
@@ -13,7 +13,7 @@ import {CommonAPICall} from '../../shared/shared.service';
 })
 export class TopnavComponent implements OnInit {
 
-
+previousUrl: string;
 routerLinkActive="";
 title = ''; parent: boolean = false;
 claimClicked = false;
@@ -28,7 +28,7 @@ b;
 WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 
 
-  constructor(private route: ActivatedRoute, private router: Router, private _location: Location, private _commonApiCall: CommonAPICall) {
+  constructor(private route: ActivatedRoute,  private router: Router, private _location: Location, private _commonApiCall: CommonAPICall) {
   var root = document.getElementsByTagName('html')[0];
   if (sessionStorage.getItem('token') == undefined || sessionStorage.getItem('token') == "") {
    
@@ -88,7 +88,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
             sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data
-          console.log(this.data.parent,"Hello");
+          //console.log(this.data.parent,"Hello");
           sessionStorage.setItem("parent",this.data.parent);
                     //add title to header
           this.title = this.data.title;
@@ -307,6 +307,39 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 //     document.getElementById("set_id").classList.remove("aclass1");
 //   }
 // }
+
+backarr(event){
+  //alert(this.router.events);
+  this.router.events
+  .filter(event => false)
+  .subscribe(e => {
+    //console.log('prev:', this.previousUrl);
+    this.previousUrl = (e as  NavigationEnd).url;
+    alert(this.previousUrl);
+  });
+  //alert(this.previousUrl);
+
+
+  // console.log(this.data.parent,"Hello");
+  // if (this.data.title=="settings" || this.data.title == "securityinfo" || this.data.title == "Password" || this.data.title == "Info" || this.data.title == "change-email" ){
+ 
+  //   document.getElementById("set_id").className+=" aclass1";
+  //   document.getElementById("leave").classList.remove("aclass1");
+  //   document.getElementById("worker").classList.remove("aclass1");
+  // } else if(this.data.title=="leaveTechPortal" ) {
+  //  // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
+  //   //ELEMENT.classList.remove("active-class1"); 
+  //   document.getElementById("leave").className+=" aclass1";
+  //   document.getElementById("worker").classList.remove("aclass1");
+  //   document.getElementById("set_id").classList.remove("aclass1");
+  // }
+  // else{
+  //   document.getElementById("worker").className+=" aclass1";
+  //    document.getElementById("leave").classList.remove("aclass1");
+  //   document.getElementById("set_id").classList.remove("aclass1");
+  // }
+}
+
 
 hideFooterIOS(){
 

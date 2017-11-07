@@ -86,18 +86,26 @@ gotoHelp() {
         this.router.navigate(['./dashboard/leaveTechPortal']);
   }
    dateOfLossInfo() {
+
   this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
+
+     //alert("hello dateofloss");
+
+
+
       .subscribe(res => {
-        //console.log(res.result[0].base64);
+        //alert( res.result[0].base64);
         this.dolImg = res.result[0].base64;
-        //console.log(this.dolImg);
+        //alert(this.dolImg);
         this.dolImgHide = true;
       },
     error =>{
       this._commonApiCall.handleError(error,"Help Date Of Loss");
     })
   }
-
+   close(){
+     this.dolImgHide = false;
+   }
   claimNoInfo() {
    this._commonApiCall.getService("supportContent?Type=HelpClaimNumber", "", "")
       .subscribe(res => {
