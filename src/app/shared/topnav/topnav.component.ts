@@ -309,7 +309,13 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 // }
 
 backarr(event){
-  alert("previous url is: " + window.history.previous.href);
+  // alert(this.data.title);
+  // if(sessionStorage.getItem("storage_navigation" )== "settings"){
+  //   document.getElementById("set_id").className+=" router-link-active";
+  //   document.getElementById("leave").classList.remove("router-link-active");
+  //  document.getElementById("worker").classList.remove("router-link-active");
+  // }
+
   //alert(this.router.events);
     // this.router.events
     // .filter(event => false)
@@ -360,7 +366,8 @@ hideFooterIOS(){
 //   }
 //    }
 navchange(){
-
+    // alert(this.data.title);
+    // sessionStorage.setItem("storage_navigation", this.data.title );
 //   let b=sessionStorage.getItem("Id1");
 //  if(b=='workerscom@gmail.com'){
 //            this.router.navigate(['./newuser/leaveregistration'])

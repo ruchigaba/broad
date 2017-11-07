@@ -94,11 +94,13 @@ export class ForgothelpComponent implements OnInit {
                 }
             this._commonApiCall.postService("emails/send", "", "application/json", data)
                 .subscribe(res => {
+                  document.getElementById("loadingDiv").style.display = "none";
                     this.commnFunc.alertPopup(res.result.email_status,"Help");
 
                     this._route.navigate(['./createNewUser']);
                 },
                 error => {
+                  document.getElementById("loadingDiv").style.display = "none";
                     this._commonApiCall.handleError(error,"Help");
                 })
         }

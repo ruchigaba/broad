@@ -58,13 +58,13 @@ cancelSecAns() {
 
     ValidateUserSecurityAnswers(answer1: string, answer2: string, answer3: string) {
         if (answer1 == undefined || answer1 == '') {
-            this.commnFunc.alertPopup("Please Enter First Answer","Validate User Security Answer");
+            this.commnFunc.alertPopup("Please Enter First Answer","Validate Security Answer");
         }
         else if (answer2 == undefined || answer2 == '') {
-            this.commnFunc.alertPopup("Please Enter Second Answer","Validate User Security Answer");
+            this.commnFunc.alertPopup("Please Enter Second Answer","Validate Security Answer");
         }
         else if (answer3 == undefined || answer3 == '') {
-            this.commnFunc.alertPopup("Please Enter Third Answer","Validate User Security Answer");
+            this.commnFunc.alertPopup("Please Enter Third Answer","Validate Security Answer");
         }
         else {
             var data =
