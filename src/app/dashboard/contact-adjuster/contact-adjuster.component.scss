@@ -410,3 +410,13 @@ width: 100% !important;
      }
 }
 
+@media screen and (min-width:768px) and (max-width:992px){
+
+    .col-con-adj-4 {
+        float:none !important;
+        margin-bottom: 20px;
+    }
+    .image-section-con-adj img {
+        max-width: 70%;
+    }
+}

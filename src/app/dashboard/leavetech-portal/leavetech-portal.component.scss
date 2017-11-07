@@ -31,13 +31,13 @@ html{
     }
     @media screen and (max-width:1024px){
         .leave-portal {
-            overflow: hidden;
+         
     
             div{
                   height:auto;
             }
              iframe{
-                height:700px;
+                // height:700px;
                 // overflow: scroll;
             }
     
@@ -48,12 +48,48 @@ html{
                 height:auto;
             }
             .leave-portal iframe{
-                height:700px;
+                // height:700px;
             }
 
         }
 
+        /////updated//
+
+        @media screen and (max-width: 450px){
+            .w4-display-left{
+                left:6px;
+            }
+        }
+        @media screen and (max-width: 736px) and (min-width: 414px){
+             .w4-display-left{
+                 left:20px;
+             }
+        } 
+        @media screen and (max-width: 980px) and (min-width: 600px){
+              .w4-display-left{
+                    left:70px;
+              }
+              .w4-display-right{
+                    right:70px;
+              }
+            }
+            @media screen and (max-width: 1024px) and (min-width: 981px){
+                .w4-display-left{
+                    left:110px;
+              }
+              .w4-display-right{
+                    right:110px;
+              }
+            
+            }
+        @media screen and (max-width: 770px) and (min-width: 455px){
+              .w5-display-left{
+                  left:40px;
+              }
+                .w5-display-right{
+                    right:40px;
+              }
+        } 
 
 
-        
-
+     

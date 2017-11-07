@@ -309,14 +309,15 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 // }
 
 backarr(event){
+  //alert("previous url is: " + window.history.previous.href);
   //alert(this.router.events);
-  // this.router.events
-  // .filter(event => false)
-  // .subscribe(e => {
-  //   //console.log('prev:', this.previousUrl);
-  //   this.previousUrl = (e as  NavigationEnd).url;
-  //   alert(this.previousUrl);
-  // });
+    // this.router.events
+    // .filter(event => false)
+    // .subscribe(e => {
+    //   //console.log('prev:', this.previousUrl);
+    //   this.previousUrl = (e as  NavigationEnd).url;
+    //   alert(this.previousUrl);
+    // });
   //alert(this.previousUrl);
 
 
