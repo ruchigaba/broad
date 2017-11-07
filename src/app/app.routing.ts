@@ -67,7 +67,7 @@ export const routes = [
       { path: 'claim-paymentdetailspage', component: ClaimPaymentdetailsComponent, data: { title: 'claim-paymentdetailspage', parent: 'claims' } },
       { path: 'claim-info', component: ClaimInfoComponent, data: { title: 'claim-info', parent: 'claims' } },
       { path: 'faqs', component: FaqComponent, data: { title: 'faqs' } },
-      { path: 'settings', component: SettingsComponent, data: { title: 'settings', parent: ''  } },
+      { path: 'settings', component: SettingsComponent, data: { title: 'settings'  } },
        { path: 'healthTicket', component: HealtTicketComponent, data: { title: 'healthTicket'} },
       { path: 'securityinfo', component: SecurityAnswerComponent, data: { title: 'securityinfo',parent:'settings' } },
       { path: 'change-email', component: ChangeIdComponent, data: { title: 'change-email',parent:'settings' } },

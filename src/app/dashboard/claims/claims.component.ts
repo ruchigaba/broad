@@ -34,6 +34,12 @@ export class ClaimsComponent implements OnInit {
   	this.item = "2";
     this.myClaimService();
     console.log('Bearer '+sessionStorage.getItem("token"));
+   
+    
+     document.body.className = 'workercomp';
+     // this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
+  
+ 
 
 
  setTimeout(() => {
@@ -45,6 +51,9 @@ export class ClaimsComponent implements OnInit {
     }
 },1000);
   }
+   ngOnDestroy(){
+    document.body.className = '';
+   }
 
   // this is to show date of loss image claim number image when links is clicked
   dateOfLossInfo() {
