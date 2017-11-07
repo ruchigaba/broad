@@ -62,7 +62,7 @@ export class ForgothelpComponent implements OnInit {
             this.commnFunc.alertPopup("Enter Name","Support Center");
         }
         else if (this.email == undefined || this.email == ''||!re.test(this.email)) {
-            this.commnFunc.alertPopup("Enter Email in valid format.","Support Center");
+            this.commnFunc.alertPopup("Enter Email in valid format.","Help");
         }
         else if (this.subject == undefined || this.subject == '') {
             this.commnFunc.alertPopup("Enter Subject","Support Center");
