@@ -309,7 +309,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 // }
 
 backarr(event){
-  alert("previous url is: " + window.history.previous.href);
+ // alert("previous url is: " + window.history.previous.href);
   //alert(this.router.events);
     // this.router.events
     // .filter(event => false)
