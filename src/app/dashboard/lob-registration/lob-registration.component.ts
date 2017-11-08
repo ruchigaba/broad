@@ -38,6 +38,7 @@ export class LOBRegistrationComponent implements OnInit {
 //     //document.getElementById("titleBar").style.display = 'none';
 //  }
  document.body.className = 'leave-registration';
+ localStorage.setItem("Help","Worker-Registration");
   }
    ngOnDestroy(){
     document.body.className = '';

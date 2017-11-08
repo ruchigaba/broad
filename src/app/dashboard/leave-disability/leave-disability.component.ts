@@ -26,6 +26,7 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
   }
  ngOnInit() {
  document.body.className = 'leaave-disablity';
+  localStorage.setItem("Help","Leave-Registration");
     }
   ngOnDestroy(){
     document.body.className = '';

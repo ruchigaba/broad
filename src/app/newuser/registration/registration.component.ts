@@ -44,6 +44,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
    // document.getElementById('titleBar').style.paddingLeft="0px";
+   localStorage.setItem("Help","workercomp-Registration");
    this.claimnum= sessionStorage.getItem("claimno");
   }
   question(): any {
