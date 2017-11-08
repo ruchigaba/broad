@@ -44,7 +44,7 @@ export class LOBRegistrationComponent implements OnInit {
     document.body.className = '';
 }
 gotoHelp() {
-    this.router.navigate(['./help']);
+    this.router.navigate(['./dashboard/help-page']);
   }
   goToWorkersComp() {
     var x =document.getElementById("worker")

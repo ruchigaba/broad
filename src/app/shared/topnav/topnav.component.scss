@@ -524,7 +524,9 @@ background-color:#efeeee;
 
 @media only screen and (max-width: 450px){
 
-  
+  a.list-group-item-mycom.router-link-active{
+      border:none;
+  }
 
     .headerBack .logo-div.logo-sec-new-one {
         width: 20%;

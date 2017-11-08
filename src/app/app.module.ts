@@ -52,6 +52,8 @@ import { ForgotsComponent } from './forgots/forgots.component';
 
 import { ValidateForgotpassComponent } from './forgot-password/validate-forgotpass/validate-forgotpass.component';
 
+import { HelpInComponent } from './dashboard/help-in/help-in.component';
+
 // -------------------------------------registration tutorial component ends ---------------------------
 
 @NgModule({
@@ -84,7 +86,8 @@ import { ValidateForgotpassComponent } from './forgot-password/validate-forgotpa
     SecurityQuestionsComponent,
     FirstTimePasswordComponent,
     ForgotsComponent,
-    ValidateForgotpassComponent 
+    ValidateForgotpassComponent,
+  HelpInComponent 
 
     // , DynemicUiComponent
   ],

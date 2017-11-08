@@ -42,6 +42,7 @@ import { LDRegistrationComponent } from './newuser/l-dregistration/l-dregistrati
 import { LeaveDisabilityComponent } from './dashboard/leave-disability/leave-disability.component';
 import { SecurityQuestionsComponent } from './newuser/security-questions/security-questions.component';
 import { ForgotsComponent } from './forgots/forgots.component'; 
+import { HelpInComponent } from './dashboard/help-in/help-in.component';
 //-------------------------------------registration tutorial component starts ---------------------------
 import { LeaveTechPortalComponent } from './dashboard/leavetech-portal/leaveTechPortal.component';
 import { FirstTimePasswordComponent } from './login/first-time-password/first-time-password.component';
@@ -87,7 +88,7 @@ export const routes = [
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'EmailSupervisor',parents:'contact-adjuster' } },
        { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
         { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
-           
+          { path: 'help-page', component: HelpInComponent, data: { title: 'Help',  parent:'' } },  
     ]
   },
   
@@ -117,7 +118,7 @@ export const NavigatableComponents = [
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
    LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
-   ValidateForgotpassComponent
+   ValidateForgotpassComponent,HelpInComponent
   // HealthTicketComponent 
 
 ];
