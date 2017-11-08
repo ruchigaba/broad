@@ -88,7 +88,7 @@ if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
           this.data = currentRoute.snapshot.data;
           if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
-            sessionStorage.setItem("title", this.data.title);
+            //sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data
           //console.log(this.data.parent,"Hello");
@@ -163,18 +163,7 @@ if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
   // //              y.style.border="0px";
   // //               alert(className)
              
-  // //                }
-  // if(className=="wrapper-claims"){
-  //    y.setAttribute("className","list-group-item-mycom router-link-active");
-  //  // alert("hi")
-   
-  //        y.style.border="0px";
-  // }
-  //          else{
-  //            //  alert(className)
-  //             // alert("hi");
-  //               y.style.border="1.5px solid #0a9e49";
-  //          y.style.padding="5px";
+  
   
   // }
   
@@ -378,7 +367,11 @@ hideFooterIOS(){
 //     this.router.navigate(['leaveregistration']);
 //   }
 //    }
+settingClick(){
+  sessionStorage.setItem("title", this.data.title);
+}
 navchange(){
+  sessionStorage.setItem("title", this.data.title);
     // alert(this.data.title);
     sessionStorage.setItem("storage_navigation", this.data.title );
  // let b=sessionStorage.getItem("Id1");
@@ -408,9 +401,14 @@ navchange(){
       }
 
   }
+
     newformat(){  
      //  alert(this.data.title); 
          sessionStorage.setItem("storage_navigation", this.data.title );
+
+
+    // sessionStorage.setItem("title", this.data.title); 
+
    // alert("worker");
   //    let a=sessionStorage.getItem("Id");
   // if(a=='leavedisability@gmail.com'){
@@ -433,14 +431,19 @@ navchange(){
         //this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
       } 
     else{
-      //alert("else");
-      //alert(sessionStorage.getItem("title"));
+      
+    //  alert(sessionStorage.getItem("title"));
       // x.style.border="0px";
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
         this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+
         //   x.style.border="1.5px solid #0a9e49";
         // x.style.padding="5px";
+
+       
+      
+
     //    var x =document.getElementById("worker")
     //   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
     //     x.setAttribute("className","list-group-item-mycom");
@@ -456,36 +459,10 @@ navchange(){
     }
 
   }
-  // logo(){
-   
-
-  //   try{
-  //       var className = document.getElementById("portal").className;
-  //   }catch(ex){
-  //       var className = ""
-  //   }
-    
-     
-  //     console.log(className)
-  //      var x =document.getElementById("menu");
-  //     //  if (!className){
-  //     //   x.style.display="none";
-  //     //  }
-  //      if(className=="leavetech"){
-      
-  //      x.style.display="block";
-  //   }
-  //     else{
-
-  //      x.style.display="none";
-  //     }
-
-  //     }
   
    
 
   lasttitle(){
-    console.log(sessionStorage.getItem("title"));
   
     // if (sessionStorage.getItem("title")) {
       let a=sessionStorage.getItem("Id");
@@ -495,6 +472,7 @@ navchange(){
      
     }
     else{
+      //alert("else if")
       this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
       //  alert("kh");
      // var x =document.getElementById("worker")
