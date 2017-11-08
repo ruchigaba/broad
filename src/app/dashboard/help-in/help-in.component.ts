@@ -56,22 +56,22 @@ export class HelpInComponent implements OnInit {
 helpSend(){
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (this.name == undefined || this.name == '') {
-    this.commnFunc.alertPopup("Enter Name","Support Center");
+    this.commnFunc.alertPopup("Enter Name","Help");
   }
   else if (this.email == undefined || this.email == ''|| !re.test(this.email)) {
-    this.commnFunc.alertPopup("Enter Email in valid format.","Support Center");
+    this.commnFunc.alertPopup("Enter Email in valid format.","Help");
   }
   else if (this.subject == undefined || this.subject == '') {
-    this.commnFunc.alertPopup("Enter Subject","Support Center");
+    this.commnFunc.alertPopup("Enter Subject","Help");
   }
   else if (this.telephone == undefined || this.telephone == ''||this.telephone.toString().length < 10) {
-    this.commnFunc.alertPopup("Contact Number should be of 10 digit","Support Center");
+    this.commnFunc.alertPopup("Contact Number should be of 10 digit","Help");
   }
   else if (this.claimNm == undefined || this.claimNm == '') {
-    this.commnFunc.alertPopup("Enter Claim Number","Support Center");
+    this.commnFunc.alertPopup("Enter Claim Number","Help");
   }
   else if (this.canIHelp == undefined || this.canIHelp == '') {
-    this.commnFunc.alertPopup("Enter Description How to Help you","Support Center");
+    this.commnFunc.alertPopup("Enter Description How to Help you","Help");
   }
   else {
     var data =
@@ -103,13 +103,14 @@ helpSend(){
                    }       
       },
       error => {
+         document.getElementById("loadingDiv").style.display = "none";
         this._commonApiCall.handleError(error,"Help");
       })
   }
 }
-   gotoHelp() {
-  	this._route.navigate(['./help']);
-}
+//    gotoHelp() {
+//   	this._route.navigate(['./help']);
+// }
 // Help Cancel Button Method
 helpCancel() {
    if(localStorage.getItem("Help")=="workercomp-Registration")

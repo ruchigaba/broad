@@ -88,7 +88,7 @@ export const routes = [
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'EmailSupervisor',parents:'contact-adjuster' } },
        { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
         { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
-          { path: 'help-page', component: HelpInComponent, data: { title: 'Help',  parent:'' } },  
+         { path: 'help-page', component: HelpInComponent, data: { title: 'Helping',  parent:'' } },  
     ]
   },
   

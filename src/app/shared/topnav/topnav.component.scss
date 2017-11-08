@@ -23,11 +23,11 @@ position: fixed;
     line-height: 80px;
 
 }
-.mycomp-tp:first-child .list-group-item-mycom.sjsj{
+.mycomp-tp.list-group-item-mycom.sjsj{
     border:1.5px solid #0a9e49;
     padding:5px;
 }
-.mycomp-tp:first-child .list-group-item-mycom{
+.mycomp-tp .list-group-item-mycom{
     border:0px;
     padding:0px;
 }
@@ -95,12 +95,22 @@ a.list-group-item-mycom.router-link-active {
     padding: 5px;
 
 }
+
 .moreobtion img{
     position: fixed;
     width: 20px;
     right: 10px;
     top: 27px;
 }
+// .mycomp-tp:first-child .list-group-item-mycom.sjsj{
+//     border:1.5px solid #0a9e49;
+//     padding:5px;
+// }
+// .mycomp-tp:first-child .list-group-item-mycom{
+//     border:0px;
+//     padding:0px;
+// }
+
 
 .fourty{
     float: left;
@@ -503,12 +513,12 @@ background-color:#efeeee;
          width:0px !important;
          height:0px !important;
      }
-     a.list-group-item-mycom.router-link-active {
-    border:0;
+    //  a.list-group-item-mycom.router-link-active {
+    // border:0;
     //padding: 5px;
      
 }
-}
+
 
 // @media only screen and (max-width: 450px){
 //      a.list-group-item-mycom.router-link-active {
@@ -524,9 +534,9 @@ background-color:#efeeee;
 
 @media only screen and (max-width: 450px){
 
-  a.list-group-item-mycom.router-link-active{
-      border:none;
-  }
+//   a.list-group-item-mycom.router-link-active{
+//       border:none;
+//   }
 
     .headerBack .logo-div.logo-sec-new-one {
         width: 20%;

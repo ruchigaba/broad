@@ -1,4 +1,13 @@
+ .whiteblank-help-in{
+    background-color: $white-bg-color;
+    width:$white-width;
+    margin:0 auto;
+    margin-top: 1%;
+    margin-bottom: 15px;
+ }
+ 
  .whiteblank-help{
+
      @include commonmix22();
     }
   

@@ -49,7 +49,10 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
+if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+  document.getElementById("worker").classList.remove("router-link-active");
 
+}
  
      // if(this.title=="forgotPass"){
      //   alert(this.title);
@@ -311,11 +314,16 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
 backarr(event){
 
   // alert(this.data.title);
-  // if(sessionStorage.getItem("storage_navigation" )== "settings"){
-  //   document.getElementById("set_id").className+=" router-link-active";
-  //   document.getElementById("leave").classList.remove("router-link-active");
-  //  document.getElementById("worker").classList.remove("router-link-active");
-  // }
+  if(sessionStorage.getItem("storage_navigation" )== "settings"){
+    document.getElementById("set_id").className+=" router-link-active";
+    document.getElementById("leave").classList.remove("router-link-active");
+   document.getElementById("worker").classList.remove("router-link-active");
+  }
+  else{
+      document.getElementById("worker").className+=" router-link-active";
+    document.getElementById("leave").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
+  }
 
   //alert("previous url is: " + window.history.previous.href);
   //alert(this.router.events);
@@ -369,8 +377,8 @@ hideFooterIOS(){
 //    }
 navchange(){
     // alert(this.data.title);
-    // sessionStorage.setItem("storage_navigation", this.data.title );
-//   let b=sessionStorage.getItem("Id1");
+    sessionStorage.setItem("storage_navigation", this.data.title );
+ // let b=sessionStorage.getItem("Id1");
 //  if(b=='workerscom@gmail.com'){
 //            this.router.navigate(['./newuser/leaveregistration'])
 //             }
@@ -382,22 +390,24 @@ navchange(){
           // x.style.border="1.5px solid #0a9e49"; 
             var x =document.getElementById("leave")  
            if (sessionStorage.getItem("Id")=="workerscomp@gmail.com") { //workerscomp@gmail.com
-          x.setAttribute("className","list-group-item-mycom router-link-active");
-          x.style.border="1.5px solid #0a9e49";
-          x.style.padding="5px";
+          // x.setAttribute("className","list-group-item-mycom router-link-active");
+          // x.style.border="1.5px solid #0a9e49";
+          // x.style.padding="5px";
         
           this.router.navigate(['./dashboard/leaveregistration']);
       } 
       else 
       {
           this.router.navigate(['./dashboard/leaveTechPortal']);
-           x.style.border="1.5px solid #0a9e49";
-           x.style.padding="5px";
+          //  x.style.border="1.5px solid #0a9e49";
+          //  x.style.padding="5px";
        
       }
 
   }
-    newformat(){   
+    newformat(){  
+     //  alert(this.data.title); 
+         sessionStorage.setItem("storage_navigation", this.data.title );
    // alert("worker");
   //    let a=sessionStorage.getItem("Id");
   // if(a=='leavedisability@gmail.com'){
@@ -406,14 +416,14 @@ navchange(){
   //          else {
   //            this.router.navigate(['./dashboard/leaveTechPortal']);
   //          }
-       // var x =document.getElementById("worker")
+        var x =document.getElementById("worker")
       //  x.setAttribute("className","list-group-item-my123 router-link-active");
       //  x.style.border="1.5px solid #0a9e49";
- var x =document.getElementById("worker")
+// var x =document.getElementById("worker")
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
-     x.setAttribute("className","list-group-item-mycom");
-        x.style.border="1.5px solid #0a9e49";
-        x.style.padding="5px";
+      x.setAttribute("className","list-group-item-mycom");
+       // x.style.border="0px";
+       //  x.style.padding="5px";
     
      this.router.navigate(['./dashboard/workercomp'])
    
@@ -426,8 +436,8 @@ navchange(){
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
         this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
-          x.style.border="1.5px solid #0a9e49";
-        x.style.padding="5px";
+        //   x.style.border="1.5px solid #0a9e49";
+        // x.style.padding="5px";
     //    var x =document.getElementById("worker")
     //   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
     //     x.setAttribute("className","list-group-item-mycom");
@@ -476,7 +486,7 @@ navchange(){
   
     // if (sessionStorage.getItem("title")) {
       let a=sessionStorage.getItem("Id");
-  if(a=='leavedisability@gmail.com'){
+     if(a=='leavedisability@gmail.com'){
      
       this.router.navigate(['createUser']);
      
@@ -531,7 +541,9 @@ navchange(){
 
     sessionStorage.setItem("refreshProviders", "true");
     document.getElementById("loadingDiv").style.display = "none";
-
+     document.getElementById("worker").className+=" router-link-active";
+    document.getElementById("leave").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
 
     //  var x =document.getElementById("worker")
      
@@ -539,11 +551,16 @@ navchange(){
    //   x.style.border="0px";
     //this.isActive = !this.isActive;
    this.isActive = !this.isActive;
- var x =document.getElementById("leave") ;
- var y= document.getElementById("worker")
-            console.log(x);
-       x.style.border="0px";
-      y.style.border="0px";
+    if (this.claimClicked == true) {
+      sessionStorage.setItem('pagePosition', undefined);
+      this.claimClicked = false;
+    }
+
+//  var x =document.getElementById("leave") ;
+//  var y= document.getElementById("worker")
+//             console.log(x);
+      //  x.style.border="0px";
+      // y.style.border="0px";
          
         //this.router.navigate(['leaveregistration']);
         //this.router.navigate(['./dashboard/claims']);
@@ -554,7 +571,16 @@ navchange(){
   //     this.claimClicked = false;
   //  }
     }
-
+ eventCalled1() {
+    document.getElementById("leave").className+=" router-link-active";
+    document.getElementById("worker").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
+ }
+ eventCalled2() {
+    document.getElementById("set_id").className+=" router-link-active";
+    document.getElementById("worker").classList.remove("router-link-active");
+   document.getElementById("leave").classList.remove("router-link-active");
+ }
    
  moreDropdownFunc(drop){
 
