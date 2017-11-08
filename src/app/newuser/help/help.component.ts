@@ -53,7 +53,7 @@ helpSend(){
   if (this.name == undefined || this.name == '') {
     this.commnFunc.alertPopup("Enter Name","Help");
   }
-  else if (this.email == undefined || this.email == ''|| !re.test(this.email)) {
+  else if (this.e == undefined || this.e == ''|| !re.test(this.e)) {
     this.commnFunc.alertPopup("Enter Email in valid format.","Help");
   }
   else if (this.subject == undefined || this.subject == '') {
