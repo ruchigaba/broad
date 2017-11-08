@@ -14,6 +14,7 @@ commnFunc;
    }
 
   ngOnInit() {
+      localStorage.setItem("Help","Forgotpass-Registration");
   }
 
 
@@ -36,7 +37,7 @@ else{
 }
   }
     gotoHelp() {
-    this.router.navigate(['./help']);
+    this.router.navigate(['./forgotHelp']);
   }
   goToLogin() {
     this.router.navigate(['']);

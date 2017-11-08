@@ -3,7 +3,7 @@ import { CommonAPICall } from '../../shared/shared.service';
 import { HttpModule, Response } from '@angular/http';
 import { RouterModule, Router } from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
-
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-forgothelp',
   templateUrl: './forgothelp.component.html',
@@ -19,7 +19,7 @@ export class ForgothelpComponent implements OnInit {
     claimNm: string;
     canIHelp: string;
 
-  constructor(private _route: Router, private _commonApiCall: CommonAPICall) {
+  constructor(private _route: Router, private _commonApiCall: CommonAPICall,private _location: Location,) {
   this.commnFunc = new CommonFunction(); 
   this.email = sessionStorage.getItem('userName');
 
@@ -86,19 +86,32 @@ export class ForgothelpComponent implements OnInit {
                 })
             var data =
                 {
-                    "to_email_address": 'dgupta@primussoft.com',
+                    "to_email_address": 'khushboo.yadav@primussoft.com',
                     "from_email_address": this.email,
                     "subject_Text": this.subject,
                     "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
                     + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + this.email + "<br/>" + "Phone: " + this.telephone
                 }
+<<<<<<< HEAD
             this._commonApiCall.postService("emails/send", "", "application/json", data)
                 .subscribe(res => {
                   document.getElementById("loadingDiv").style.display = "none";
+=======
+                 this._commonApiCall.postService("emails/send", "", "application/json", data)
+                  .subscribe(res => {
+>>>>>>> 99303cbb6fb026b5f2d6eb3334b2beb2c9f79271
                     this.commnFunc.alertPopup(res.result.email_status,"Help");
-
-                    this._route.navigate(['./createNewUser']);
-                },
+                    if(localStorage.getItem("Help")=="Forgotpass-Registration"){
+                        this._route.navigate(['./forgotsecurity']); 
+                   }
+                   else if(localStorage.getItem("Help")=="validate-Registration"){
+                        this._route.navigate(['./validate']); 
+                   }
+                   else if(localStorage.getItem("Help")=="validateforgot-Registration"){
+                        this._route.navigate(['./validate-forgotpass']); 
+                   }
+                  
+                    },
                 error => {
                   document.getElementById("loadingDiv").style.display = "none";
                     this._commonApiCall.handleError(error,"Help");
@@ -115,8 +128,18 @@ export class ForgothelpComponent implements OnInit {
 
     }
     // Help Cancel Button Method
-    helpCancel() {
-        this._route.navigate(['./validate']);
+    Cancel() {
+                   if(localStorage.getItem("Help")=="Forgotpass-Registration"){
+                        this._route.navigate(['./forgotsecurity']); 
+                   }
+                   else if(localStorage.getItem("Help")=="validate-Registration"){
+                        this._route.navigate(['./validate']); 
+                   }
+                   else if(localStorage.getItem("Help")=="validateforgot-Registration"){
+                        this._route.navigate(['./validate-forgotpass']); 
+                   }
+                  
+       
     }
 
 }
