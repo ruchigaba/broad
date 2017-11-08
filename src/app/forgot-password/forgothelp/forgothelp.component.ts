@@ -92,8 +92,14 @@ export class ForgothelpComponent implements OnInit {
                     "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
                     + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + this.email + "<br/>" + "Phone: " + this.telephone
                 }
+<<<<<<< HEAD
+            this._commonApiCall.postService("emails/send", "", "application/json", data)
+                .subscribe(res => {
+                  document.getElementById("loadingDiv").style.display = "none";
+=======
                  this._commonApiCall.postService("emails/send", "", "application/json", data)
                   .subscribe(res => {
+>>>>>>> 99303cbb6fb026b5f2d6eb3334b2beb2c9f79271
                     this.commnFunc.alertPopup(res.result.email_status,"Help");
                     if(localStorage.getItem("Help")=="Forgotpass-Registration"){
                         this._route.navigate(['./forgotsecurity']); 
@@ -107,6 +113,7 @@ export class ForgothelpComponent implements OnInit {
                   
                     },
                 error => {
+                  document.getElementById("loadingDiv").style.display = "none";
                     this._commonApiCall.handleError(error,"Help");
                 })
         }
