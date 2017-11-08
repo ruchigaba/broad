@@ -1,4 +1,33 @@
-
+.lossImg3{
+    display: block;
+       border-style: solid;
+       border-color: black;
+       float: left;
+       z-index: 5;
+       position: absolute;
+       left: 40%;
+       top: 64%;
+       width: 37%;
+   
+   }
+   .innnerr-divv-new3 img{
+        width:100%;
+        float: left;
+   }
+   
+   .closebutton{
+   
+   position: absolute;
+       right: 0;
+     
+   }
+   body .lossImg3 .innnerr-divv-new {
+       background-color: #fff;
+       border: 2px solid #000;
+       margin: 0 auto;
+       padding-top: 25px;
+       width: 50%;
+   }
 .leaave-disablity .sidebar {
     display: none;
 }
@@ -15,37 +44,7 @@
     margin-top: 1%;
        }
 
-       .innnerr-divv-new img{
-        width:100%;
-        float:left;
-   }
-    
-    .lossImg1 {
-        cursor: pointer;
-          display: block;
-          border-style: solid;
-          border-color: black;
-          float: left;
-          z-index: 5;
-          position: absolute;
-          left: 27%;
-          top: 60%;
-          width: 46%;
-      }
-      .closebutton{
-      
-      position: absolute;
-          right: 0;
-        
-      }
-      body .lossImg .innnerr-divv-new {
-          background-color: #fff;
-          border: 2px solid #000;
-          margin: 0 auto;
-          padding-top: 25px;
-          width: 50%;
-      }
-
+       
       .leaave-disablity  {
         #main-container{
           margin-left:0;
@@ -58,38 +57,59 @@
               width:100%;
           }}
 
-          @media screen and (max-width: 800px){
+           
+          @media only screen and (max-width: 800px) {
             
-          .lossImg1 {
-          left: 4%;
-            top: 110%;
-            width: 92%;
-        
+           .lossImg3 {
+             left: 10%;
+             top: 43%;
+             width: 80%;
+         }
         }
-        }
-        
-        @media screen and (max-width: 767px){
-        
+         @media screen and  (min-width: 360px) and(max-width: 670px){
+         .lossImg3 {
+             left: 10%;
+             top: 47%;
+             width: 80%;
+         }
          
-        .lossImg .innnerr-divv-new {
-            
-            width: 100% !important;
-        }
-        
-        .closebutton {
-            float: right;
-            position: relative;
-            top: -25px;
-        }
-        .lossImg img {
-            max-width: 100%;
-        }
-        
-        }
-         @media screen and (min-width: 767px) and (max-width: 1020px){
-        .lossImg1 {
-            left: 27%;
-            top: 52%;
-            width: 50%;
-        }
-        }
+           }
+           
+           @media screen and (min-width:767px){
+           .lossImg3 {
+              z-index: 5;
+             position: absolute;
+            //  left: 44%;
+             top: 68%;
+         }
+         .colx{
+             left:33%;
+         }
+         }
+         
+         @media screen and (max-width: 767px){
+         
+          
+         .lossImg3 .innnerr-divv-new3 {
+           width: 100% !important;
+         }
+         
+         
+         .closebutton {
+             float: right;
+             position: relative;
+             top: -25px;
+         }
+         
+         .lossImg3 img {
+             max-width: 100%;
+         }
+         
+         }
+          @media screen and (min-width: 767px) and (max-width: 1020px){
+         .lossImg3 {
+             left: 27%;
+             top: 42%;
+             width: 50%;
+         }
+          }  

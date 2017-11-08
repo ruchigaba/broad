@@ -75,7 +75,7 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
 
 
 gotoHelp() {
-    this.router.navigate(['./dashboard/help-page']);
+    this.router.navigate(['./help']);
   }
   goToLeaveDisability() {
      var x =document.getElementById("worker")

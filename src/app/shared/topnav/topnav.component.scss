@@ -516,6 +516,7 @@ background-color:#efeeee;
     //  a.list-group-item-mycom.router-link-active {
     // border:0;
     //padding: 5px;
+
      
 }
 
@@ -530,13 +531,20 @@ background-color:#efeeee;
      .menu-2{
          display:none;
      }
+   
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  a.list-group-item-mycom.sjsj.router-link-active{
+     display:none;
+  }
 }
 
 @media only screen and (max-width: 450px){
 
-//   a.list-group-item-mycom.router-link-active{
-//       border:none;
-//   }
+  a.list-group-item-mycom.sjsj.router-link-active{
+     display:none;
+  }
+
 
     .headerBack .logo-div.logo-sec-new-one {
         width: 20%;
