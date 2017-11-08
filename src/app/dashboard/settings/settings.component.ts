@@ -16,7 +16,7 @@ export class SettingsComponent implements OnInit {
    if(document.getElementById("worker").className=="list-group-item-mycom sjsj"){
       var x= document.getElementById("worker")
             console.log(x);
-       x.style.border="0px";
+      //  x.style.border="0px";
    }
     document.body.className = 'settings';
     window.scrollTo(0, 0);

@@ -28,25 +28,26 @@
      
    <div class="mycomp-tp">
 
-       <a  id="worker"  (click) = "claimClicked = true;eventCalled();lasttitle();newformat()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
+       <a  id="worker"  (click) = "claimClicked = true;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom router-link-active">
       <span class="menu-item-img-span-abc">Worker's Comp</span> 
       </a></div>
       
  
    <div class="mycomp-tp">
- <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="eventCalled();navchange()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
+ <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="eventCalled1();navchange()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
   <span class="menu-item-img-span-abc">Absence/Disability</span>
  </a></div>
 
      
-   <div class="mycomp-tp" >
-       <a id="set_id" [routerLink]="['./settings']" (click)="eventCalled();settingClick()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">
-            <span class="menu-2">Settings</span>
+
+   <div class="mycomp-tp " >
+       <a id="set_id" [routerLink]="['./settings']" (click)="eventCalled2()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
+        <span class="menu-2">Settings</span>
            </a>
            </div>
            
    <div class="mycomp-tp">
-       <a [routerLink]="['']" (click)="eventCalled();"[routerLinkActive]="['router-link']" class="list-group-item-mycom">
+       <a [routerLink]="['']" (click)="eventCalled3();"[routerLinkActive]="['router-link']" class="list-group-item-mycom">
             <span class="menu-2">Log Out</span>
            </a></div>
    </div>
@@ -97,7 +98,7 @@
           
           <li>
           <div class="menu-icon">
-               <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="w3-bar-item w3-button" (click)="k()">
+               <a [routerLink]="['settings']" (click)="eventCalled2()" [routerLinkActive]="['router-link-active']" class="w3-bar-item w3-button" (click)="menuicon()">
             
            <img src=".\image\settings2_64x64.png" >
          <span class="commpaa">Settings</span></a> </div>
@@ -105,7 +106,7 @@
            
 
           <li>
-      <a [routerLink]="['']" class="w3-bar " (click)="k()">
+      <a [routerLink]="['']" class="w3-bar " (click)="menuicon()">
             <div class="menu-icon">
         <img  class="abc" src=".\image\logout_64x64.png">
             </div>

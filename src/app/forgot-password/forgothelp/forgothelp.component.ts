@@ -92,15 +92,13 @@ export class ForgothelpComponent implements OnInit {
                     "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
                     + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + this.email + "<br/>" + "Phone: " + this.telephone
                 }
- 
+
+
             this._commonApiCall.postService("emails/send", "", "application/json", data)
                 .subscribe(res => {
                   document.getElementById("loadingDiv").style.display = "none";
- 
-               
- 
-                    this.commnFunc.alertPopup(res.result.email_status,"Help");
-                    if(localStorage.getItem("Help")=="Forgotpass-Registration"){
+                   this.commnFunc.alertPopup(res.result.email_status,"Help");
+                   if(localStorage.getItem("Help")=="Forgotpass-Registration"){
                         this._route.navigate(['./forgotsecurity']); 
                    }
                    else if(localStorage.getItem("Help")=="validate-Registration"){
