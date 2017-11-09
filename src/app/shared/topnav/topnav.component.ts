@@ -88,7 +88,7 @@ if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
           this.data = currentRoute.snapshot.data;
           if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
-            //sessionStorage.setItem("title", this.data.title);
+            sessionStorage.setItem("title", this.data.title);
           }
           //console.log(this.data
           //console.log(this.data.parent,"Hello");
@@ -304,14 +304,28 @@ backarr(event){
 
  // alert("previous url is: " + window.history.previous.href);
 
-  // alert(this.data.title);
-  if(sessionStorage.getItem("storage_navigation" )== "settings"){
+   //alert(sessionStorage.getItem("storage_navigation"));
+ 
+  if(sessionStorage.getItem("storage_navigation")== "settings"||
+  sessionStorage.getItem("storage_navigation")== "securityinfo"||
+  sessionStorage.getItem("storage_navigation")== "change-email"||
+  sessionStorage.getItem("storage_navigation")== "Password"||
+  sessionStorage.getItem("storage_navigation")== "Info")
+  {
+  
     document.getElementById("set_id").className+=" router-link-active";
     document.getElementById("leave").classList.remove("router-link-active");
    document.getElementById("worker").classList.remove("router-link-active");
   }
-  else{
-      document.getElementById("worker").className+=" router-link-active";
+  else if(sessionStorage.getItem("storage_navigation")== "leaveTechPortal" ){
+  //  alert("leavetech")
+      document.getElementById("leave").className+=" router-link-active";
+    document.getElementById("worker").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
+  }
+  else {
+
+    document.getElementById("worker").className+=" router-link-active";
     document.getElementById("leave").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
   }
@@ -351,8 +365,7 @@ backarr(event){
 
 
 hideFooterIOS(){
-
-  var theElement = document.getElementById("pageHtml");
+var theElement = document.getElementById("pageHtml");
     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
       theElement.ontouchstart = function() {
         this.hideKeyboard = document.activeElement;
@@ -368,12 +381,20 @@ hideFooterIOS(){
 //   }
 //    }
 settingClick(){
-  sessionStorage.setItem("title", this.data.title);
+ 
+  sessionStorage.setItem("storage_navigation", this.data.title);
+  document.getElementById("set_id").className+=" router-link-active";
+    document.getElementById("worker").classList.remove("router-link-active");
+   document.getElementById("leave").classList.remove("router-link-active");
+ //  alert("inside settings::"+sessionStorage.getItem("storage_navigation"));
 }
 navchange(){
-  sessionStorage.setItem("title", this.data.title);
+ // sessionStorage.setItem("title", this.data.title);
     // alert(this.data.title);
     sessionStorage.setItem("storage_navigation", this.data.title );
+     document.getElementById("leave").className+=" router-link-active";
+    document.getElementById("worker").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
  // let b=sessionStorage.getItem("Id1");
 //  if(b=='workerscom@gmail.com'){
 //            this.router.navigate(['./newuser/leaveregistration'])
@@ -389,11 +410,12 @@ navchange(){
           // x.setAttribute("className","list-group-item-mycom router-link-active");
           // x.style.border="1.5px solid #0a9e49";
           // x.style.padding="5px";
-        
+    
           this.router.navigate(['./dashboard/leaveregistration']);
       } 
       else 
       {
+       
           this.router.navigate(['./dashboard/leaveTechPortal']);
           //  x.style.border="1.5px solid #0a9e49";
           //  x.style.padding="5px";
@@ -404,7 +426,8 @@ navchange(){
 
     newformat(){  
      //  alert(this.data.title); 
-         sessionStorage.setItem("storage_navigation", this.data.title );
+     //sessionStorage.setItem("title", this.data.title);
+        sessionStorage.setItem("storage_navigation", this.data.title );
 
 
     // sessionStorage.setItem("title", this.data.title); 
@@ -418,6 +441,9 @@ navchange(){
   //            this.router.navigate(['./dashboard/leaveTechPortal']);
   //          }
         var x =document.getElementById("worker")
+          document.getElementById("worker").className+=" router-link-active";
+    document.getElementById("leave").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
       //  x.setAttribute("className","list-group-item-my123 router-link-active");
       //  x.style.border="1.5px solid #0a9e49";
 // var x =document.getElementById("worker")
@@ -522,9 +548,7 @@ navchange(){
 
     sessionStorage.setItem("refreshProviders", "true");
     document.getElementById("loadingDiv").style.display = "none";
-     document.getElementById("worker").className+=" router-link-active";
-    document.getElementById("leave").classList.remove("router-link-active");
-   document.getElementById("set_id").classList.remove("router-link-active");
+    
 
     //  var x =document.getElementById("worker")
      
@@ -552,16 +576,8 @@ navchange(){
   //     this.claimClicked = false;
   //  }
     }
- eventCalled1() {
-    document.getElementById("leave").className+=" router-link-active";
-    document.getElementById("worker").classList.remove("router-link-active");
-   document.getElementById("set_id").classList.remove("router-link-active");
- }
- eventCalled2() {
-    document.getElementById("set_id").className+=" router-link-active";
-    document.getElementById("worker").classList.remove("router-link-active");
-   document.getElementById("leave").classList.remove("router-link-active");
- }
+ 
+ 
    
  moreDropdownFunc(drop){
 

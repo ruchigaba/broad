@@ -25,6 +25,9 @@ export class LeaveTechPortalComponent implements OnInit, OnDestroy {
     
      document.body.className = ' leave-portal';
       this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
+      if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+       document.body.className = ' leave-portal';
+     }
   }
   ngOnDestroy(){
     document.body.className = '';
