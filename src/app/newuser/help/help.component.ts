@@ -81,11 +81,11 @@ helpSend(){
       .subscribe(res => {
         document.getElementById("loadingDiv").style.display = "none";
         this.commnFunc.alertPopup(res.result.email_status,"Help");
-      if(localStorage.getItem("Help")=="workercomp-Registration")
+             if(localStorage.getItem("Help")=="workercomp-Registration")
                     {  
                     this._route.navigate(['./createUser']);
                    }
-            else if(localStorage.getItem("Help")=="Registration"){
+                   else if(localStorage.getItem("Help")=="Registration"){
                         this._route.navigate(['./worker-comp']); 
                    }
                     else if(localStorage.getItem("Help")=="leavedisability-Registration"){
@@ -104,9 +104,7 @@ helpSend(){
       })
   }
 }
-   gotoHelp() {
-  	this._route.navigate(['./help']);
-}
+
 // Help Cancel Button Method
 helpCancel() {
    if(localStorage.getItem("Help")=="workercomp-Registration")
