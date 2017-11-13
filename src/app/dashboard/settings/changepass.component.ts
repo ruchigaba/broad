@@ -23,6 +23,9 @@ export class ChangePassComponent {
   commnFun = new CommonFunction();
 ngOnInit(){
 		 document.body.className = 'changepass';
+     document.getElementById("set_id").className+=" router-link-active";
+         document.getElementById("leave").classList.remove("router-link-active");
+         document.getElementById("worker").classList.remove("router-link-active"); 
 	}
     ngOnDestroy(){
     document.body.className = '';

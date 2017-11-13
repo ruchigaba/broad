@@ -10,7 +10,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class SettingsComponent implements OnInit {
 data: any;
 title = '';
-  constructor(private _routes : Router,private route: ActivatedRoute,) { }
+  constructor(private _routes : Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
    // document.getElementById('main-container').style.marginLeft='259px';
@@ -49,6 +49,6 @@ changeId(){
 }
 aboutTheApp(){
    sessionStorage.setItem("storage_navigation", this.data.title);
-  this._routes.navigate(['./dashboard/aboutApp']);
+   this._routes.navigate(['./dashboard/aboutApp']);
 }
 }

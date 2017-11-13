@@ -10,15 +10,16 @@
 .navbar.navbar-default.navbar-fixed-top.hidden-xs.ng-scope {
     top: -78px;
 }
-
-@media only screen and (min-width: 1200px) {
-    .leavetech {
-        height: 700px;
-         position:relative;
-          top:-70px; 
-    }
+.leavetech {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    top: 0;
 }
-    
+body.ios{
+position:relative !important;
+}
 .leave-portal .wrapper-main-page {
     margin-bottom: 0% !important;
 }
@@ -30,4 +31,49 @@
    // width:500;
    // left:10%;
       }
+
+    
+
+.ios .leavetech{
+    //display:none !important;
+    position:relative !important;
+    height:100vh !important;
+    margin-top:-50px !important;
+    top:-50px !important;
+}
+
+.ios .mobileFooter{
+    display:none !important;
+}
+.ios {
+    
+    overflow:hidden;
+    //margin-bottom: 2% !important;
+}
+  
+  .leave-portal{
+      
+      //height:100% !important;
+      // overflow:hidden !important;
+      //  position: fixed;
+      
+      // width:100%;
+      
+  }
+  .ios .wrapper-main-page {
+      margin-bottom: 2% !important;
+  }
+  
+  .ios iframe{
+      -webkit-overflow-scrolling: touch !important;
+      overflow: scroll !important;
+      // position: absolute;
+      // width:500;
+      // left:10%;
+  }
+
+
+
+
+
 

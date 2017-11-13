@@ -18,6 +18,7 @@ export class ForgothelpComponent implements OnInit {
     telephone: string;
     claimNm: string;
     canIHelp: string;
+    toEmail: string;
 
   constructor(private _route: Router, private _commonApiCall: CommonAPICall,private _location: Location,) {
   this.commnFunc = new CommonFunction(); 
@@ -47,13 +48,13 @@ export class ForgothelpComponent implements OnInit {
     })
     //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
 
-    //   this._commonApiCall.getService("supportContent?Type=HelpSupportEmail","","")
-    //   .subscribe(res => {
-    //     this.email = res.result[0].base64;
-    //   },
-    // error =>{
-    //   this._commonApiCall.handleError(error,"Help Email");
-    // })
+      this._commonApiCall.getService("supportContent?Type=HelpSupportEmail","","")
+      .subscribe(res => {
+        this.toEmail = res.result[0].base64;
+      },
+    error =>{
+      this._commonApiCall.handleError(error,"Help Email");
+    })
   }
   // HELP VALIDTAION
     helpSend() {
@@ -79,14 +80,14 @@ export class ForgothelpComponent implements OnInit {
         else {
             //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
 
-            var toEmail;
-            this._commonApiCall.getService("supportContent?Type=HelpSupportEmail", "", "")
-                .subscribe(res => {
-                    toEmail = res.result[0].base64;
-                })
+            // var toEmail;
+            // this._commonApiCall.getService("supportContent?Type=HelpSupportEmail", "", "")
+            //     .subscribe(res => {
+            //         toEmail = res.result[0].base64;
+            //     })
             var data =
                 {
-                    "to_email_address": 'khushboo.yadav@primussoft.com',
+                    "to_email_address": this.toEmail,
                     "from_email_address": this.email,
                     "subject_Text": this.subject,
                     "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"

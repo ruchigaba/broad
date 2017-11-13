@@ -44,7 +44,7 @@ export class LOBRegistrationComponent implements OnInit {
     document.body.className = '';
 }
 gotoHelp() {
-
+  sessionStorage.setItem("HelpClicked","Worker-Registration");
     this.router.navigate(['./help']);
   }
   goToWorkersComp() {

@@ -53,6 +53,12 @@ if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
   document.getElementById("worker").classList.remove("router-link-active");
 
 }
+else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage.getItem("HelpClicked")=="Worker-Registration"){
+
+   document.getElementById("leave").className+=" router-link-active";
+   document.getElementById("worker").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
+}
  
      // if(this.title=="forgotPass"){
      //   alert(this.title);
@@ -86,7 +92,7 @@ if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Help'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
@@ -301,12 +307,7 @@ if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
 // }
 
 backarr(event){
-
- // alert("previous url is: " + window.history.previous.href);
-
-   //alert(sessionStorage.getItem("storage_navigation"));
- 
-  if(sessionStorage.getItem("storage_navigation")== "settings"||
+if(sessionStorage.getItem("storage_navigation")== "settings"||
   sessionStorage.getItem("storage_navigation")== "securityinfo"||
   sessionStorage.getItem("storage_navigation")== "change-email"||
   sessionStorage.getItem("storage_navigation")== "Password"||
@@ -427,8 +428,9 @@ navchange(){
     newformat(){  
      //  alert(this.data.title); 
      //sessionStorage.setItem("title", this.data.title);
+      sessionStorage.setItem("HelpClicked","" );
         sessionStorage.setItem("storage_navigation", this.data.title );
-
+        //   alert( sessionStorage.getItem("storage_navigation"));
 
     // sessionStorage.setItem("title", this.data.title); 
 
@@ -463,6 +465,7 @@ navchange(){
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
         this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+      //   this.router.navigate(['./dashboard/workercomp'])
 
         //   x.style.border="1.5px solid #0a9e49";
         // x.style.padding="5px";

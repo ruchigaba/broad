@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonAPICall } from '../../shared/shared.service';
-import {Router} from '@angular/router';
+import {Router,ActivatedRoute } from '@angular/router';
 import {ViewEncapsulation} from '@angular/core';
 import { CommonFunction } from '../../shared/commonFunction';
 
@@ -15,7 +15,8 @@ import { CommonFunction } from '../../shared/commonFunction';
 //securityanswer component
 
 export class SecurityAnswerComponent {
-
+  data: any;
+  title = '';
   questions: any = [];
   count=0;
   filter: boolean= false;
@@ -26,7 +27,7 @@ export class SecurityAnswerComponent {
 
 //calling security questions service
 
-  constructor(private _cac: CommonAPICall, private _routes : Router)
+  constructor(private _cac: CommonAPICall, private _routes : Router,private route: ActivatedRoute)
   {
     window.scrollTo(0, 0);
     this._cac.getService("SecQuestions", "", "")
@@ -42,7 +43,11 @@ export class SecurityAnswerComponent {
 
   }
   ngOnInit(){
-		 document.body.className = 'securityinfo';
+        document.body.className = 'securityinfo';
+        document.getElementById("set_id").className+=" router-link-active";
+         document.getElementById("leave").classList.remove("router-link-active");
+         document.getElementById("worker").classList.remove("router-link-active"); 
+         
 	}
     ngOnDestroy(){
     document.body.className = '';
