@@ -28,7 +28,7 @@
      
    <div class="mycomp-tp">
 
-       <a  id="worker"  (click) = "claimClicked = true;eventCalled();lasttitle();newformat();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom router-link-active">
+       <a  id="worker"  (click) = "claimClicked = true;lasttitle();eventCalled();newformat();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom router-link-active">
       <span class="menu-item-img-span-abc">Worker's Comp</span> 
       </a></div>
       
@@ -41,7 +41,7 @@
      
 
    <div class="mycomp-tp " >
-       <a id="set_id" [routerLink]="['settings']" (click)="eventCalled();settingClick()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
+       <a id="set_id" [routerLink]="['settings']" (click)="settingClick()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
         <span class="menu-2">Settings</span>
            </a>
            </div>

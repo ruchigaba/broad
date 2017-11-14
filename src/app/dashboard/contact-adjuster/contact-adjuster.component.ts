@@ -2,7 +2,7 @@
 import { Component,OnInit } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 
 import { CommonAPICall } from '../../shared/shared.service';
 
@@ -20,16 +20,25 @@ export class ContactAdjusterComponent implements OnInit {
     email:string;
     superName:string;
     superEmail:string;
-
+    data: any;
+    title = '';
     claimNumber = "";
     isShowContact = false;
     claims1:any[] = JSON.parse(sessionStorage.getItem('claims'));
 
       // claimId = this.claims1[0].claim_id;
      claimId=12978352;
-    constructor(private _commonApiCall:CommonAPICall, private _route:Router) {}
+    constructor(private _commonApiCall:CommonAPICall, private _route:Router,private route: ActivatedRoute) {}
 
     ngOnInit(){
+   let currentRoute = this.route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;   
 console.log(this.claims1);
 
       window.scrollTo(0, 0);
@@ -73,7 +82,7 @@ claimInfoMessage(){
   sessionStorage.setItem('pageName','Adjuster');
   sessionStorage.setItem('name',this.name);
   sessionStorage.setItem('email',this.email);
-
+  sessionStorage.setItem("storage_navigation", this.data.title);
   this._route.navigate(['./dashboard/ClaimInfoMessage']);
 }
 //---------------------------------REDIRECT EMAIL SUPERVISOR METHOD-------------------------------------
@@ -82,7 +91,7 @@ emailSupervisor(){
   sessionStorage.setItem('pageName','Supervisor');
   sessionStorage.setItem('superName',this.superName);
   sessionStorage.setItem('superEmail',this.superEmail);
-  // this._route.navigate(['./dashboard/claimInfoMessage']);
+  sessionStorage.setItem("storage_navigation", this.data.title);
   this._route.navigate(['./dashboard/ClaimInfoMessage']);
 }
 //---------------------------------OPEN DIALER-------------------------------------
@@ -92,6 +101,8 @@ contact(){
 
 }
 absencedisability(){
+  sessionStorage.setItem("storage_navigation", this.data.title);
+  document.getElementById("worker").classList.remove("router-link-active");
   this._route.navigate(['./dashboard/leaveTechPortal']);
 }
 //-----------------------------------------ITS CALLED AFTER SELECTING OTHER CLAIM NUMBER-----------------------------

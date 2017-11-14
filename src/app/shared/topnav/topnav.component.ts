@@ -49,16 +49,21 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
-if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+     if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
+
   document.getElementById("worker").classList.remove("router-link-active");
 
 }
-else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage.getItem("HelpClicked")=="Worker-Registration"){
 
+else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage.getItem("HelpClicked")=="Worker-Registration"){
    document.getElementById("leave").className+=" router-link-active";
    document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
 }
+ 
+
+
+
  
      // if(this.title=="forgotPass"){
      //   alert(this.title);
@@ -92,7 +97,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Help'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
@@ -307,25 +312,25 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
 // }
 
 backarr(event){
+  alert(sessionStorage.getItem("storage_navigation"))
 if(sessionStorage.getItem("storage_navigation")== "settings"||
   sessionStorage.getItem("storage_navigation")== "securityinfo"||
   sessionStorage.getItem("storage_navigation")== "change-email"||
   sessionStorage.getItem("storage_navigation")== "Password"||
   sessionStorage.getItem("storage_navigation")== "Info")
   {
-  
+ 
     document.getElementById("set_id").className+=" router-link-active";
     document.getElementById("leave").classList.remove("router-link-active");
    document.getElementById("worker").classList.remove("router-link-active");
   }
   else if(sessionStorage.getItem("storage_navigation")== "leaveTechPortal" ){
-  //  alert("leavetech")
-      document.getElementById("leave").className+=" router-link-active";
+  
+    document.getElementById("leave").className+=" router-link-active";
     document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
   }
   else {
-
     document.getElementById("worker").className+=" router-link-active";
     document.getElementById("leave").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
@@ -392,7 +397,8 @@ settingClick(){
 navchange(){
  // sessionStorage.setItem("title", this.data.title);
     // alert(this.data.title);
-    sessionStorage.setItem("storage_navigation", this.data.title );
+     //  sessionStorage.setItem("HelpClick","" );
+    sessionStorage.setItem("storage_navigation",this.data.title );
      document.getElementById("leave").className+=" router-link-active";
     document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
@@ -406,6 +412,7 @@ navchange(){
              //   var x =document.getElementById("leave")
        //     x.setAttribute("className","list-group-item-my123 router-link-active");
           // x.style.border="1.5px solid #0a9e49"; 
+        
             var x =document.getElementById("leave")  
            if (sessionStorage.getItem("Id")=="workerscomp@gmail.com") { //workerscomp@gmail.com
           // x.setAttribute("className","list-group-item-mycom router-link-active");
@@ -413,7 +420,14 @@ navchange(){
           // x.style.padding="5px";
     
           this.router.navigate(['./dashboard/leaveregistration']);
-      } 
+           }
+          else if ( sessionStorage.getItem("HelpClick")=="leave-disability" && sessionStorage.getItem("Id")=="leavedisability@gmail.com"){
+ 
+   document.getElementById("worker").className+=" router-link-active";
+   document.getElementById("leave").classList.remove("router-link-active");
+   document.getElementById("set_id").classList.remove("router-link-active");
+}
+      
       else 
       {
        
@@ -443,14 +457,14 @@ navchange(){
   //            this.router.navigate(['./dashboard/leaveTechPortal']);
   //          }
         var x =document.getElementById("worker")
-          document.getElementById("worker").className+=" router-link-active";
+    document.getElementById("worker").className+=" router-link-active";
     document.getElementById("leave").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
       //  x.setAttribute("className","list-group-item-my123 router-link-active");
       //  x.style.border="1.5px solid #0a9e49";
 // var x =document.getElementById("worker")
   if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
-      x.setAttribute("className","list-group-item-mycom");
+    //  x.setAttribute("className","list-group-item-mycom");
        // x.style.border="0px";
        //  x.style.padding="5px";
     
