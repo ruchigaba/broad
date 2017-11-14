@@ -40,6 +40,7 @@ export class ForgotPasswordComponent implements OnInit,OnDestroy {
   }
 ngOnInit() {
    // document.getElementById('titleBar').style.paddingLeft="245px";
+    document.getElementById('titleBar').style.width="70%";
   }
   ngOnDestroy() {
  

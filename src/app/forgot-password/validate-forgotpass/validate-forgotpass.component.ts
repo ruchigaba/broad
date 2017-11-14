@@ -30,6 +30,7 @@ export class ValidateForgotpassComponent implements OnInit {
   ngOnInit() {
     this.claimnum= sessionStorage.getItem("claimno");
       localStorage.setItem("Help","validateforgot-Registration");
+       document.getElementById('titleBar').style.width="70%";
   }
    question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")

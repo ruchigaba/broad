@@ -96,9 +96,10 @@
 
 
 
-    <!-- <li [routerLink]="['settings']" (click) = "activeFooterMenu='Settings'" [class.active]="activeFooterMenu=='Settings'">
+     <!--<li [routerLink]="['settings']" (click) = "activeFooterMenu='Settings'" [class.active]="activeFooterMenu=='Settings'">
     <a class="list-group-item"> -->
- <!--    <li>
+        <div class="only" id="onlyworkers">
+    <li>
 <a [routerLink]="['settings']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">
     <div class="image-section-sidebar">
     <img class="menu-item-img-sidebar" src=".\image\settings2_64x64.png" >
@@ -107,11 +108,11 @@
     <span class="menu-item-img-span" >Settings</span>
     </div>
     </a>
-    </li> -->
+    </li> 
 
     <!-- <li [routerLink]="['']" (click) = "activeFooterMenu='Logout'" [class.active]="activeFooterMenu=='Logout'">
     <a class="list-group-item"> -->
- <!--    <li>
+    <li>
 <a [routerLink]="['']" [routerLinkActive]="['router-link']" class="list-group-item">
     <div class="image-section-sidebar">
     <img class="menu-item-img-sidebar" src=".\image\logout_64x64.png" >
@@ -120,8 +121,9 @@
     <span class="menu-item-img-span">Log Out</span>
     </div>
     </a>
-    </li> -->
- <!--     -->
+    </li> 
+        </div>
+ 
 
 
     <a routerLink="/dashboard/home" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">

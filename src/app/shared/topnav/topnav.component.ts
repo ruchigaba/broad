@@ -225,10 +225,23 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
      document.getElementById("tohide").style.display = 'none';
    //  document.getElementById("titleBar").style.display = 'block';
  }
- else{
+ else if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
+  document.getElementById("toshow").style.display = 'none';
+  document.getElementById("titleBar").style.display = 'block';
  
+ 
+ }
+  else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+  document.getElementById("WC").style.display = 'none';
+   document.getElementById("ST").style.display = 'none';
+    document.getElementById("titleBar").style.display = 'none';
+ }
+
+ else{
+   
   //document.getElementById("toshow").style.display = 'block';
   document.getElementById("titleBar").style.display = 'none';
+  document.getElementById("onlyworkers").style.display = 'none';
  }
 
   }
@@ -316,7 +329,9 @@ elseBack(){
 
 }
 backarr(event){
-  //alert(sessionStorage.getItem("storage_navigation"))
+
+
+  // alert(sessionStorage.getItem("storage_navigation"))
 if(sessionStorage.getItem("storage_navigation")== "settings"||
   sessionStorage.getItem("storage_navigation")== "securityinfo"||
   sessionStorage.getItem("storage_navigation")== "change-email"||
@@ -403,7 +418,7 @@ navchange(){
     // alert(this.data.title);
      //  sessionStorage.setItem("HelpClick","" );
     sessionStorage.setItem("storage_navigation",this.data.title );
-     document.getElementById("leave").className+=" router-link-active";
+    document.getElementById("leave").className+=" router-link-active";
     document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
  // let b=sessionStorage.getItem("Id1");

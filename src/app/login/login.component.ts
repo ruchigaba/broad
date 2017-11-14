@@ -273,7 +273,15 @@ else if(this.username== 'workerscomp@gmail.com'){
     sessionStorage.setItem("Id","workerscomp@gmail.com");
         this.router.navigate(['./dashboard/claims']);
       }
-      else{
+    else if(this.username== 'onlyworkerscomp@gmail.com'){
+       sessionStorage.setItem("Id","onlyworkerscomp@gmail.com");
+        this.router.navigate(['./dashboard/claims']);
+    }
+    else if(this.username== 'onlyleavedisability@gmail.com'){
+       sessionStorage.setItem("Id","onlyleavedisability@gmail.com");
+        this.router.navigate(['./dashboard/leaveTechPortal']);
+    }
+    else{
          sessionStorage.setItem("Id","");
        this.router.navigate(['./dashboard/claims']);
       }

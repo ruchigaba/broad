@@ -26,7 +26,7 @@
   <div class="titltxtd" id="titleBar">{{title}}</div>
    <div class="title-div fourty" id="toshow">
      
-   <div class="mycomp-tp">
+   <div class="mycomp-tp" id="WC">
 
        <a  id="worker"  (click) = "claimClicked = true;lasttitle();eventCalled();newformat();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom router-link-active">
       <span class="menu-item-img-span-abc">Worker's Comp</span> 
@@ -40,7 +40,7 @@
 
      
 
-   <div class="mycomp-tp " >
+   <div class="mycomp-tp " id="ST" >
        <a id="set_id" [routerLink]="['settings']" (click)="settingClick()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom sjsj">
         <span class="menu-2">Settings</span>
            </a>
