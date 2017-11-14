@@ -80,10 +80,17 @@ export class ForgothelpComponent implements OnInit {
         else {
             //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
 
+
+            //  var toEmail;
+            // this._commonApiCall.getService("supportContent?Type=HelpSupportEmail", "", "")
+            //     .subscribe(res => {
+            //         toEmail = res.result[0].base64;
+            //         alert(toEmail);
             // var toEmail;
             // this._commonApiCall.getService("supportContent?Type=HelpSupportEmail", "", "")
             //     .subscribe(res => {
             //         toEmail = res.result[0].base64;
+
             //     })
             var data =
                 {
@@ -97,6 +104,7 @@ export class ForgothelpComponent implements OnInit {
 
             this._commonApiCall.postService("emails/send", "", "application/json", data)
                 .subscribe(res => {
+                  //alert(toEmail);
                   document.getElementById("loadingDiv").style.display = "none";
                    this.commnFunc.alertPopup(res.result.email_status,"Help");
                    if(localStorage.getItem("Help")=="Forgotpass-Registration"){
