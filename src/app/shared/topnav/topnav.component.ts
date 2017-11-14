@@ -225,8 +225,9 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    //  document.getElementById("titleBar").style.display = 'block';
  }
  else if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
+  document.body.className = 'customheader';
   document.getElementById("toshow").style.display = 'none';
-  document.getElementById("titleBar").style.display = 'block';
+  //document.getElementById("titleBar").style.display = 'block';
  
  
  }
