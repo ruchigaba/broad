@@ -12,7 +12,7 @@ import {CommonAPICall} from '../../shared/shared.service';
   providers: [CommonAPICall]
 })
 export class TopnavComponent implements OnInit {
-
+LeaveTechTitle;
 previousUrl: string;
 routerLinkActive="";
 title = ''; parent: boolean = false;
@@ -49,6 +49,7 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
+   this.LeaveTechTitle=sessionStorage.getItem("storage_navigation");
      if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
 
   document.getElementById("worker").classList.remove("router-link-active");
@@ -324,8 +325,13 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
 //     document.getElementById("set_id").classList.remove("aclass1");
 //   }
 // }
+elseBack(){
+  //alert("else back button");
 
+}
 backarr(event){
+
+
   // alert(sessionStorage.getItem("storage_navigation"))
 if(sessionStorage.getItem("storage_navigation")== "settings"||
   sessionStorage.getItem("storage_navigation")== "securityinfo"||
