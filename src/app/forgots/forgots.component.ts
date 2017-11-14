@@ -15,6 +15,7 @@ commnFunc;
 
   ngOnInit() {
       localStorage.setItem("Help","Forgotpass-Registration");
+       document.getElementById('titleBar').style.width="70%";
   }
 
 

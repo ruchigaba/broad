@@ -33,7 +33,7 @@ export class EulaComponent implements OnInit{
 
     ngOnInit() {
       window.scrollTo(0, 0);
-     // document.getElementById('titleBar').style.paddingLeft="0px";
+      document.getElementById('titleBar').style.width="70%";
       this._cac.addClass1("eula");
       console.log(sessionStorage.getItem("token"));
        

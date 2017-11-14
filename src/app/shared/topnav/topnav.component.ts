@@ -241,8 +241,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    
   //document.getElementById("toshow").style.display = 'block';
   document.getElementById("titleBar").style.display = 'none';
- 
-   document.getElementById("onlyworkers").style.display = 'none';
+  document.getElementById("onlyworkers").style.display = 'none';
  }
 
   }
