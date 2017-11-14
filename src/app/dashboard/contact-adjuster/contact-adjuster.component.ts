@@ -43,9 +43,19 @@ console.log(this.claims1);
 
       window.scrollTo(0, 0);
         // Here Contact Adjuster Service Called.
- this.contactAdjusterService();
-}
-
+    this.contactAdjusterService();
+      // if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com")
+      // {
+      //   alert("123")
+      //   alert( document.getElementById("adjuster123"))
+      //  document.getElementById("adjuster123").style.display ='none';
+      // }
+      // else{
+      //   alert("xyz")
+        
+      //     document.getElementById("adjuster123").style.display ='block';
+      // }
+    }
 // Contact Adjuster Service  implementation method .
 contactAdjusterService(){
  
