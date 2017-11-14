@@ -1,6 +1,6 @@
 import { Component, OnInit,Pipe, PipeTransform  } from '@angular/core';
 import { CommonAPICall } from '../../../shared/shared.service';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { CommonFunction } from '../../../shared/commonFunction';
 
 declare var google: any;
@@ -15,15 +15,25 @@ declare var google: any;
 export class NearbyphysiciansMapComponent implements OnInit {
 commnFunc;
 map; mapOptions; item = 1;
+ data: any;
+title = '';
     infoWindow; marker; bounds;
     markers = []; totalPages = []; providersList;
     markerOptions; infoWindowOptions;
     showPagination = false;
-  constructor(private _commonApiCall: CommonAPICall, private route: Router) {
+  constructor(private _commonApiCall: CommonAPICall, private route: Router,private _route: ActivatedRoute) {
   this.commnFunc = new CommonFunction(); }
 
   ngOnInit() {
-
+      let currentRoute = this._route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
+           sessionStorage.setItem("storage_navigation", this.data.title);
       var routevar = this.route;
       this._commonApiCall.checkToken(routevar);
         window.scrollTo(0, 0);

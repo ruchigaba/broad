@@ -80,11 +80,17 @@ export class ForgothelpComponent implements OnInit {
         else {
             //-------------------------------------GET SUPPORT EMAIL API CALL-----------------------------------
 
+
             //  var toEmail;
             // this._commonApiCall.getService("supportContent?Type=HelpSupportEmail", "", "")
             //     .subscribe(res => {
             //         toEmail = res.result[0].base64;
             //         alert(toEmail);
+            // var toEmail;
+            // this._commonApiCall.getService("supportContent?Type=HelpSupportEmail", "", "")
+            //     .subscribe(res => {
+            //         toEmail = res.result[0].base64;
+
             //     })
             var data =
                 {

@@ -75,15 +75,17 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
 
 
 gotoHelp() {
-    this.router.navigate(['./help']);
+  this.router.navigate(['./dashboard/help-page']);
   }
   goToLeaveDisability() {
-     var x =document.getElementById("worker")
-     var y= document.getElementById("leave")
-      x.setAttribute("className","list-group-item-mycom");
-        y.style.border="1.5px solid #0a9e49";
-        y.style.padding="5px";
-          x.style.border="0px";
+    //  var x =document.getElementById("worker")
+    //  var y= document.getElementById("leave")
+    //   x.setAttribute("className","list-group-item-mycom");
+    //     y.style.border="1.5px solid #0a9e49";
+    //     y.style.padding="5px";
+    //       x.style.border="0px";
+         document.getElementById("leave").className+=" router-link-active";
+    document.getElementById("worker").classList.remove("router-link-active");
         this.router.navigate(['./dashboard/leaveTechPortal']);
   }
    dateOfLossInfo() {

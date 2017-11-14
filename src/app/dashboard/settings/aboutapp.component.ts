@@ -40,6 +40,14 @@ export class AboutAppComponent implements OnInit {
 
 	ngOnInit(){
 		 document.body.className = 'aboutapp';
+		 document.getElementById("set_id").className+=" router-link-active";
+         document.getElementById("leave").classList.remove("router-link-active");
+         document.getElementById("worker").classList.remove("router-link-active"); 
+		//  alert("hi")
+		 
+		//    document.getElementById("set_id").className+=" router-link-active";
+		//    document.getElementById("leave").classList.remove("router-link-active");
+    //       document.getElementById("worker").classList.remove("router-link-active");
 	}
     ngOnDestroy(){
     document.body.className = '';

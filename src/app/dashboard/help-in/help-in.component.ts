@@ -76,14 +76,15 @@ helpSend(){
   else {
     var data =
       {
-        "to_email_address": "dgupta@primussoft.com",
+        "to_email_address":  this.email,
         "from_email_address": this.e,
         "subject_Text": this.subject,
         "body_Text": "<b>" + "Claim Number: " + this.claimNm + "</b>" + "<br/><br/>" + this.canIHelp + "<br/><br/>"
-        + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + "dgupta@primussoft.com" + "<br/>" + "Phone: " + this.telephone
+        + "Regards," + "<br/>" + this.name + "<br/>" + "Email: " + this.e + "<br/>" + "Phone: " + this.telephone
       }
     this._commonApiCall.postService("emails/send", "", "application/json", data)
       .subscribe(res => {
+          document.getElementById("loadingDiv").style.display = "none";
         this.commnFunc.alertPopup(res.result.email_status,"Help");
       if(localStorage.getItem("Help")=="workercomp-Registration")
                     {  

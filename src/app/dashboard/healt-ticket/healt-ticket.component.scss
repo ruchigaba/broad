@@ -139,8 +139,18 @@ button#dropdownMenu1 {
     float: left;
     padding-right: 20px;
     }
-   
-   @media only screen and (max-width: 800px) {
+
+      .healthtctz{
+     text-align:center;
+     width:33%;
+     margin: 0 auto;
+    }
+
+    @media only screen and (max-width: 800px) {
+       .healthtctz{
+        text-align:justify;
+        width:100%;     
+       }
    .content-healthtick-page {
     width: 96%;
     padding: 0 0 0 0;

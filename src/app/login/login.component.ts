@@ -215,12 +215,8 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
 
         },
         error => {
-      if(this.username== 'leavedisability@gmail.com'){
-        this.router.navigate(['./dashboard/leaveTechPortal']);
-      }
-      else{
-        this._commonApi.handleError(error, "Login");
-      }
+     this._commonApi.handleError(error, "Login");
+      
         });
     }
   }

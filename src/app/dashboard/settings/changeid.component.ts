@@ -22,6 +22,9 @@ reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
   {window.scrollTo(0, 0);}
 ngOnInit(){
 		 document.body.className = 'changeid';
+     document.getElementById("set_id").className+=" router-link-active";
+         document.getElementById("leave").classList.remove("router-link-active");
+         document.getElementById("worker").classList.remove("router-link-active"); 
 	}
     ngOnDestroy(){
     document.body.className = '';

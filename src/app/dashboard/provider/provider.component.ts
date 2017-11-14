@@ -1,6 +1,6 @@
  import { Component, OnInit } from '@angular/core';
 import { CommonAPICall } from '../../shared/shared.service';
-import {Router, RouteReuseStrategy, ActivatedRouteSnapshot,DetachedRouteHandle,NavigationEnd} from '@angular/router';
+import {Router, RouteReuseStrategy, ActivatedRouteSnapshot,DetachedRouteHandle,NavigationEnd,ActivatedRoute} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
 import {CustomReuseStrategy} from '../../reuse-strategy';
 
@@ -15,17 +15,27 @@ declare var window: any;
 })
 export class ProviderComponent implements OnInit {
     commnFunc;
+     data: any;
+     title = '';
     address = ""; city = ""; state = ""; zipcode = ""; claimNumber = ""; selectedItem = "";
     currentLocationHide = true; contentLoaded = false; taxId2digits = ""; taxId7digits = "";
     phone3digits = ""; phone3digits2 = ""; phone4digits = ""; selectedSpecialities = [];
     headerToken = 'Bearer ' + sessionStorage.getItem("token");
     specialitesArray = []; radiusdistance = []; folder = {};
 
-  constructor(private _commonApiCall: CommonAPICall, private route: Router) { 
+  constructor(private _commonApiCall: CommonAPICall, private route: Router,private _route: ActivatedRoute) { 
   this.commnFunc = new CommonFunction();}
 
   ngOnInit() {
-
+     let currentRoute = this._route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
+           sessionStorage.setItem("storage_navigation", this.data.title);
       var routevar = this.route;
         this._commonApiCall.checkToken(routevar);
 

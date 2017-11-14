@@ -44,17 +44,20 @@ export class LOBRegistrationComponent implements OnInit {
     document.body.className = '';
 }
 gotoHelp() {
-
-    this.router.navigate(['./help']);
+  sessionStorage.setItem("HelpClicked","Worker-Registration");
+    this.router.navigate(['./dashboard/help-page']);
   }
   goToWorkersComp() {
-    var x =document.getElementById("worker")
-     var y= document.getElementById("leave")
-      x.setAttribute("className","list-group-item-mycom");
-        x.style.border="1.5px solid #0a9e49";
-        x.style.padding="5px";
-          y.style.border="0px";
-         this.router.navigate(['./dashboard/claims']);
+    // var x =document.getElementById("worker")
+    //  var y= document.getElementById("leave")
+    //   x.setAttribute("className","list-group-item-mycom");
+    //     x.style.border="1.5px solid #0a9e49";
+    //     x.style.padding="5px";
+    //       y.style.border="0px";
+     document.getElementById("worker").className+=" router-link-active";
+    document.getElementById("leave").classList.remove("router-link-active");
+        // this.router.navigate(['./dashboard/claims']);
+        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
   }
    question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")

@@ -80,7 +80,7 @@ this.addDivBeforeBody();
       'Authorization': headerToken,
       'Content-Type': contentType,
       // 'ApplicationVersion': "3.0",
-      //  'Platform': "Native",
+      //  'Platform': "Browser",
       //  'ApplicationName': 'MyClaim',
 
 
@@ -136,7 +136,7 @@ this.addDivBeforeBody();
 
         // code to show loader when http request is called
         this.isLoading = false;
-       document.getElementById("loadingDiv").style.display = "none";
+        document.getElementById("loadingDiv").style.display = "none";
         return resp.json();
       });
 
