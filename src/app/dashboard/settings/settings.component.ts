@@ -18,10 +18,23 @@ title = '';
   //  if(document.getElementById("worker").className=="list-group-item-mycom sjsj"){
   //     var x= document.getElementById("worker")
   //           console.log(x);
-  //     //  x.style.border="0px";
-  if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
-  document.getElementById("sidebar").style.display = 'block';
-  }
+  // //     //  x.style.border="0px";
+  if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+  document.getElementById("sidebar").style.display = 'none';
+  
+   document.getElementById("mobileFooter").style.display = 'none';
+
+}
+else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+  document.getElementById("sidebar").style.display = 'none';
+   document.getElementById("mobileFooter").style.display = 'none';
+}
+else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
+   document.getElementById("sidebar").style.display = 'none';
+    document.getElementById("mobileFooter").style.display = 'none';
+}
+
+
      let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
