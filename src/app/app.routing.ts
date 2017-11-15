@@ -73,7 +73,7 @@ export const routes = [
       { path: 'securityinfo', component: SecurityAnswerComponent, data: { title: 'securityinfo',parent:'settings' } },
       { path: 'change-email', component: ChangeIdComponent, data: { title: 'change-email',parent:'settings' } },
       { path: 'change-password', component: ChangePassComponent, data: { title: 'Password',parent:'settings' } },
-      { path: 'contact-adjuster', component: ContactAdjusterComponent, data: { title: 'Contact Workers Comp Adjuster'} },
+      { path: 'contact-adjuster', component: ContactAdjusterComponent, data: { title: 'contact-adjuster'} },
       { path:'provider', component:ProviderComponent , data: {title:'provider'} },
       { path: 'physiciansmap', component: NearbyphysiciansMapComponent, data: { title: 'physiciansmap',parent:'provider' } },
       { path: 'social-media', component: SocialMediaComponent, data: { title: 'social-media' } },

@@ -10,6 +10,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class SettingsComponent implements OnInit {
 data: any;
 title = '';
+
   constructor(private _routes : Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -18,6 +19,9 @@ title = '';
   //     var x= document.getElementById("worker")
   //           console.log(x);
   //     //  x.style.border="0px";
+  if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
+  document.getElementById("sidebar").style.display = 'block';
+  }
      let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
