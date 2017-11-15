@@ -24,7 +24,8 @@ a.w3-bar {
 .clstext{
 position: fixed;
     right: 20px;
-    line-height: 80px;
+    line-height: 69px;
+    top: 5px;
 
 }
 // .mycomp-tp.list-group-item-mycom.sjsj{
@@ -303,10 +304,11 @@ a.active {
      
 } */
 
-
-.navbarstyle #titleBar{
+.navbarstyle #titleBar{     
     width:51% !important;
 }
+
+
 .w3-dropdown-dr{
 line-height: 40px;
 }
