@@ -227,12 +227,12 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    //  document.getElementById("titleBar").style.display = 'block';
  }
  else if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
-   document.body.className = 'customworker';
+ 
   document.getElementById("toshow").style.display = 'none';
   document.getElementById("titleBar").style.display = 'block';
 }
   else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
-      document.body.className = 'customleave';
+     
   document.getElementById("WC").style.display = 'none';
   document.getElementById("titleBar").style.display = 'none';
  }
@@ -325,7 +325,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
 //   }
 // }
 elseBack(){
-  alert(sessionStorage.getItem("storage_navigation"));
+ // alert(sessionStorage.getItem("storage_navigation"));
 //   if(sessionStorage.getItem("storage_navigation")  == 'claims'){
 //     alert(sessionStorage.getItem("storage_navigation"));
 //   this.backarr();
@@ -397,10 +397,10 @@ settingClick(){
 navchange(){
  // sessionStorage.setItem("title", this.data.title);
     // alert(this.data.title);
-     //  sessionStorage.setItem("HelpClick","" );
+     // sessionStorage.setItem("HelpClick","" );
      setTimeout(()=>{
     sessionStorage.setItem("storage_navigation",this.data.title );
-    alert(this.data.title);
+   //  alert(this.data.title);
   },400);
 
     //alert(this.data.title);

@@ -46,17 +46,7 @@ console.log(this.claims1);
         // Here Contact Adjuster Service Called.
     this.contactAdjusterService();
 
-      if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com")
-      {
-     setTimeout(()=>{
-     //document.getElementById("qwert").style.display="none"
-     },650)
-     }
-      else{
-         //document.getElementById("qwert").style.display ='block';
-      }
-
-    }
+  }
    
 // Contact Adjuster Service  implementation method .
 contactAdjusterService(){
@@ -109,7 +99,7 @@ emailSupervisor(){
 //---------------------------------OPEN DIALER-------------------------------------
 
 contact(){
-  window.open('tel:'+this.phone, '_system');
+  
 
 }
 absencedisability(){
