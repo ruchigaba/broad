@@ -37,11 +37,13 @@ else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
   document.getElementById("sidebar").style.display = 'none';
  //  document.getElementById("mobileFooter").style.display = 'none';
 }
-else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
+else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com" ){
    document.getElementById("sidebar").style.display = 'none';
      document.body.className = 'settingsun';
 }
-    
+else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+      document.body.className = 'settingun';
+}
     // document.getElementById("settingsun").classList.remove("section-image-setting");
     //  document.getElementById("settingsun").className+="settingstest"; 
 

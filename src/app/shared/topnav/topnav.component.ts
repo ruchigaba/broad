@@ -98,7 +98,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change email address' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
@@ -226,14 +226,12 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    //  document.getElementById("titleBar").style.display = 'block';
  }
  else if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
-  // document.body.className = 'customheader';
+   document.body.className = 'customworker';
   document.getElementById("toshow").style.display = 'none';
-
-  
-
   document.getElementById("titleBar").style.display = 'block';
 }
   else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+      document.body.className = 'customleave';
   document.getElementById("WC").style.display = 'none';
   document.getElementById("titleBar").style.display = 'none';
  }
