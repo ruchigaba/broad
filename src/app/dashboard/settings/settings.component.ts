@@ -28,7 +28,7 @@ title = '';
   //           console.log(x);
   // //     //  x.style.border="0px";
   if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
-  document.getElementById("sidebar").style.display = 'none';
+ // document.getElementById("sidebar").style.display = 'none';
   
   // document.getElementById("mobileFooter").style.display = 'none';
 
@@ -37,20 +37,22 @@ else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
   document.getElementById("sidebar").style.display = 'none';
  //  document.getElementById("mobileFooter").style.display = 'none';
 }
+else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com" && sessionStorage.getItem('userName')!="" ){
+
+     document.body.className = 'settings';
+}
 else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com" ){
-   document.getElementById("sidebar").style.display = 'none';
-     document.body.className = 'settingsun';
+  // document.getElementById("sidebar").style.display = 'none';
+   document.body.className = 'settingsun';
 }
-else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
-      document.body.className = 'settingun';
-}
+
     // document.getElementById("settingsun").classList.remove("section-image-setting");
     //  document.getElementById("settingsun").className+="settingstest"; 
 
 
 else
    {
-         document.body.className = 'settings';
+       
    } 
   //  }
 
@@ -60,6 +62,7 @@ else
     ngOnDestroy(){
     document.body.className = '';
 
+  
   }
 securityinfo(){
    sessionStorage.setItem("storage_navigation", this.data.title);

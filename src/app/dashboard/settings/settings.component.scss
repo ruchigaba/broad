@@ -22,12 +22,23 @@ width:25%;
     }
      
   } 
+
   .settingun{
     #main-container{
       margin-left:0;
     }  
   }
 
+
+  .settingsun {
+    .section-image-setting img {
+       
+      width: 20%;
+  }
+  }
+.settingsun .sidebar{
+  display:none;
+}
 
 
 .extratopcls{
@@ -43,7 +54,12 @@ text-align: right;
  
 
 @media only screen and (max-width: 800px){
- 
+  .settingsun {
+    .section-image-setting img {
+       
+      width: 50%;
+  }
+  }
 .main-container {
   
  margin-left: 0px;
