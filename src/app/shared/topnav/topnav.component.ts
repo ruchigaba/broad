@@ -399,7 +399,7 @@ navchange(){
     // alert(this.data.title);
      // sessionStorage.setItem("HelpClick","" );
      setTimeout(()=>{
-    sessionStorage.setItem("storage_navigation",this.data.title );
+    sessionStorage.setItem("storage_navigation",this.data.title);
    //  alert(this.data.title);
   },400);
 
@@ -483,7 +483,7 @@ navchange(){
       // x.style.border="0px";
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
-        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+        this.router.navigate(['dashboard/'+sessionStorage.getItem("title")]);
       //   this.router.navigate(['./dashboard/workercomp'])
 
         //   x.style.border="1.5px solid #0a9e49";

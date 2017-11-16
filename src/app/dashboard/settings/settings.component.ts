@@ -27,13 +27,13 @@ title = '';
   //     var x= document.getElementById("worker")
   //           console.log(x);
   // //     //  x.style.border="0px";
-  if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+ 
  // document.getElementById("sidebar").style.display = 'none';
   
   // document.getElementById("mobileFooter").style.display = 'none';
 
-}
-else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+
+ if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
   document.getElementById("sidebar").style.display = 'none';
    document.body.className = 'settingswork';
  //  document.getElementById("mobileFooter").style.display = 'none';

@@ -45,8 +45,13 @@ console.log(this.claims1);
       window.scrollTo(0, 0);
         // Here Contact Adjuster Service Called.
     this.contactAdjusterService();
-
+  if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
+  document.body.className = 'adjusterworkerscomp';
+    }
   }
+   ngOnDestroy(){
+    document.body.className = '';
+   }
    
 // Contact Adjuster Service  implementation method .
 contactAdjusterService(){
