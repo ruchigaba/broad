@@ -10,14 +10,10 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class SettingsComponent implements OnInit {
 data: any;
 title = '';
+
   constructor(private _routes : Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
-   // document.getElementById('main-container').style.marginLeft='259px';
-  //  if(document.getElementById("worker").className=="list-group-item-mycom sjsj"){
-  //     var x= document.getElementById("worker")
-  //           console.log(x);
-  //     //  x.style.border="0px";
      let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -26,8 +22,36 @@ title = '';
         sessionStorage.setItem("parent",this.data.parent);
                     //add title to header
           this.title = this.data.title;
+   // document.getElementById('main-container').style.marginLeft='259px';
+  //  if(document.getElementById("worker").className=="list-group-item-mycom sjsj"){
+  //     var x= document.getElementById("worker")
+  //           console.log(x);
+  // //     //  x.style.border="0px";
+  if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+  document.getElementById("sidebar").style.display = 'none';
+  
+  // document.getElementById("mobileFooter").style.display = 'none';
+
+}
+else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+  document.getElementById("sidebar").style.display = 'none';
+ //  document.getElementById("mobileFooter").style.display = 'none';
+}
+else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
+   document.getElementById("sidebar").style.display = 'none';
+     document.body.className = 'settingsun';
+}
+    
+    // document.getElementById("settingsun").classList.remove("section-image-setting");
+    //  document.getElementById("settingsun").className+="settingstest"; 
+
+
+else
+   {
+         document.body.className = 'settings';
+   } 
   //  }
-    document.body.className = 'settings';
+
     window.scrollTo(0, 0);
     document.getElementsByTagName("html")[0].removeAttribute("class");
   }

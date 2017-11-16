@@ -12,17 +12,22 @@ float: left;
 width: 50%;
 img {
 padding: 5px;
-width:20%;
+width:25%;
 }
 }
 
-.settings , .securityinfo , .changepass , .aboutapp , .changeid {
+.settingsun , .abtapp , .chngid , .changeps , .securityin {
     #main-container{
       margin-left:0;
     }
      
   } 
-
+  .settingsun {
+    .section-image-setting img {
+       
+      width: 20%;
+  }
+  }
 
 
 .extratopcls{
@@ -38,7 +43,12 @@ text-align: right;
  
 
 @media only screen and (max-width: 800px){
- 
+  .settingsun {
+    .section-image-setting img {
+       
+      width: 50%;
+  }
+  }
 .main-container {
   
  margin-left: 0px;

@@ -59,21 +59,35 @@ margin-left:0;
   display:none;
 }
 
-.settings .sidebar{
-  display: none;
-}
-.aboutapp .sidebar{
-  display: none;
-}
-.securityinfo .sidebar{
-  display: none;
-}
-.changeid .sidebar{
-  display: none;
-}
-.changepass .sidebar{
-  display: none;
-}
+// .settings .sidebar{
+//   display: none;
+// // }
+// .aboutapp .sidebar{
+//   display: none;
+// }
+// .securityinfo .sidebar{
+//   display: none;
+// }
+// .changeid .sidebar{
+//   display: none;
+// }
+// .changepass .sidebar{
+//   display: none;
+// } 
+// .aboutapp .sidebar{
+//   display: none;
+// }
+// .securityinfo .sidebar{
+//   display: none;
+// }
+// .changeid .sidebar{
+//   display: none;
+// }
+// .changepass .sidebar{
+//   display: none;
+// }
+ 
+ 
 
  
 .navbar-fixed-top {
@@ -169,10 +183,6 @@ h4{
  }
 
 
-
-
-
-
 body {
 
 
@@ -207,8 +217,7 @@ img {
 @media screen and (max-width: 800px){
 
 .main-container {
-  
-    margin-top: 0px !important;
+   margin-top: 0px !important;
 }
 
 .mycontain {
@@ -219,24 +228,22 @@ img {
     margin-top: 0;
     margin-left: 0;
 }
-.settings .mobileFooter{
-display:none;
-}
+
 .leave-registration .mobileFooter{
 display:none;
 }
-.aboutapp .mobileFooter{
-  display: none;
-}
-.securityinfo .mobileFooter{
-  display: none;
-}
-.changeid .mobileFooter{
-  display: none;
-}
-.changepass .mobileFooter{
-  display: none;
-} 
+// .aboutapp .mobileFooter{
+//   display: none;
+// }
+// .securityinfo .mobileFooter{
+//   display: none;
+// }
+// .changeid .mobileFooter{
+//   display: none;
+// }
+// .changepass .mobileFooter{
+//   display: none;
+// } 
 .help-in  .mobileFooter{
   display: none;
 } 

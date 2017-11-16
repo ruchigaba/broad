@@ -1,7 +1,11 @@
 
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
-
+// .customheader{
+ 
+ 
+// margin-left: 20% !important;
+// }
 a.w3-bar-item.w3-button {
     display: inline-block;
     width: 200%;
@@ -20,7 +24,8 @@ a.w3-bar {
 .clstext{
 position: fixed;
     right: 20px;
-    line-height: 80px;
+    line-height: 69px;
+    top: 5px;
 
 }
 // .mycomp-tp.list-group-item-mycom.sjsj{
@@ -298,6 +303,12 @@ a.active {
    float: none !important;
      
 } */
+
+// .navbarstyle #titleBar{     
+//     width:51% !important;
+// }
+
+
 .w3-dropdown-dr{
 line-height: 40px;
 }
@@ -390,8 +401,11 @@ background-color:#efeeee;
 .titltxtd {
      
     line-height: 69px;
-    width:74%;
+    // width:74%;
       font-size: 18px;
+     
+      height: auto;
+      width: 60%;
    
 }
 
@@ -558,7 +572,7 @@ background-color:#efeeee;
     }
 
     .headerBack .titltxtd {
-    width: 51%;
+    width: 51% !important;
     display: flex;
     align-items: center !important;
     justify-content: center;

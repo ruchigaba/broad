@@ -25,10 +25,10 @@ title = '';
    // this.name = 'Angular2'
   }
   ngOnInit() {
-    var iframe = document.getElementById("frameid");
-var iWindow = (<HTMLIFrameElement>iframe).src;
+//     var iframe = document.getElementById("frameid");
+// var iWindow = (<HTMLIFrameElement>iframe).src;
   //var url = iWindow.location.href;  
-  alert("url will be:" +iWindow);
+  //alert("url will be:" +iWindow);
     
      let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
