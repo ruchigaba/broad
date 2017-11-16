@@ -202,8 +202,8 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
             //console.log(this.getBase64(input.files));
           }
           else {
-            // imgPhoto.src = this.transperentImg;
-            // inputFileName.value = '';
+             imgPhoto.src = this.transperentImg;
+             inputFileName.value = '';
             this.ComFunc.alertPopup("File size should not be more than 1 mb.", "Message");
           }
         }
@@ -217,8 +217,8 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
       }
     }
     else {
-      // imgPhoto.src = this.transperentImg;   //change by khushboo on 7/9/17
-      // inputFileName.value = '';
+       imgPhoto.src = this.transperentImg;   //change by khushboo on 7/9/17
+      inputFileName.value = '';
        
        this.ComFunc.alertPopup("File format not supported", "Message");
     }

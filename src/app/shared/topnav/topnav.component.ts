@@ -49,7 +49,8 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
-   this.LeaveTechTitle=sessionStorage.getItem("storage_navigation");
+  // this.LeaveTechTitle=sessionStorage.getItem("storage_navigation");
+   //alert(this.LeaveTechTitle);
      if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
 
   document.getElementById("worker").classList.remove("router-link-active");
@@ -325,11 +326,22 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
 //   }
 // }
 elseBack(){
-  //alert("else back button");
+  alert(sessionStorage.getItem("storage_navigation"));
+//   if(sessionStorage.getItem("storage_navigation")  == 'claims'){
+//     alert(sessionStorage.getItem("storage_navigation"));
+//   this.backarr();
+//   return false;
+// }
+    document.getElementById("worker").className+=" router-link-active";
+    // document.getElementById("leave").classList.remove("router-link-active");
+   // document.getElementById("set_id").classList.remove("router-link-active");
 
 }
-backarr(event){
-
+backarr(){
+if(sessionStorage.getItem("storage_navigation")  == 'leaveTechPortal'){
+  this.elseBack();
+  return false;
+}
 
   // alert(sessionStorage.getItem("storage_navigation"))
 if(sessionStorage.getItem("storage_navigation")== "settings"||
@@ -346,7 +358,7 @@ if(sessionStorage.getItem("storage_navigation")== "settings"||
   else if(sessionStorage.getItem("storage_navigation")== "leaveTechPortal" ){
   
     document.getElementById("leave").className+=" router-link-active";
-    document.getElementById("worker").classList.remove("router-link-active");
+    document.getElementById("worker").classList.remove("router-link-active");  
    document.getElementById("set_id").classList.remove("router-link-active");
   }
   else {
@@ -355,37 +367,7 @@ if(sessionStorage.getItem("storage_navigation")== "settings"||
    document.getElementById("set_id").classList.remove("router-link-active");
   }
 
-  //alert("previous url is: " + window.history.previous.href);
-
-  //alert(this.router.events);
-    // this.router.events
-    // .filter(event => false)
-    // .subscribe(e => {
-    //   //console.log('prev:', this.previousUrl);
-    //   this.previousUrl = (e as  NavigationEnd).url;
-    //   alert(this.previousUrl);
-    // });
-  //alert(this.previousUrl);
-
-
-  // console.log(this.data.parent,"Hello");
-  // if (this.data.title=="settings" || this.data.title == "securityinfo" || this.data.title == "Password" || this.data.title == "Info" || this.data.title == "change-email" ){
- 
-  //   document.getElementById("set_id").className+=" aclass1";
-  //   document.getElementById("leave").classList.remove("aclass1");
-  //   document.getElementById("worker").classList.remove("aclass1");
-  // } else if(this.data.title=="leaveTechPortal" ) {
-  //  // document.querySelector("leave").className=document.querySelector("leave").className.split("aclass1").join("");
-  //   //ELEMENT.classList.remove("active-class1"); 
-  //   document.getElementById("leave").className+=" aclass1";
-  //   document.getElementById("worker").classList.remove("aclass1");
-  //   document.getElementById("set_id").classList.remove("aclass1");
-  // }
-  // else{
-  //   document.getElementById("worker").className+=" aclass1";
-  //    document.getElementById("leave").classList.remove("aclass1");
-  //   document.getElementById("set_id").classList.remove("aclass1");
-  // }
+  
 }
 
 
@@ -417,7 +399,12 @@ navchange(){
  // sessionStorage.setItem("title", this.data.title);
     // alert(this.data.title);
      //  sessionStorage.setItem("HelpClick","" );
+     setTimeout(()=>{
     sessionStorage.setItem("storage_navigation",this.data.title );
+    alert(this.data.title);
+  },400);
+
+    //alert(this.data.title);
     document.getElementById("leave").className+=" router-link-active";
     document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");

@@ -49,11 +49,11 @@ console.log(this.claims1);
       if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com")
       {
      setTimeout(()=>{
-     document.getElementById("qwert").style.display="none"
+     //document.getElementById("qwert").style.display="none"
      },650)
      }
       else{
-         document.getElementById("qwert").style.display ='block';
+         //document.getElementById("qwert").style.display ='block';
       }
     }
    
@@ -108,7 +108,7 @@ emailSupervisor(){
 //---------------------------------OPEN DIALER-------------------------------------
 
 contact(){
- // window.open('tel:'+this.phone, '_system');
+  window.open('tel:'+this.phone, '_system');
 
 }
 absencedisability(){
