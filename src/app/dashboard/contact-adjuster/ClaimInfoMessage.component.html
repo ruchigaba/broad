@@ -76,11 +76,11 @@ Upload Attachments
    <div id="collapseExample" class="collapse">
          <div #mainDiv class="collapse-claim-info" id="collapseExample" style="display:none;">
           <!--template bindings={}-->
-          <!--<input class="inputFileName" id="fileName"  type="file">-->
+          <!-- <input class="inputFileName" id="fileName"  type="file"> -->
           <input type = "button" class="cma-btn-nw" value = "Camera" *ngIf = "showCameraButton" 
           (click) = "openCameraAndroid()"  style="margin-top:15px; color: #000;"/> 
         <input type="file" (change)="profileImgChange(input)" style="display:none !important;" #input class="inputFileName" id="fileName" [disabled]="profileImg.length == 2" />
-         <div  class="choosefilecontainer-claim-info" style="margin-top:5px;">
+         <div  class="choosefilecontainer" style="margin-top:5px;">
           <label for="fileName" style="opacity: 0.98;cursor: pointer;border-radius: 3px;
           background-color: #ccc;padding: 4px;padding-right: 8px;padding-left: 8px;margin-top:8px;"
            [class.disableChoose]="profileImg.length == 2">Choose File</label>

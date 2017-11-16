@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'css-carousel',
-  templateUrl:'leaveTechPortal.component.html',
+  templateUrl:'leaveTechPortal.component.html'
   //providers: [CommonAPICall]
 })
 export class LeaveTechPortalComponent implements OnInit, OnDestroy {
@@ -25,6 +25,11 @@ title = '';
    // this.name = 'Angular2'
   }
   ngOnInit() {
+//     var iframe = document.getElementById("frameid");
+// var iWindow = (<HTMLIFrameElement>iframe).src;
+  //var url = iWindow.location.href;  
+  //alert("url will be:" +iWindow);
+    
      let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
