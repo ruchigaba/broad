@@ -39,13 +39,19 @@ else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
 }
 else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
    document.getElementById("sidebar").style.display = 'none';
-  //  document.getElementById("mobileFooter").style.display = 'none';
+     document.body.className = 'settingsun';
 }
-
-
     
+    // document.getElementById("settingsun").classList.remove("section-image-setting");
+    //  document.getElementById("settingsun").className+="settingstest"; 
+
+
+else
+   {
+         document.body.className = 'settings';
+   } 
   //  }
-    document.body.className = 'settings';
+
     window.scrollTo(0, 0);
     document.getElementsByTagName("html")[0].removeAttribute("class");
   }
