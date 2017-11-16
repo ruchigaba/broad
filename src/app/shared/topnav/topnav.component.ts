@@ -62,6 +62,10 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
 }
+else if (sessionStorage.getItem("Id")=="onlyworkerscomp@gmail.com") {
+   document.getElementById("tohide").style.display = 'none';
+}
+
  
 
 

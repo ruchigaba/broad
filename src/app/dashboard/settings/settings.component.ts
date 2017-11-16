@@ -53,7 +53,7 @@ else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!=
 
 else
    {
-     document.body.className = 'settings';   
+     document.body.className = 'settings123';   
    } 
   //  }
 

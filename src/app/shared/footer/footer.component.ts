@@ -12,7 +12,11 @@ activeFooterMenu = "Claim Info";
   constructor(private route?: Router) { }
   
   ngOnInit() {
-
+       if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com")
+       {
+          document.getElementById("Settings").style.display = 'block';
+           document.getElementById("Log Out").style.display = 'block';
+       }
      // document.onclick=function() { 
      //   document.getElementById("togg-dv").className = "hidden-content slide-down"
      //   };
