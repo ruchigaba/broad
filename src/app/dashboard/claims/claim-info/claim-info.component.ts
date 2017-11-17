@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonAPICall } from '../../../shared/shared.service';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-claim-info',
@@ -12,11 +12,19 @@ export class ClaimInfoComponent implements OnInit {
 	claimNumber = "";employeeName = "";dateOfLoss = "";
 adjusterName = "";adjusterEmail = "";claimStat = "";
 claimStatus = "";adjusterNo="";
-
-  constructor(public _dashboardApiService: CommonAPICall, private route: Router) { }
+data: any;
+title = '';
+constructor(public _dashboardApiService: CommonAPICall, private route: Router,private _route: ActivatedRoute) { }
 
   ngOnInit() {
-
+     let currentRoute = this._route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
   	var routevar = this.route;
     this._dashboardApiService.checkToken(routevar);
 
