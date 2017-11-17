@@ -32,12 +32,15 @@ width:25%;
   display:none;
 }
 
-  .settingsun,.settingswork {
+  .settingsun ,.settingswork  {
     .section-image-setting img {
        
       width: 20%;
   }
   }
+
+
+ 
 .settingsun .sidebar{
   display:none;
 }
@@ -62,6 +65,14 @@ text-align: right;
       width: 50%;
   }
   }
+
+  .settingswork {
+    .section-image-setting img {
+       
+      width: 45%;
+  }
+  }
+
 .main-container {
   
  margin-left: 0px;
