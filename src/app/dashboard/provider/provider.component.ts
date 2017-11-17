@@ -233,7 +233,7 @@ getClaimantAddress() {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     sessionStorage.setItem("local_Latitude", "" + position.coords.latitude);
                     sessionStorage.setItem("local_Longitude", "" + position.coords.longitude);
-                    route.navigate(['./dashboard/physiciansmap']);
+                    route.navigate(['./dashboard/Providers']);
 
                 },
                 function(error) { 
@@ -286,7 +286,7 @@ getClaimantAddress() {
                                     sessionStorage.setItem("local_Latitude", "" + position.coords.latitude);
                                     sessionStorage.setItem("local_Longitude", "" + position.coords.longitude);
 
-                                    route.navigate(['./dashboard/physiciansmap']);
+                                    route.navigate(['./dashboard/Providers']);
                                 },
                                 function(error) {
                                     //alert("current location");
@@ -402,7 +402,7 @@ getClaimantAddress() {
                  {
                     sessionStorage.setItem("local_Latitude", response.results[0].geometry.location.lat);
                     sessionStorage.setItem("local_Longitude", response.results[0].geometry.location.lng);
-                    this.route.navigate(['./dashboard/physiciansmap']);
+                    this.route.navigate(['./dashboard/Providers']);
                 }
             },
             error => {
@@ -421,7 +421,7 @@ getClaimantAddress() {
                  {
                     sessionStorage.setItem("local_Latitude", response.results[0].geometry.location.lat);
                     sessionStorage.setItem("local_Longitude", response.results[0].geometry.location.lng);
-                    this.route.navigate(['./dashboard/physiciansmap']);
+                    this.route.navigate(['./dashboard/Providers']);
                 }
             },
             error => {
