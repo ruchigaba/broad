@@ -96,8 +96,22 @@ getClaimantAddress() {
 
     }
 
-    hideShowRadius(){
-        //document.getElementById('hideradius').remove();
+    hideShowRadius(hideRadius){
+        if (hideRadius.style.display=="none") {
+         window.addEventListener("click",()=>{
+               hideRadius.style.display="none";
+    })
+    //  window.addEventListener("touchstart",()=>{
+    //  dropdownMenu1.style.display="none";
+    // })
+     setTimeout(()=>{
+      hideRadius.style.display="block";
+    },100)
+ }
+      else{
+        hideRadius.style.display="none";
+      }
+       
          
          var dropD=document.getElementById('hide1');
         console.log(dropD.style.display);

@@ -108,10 +108,10 @@ export class RegistrationComponent implements OnInit {
     else if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
       this.commnFunc.alertPopup("Please enter the 4 digit SSN in number format","Registration");
     }
-    else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)>12) {
+    else if (this.dobmonth == "" || this.dobmonth == undefined || parseInt(this.dobmonth)<1 || parseInt(this.dobmonth)>12) {
       this.commnFunc.alertPopup("Invalid Month for date of Birth","Registration");
     }
-    else if (this.dobdate == "" || this.dobdate == undefined || parseInt(this.dobdate) >31) {
+    else if (this.dobdate == "" || this.dobdate == undefined || parseInt(this.dobdate) <1 || parseInt(this.dobdate) >31) {
       this.commnFunc.alertPopup("Invalid Date for date of Birth","Registration");
     }
     else if (this.dobyear == "" || this.dobyear == undefined || parseInt(this.dobyear) < 1900 || parseInt(this.dobyear) > current_year)  {
@@ -120,10 +120,10 @@ export class RegistrationComponent implements OnInit {
     else if (this.hzc == "" || this.hzc == undefined || this.hzc.toString().length!==5) {
       this.commnFunc.alertPopup("Please enter the 5 digit zip code ","Registration");
     }
-    else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)>12) {
+    else if (this.dolmonth == "" || this.dolmonth == undefined || parseInt(this.dolmonth)<1 || parseInt(this.dolmonth)>12) {
       this.commnFunc.alertPopup("Invalid Month for date of loss","Registration");
     }
-    else if (this.doldate == "" || this.doldate == undefined || parseInt(this.doldate)>31) {
+    else if (this.doldate == "" || this.doldate == undefined ||  parseInt(this.doldate)<1 || parseInt(this.doldate)>31) {
       this.commnFunc.alertPopup("Invalid Date for date of loss","Registration");
     }
     else if (this.dolyear == "" || this.dolyear == undefined || parseInt(this.dolyear)<1900 || parseInt(this.dolyear) > current_year) {
