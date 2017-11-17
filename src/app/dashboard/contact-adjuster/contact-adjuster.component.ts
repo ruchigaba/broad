@@ -104,9 +104,7 @@ emailSupervisor(){
 //---------------------------------OPEN DIALER-------------------------------------
 
 contact(){
-  
-
-}
+  }
 absencedisability(){
   sessionStorage.setItem("storage_navigation", this.data.title);
   document.getElementById("worker").classList.remove("router-link-active");
