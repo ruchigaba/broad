@@ -48,6 +48,10 @@ title = '';
 
         document.body.className = 'ios'; 
       }
+      if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+       document.body.className = 'absenceleave';
+    
+}
     }
    ngOnDestroy(){
     document.body.className = '';

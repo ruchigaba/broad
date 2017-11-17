@@ -17,6 +17,12 @@ activeFooterMenu = "Claim Info";
           document.getElementById("Settings").style.display = 'block';
            document.getElementById("Log Out").style.display = 'block';
        }
+        if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com")
+       {
+          document.getElementById("Settings").style.display = 'block';
+           document.getElementById("Log Out").style.display = 'block';
+       }
+
      // document.onclick=function() { 
      //   document.getElementById("togg-dv").className = "hidden-content slide-down"
      //   };

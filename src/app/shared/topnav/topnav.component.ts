@@ -231,18 +231,19 @@ else if (sessionStorage.getItem("Id")=="onlyworkerscomp@gmail.com") {
    //  document.getElementById("titleBar").style.display = 'block';
  }
  else if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
- 
+  document.getElementById("usernameweldiff").style.display = 'none';
   document.getElementById("toshow").style.display = 'none';
   document.getElementById("titleBar").style.display = 'block';
 }
   else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
-     
+    
+   document.getElementById("usernamewelcome").style.display = 'none';
   document.getElementById("WC").style.display = 'none';
   document.getElementById("titleBar").style.display = 'none';
  }
 
  else{
- 
+   document.getElementById("usernamewelcome").style.display = 'none';
   //document.getElementById("toshow").style.display = 'block';
   document.getElementById("titleBar").style.display = 'none';
   document.getElementById("onlyworkers").style.display = 'none';
