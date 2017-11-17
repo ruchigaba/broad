@@ -62,6 +62,10 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    document.getElementById("worker").classList.remove("router-link-active");
    document.getElementById("set_id").classList.remove("router-link-active");
 }
+else if (sessionStorage.getItem("Id")=="onlyworkerscomp@gmail.com") {
+   document.getElementById("tohide").style.display = 'none';
+}
+
  
 
 
@@ -99,7 +103,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change-email' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change email address' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping' && this.data.title !== 'contact'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
@@ -227,14 +231,12 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    //  document.getElementById("titleBar").style.display = 'block';
  }
  else if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
-  // document.body.className = 'customheader';
+ 
   document.getElementById("toshow").style.display = 'none';
-
-  
-
   document.getElementById("titleBar").style.display = 'block';
 }
   else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+     
   document.getElementById("WC").style.display = 'none';
   document.getElementById("titleBar").style.display = 'none';
  }
@@ -327,7 +329,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
 //   }
 // }
 elseBack(){
-  alert(sessionStorage.getItem("storage_navigation"));
+ // alert(sessionStorage.getItem("storage_navigation"));
 //   if(sessionStorage.getItem("storage_navigation")  == 'claims'){
 //     alert(sessionStorage.getItem("storage_navigation"));
 //   this.backarr();
@@ -399,10 +401,10 @@ settingClick(){
 navchange(){
  // sessionStorage.setItem("title", this.data.title);
     // alert(this.data.title);
-     //  sessionStorage.setItem("HelpClick","" );
+     // sessionStorage.setItem("HelpClick","" );
      setTimeout(()=>{
-    sessionStorage.setItem("storage_navigation",this.data.title );
-    alert(this.data.title);
+    sessionStorage.setItem("storage_navigation",this.data.title);
+   //  alert(this.data.title);
   },400);
 
     //alert(this.data.title);
@@ -485,7 +487,7 @@ navchange(){
       // x.style.border="0px";
         //this.router.navigate(['./dashboard/claims']);
         //state preserve(ruchi)
-        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+        this.router.navigate(['dashboard/'+sessionStorage.getItem("title")]);
       //   this.router.navigate(['./dashboard/workercomp'])
 
         //   x.style.border="1.5px solid #0a9e49";

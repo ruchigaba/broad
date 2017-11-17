@@ -265,20 +265,20 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
        // alert('hello' + this.username);
         // this.router.navigate(['./dashboard/claims']);
         // this.navigateSuccess(this.username);
-    if(this.username== 'leavedisability@gmail.com'){
-  sessionStorage.setItem("Id","leavedisability@gmail.com");
-        this.router.navigate(['./dashboard/leaveTechPortal']);
+        if(this.username== 'leavedisability@gmail.com'){
+          sessionStorage.setItem("Id","leavedisability@gmail.com");
+            this.router.navigate(['./dashboard/leaveTechPortal']);
       }
-else if(this.username== 'workerscomp@gmail.com'){
-    sessionStorage.setItem("Id","workerscomp@gmail.com");
+        else if(this.username== 'workerscomp@gmail.com'){
+          sessionStorage.setItem("Id","workerscomp@gmail.com");
         this.router.navigate(['./dashboard/claims']);
-      }
-    else if(this.username== 'onlyworkerscomp@gmail.com'){
+       }
+        else if(this.username== 'onlyworkerscomp@gmail.com'){
        sessionStorage.setItem("Id","onlyworkerscomp@gmail.com");
         this.router.navigate(['./dashboard/claims']);
-    }
-    else if(this.username== 'onlyleavedisability@gmail.com'){
-       sessionStorage.setItem("Id","onlyleavedisability@gmail.com");
+        }
+        else if(this.username== 'onlyleavedisability@gmail.com'){
+        sessionStorage.setItem("Id","onlyleavedisability@gmail.com");
         this.router.navigate(['./dashboard/leaveTechPortal']);
     }
     else{

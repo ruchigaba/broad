@@ -97,6 +97,7 @@ getClaimantAddress() {
     }
 
     hideShowRadius(){
+        //document.getElementById('hideradius').remove();
          
          var dropD=document.getElementById('hide1');
         console.log(dropD.style.display);
@@ -111,7 +112,13 @@ getClaimantAddress() {
     searchRadiusdropboxitem(item) {
        
         this.selectedItem = item;
-        
+    //   var radiusdropdown= document.getElementById('dropdownMenu1');
+    //      if(radiusdropdown.style.display=='block'){
+    //     radiusdropdown.style.display='none';
+    // }
+    // else{
+    //     radiusdropdown.style.display='block';
+    // }
 
     }
 

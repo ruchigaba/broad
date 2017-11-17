@@ -27,28 +27,33 @@ title = '';
   //     var x= document.getElementById("worker")
   //           console.log(x);
   // //     //  x.style.border="0px";
-  if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
-  document.getElementById("sidebar").style.display = 'none';
+ 
+ // document.getElementById("sidebar").style.display = 'none';
   
   // document.getElementById("mobileFooter").style.display = 'none';
 
-}
-else if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+
+ if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
   document.getElementById("sidebar").style.display = 'none';
+   document.body.className = 'settingswork';
  //  document.getElementById("mobileFooter").style.display = 'none';
 }
-else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
-   document.getElementById("sidebar").style.display = 'none';
-     document.body.className = 'settingsun';
-}
+else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+  document.body.className = 'settingsworkerscomp';
     
+}
+else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com" ){
+  // document.getElementById("sidebar").style.display = 'none';
+   document.body.className = 'settingsun';
+}
+
     // document.getElementById("settingsun").classList.remove("section-image-setting");
     //  document.getElementById("settingsun").className+="settingstest"; 
 
 
 else
    {
-         document.body.className = 'settings';
+     document.body.className = 'settings123';   
    } 
   //  }
 
@@ -58,6 +63,7 @@ else
     ngOnDestroy(){
     document.body.className = '';
 
+  
   }
 securityinfo(){
    sessionStorage.setItem("storage_navigation", this.data.title);

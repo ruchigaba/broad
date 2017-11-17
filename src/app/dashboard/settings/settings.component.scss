@@ -16,18 +16,31 @@ width:25%;
 }
 }
 
-.settingsun , .abtapp , .chngid , .changeps , .securityin {
+.settingsun , .abtapp , .chngid , .changeps , .securityin , .settingswork{
     #main-container{
       margin-left:0;
     }
      
   } 
-  .settingsun {
+
+  .settingun{
+    #main-container{
+      margin-left:0;
+    }  
+  }
+.settingsworkerscomp .sidebar{
+  display:none;
+}
+
+  .settingsun,.settingswork {
     .section-image-setting img {
        
       width: 20%;
   }
   }
+.settingsun .sidebar{
+  display:none;
+}
 
 
 .extratopcls{

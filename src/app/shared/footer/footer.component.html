@@ -5,7 +5,7 @@
 <div id="FAQ" class="pop-blur-dv" [routerLink]="['faqs']" (click) = "removeMoreOptions()"
  [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' ">
     <div class="midd-content" >
-    <a href="#" md-ink-ripple [routerLink]="['faqs']" (click)="activeFooterMenu='FAQ'; removeMoreOptions()">
+    <a href="#" md-ink-ripple [routerLink]="['FAQ']" (click)="activeFooterMenu='FAQ'; removeMoreOptions()">
     <img  src=" .\image\faq2_64x64.png" [routerLink]="['faqs']" />
     <div style="clear:both;"></div>
     <span [routerLink]="['faqs']">FAQ</span></a>
@@ -14,7 +14,7 @@
 
      <div class="pop-blur-dv" id="Social" [ngClass]="activeFooterMenu =='Social' ? 'activeFooter' :'' ">
     <div class="midd-content" >
-    <a md-ink-ripple [routerLink]="['social-media']" (click)="activeFooterMenu ='Social';removeMoreOptions()">
+    <a md-ink-ripple [routerLink]="['social']" (click)="activeFooterMenu ='Social';removeMoreOptions()">
     <img  src=".\image\social2_64x64.png" >
     <div style="clear:both;"></div>
      <span  >Social</span></a>
@@ -44,7 +44,7 @@
     </div>
 
 
-     <div  class="pop-blur-dv" id="Settings" >
+     <div  class="pop-blur-dv" id="Settings" style="display:none">
     <div class="midd-content" >
     <a md-ink-ripple [routerLink]="['settings']" (click)="activeFooterMenu = 'Settings'; removeMoreOptions()">
     <img src=".\image\settings2_64x64.png" >
@@ -54,7 +54,7 @@
     </div> 
 
  
-    <div class="pop-blur-dv " id="Log Out"  >
+    <div class="pop-blur-dv " id="Log Out"  style="display:none">
     <div class="midd-content" >
     <a md-ink-ripple [routerLink]="['']" (click)="activeFooterMenu = 'Logout';removeMoreOptions()">
     <img src=".\image\logout_64x64.png">
@@ -119,7 +119,7 @@
 
     <div class="col2-xx-mm"  id="Contact" [ngClass]="activeFooterMenu =='Contact Adjuster' ? 'activeFooter' :'' ">
     <div class="midd-content"  >
-    <a md-ink-ripple [routerLink]="['contact-adjuster']" (click)="activeFooterMenu = 'Contact Adjuster'">
+    <a md-ink-ripple [routerLink]="['contact']" (click)="activeFooterMenu = 'Contact Adjuster'">
     <img src=".\image\contactAdjuster-64x64.png" />
     <div style="clear:both;"></div>
     <span>Contact</span></a>
@@ -128,7 +128,7 @@
 
     <div class="col2-xx-mm"  id="Providers" [ngClass]="activeFooterMenu =='Facility Lookup' ? 'activeFooter' :'' ">
     <div class="midd-content">
-    <a md-ink-ripple [routerLink]="['provider']" (click)="activeFooterMenu = 'Facility Lookup';footerProviderClick()">
+    <a md-ink-ripple [routerLink]="['providers']" (click)="activeFooterMenu = 'Facility Lookup';footerProviderClick()">
     <img src=".\image\facilitylookup2_64x64.png">
     <div style="clear:both;"></div>
     <span>Providers</span></a>
