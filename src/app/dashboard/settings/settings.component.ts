@@ -35,7 +35,11 @@ title = '';
 
  if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
   document.getElementById("sidebar").style.display = 'none';
-   document.body.className = 'settingswork';
+
+  
+
+   document.body.className = 'settingswork absenceleave';
+
  //  document.getElementById("mobileFooter").style.display = 'none';
 }
 else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
@@ -44,7 +48,10 @@ else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
 }
 else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com" ){
   // document.getElementById("sidebar").style.display = 'none';
-   document.body.className = 'settingsun';
+
+
+   document.body.className = 'settingsun ';
+
 }
 
     // document.getElementById("settingsun").classList.remove("section-image-setting");

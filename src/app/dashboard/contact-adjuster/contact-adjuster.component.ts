@@ -90,7 +90,7 @@ claimInfoMessage(){
   sessionStorage.setItem('name',this.name);
   sessionStorage.setItem('email',this.email);
   sessionStorage.setItem("storage_navigation", this.data.title);
-  this._route.navigate(['./dashboard/ClaimInfoMessage']);
+  this._route.navigate(['./dashboard/Message']);
 }
 //---------------------------------REDIRECT EMAIL SUPERVISOR METHOD-------------------------------------
 
@@ -99,14 +99,10 @@ emailSupervisor(){
   sessionStorage.setItem('superName',this.superName);
   sessionStorage.setItem('superEmail',this.superEmail);
   sessionStorage.setItem("storage_navigation", this.data.title);
-  this._route.navigate(['./dashboard/ClaimInfoMessage']);
+  this._route.navigate(['./dashboard/Message']);
 }
 //---------------------------------OPEN DIALER-------------------------------------
 
-contact(){
-  
-
-}
 absencedisability(){
   sessionStorage.setItem("storage_navigation", this.data.title);
   document.getElementById("worker").classList.remove("router-link-active");

@@ -42,12 +42,15 @@ title = '';
            document.getElementById("worker").classList.remove("router-link-active");
         //  sessionStorage.setItem("storage_navigation", this.data.title);
         //  alert(sessionStorage.getItem("storage_navigation"))
-         document.body.className = ' leave-portal';
+         document.body.className = ' leave-portal absenceleave';
       this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
       if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
 
         document.body.className = 'ios'; 
       }
+      
+  
+
     }
    ngOnDestroy(){
     document.body.className = '';

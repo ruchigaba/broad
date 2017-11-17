@@ -43,7 +43,7 @@ export class SecurityAnswerComponent {
 
   }
   ngOnInit(){
-        document.body.className = 'securityinfo';
+        document.body.className = 'securityinfo ';
 
         document.getElementById("set_id").className+=" router-link-active";
          document.getElementById("leave").classList.remove("router-link-active");

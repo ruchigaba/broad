@@ -75,17 +75,25 @@ export const routes = [
       { path: 'change-password', component: ChangePassComponent, data: { title: 'Password',parent:'settings' } },
       { path: 'contact', component: ContactAdjusterComponent, data: { title: 'contact'} },
       { path:'providers', component:ProviderComponent , data: {title:'providers'} },
+
       { path: 'physiciansmap', component: NearbyphysiciansMapComponent, data: { title:'providers',parent:'provider' } },
+
       { path: 'social', component: SocialMediaComponent, data: { title: 'social' } },
       //{ path: 'leaveclaim-addedittime', component: AddEditTime, data: { title: 'Add/Edit Time',parents:'leaveclaim-details' } },
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
       { path: 'tutorial', component: TutorialComponent, data: { title: 'tutorial' } },
+
       { path: 'ClaimInfoMessage', component: ClaimInfoMessageComponent, data: { title: 'Message',parent:'contact-adjuster' } },
       { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal' } },
       //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',par,parent:'leaveTechPortal'ents:'leaveclaim-details' } },
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact-adjuster' } },
+
+      { path: 'Message', component: ClaimInfoMessageComponent, data: { title: 'Message',parent:'contact' } },
+      { path: 'leaveTechPortal', component: LeaveTechPortalComponent, data: { title: 'leaveTechPortal' } },
+      //{ path: 'return-to-work', component: ReturnToWorkComponent, data: { title: 'Return to work',par,parent:'leaveTechPortal'ents:'leaveclaim-details' } },
+      //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
         { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
          { path: 'help-page', component: HelpInComponent, data: { title: 'Helping',  parent:'' } },  
