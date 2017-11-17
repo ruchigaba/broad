@@ -147,7 +147,7 @@ this.addDivBeforeBody();
       this.commnFunc.alertPopup(message, errorHeading);
       document.getElementById("loadingDiv").style.display = "none";
     }
-     if (res.status == 408) {
+     if (res.status == 408 || res.status == undefined) {
       var message = "Your inquiry has experienced a delay.  Please try again later.  If problem persists, please contact our Support Center at MyClaim_SelfService_Support@broadspire.com.";
       this.commnFunc.alertPopup(message, errorHeading);
       document.getElementById("loadingDiv").style.display = "none";
@@ -168,7 +168,10 @@ this.addDivBeforeBody();
         document.getElementById("loadingDiv").style.display = "none";
       }
      else
-        this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+       {
+         alert("else part" +res.json());
+               this.commnFunc.alertPopup(res.json().error_description, errorHeading);
+             }
 
     
       // else if(document.getElementsByTagName("html")[0].className !== "login-bg-image") {
@@ -211,7 +214,8 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
         } 
 
      else{
-        this.hideLoaderShowPopup(res.json().htmlErrors, errorHeading);
+       //alert("else" +res.json());
+        this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       } 
     
    //--------------------Updated By Niruti do not comment pls----------------//
@@ -239,7 +243,7 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
   }
   navigate() {
     //alert('navigation')
-    //this.route.navigate(['']);
+    this.route.navigate(['']);
   }
   // this function is to hide loader and display error message when error has occured in http request
   hideLoaderShowPopup(message, errorHeading) {
