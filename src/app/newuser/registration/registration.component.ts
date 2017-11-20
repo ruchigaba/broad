@@ -46,7 +46,7 @@ export class RegistrationComponent implements OnInit {
    // document.getElementById('titleBar').style.paddingLeft="0px";
    localStorage.setItem("Help","workercomp-Registration");
    this.claimnum= sessionStorage.getItem("claimno");
-    document.getElementById('titleBar').style.width="70%";
+    document.getElementById('titleBar').style.width="71%";
   }
   question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")
