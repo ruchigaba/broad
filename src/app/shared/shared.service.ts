@@ -214,8 +214,10 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
         } 
 
      else{
-       //alert("else" +res.json());
-        this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
+       alert("else" +res.json());
+       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
+      this.commnFunc.alertPopup(message, errorHeading);
+        // this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       } 
     
    //--------------------Updated By Niruti do not comment pls----------------//
@@ -229,8 +231,10 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
         this.commnFunc.alertPopup(res.json().errors, errorHeading);
       }
       else
-      this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
+      {
 
+      this.commnFunc.alertPopup(res.json().errorMessage, errorHeading);
+    }
     }
 // else if( (document.getElementsByTagName("html")[0].className !== "login-bg-image")){
 //           this.commnFunc.alertPopup(res.json().error_description, errorHeading);
