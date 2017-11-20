@@ -27,7 +27,7 @@ commnFunc;
    let a = this.ClaimNumber;
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
-   if (this.ClaimNumber == " " || this.ClaimNumber == undefined) {
+   if (this.ClaimNumber == "" || this.ClaimNumber == undefined) {
       this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
   
