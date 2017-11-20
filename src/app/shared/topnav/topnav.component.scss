@@ -1014,9 +1014,9 @@ margin-left: 840px;
         
       width: 0% !important;
      }
-     .ios .mycomp-tp {
-        margin-left: 194px!important;
-    }
+    //  .ios .mycomp-tp {
+    //     margin-left: 194px!important;
+    // }
     }
 
 @media only screen and (min-width:768px) and (max-width:1024px){
@@ -1024,9 +1024,9 @@ margin-left: 840px;
        
      width: 0% !important;
     }
-    .ios .mycomp-tp {
-        margin-left: 137px;
-    }
+    // .ios .mycomp-tp {
+    //     margin-left: 137px;
+    // }
 
 
     .leave-portal{
@@ -1060,8 +1060,15 @@ margin-left: 840px;
          .arrowdiv{
              top:5px;
          }
+
+         
     }
 }
 
 
-
+// @media screen and (max-width: 1200px) and (min-width: 1024px)
+//  {
+// .ios .mycomp-tp {
+//     margin-left: 114px !important;
+// }
+//  }
