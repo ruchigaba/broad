@@ -46,7 +46,7 @@ title = '';
       this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
       if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
 
-        document.body.className = 'ios'; 
+        document.body.className = 'ios onlyleavedisa'; 
       }
       
   
