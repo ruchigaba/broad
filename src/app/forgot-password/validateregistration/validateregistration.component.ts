@@ -46,7 +46,7 @@ export class ValidateregistrationComponent implements OnInit {
   	document.getElementById('titleBar').style.paddingLeft="230px";
       this.claimnum= sessionStorage.getItem("claimno");
         localStorage.setItem("Help","validate-Registration");
-         document.getElementById('titleBar').style.width="70%";
+         document.getElementById('titleBar').style.width="71%";
   }
   question(): any {
         this._commonApiCall.getService("SecQuestions", "", "")

@@ -317,7 +317,7 @@ a.active {
 // }
 
 .absenceleave .mycomp-tp {
-    margin-left: 33px;
+    margin-left: 13px;
 }
 .w3-dropdown-dr{
 line-height: 40px;
@@ -940,6 +940,7 @@ margin-left: 840px;
 //-------Updated By Niruti (Eula Responsive)-----//
 @media only screen and (min-width:350px) and (max-width:650px){
     .titltxtd{
+        height: 70px;
         padding-left:63px !important;
         vertical-align: 0 ;
     }
@@ -1014,8 +1015,9 @@ margin-left: 840px;
         
       width: 0% !important;
      }
-     .ios .mycomp-tp {
-        margin-left: 194px!important;
+   
+    .ios .mycomp-tp {
+        margin-left: 105px !important;
     }
     }
 
@@ -1024,11 +1026,11 @@ margin-left: 840px;
        
      width: 0% !important;
     }
+   
     .ios .mycomp-tp {
-        margin-left: 137px;
+        margin-left: 75px;
     }
-
-
+     
     .leave-portal{
         .menu-item-img-span-abc{
           padding:3px;
@@ -1060,8 +1062,15 @@ margin-left: 840px;
          .arrowdiv{
              top:5px;
          }
+
+         
     }
 }
 
 
-
+// @media screen and (max-width: 1200px) and (min-width: 1024px)
+//  {
+// .ios .mycomp-tp {
+//     margin-left: 114px !important;
+// }
+//  }

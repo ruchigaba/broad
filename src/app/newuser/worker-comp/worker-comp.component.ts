@@ -18,7 +18,7 @@ commnFunc;
 
   ngOnInit() {
      localStorage.setItem("Help","Registration");
-      document.getElementById('titleBar').style.width="70%";
+      document.getElementById('titleBar').style.width="71%";
 
 }
  createNewUser12(){
