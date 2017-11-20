@@ -21,7 +21,7 @@ isActive = false;
 
   ngOnInit() {
   	window.scrollTo(0, 0);
-       if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
+       if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com" || sessionStorage.getItem("Id")=="workerscompExpiredltuser@gmail.com"){
           document.getElementById("integratedadj").style.display = 'none';
            document.getElementById("integratedfaq").style.display = 'none';
             document.getElementById("integratedtutorial").style.display = 'none';

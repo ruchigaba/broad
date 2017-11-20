@@ -44,13 +44,11 @@ export class SecurityAnswerComponent {
   }
   ngOnInit(){
         document.body.className = 'securityinfo ';
-
         document.getElementById("set_id").className+=" router-link-active";
          document.getElementById("leave").classList.remove("router-link-active");
          document.getElementById("worker").classList.remove("router-link-active"); 
-          if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
-		
-           document.body.className = 'securityin';
+          if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"  && sessionStorage.getItem('Id')!="workerscompExpiredltuser@gmail.com"){
+	      document.body.className = 'securityin';
           document.getElementById("sidebar").style.display = 'none';
 		}
          

@@ -16,7 +16,7 @@ width:25%;
 }
 }
 
-.settingsun , .abtapp , .chngid , .changeps , .securityin , .settingswork{
+.settingsun , .abtapp , .chngid , .changeps , .securityin , .settingswork,.settingsworkerscomp{
     #main-container{
       margin-left:0;
     }
@@ -32,17 +32,12 @@ width:25%;
   display:none;
 }
 
-
-  .settingsun ,.settingswork  {
-
+  .settingsun ,.settingswork,.settingsworkerscomp {
     .section-image-setting img {
        
       width: 20%;
   }
   }
-.settingsun .sidebar{
-  display:none;
-}
 
 
  
@@ -64,12 +59,14 @@ text-align: right;
  
 
 @media only screen and (max-width: 800px){
-  .settingsun {
+  .settingsun ,.settingsworkerscomp{
     .section-image-setting img {
        
       width: 50%;
   }
   }
+ 
+
 
   .settingswork {
     .section-image-setting img {

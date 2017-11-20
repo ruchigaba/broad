@@ -8,7 +8,7 @@
 // }
 .absenceleave{
     .mycomp-tp {
-        margin-left: 105px;
+        margin-left: 97px;
     }
 }
 
@@ -492,9 +492,6 @@ background-color:#efeeee;
 }
 
 @media screen and (min-width: 768px) and (max-width:1024px){
-
-     
-
 .logoclaim.mobileruc img {
     display: none;
 }
@@ -528,11 +525,6 @@ background-color:#efeeee;
   
 }
 @media only screen and (min-width: 450px) and (max-width: 920px){
-
-     
-
-
-
      .mycomp-tp {
      margin-left: 18px;
     font-size: 13px;
@@ -634,6 +626,12 @@ background-color:#efeeee;
           display:none;
       }
  }
+ .ios{
+    .mycomp-tp {
+        margin-left: 112px;
+    }
+}
+
 // a.list-group-item-mycom.router-link-active{
 //     border:none;
 // }
@@ -735,10 +733,6 @@ background-color:#efeeee;
 }
 
 @media only screen and (min-width:681px) and (max-width:800px){
-    
-
-
-
     .mycomp-tp{
 margin-left:40px;
     }

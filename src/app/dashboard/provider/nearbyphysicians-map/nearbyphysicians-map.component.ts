@@ -25,7 +25,6 @@ title = '';
   this.commnFunc = new CommonFunction(); }
 
   ngOnInit() {
-      document.getElementById("closePop").click();
       let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
