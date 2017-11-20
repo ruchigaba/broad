@@ -1,7 +1,9 @@
 // @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 // @import '../../common/common.scss';
- 
+.changeps .sidebar{
+     display:none;
+   }
  .whiteblank-pass{
      @include commommix33();
     }

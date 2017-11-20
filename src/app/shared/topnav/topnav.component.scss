@@ -626,11 +626,11 @@ background-color:#efeeee;
           display:none;
       }
  }
- .ios{
-    .mycomp-tp {
-        margin-left: 112px;
-    }
-}
+//  .ios{
+//     .mycomp-tp {
+//         margin-left: 112px;
+//     }
+// }
 
 // a.list-group-item-mycom.router-link-active{
 //     border:none;
@@ -1009,8 +1009,26 @@ margin-left: 840px;
          margin-top:-58px;
     }
 }
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+    .fourty {
+        
+      width: 0% !important;
+     }
+     .ios .mycomp-tp {
+        margin-left: 194px!important;
+    }
+    }
 
 @media only screen and (min-width:768px) and (max-width:1024px){
+    .fourty {
+       
+     width: 0% !important;
+    }
+    .ios .mycomp-tp {
+        margin-left: 137px;
+    }
+
+
     .leave-portal{
         .menu-item-img-span-abc{
           padding:3px;

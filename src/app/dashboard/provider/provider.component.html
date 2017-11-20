@@ -59,16 +59,17 @@
 		</div>
 		</div>
 		<div class="border pading">
-			<span class="search-drop">Search Radius(miles)</span>
-			<button aria-expanded="true" aria-haspopup="true" class="search-select  dropdown-toggle btt-nn" data-toggle="dropdown" (click)="hideShowRadius()" id="dropdownMenu1" style="background: #DBDBDB !important;color:#444 !important; z-index: 999;" type="button">
-			{{selectedItem}}
+                                             <span class="search-drop">Search Radius(miles)</span>
+                                             <button aria-expanded="true" aria-haspopup="true" class="search-select  dropdown-toggle btt-nn" data-toggle="dropdown" (click)="hideShowRadius(hideRadius)" id="dropdownMenu1" style="background: #DBDBDB !important;color:#444 !important; z-index: 999;" type="button">
+                                             {{selectedItem}}
                   <span class="caret"></span>
                   </button>
-                  <ul  class="dropdown-menu provider-ka-hh" aria-labelledby="dropdownMenu1" style="display:none;    cursor: pointer; z-index: 99999;    border: 1px solid rgba(0, 0, 0, 0.15);" id="hide1" >
-                <li  (click) ="searchRadiusdropboxitem(a);hideShowRadius()" *ngFor="let a of radiusdistance"><a >{{a}}</a></li>
-                <div style="clear:both;"></div>
+<ul #hideRadius class="dropdown-menu provider-ka-hh" aria-labelledby="dropdownMenu1" style="display:none;    cursor: pointer; z-index: 99999;    border: 1px solid rgba(0, 0, 0, 0.15);" id="hide1" >
+                <li (click) ="searchRadiusdropboxitem(a);hideShowRadius()" *ngFor="let a of radiusdistance"><a >{{a}}</a></li>
+<div style="clear:both;"></div>
               </ul>
-		</div>
+                              </div>
+
 		<div class="border">
 			 <div class="panel-heading-provider" id="heading2" role="tab">
                                    <h4 class="panel-title">

@@ -41,24 +41,15 @@ title = '';
 }
 else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
   document.body.className = 'settingsworkerscomp';
-    
 }
 else if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com" && sessionStorage.getItem('Id')!="workerscompExpiredltuser@gmail.com" ){
-  // document.getElementById("sidebar").style.display = 'none';
-   document.body.className = 'settingsun ';
+ document.body.className = 'settingsun ';
 }
-
-    // document.getElementById("settingsun").classList.remove("section-image-setting");
-    //  document.getElementById("settingsun").className+="settingstest"; 
-
-
 else
    {
      document.body.className = 'settings123';   
    } 
-  //  }
-
-    window.scrollTo(0, 0);
+   window.scrollTo(0, 0);
     document.getElementsByTagName("html")[0].removeAttribute("class");
   }
     ngOnDestroy(){
