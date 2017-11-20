@@ -96,7 +96,22 @@ getClaimantAddress() {
 
     }
 
-    hideShowRadius(){
+    hideShowRadius(hideRadius){
+        if (hideRadius.style.display=="none") {
+         window.addEventListener("click",()=>{
+               hideRadius.style.display="none";
+    })
+    //  window.addEventListener("touchstart",()=>{
+    //  dropdownMenu1.style.display="none";
+    // })
+     setTimeout(()=>{
+      hideRadius.style.display="block";
+    },100)
+ }
+      else{
+        hideRadius.style.display="none";
+      }
+       
          
          var dropD=document.getElementById('hide1');
         console.log(dropD.style.display);
@@ -111,7 +126,13 @@ getClaimantAddress() {
     searchRadiusdropboxitem(item) {
        
         this.selectedItem = item;
-        
+    //   var radiusdropdown= document.getElementById('dropdownMenu1');
+    //      if(radiusdropdown.style.display=='block'){
+    //     radiusdropdown.style.display='none';
+    // }
+    // else{
+    //     radiusdropdown.style.display='block';
+    // }
 
     }
 

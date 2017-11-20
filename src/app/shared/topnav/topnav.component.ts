@@ -102,7 +102,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
             currentRoute = currentRoute.children[0];
           }
           this.data = currentRoute.snapshot.data;
-          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='securityinfo' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change email address' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping'){
+          if(this.data.title !== 'leaveTechPortal' && this.data.title !== 'settings' && this.data.title !='security Info' && this.data.title !== 'Leave/Disability Registration' && this.data.title !='change email address' && this.data.title !='Password' && this.data.title !='Info' && this.data.title !='Helping'){
              //alert(" Hi :"+sessionStorage.getItem('title'));
             sessionStorage.setItem("title", this.data.title);
           }
@@ -450,7 +450,7 @@ navchange(){
   }
 
     newformat(){  
-       alert(this.data.title); 
+     
      //sessionStorage.setItem("title", this.data.title);
       sessionStorage.setItem("HelpClicked","" );
         sessionStorage.setItem("storage_navigation", this.data.title );

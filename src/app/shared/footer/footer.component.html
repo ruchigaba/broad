@@ -2,13 +2,13 @@
 
     <div class="hidden-content slide-down" id="togg-dv" class= "togg-dv" style="float: right;font-size: 10px;line-height: 26px;width: 20%;background: #f6f6f6 none repeat scroll 0 0; display:none; ">
 <!-- [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' " //active the footer menu(ruchi) -->
-<div id="FAQ" class="pop-blur-dv" [routerLink]="['faqs']" (click) = "removeMoreOptions()"
+<div id="FAQ" class="pop-blur-dv" [routerLink]="['FAQ']" (click) = "removeMoreOptions()"
  [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' ">
     <div class="midd-content" >
     <a href="#" md-ink-ripple [routerLink]="['FAQ']" (click)="activeFooterMenu='FAQ'; removeMoreOptions()">
-    <img  src=" .\image\faq2_64x64.png" [routerLink]="['faqs']" />
+    <img  src=" .\image\faq2_64x64.png" [routerLink]="['FAQ']" />
     <div style="clear:both;"></div>
-    <span [routerLink]="['faqs']">FAQ</span></a>
+    <span [routerLink]="['FAQ']">FAQ</span></a>
     </div>
     </div>
 
@@ -44,7 +44,7 @@
     </div>
 
 
-     <div  class="pop-blur-dv" id="Settings" style="display:none">
+     <div  class="pop-blur-dv" id="Settings"  [ngClass]="activeFooterMenu =='Settings' ? 'activeFooter' :'' " style="display:none;">
     <div class="midd-content" >
     <a md-ink-ripple [routerLink]="['settings']" (click)="activeFooterMenu = 'Settings'; removeMoreOptions()">
     <img src=".\image\settings2_64x64.png" >
@@ -109,7 +109,7 @@
 
     <div class="col2-xx-mm"  id="Health Ticket" [ngClass]="activeFooterMenu =='Health Ticket' ? 'activeFooter' :'' " >
     <div class="midd-content" >
-    <a md-ink-ripple [routerLink]="['healthTicket']" (click)="activeFooterMenu = 'Health Ticket' ">
+    <a md-ink-ripple [routerLink]="['Health Ticket']" (click)="activeFooterMenu = 'Health Ticket' ">
     <img src=".\image\healthTicket.png">
     <div style="clear:both;"></div>
     <span>Ticket</span>

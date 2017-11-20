@@ -26,12 +26,14 @@ export class ContactAdjusterComponent implements OnInit {
     isShowContact = false;
     claims1:any[] = JSON.parse(sessionStorage.getItem('claims'));
     removeleave="";
+   
 
        claimId = this.claims1[0].claim_id;
       constructor(private _commonApiCall:CommonAPICall, private _route:Router,private route: ActivatedRoute) {}
 
     ngOnInit(){
    this.removeleave = sessionStorage.getItem('Id');
+
    let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -45,7 +47,7 @@ console.log(this.claims1);
       window.scrollTo(0, 0);
         // Here Contact Adjuster Service Called.
     this.contactAdjusterService();
-  if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"){
+  if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"||sessionStorage.getItem('Id')=="workerscompExpiredltuser@gmail.com"){
   document.body.className = 'adjusterworkerscomp';
     }
   }
@@ -61,9 +63,7 @@ contactAdjusterService(){
   this._commonApiCall.getService("claims/servicers?claim_id="+this.claimId,""+token, "")
             .subscribe(res => {
               console.log(res);
-              
-        
-                this.claimServicers = res.result.claimServicers,
+              this.claimServicers = res.result.claimServicers,
                 this.claimNumber = res.result.claimNumber,
                 this.name = res.result.claimServicers[0].name,
                 this.phone=res.result.claimServicers[0].phone;

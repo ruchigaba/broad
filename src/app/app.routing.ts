@@ -70,7 +70,7 @@ export const routes = [
       { path: 'FAQ', component: FaqComponent, data: { title: 'FAQ' } },
       { path: 'settings', component: SettingsComponent, data: { title: 'settings'  } },
       { path: 'Health Ticket', component: HealtTicketComponent, data: { title: 'Health Ticket'} },
-      { path: 'securityinfo', component: SecurityAnswerComponent, data: { title: 'securityinfo',parent:'settings' } },
+      { path: 'securityinfo', component: SecurityAnswerComponent, data: { title: 'security Info',parent:'settings' } },
       { path: 'change-email', component: ChangeIdComponent, data: { title: 'change email address',parent:'settings' } },
       { path: 'change-password', component: ChangePassComponent, data: { title: 'Password',parent:'settings' } },
       { path: 'contact', component: ContactAdjusterComponent, data: { title: 'contact'} },
