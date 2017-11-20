@@ -36,7 +36,7 @@ export class ForgothelpComponent implements OnInit {
    document.getElementById('titleBar').style.paddingLeft="330px !important" ;
   	window.scrollTo(0, 0);
       this.supportContent();
-       document.getElementById('titleBar').style.width="70%";
+       document.getElementById('titleBar').style.width="71%";
   }
   supportContent(){
     //-------------------------------------GET SUPPORT SUBJECT API CALL-----------------------------------

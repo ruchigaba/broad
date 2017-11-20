@@ -54,6 +54,9 @@ console.log(this.claims1);
   if(sessionStorage.getItem('Id')=="onlyworkerscomp@gmail.com"||sessionStorage.getItem('Id')=="workerscompExpiredltuser@gmail.com"){
   document.body.className = 'adjusterworkerscomp';
     }
+   else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+  document.body.className = 'onlyworkerscomp';
+    }
   }
    ngOnDestroy(){
     document.body.className = '';

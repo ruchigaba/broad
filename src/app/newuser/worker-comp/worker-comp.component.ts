@@ -18,7 +18,7 @@ commnFunc;
 
   ngOnInit() {
      localStorage.setItem("Help","Registration");
-      document.getElementById('titleBar').style.width="70%";
+      document.getElementById('titleBar').style.width="71%";
 
 }
  createNewUser12(){
@@ -27,7 +27,7 @@ commnFunc;
    let a = this.ClaimNumber;
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
-   if (this.ClaimNumber == " " || this.ClaimNumber == undefined) {
+   if (this.ClaimNumber == "" || this.ClaimNumber == undefined) {
       this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
   

@@ -30,7 +30,7 @@ export class RegistrationTutorialComponent implements OnInit {
   ngOnInit(){
     //this.getTutorial();
   //  document.getElementById('titleBar').style.paddingLeft="0px"; 
-    document.getElementById('titleBar').style.width="70%";
+    document.getElementById('titleBar').style.width="71%";
   }
   firstTimeImages(){
     if(this.landscapeImages.length>0 && this.landscapeImages[0].fileName.indexOf('Landscape')>=0){

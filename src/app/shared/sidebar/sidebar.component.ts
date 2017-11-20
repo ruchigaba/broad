@@ -21,8 +21,7 @@ isActive = false;
 
   ngOnInit() {
   	window.scrollTo(0, 0);
-     
-  }
+ }
   logOut(){
   this.route.navigate([''],{replaceUrl:true});
 }
