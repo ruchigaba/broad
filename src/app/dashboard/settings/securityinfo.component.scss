@@ -1,7 +1,9 @@
 // @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 // @import '../../common/common.scss';
-
+.securityin .sidebar{
+     display:none;
+   }
  .whiteblank-info{
      @include commommix33();
     }

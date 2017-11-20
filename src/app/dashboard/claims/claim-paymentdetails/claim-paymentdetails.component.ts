@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonAPICall } from '../../../shared/shared.service';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,11 +15,20 @@ export class ClaimPaymentdetailsComponent implements OnInit {
   cityStateZip = "";
   contentLoaded = false;
   headerToken = 'Bearer ' + sessionStorage.getItem("token");
-transactionsArray = [];
-
-  constructor(public _commonAPICall: CommonAPICall, private route: Router) { }
+  transactionsArray = [];
+  data: any;
+  title = '';
+constructor(public _commonAPICall: CommonAPICall, private route: Router,private _route: ActivatedRoute) { }
 
   ngOnInit() {
+    let currentRoute = this._route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
   	var routevar = this.route;
     this._commonAPICall.checkToken(routevar);
     this.getSelectedClaimPaymentDetails();

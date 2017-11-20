@@ -170,7 +170,7 @@ export class RegistrationComponent implements OnInit {
 
        this._commonApiCall.postService("users", "", "application/json", data)
         .subscribe(res => {
-           document.getElementById("loadingDiv").style.display = "none"; 
+           document.getElementById("loadingDiv").style.display = "none"; 
             
 
            this.commnFunc.alertPopup(res.result,"Registration");
@@ -178,7 +178,7 @@ export class RegistrationComponent implements OnInit {
            this._route.navigate(['']);
          },
          error => {
-            document.getElementById("loadingDiv").style.display = "none"; 
+            document.getElementById("loadingDiv").style.display = "none"; 
 
            // alert('error :'+error.errors);
            this._commonApiCall.handleError(error,"Registration");
@@ -187,6 +187,7 @@ export class RegistrationComponent implements OnInit {
      }
     
   }
+
   gotoHelp() {
     this._route.navigate(['./help']);
   }

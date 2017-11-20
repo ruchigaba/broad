@@ -43,16 +43,10 @@ export class AboutAppComponent implements OnInit {
 		 document.getElementById("set_id").className+=" router-link-active";
          document.getElementById("leave").classList.remove("router-link-active");
          document.getElementById("worker").classList.remove("router-link-active"); 
-		  if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"){
+		  if(sessionStorage.getItem('userName')!="" && sessionStorage.getItem('Id')!="onlyworkerscomp@gmail.com"  && sessionStorage.getItem('Id')!="workerscompExpiredltuser@gmail.com"){
 		      document.body.className = 'abtapp';
-			 document.getElementById("sidebar").style.display = 'none';
 		}
-		//  alert("hi")
-		 
-		//    document.getElementById("set_id").className+=" router-link-active";
-		//    document.getElementById("leave").classList.remove("router-link-active");
-    //       document.getElementById("worker").classList.remove("router-link-active");
-	}
+		}
     ngOnDestroy(){
     document.body.className = '';
     }

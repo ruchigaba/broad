@@ -161,6 +161,7 @@ resetNewUserInfo() {
                 })
         }
     }
+
     goToSecAns() {
         this._route.navigate(['./forgotPass']);
     }
