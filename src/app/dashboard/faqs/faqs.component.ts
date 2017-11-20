@@ -19,12 +19,20 @@ ansArr = [];
   isClassVisible= false;
   constructor(private _commonApi:CommonAPICall,private router:Router) { }
   ngOnInit() {
+    //on back button android activate footer
+      document.getElementById('FAQ').className+=" activeFooter";
+
     var routevar = this.router;
     this._commonApi.checkToken(routevar);
     window.scrollTo(0, 0);
     this.getFAQService();
    document.getElementsByTagName("html")[0].removeAttribute("class");  
   }
+
+  ngOnDestroy(){
+    document.getElementById("FAQ").classList.remove("activeFooter");
+   }
+
 getFAQService(){
   this._commonApi.getService("users/faqs","","application/json")
   .subscribe(res => {

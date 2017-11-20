@@ -214,9 +214,9 @@ else if( (document.getElementsByTagName("html")[0].className == "login-bg-image"
         } 
 
      else{
-       alert("else" +res.json());
-       var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
-      this.commnFunc.alertPopup(message, errorHeading);
+       //alert("else" +errorHeading);
+       //var message = "The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.";
+      this.commnFunc.alertPopup("The service is currently unavailable at this time. Please try your inquiry again later. We apologize for any inconvenience.", errorHeading);
         // this.commnFunc.alertPopup(res.json().htmlErrors, errorHeading);
       } 
     

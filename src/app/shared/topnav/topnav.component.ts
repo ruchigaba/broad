@@ -336,16 +336,16 @@ elseBack(){
 //   this.backarr();
 //   return false;
 // }
-    document.getElementById("worker").className+=" router-link-active";
+    //document.getElementById("worker").className+=" router-link-active";
     // document.getElementById("leave").classList.remove("router-link-active");
    // document.getElementById("set_id").classList.remove("router-link-active");
 
 }
 backarr(){
-if(sessionStorage.getItem("storage_navigation")  == 'leaveTechPortal'){
-  this.elseBack();
-  return false;
-}
+// if(sessionStorage.getItem("storage_navigation")  == 'leaveTechPortal'){
+//   this.elseBack();
+//   return false;
+// }
 
  
 if(sessionStorage.getItem("storage_navigation")== "settings"||

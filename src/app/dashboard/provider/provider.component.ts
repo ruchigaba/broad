@@ -27,6 +27,9 @@ export class ProviderComponent implements OnInit {
   this.commnFunc = new CommonFunction();}
 
   ngOnInit() {
+       //on back button android activate footer
+      document.getElementById('Providers').className+=" activeFooter";
+      
      let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -47,6 +50,12 @@ export class ProviderComponent implements OnInit {
         this.radiusdistance = ['5', '10', '15', '20', '25', '50', '100'];
         this.selectedItem = this.radiusdistance[0];
   }
+
+  ngOnDestroy(){
+    document.body.className = '';
+    document.getElementById("Providers").classList.remove("activeFooter");
+   }
+
 
   // clear addres and zipcode on click of clear buttonclearData
     clearData() {
@@ -69,7 +78,7 @@ getClaimantAddress() {
 
             },
             error => {
-                this._commonApiCall.handleError(error, "Login");
+                this._commonApiCall.handleError(error, "providers");
             });
     }
     getMedSpecialities() {
@@ -80,7 +89,7 @@ getClaimantAddress() {
 
             },
             error => {
-                this._commonApiCall.handleError(error, "Login");
+                this._commonApiCall.handleError(error, "providers");
             })
     }
 
