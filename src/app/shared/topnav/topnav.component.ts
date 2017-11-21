@@ -336,12 +336,20 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
 //   this.backarr();
 //   return false;
 // }
+
   //  document.getElementById("worker").className+=" router-link-active";
     // document.getElementById("leave").classList.remove("router-link-active");
    // document.getElementById("set_id").classList.remove("router-link-active");
 
 //}
 backarr(event){
+
+    //document.getElementById("worker").className+=" router-link-active";
+    // document.getElementById("leave").classList.remove("router-link-active");
+   // document.getElementById("set_id").classList.remove("router-link-active");
+
+
+
 // if(sessionStorage.getItem("storage_navigation")  == 'leaveTechPortal'){
 //   this.elseBack();
 //   return false;

@@ -25,10 +25,19 @@ export class TutorialComponent implements OnInit {
   //-----------------------------------------------------------OnInit Method Start-----------------------------------------------------
   ngOnInit() {
 
+    //on back button android activate footer
+      document.getElementById('Tutorial').className+=" activeFooter";
+       document.getElementById('worker').className+=" router-link-active"; 
     var routevar = this._route;
     this._commonApiCall.checkToken(routevar);
     //this.getTutorial();
   }
+
+  ngOnDestroy(){
+    document.getElementById("worker").classList.remove("router-link-active");
+    document.getElementById("Tutorial").classList.remove("activeFooter");
+   }
+
   firstTimeImages() {
     if (this.landscapeImages.length > 0 && this.landscapeImages[0].fileName.indexOf('Landscape') >= 0) {
       if (window.matchMedia("(orientation:landscape)").matches) {

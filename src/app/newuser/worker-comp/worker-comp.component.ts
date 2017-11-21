@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
-
+import { CommonAPICall } from '../../shared/shared.service';
 @Component({
   selector: 'app-worker-comp',
   templateUrl: './worker-comp.component.html',
@@ -12,7 +12,7 @@ export class WorkerCompComponent implements OnInit {
 //  claimNumber = "";
 ClaimNumber="";
 commnFunc;
-  constructor(private router: Router) {
+  constructor(private router: Router,public _dashboardApiService: CommonAPICall,) {
     this.commnFunc = new CommonFunction();
    }
 
@@ -27,17 +27,16 @@ commnFunc;
    let a = this.ClaimNumber;
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
-   if (ClaimNumber == "" || ClaimNumber == undefined) {
+   if (ClaimNumber== "" || ClaimNumber == undefined) {
       this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
-  
-  
- else if (a.charAt(0).match(/[a-z]/i)){
+  else if (a.charAt(0).match(/[a-z]/i)){
    this.router.navigate(['./lregistration']);
   
 }
 else{
    this.router.navigate(['./createUser']);
+  
 }
   }
     gotoHelp() {

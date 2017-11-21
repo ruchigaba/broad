@@ -26,6 +26,7 @@ export class LOBRegistrationComponent implements OnInit {
   }
 
   ngOnInit() {
+     document.getElementById('leave').className+=" router-link-active";
 //      if (sessionStorage.getItem('Id1') == 'workerscom@gmail.com')  {
 //     document.getElementById("toshow").style.display = 'none';
 //       document.getElementById("titleBar").style.display = 'block';
@@ -42,6 +43,7 @@ export class LOBRegistrationComponent implements OnInit {
   }
    ngOnDestroy(){
     document.body.className = '';
+     document.getElementById("leave").classList.remove("router-link-active");
 }
 gotoHelp() {
   sessionStorage.setItem("HelpClicked","Worker-Registration");
