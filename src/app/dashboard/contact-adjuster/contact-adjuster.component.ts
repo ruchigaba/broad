@@ -32,6 +32,7 @@ export class ContactAdjusterComponent implements OnInit {
       constructor(private _commonApiCall:CommonAPICall, private _route:Router,private route: ActivatedRoute) {}
 
     ngOnInit(){
+
    this.removeleave = sessionStorage.getItem('Id');
 
    let currentRoute = this.route.root;
@@ -41,8 +42,8 @@ export class ContactAdjusterComponent implements OnInit {
        this.data = currentRoute.snapshot.data;
         sessionStorage.setItem("parent",this.data.parent);
                     //add title to header
-          this.title = this.data.title;   
-console.log(this.claims1);
+          this.title = this.data.title; 
+       console.log(this.claims1);
 
       window.scrollTo(0, 0);
         // Here Contact Adjuster Service Called.

@@ -27,6 +27,7 @@ export class ProviderComponent implements OnInit {
   this.commnFunc = new CommonFunction();}
 
   ngOnInit() {
+   //   alert(this.data.title)
      let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];

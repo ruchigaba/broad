@@ -21,13 +21,13 @@ commnFunc;
       document.getElementById('titleBar').style.width="71%";
 
 }
- createNewUser12(){
+ createNewUser12(ClaimNumber: string){
    
   // alert("kh");
    let a = this.ClaimNumber;
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
-   if (this.ClaimNumber == "" || this.ClaimNumber == undefined) {
+   if (ClaimNumber == "" || ClaimNumber == undefined) {
       this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
   

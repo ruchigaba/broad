@@ -30,16 +30,16 @@ title = '';
   //var url = iWindow.location.href;  
   //alert("url will be:" +iWindow);
     
-     let currentRoute = this.route.root;
-      while (currentRoute.children[0] !== undefined) {
-            currentRoute = currentRoute.children[0];
-          }
-       this.data = currentRoute.snapshot.data;
-        sessionStorage.setItem("parent",this.data.parent);
-                    //add title to header
-          this.title = this.data.title;
-           document.getElementById("leave").className+=" router-link-active";
-           document.getElementById("worker").classList.remove("router-link-active");
+    //  let currentRoute = this.route.root;
+    //   while (currentRoute.children[0] !== undefined) {
+    //         currentRoute = currentRoute.children[0];
+    //       }
+    //    this.data = currentRoute.snapshot.data;
+    //     sessionStorage.setItem("parent",this.data.parent);
+    //                 //add title to header
+    //       this.title = this.data.title;
+    //        document.getElementById("leave").className+=" router-link-active";
+    //        document.getElementById("worker").classList.remove("router-link-active");
         //  sessionStorage.setItem("storage_navigation", this.data.title);
         //  alert(sessionStorage.getItem("storage_navigation"))
          document.body.className = ' leave-portal absenceleave';
