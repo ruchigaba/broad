@@ -16,6 +16,7 @@
     width: 100%;
     margin-top: 0;
     top: 0;
+   
 }
 body.ios{
 position:relative !important;
@@ -72,11 +73,18 @@ position:relative !important;
       // left:10%;
   }
   @media only screen and (max-width: 800px) {
-  .leavetech {
-     
-    width: 97%;
+   .ios .mycontain {
+        margin-left: 0px !important;  
+        margin-right :0px !important;
+    }
+
+
+    .absenceleave .mycontain {
+        margin-left: 0px !important;  
+        margin-right :0px !important;
+    }
   }
-  }
+  
 
 
 
