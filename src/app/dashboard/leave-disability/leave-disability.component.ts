@@ -27,10 +27,11 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
  ngOnInit() {
  document.body.className = 'leaave-disablity';
   localStorage.setItem("Help","Leave-Registration");
+     document.getElementById('worker').className+=" router-link-active";
     }
   ngOnDestroy(){
     document.body.className = '';
-
+  document.getElementById("worker").classList.remove("router-link-active");
   }
   createNewUser1(){
     var current_year=new Date().getFullYear();

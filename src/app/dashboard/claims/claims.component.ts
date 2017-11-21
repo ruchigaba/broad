@@ -30,6 +30,9 @@ export class ClaimsComponent implements OnInit {
   constructor(public _dashboardApiService: CommonAPICall, private route: Router,private ComFunc:CommonFunction,private _route: ActivatedRoute) { }
 
   ngOnInit() {
+    //on back button android activate footer
+     document.getElementById('Claims').className+=" activeFooter";
+      document.getElementById('worker').className+=" router-link-active"; 
     let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -63,7 +66,9 @@ export class ClaimsComponent implements OnInit {
   }
    ngOnDestroy(){
     document.body.className = '';
-   }
+    document.getElementById("Claims").classList.remove("activeFooter");
+    document.getElementById("worker").classList.remove("router-link-active");
+  }
 
   // this is to show date of loss image claim number image when links is clicked
   dateOfLossInfo() {
@@ -298,7 +303,7 @@ getDocHeight() {
 
       },
       error => {
-        this._dashboardApiService.handleError(error, "Login");
+        this._dashboardApiService.handleError(error, "Claims");
       })
       
   }
@@ -418,7 +423,7 @@ getAddClaimService() {
         this.zipCode = response.result.zipCode;
       },
       error => {
-        this._dashboardApiService.handleError(error, "Login");
+        this._dashboardApiService.handleError(error, "Claims");
       })
       setTimeout(() => {
    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {

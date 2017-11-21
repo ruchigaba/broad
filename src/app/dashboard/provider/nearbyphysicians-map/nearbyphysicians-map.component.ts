@@ -25,6 +25,7 @@ title = '';
   this.commnFunc = new CommonFunction(); }
 
   ngOnInit() {
+       document.getElementById('worker').className+=" router-link-active";
       let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -39,6 +40,9 @@ title = '';
         window.scrollTo(0, 0);
         this.getMapData(0);
   }
+   ngOnDestroy(){
+     document.getElementById("worker").classList.remove("router-link-active");
+   }
 allow2Decimals(distance):String{
       var num = Number(distance);
       var n = num.toFixed(2)

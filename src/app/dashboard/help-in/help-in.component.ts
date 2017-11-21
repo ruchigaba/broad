@@ -27,10 +27,18 @@ export class HelpInComponent implements OnInit {
     this.supportContent();
    document.getElementById('titleBar').style.paddingLeft="300px";
     document.body.className = 'help-in';
+    if (sessionStorage.getItem('Id')=="leavedisability@gmail.com"){
+       document.getElementById('worker').className+=" router-link-active";
+    }
+   else if (sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
+       document.getElementById('leave').className+=" router-link-active";
+    } 
      
   }
   ngOnDestroy(){
     document.body.className = '';
+     document.getElementById("worker").classList.remove("router-link-active");
+      document.getElementById("leave").classList.remove("router-link-active");
    }
   
   supportContent(){
