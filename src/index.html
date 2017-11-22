@@ -223,16 +223,17 @@ label#modalLabel {
   </style>
   <script type="text/javascript">
   function onLoad() {
-        // document.addEventListener("deviceready", onDeviceReady, false);
+         document.addEventListener("deviceready", onDeviceReady, false);
     }
   function onDeviceReady() {
         // Register the event listener
-        // document.addEventListener("backbutton", onBackKeyDown, false);
+        document.addEventListener("backbutton", onBackKeyDown, false);
     }
 
     // Handle the back button
     //
     function onBackKeyDown() {
+      document.getElementsByClassName("modal-backdrop fade in")[0].classList.remove("in");
     //document.getElementById("closePop").click();
     }
 </script>
@@ -259,7 +260,7 @@ label#modalLabel {
 
       </div>
   </div>
-   <div id="fade-me" class="modal-backdrop fade in" style="display: none;"></div> 
+   <!-- <div id="fade-me" class="modal-backdrop fade in" style="display: none;"></div>  -->
     <!-------------------------- common popup for alerts starts-------------------------------------->
 
   <!-- ------------------------------------loader icon for http requests---------------------- -->

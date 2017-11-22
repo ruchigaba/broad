@@ -29,7 +29,7 @@ export class ProviderComponent implements OnInit {
   ngOnInit() {
        //on back button android activate footer
       document.getElementById('Providers').className+=" activeFooter";
-      
+
      let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
