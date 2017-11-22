@@ -32,7 +32,7 @@ export class ClaimsComponent implements OnInit {
   ngOnInit() {
     //on back button android activate footer
      document.getElementById('Claims').className+=" activeFooter";
-     
+      document.getElementById('worker').className+=" router-link-active"; 
     let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -67,7 +67,8 @@ export class ClaimsComponent implements OnInit {
    ngOnDestroy(){
     document.body.className = '';
     document.getElementById("Claims").classList.remove("activeFooter");
-   }
+    document.getElementById("worker").classList.remove("router-link-active");
+  }
 
   // this is to show date of loss image claim number image when links is clicked
   dateOfLossInfo() {

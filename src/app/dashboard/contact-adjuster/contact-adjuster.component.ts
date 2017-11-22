@@ -32,10 +32,9 @@ export class ContactAdjusterComponent implements OnInit {
       constructor(private _commonApiCall:CommonAPICall, private _route:Router,private route: ActivatedRoute) {}
 
     ngOnInit(){
-
-     //on back button android activate footer
+  //on back button android activate footer
      document.getElementById('Contact').className+=" activeFooter";
-
+     document.getElementById('worker').className+=" router-link-active";
    this.removeleave = sessionStorage.getItem('Id');
 
    let currentRoute = this.route.root;
@@ -45,8 +44,8 @@ export class ContactAdjusterComponent implements OnInit {
        this.data = currentRoute.snapshot.data;
         sessionStorage.setItem("parent",this.data.parent);
                     //add title to header
-          this.title = this.data.title;   
-console.log(this.claims1);
+          this.title = this.data.title; 
+       console.log(this.claims1);
 
       window.scrollTo(0, 0);
         // Here Contact Adjuster Service Called.
@@ -61,6 +60,7 @@ console.log(this.claims1);
    ngOnDestroy(){
     document.body.className = '';
      document.getElementById("Contact").classList.remove("activeFooter");
+      document.getElementById("worker").classList.remove("router-link-active");
    }
    
 // Contact Adjuster Service  implementation method .

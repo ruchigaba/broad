@@ -21,6 +21,7 @@ export class ClaimPaymentdetailsComponent implements OnInit {
 constructor(public _commonAPICall: CommonAPICall, private route: Router,private _route: ActivatedRoute) { }
 
   ngOnInit() {
+      document.getElementById('worker').className+=" router-link-active";
     let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -34,6 +35,9 @@ constructor(public _commonAPICall: CommonAPICall, private route: Router,private 
     this.getSelectedClaimPaymentDetails();
     console.log(sessionStorage.getItem("trans_id"));
   }
+   ngOnDestroy(){
+    document.getElementById("worker").classList.remove("router-link-active");
+   }
   	getSelectedClaimPaymentDetails(){
   		this._commonAPICall.getService('payment/detail?trans_id=' + sessionStorage.getItem("trans_id"),
       this.headerToken, "application/json")

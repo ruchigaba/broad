@@ -23,9 +23,10 @@ createNewUser12(){
    
   // alert("kh");
    let a = this.ClaimNumber;
+   a=a.trim();
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
-   if (this.ClaimNumber == " " || this.ClaimNumber == undefined) {
+   if (a == "" || a == undefined) {
       this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
   

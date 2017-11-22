@@ -13,10 +13,12 @@ export class SocialMediaComponent implements OnInit {
   ngOnInit() {
   	//on back button android activate footer
       document.getElementById('Social').className+=" activeFooter";
+      document.getElementById('worker').className+=" router-link-active"; 
   }
 
 ngOnDestroy(){
     document.getElementById("Social").classList.remove("activeFooter");
+     document.getElementById("worker").classList.remove("router-link-active");
    }
    
 }

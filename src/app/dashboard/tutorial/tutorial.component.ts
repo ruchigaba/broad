@@ -27,13 +27,14 @@ export class TutorialComponent implements OnInit {
 
     //on back button android activate footer
       document.getElementById('Tutorial').className+=" activeFooter";
-
+       document.getElementById('worker').className+=" router-link-active"; 
     var routevar = this._route;
     this._commonApiCall.checkToken(routevar);
     //this.getTutorial();
   }
 
   ngOnDestroy(){
+    document.getElementById("worker").classList.remove("router-link-active");
     document.getElementById("Tutorial").classList.remove("activeFooter");
    }
 

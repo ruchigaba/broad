@@ -14,6 +14,7 @@ title = '';
   constructor(private _routes : Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
+
      let currentRoute = this.route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -54,9 +55,7 @@ else
   }
     ngOnDestroy(){
     document.body.className = '';
-
-  
-  }
+   }
 securityinfo(){
    sessionStorage.setItem("storage_navigation", this.data.title);
   this._routes.navigate(['./dashboard/securityinfo']);

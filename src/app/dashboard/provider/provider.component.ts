@@ -27,10 +27,18 @@ export class ProviderComponent implements OnInit {
   this.commnFunc = new CommonFunction();}
 
   ngOnInit() {
+
+   //   alert(this.data.title)
+
        //on back button android activate footer
       document.getElementById('Providers').className+=" activeFooter";
+<<<<<<< HEAD
 
      let currentRoute = this._route.root;
+=======
+       document.getElementById('worker').className+=" router-link-active";
+      let currentRoute = this._route.root;
+>>>>>>> 892a0a9b41f4be75c57af5e6b8dbbd01dccdd5cb
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
           }
@@ -54,6 +62,7 @@ export class ProviderComponent implements OnInit {
   ngOnDestroy(){
     document.body.className = '';
     document.getElementById("Providers").classList.remove("activeFooter");
+     document.getElementById("worker").classList.remove("router-link-active");
    }
 
 

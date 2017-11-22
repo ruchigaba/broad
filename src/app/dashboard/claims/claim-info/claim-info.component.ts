@@ -17,6 +17,7 @@ title = '';
 constructor(public _dashboardApiService: CommonAPICall, private route: Router,private _route: ActivatedRoute) { }
 
   ngOnInit() {
+     document.getElementById('worker').className+=" router-link-active"; 
      let currentRoute = this._route.root;
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
@@ -54,6 +55,9 @@ constructor(public _dashboardApiService: CommonAPICall, private route: Router,pr
     this.dateOfLoss  = sessionStorage.getItem("SelectedMyClaimDatOfLoss");
     this.employeeName = sessionStorage.getItem("SelectedMyClaimEmployeeName");
   }
+   ngOnDestroy(){
+    document.getElementById("worker").classList.remove("router-link-active");
+   }
   openPhoneDialerFromClaimInfo=function(){
   //  this.adjusterPhone = sessionStorage.getItem("AdjusterPhone");
     document.location.href = "tel:+"+sessionStorage.getItem("AdjusterPhone");

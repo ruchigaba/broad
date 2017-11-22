@@ -50,7 +50,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
     this.claimNumber=sessionStorage.getItem('claim_number');
     var routevar = this.route;
     this._commonApiCall.checkToken(routevar);
-
+      document.getElementById('worker').className+=" router-link-active";
     // give loader the fixed position so that it always stay at center in this page
     var theElement = <HTMLElement>document.querySelector("#loadingDiv");
     theElement.style.position = "fixed";
@@ -71,6 +71,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     var theElement = <HTMLElement>document.querySelector("#loadingDiv");
+    document.getElementById("worker").classList.remove("router-link-active");
     theElement.style.position = "absolute";
   }
 

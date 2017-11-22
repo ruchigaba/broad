@@ -11,7 +11,7 @@
        What is your claim number?
        <span class="sm-txt-new-registration">( Enter Your Claim Number Exactly As Shown on Correspondence from Broadspire )</span>
    </li>
- <li> <input [(ngModel)]="ClaimNumber" id="firstName" class="form-control-data-registration" ngdefaultcontrol="" type="text" ngDefaultControl/>
+ <li> <input [(ngModel)]="ClaimNumber" id="first" class="form-control-data-registration"ngDefaultControl/>
   </li>
 
 
@@ -20,7 +20,7 @@
    <div style="padding: 0px 15px 0px 15px;">
       <div class="col-12-registration-comp" style="width:100%;">
       <div class="col-6-registration-comp" >
-      <button (click)="createNewUser12()" class="btn-continue-registration">Continue</button>
+      <button (click)="createNewUser12(ClaimNumber)" type="submit" class="btn-continue-registration">Continue</button>
       </div>
       <div class="col-6-registration-comp">
       <button (click)="goToLogin()"  class="btn-cancel-registration">Cancel</button>

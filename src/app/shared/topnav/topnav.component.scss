@@ -8,7 +8,7 @@
 // }
 .absenceleave{
     .mycomp-tp {
-        margin-left: 97px;
+        margin-left: 76px;
     }
 }
 
@@ -370,7 +370,7 @@ background-color:#efeeee;
 }
 .clstext,.clstextdiff {
      font-size: 12px;
-    line-height: 70px;
+    line-height: 60px;
 }
 
 .logo-sec-new-one {
@@ -565,7 +565,7 @@ background-color:#efeeee;
   }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 800px){
 
   a.list-group-item-mycom.sjsj.router-link-active{
      display:none;
@@ -866,7 +866,7 @@ line-height: 40px;
 }
 .commpaa{
     
-        font-size: 12px;
+        font-size: 12px !important;
     margin-top: 6px;
     margin-left: 5px;
         color: black;
@@ -1034,9 +1034,9 @@ margin-left: 840px;
 //     margin-top: 0;
 // }
    
-    .ios .mycomp-tp {
-        margin-left: 75px;
-    }
+    // .ios .mycomp-tp {
+    //     margin-left: 75px;
+    // }
      
     .leave-portal{
         .menu-item-img-span-abc{

@@ -21,7 +21,7 @@ ansArr = [];
   ngOnInit() {
     //on back button android activate footer
       document.getElementById('FAQ').className+=" activeFooter";
-
+       document.getElementById('worker').className+=" router-link-active";
     var routevar = this.router;
     this._commonApi.checkToken(routevar);
     window.scrollTo(0, 0);
@@ -31,6 +31,7 @@ ansArr = [];
 
   ngOnDestroy(){
     document.getElementById("FAQ").classList.remove("activeFooter");
+     document.getElementById("worker").classList.remove("router-link-active");
    }
 
 getFAQService(){
