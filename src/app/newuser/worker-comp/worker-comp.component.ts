@@ -6,6 +6,7 @@ import { CommonAPICall } from '../../shared/shared.service';
   selector: 'app-worker-comp',
   templateUrl: './worker-comp.component.html',
   //styleUrls: ['./worker-comp.component.scss']
+    providers: [CommonAPICall]
 })
 export class WorkerCompComponent implements OnInit {
 //  claimNum = "";
