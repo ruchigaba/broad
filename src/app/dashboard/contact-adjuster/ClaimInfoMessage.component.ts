@@ -24,7 +24,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   claimNumber: string="";
   pageName = sessionStorage.getItem('pageName');
   name="";
-  email="";
+  email:string;
   attachmentDescription: string = "";
   profileImg: string[] = [];
   pdfImg = false;
@@ -59,6 +59,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
     if (this.pageName == "Adjuster") {
       this.name = sessionStorage.getItem('name');
       this.email = sessionStorage.getItem('email');
+      //alert(this.email);
     }
     else {
       this.name = sessionStorage.getItem('superName');
@@ -530,7 +531,7 @@ if(this.profileImg.length > 1){
     var data =
       {
         "email_Method": "Smart",
-        "to_email_address": "dgupta@primussoft.com",
+        "to_email_address": "ruchi.rani@primussoft.com",
         "from_email_address": this.Message_email + ' <' + this.Message_email + '>',
         "subject_Text": this.Message_subject + ' Broadspire IQ Claim #: ' + this.claimNumber,
         "body_Text": this.inputMessage + '<br/>' + '<br/>' + '<b>' + ' Contact Phone Number: ' + '</b>' + this.Message_number + '<br/>',

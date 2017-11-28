@@ -34,6 +34,7 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
   document.getElementById("worker").classList.remove("router-link-active");
   }
   createNewUser1(){
+    this.claimNo = this.claimNo.trim();
     var current_year=new Date().getFullYear();
      if (this.ssn == "" || this.ssn == undefined || this.ssn.toString().length!==4) {
       this.commnFunc.alertPopup("Please enter the 4 digit ssn in number format","Registration");

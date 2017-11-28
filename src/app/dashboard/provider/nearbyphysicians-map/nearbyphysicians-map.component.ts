@@ -79,7 +79,7 @@ allow2Decimals(distance):String{
                 if (response.result.message == "No providers found for search criteria provided") {
                         this.commnFunc.alertPopup("No providers found for search criteria provided", "Providers");
 
-                    this.route.navigate(['./dashboard/provider']);
+                    this.route.navigate(['./dashboard/providers']);
 
                 } else {
                     if (pageNumber == 0) {
