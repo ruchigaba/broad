@@ -279,7 +279,6 @@ a.active {
     font-weight: 600;
     color: white;
     margin-left: 43px;
-     
     height: 84px;
     // padding-left: 317px;
     line-height: 80px;
@@ -325,8 +324,7 @@ a.active {
 line-height: 40px;
 }
 .commpaa{
-    
-        font-size: 12px;
+    font-size: 12px;
     margin-top: 6px;
     margin-left: 5px;
         color: black;
@@ -565,7 +563,7 @@ background-color:#efeeee;
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 450px){
 
   a.list-group-item-mycom.sjsj.router-link-active{
      display:none;
@@ -1052,6 +1050,7 @@ margin-left: 840px;
     }
     .logoclaim img{
         margin-top:19px;
+        max-height: 38px;
    }
 }
 
