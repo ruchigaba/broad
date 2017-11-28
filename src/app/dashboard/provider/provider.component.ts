@@ -32,8 +32,10 @@ export class ProviderComponent implements OnInit {
 
        //on back button android activate footer
       document.getElementById('Providers').className+=" activeFooter";
+
        document.getElementById('worker').className+=" router-link-active";
       let currentRoute = this._route.root;
+
       while (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
           }

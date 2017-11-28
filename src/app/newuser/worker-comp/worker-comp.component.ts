@@ -6,6 +6,7 @@ import { CommonAPICall } from '../../shared/shared.service';
   selector: 'app-worker-comp',
   templateUrl: './worker-comp.component.html',
   //styleUrls: ['./worker-comp.component.scss']
+    providers: [CommonAPICall]
 })
 export class WorkerCompComponent implements OnInit {
 //  claimNum = "";
@@ -25,15 +26,18 @@ commnFunc;
    
   // alert("kh");
    let a = this.ClaimNumber;
+   a = a.trim();
+  // this.ClaimNumber=
    sessionStorage.setItem("claimno",a);
   // let a = sessionStorage.getItem("ClaimNumber");
-   if (ClaimNumber== "" || ClaimNumber == undefined) {
-      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
-    }
-  else if (a.charAt(0).match(/[a-z]/i)){
+  
+   if (a.charAt(0).match(/[a-z]/i)){
    this.router.navigate(['./lregistration']);
   
 }
+else if (a== "" || a== undefined) {
+      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
+    }
 else{
    this.router.navigate(['./createUser']);
   

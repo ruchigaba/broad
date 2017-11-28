@@ -39,6 +39,7 @@ export class EulaComponent implements OnInit{
        
     }
     navigatetoreg() {
+     
       this.router.navigate(['./worker-comp']);
     }
     

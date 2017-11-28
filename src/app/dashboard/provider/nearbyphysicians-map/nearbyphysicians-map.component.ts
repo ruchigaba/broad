@@ -74,6 +74,7 @@ allow2Decimals(distance):String{
         // calling service
         this._commonApiCall.getService(urlParameter, "", "application/json")
             .subscribe(response => {
+                //alert("no provider");
 
                 if (response.result.message == "No providers found for search criteria provided") {
                         this.commnFunc.alertPopup("No providers found for search criteria provided", "Providers");
