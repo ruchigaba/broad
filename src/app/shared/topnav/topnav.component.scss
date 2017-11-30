@@ -317,8 +317,12 @@ a.active {
 // .onlyleavedisa .mycomp-tp {
 //     margin-left: 40px;
 // }
+//   .onlyleavedisa .mycomp-tp{
+//     margin-left: 47px;
+// }
+
 .absenceleave .mycomp-tp {
-    margin-left: 13px;
+    margin-left: 10px;
 }
 .w3-dropdown-dr{
 line-height: 40px;
@@ -499,6 +503,12 @@ background-color:#efeeee;
     position: relative;
     top: 0px;   
 }
+}
+
+.moreobtion {
+    ul , li{
+        font-size:12px !important;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width:980px){
@@ -1059,6 +1069,7 @@ margin-left: 840px;
          margin-top:-5px !important;
     }
 }
+
 @media screen and (min-width:992px) and (max-width:1024px){
     .leave-portal{
          .logoclaim img{

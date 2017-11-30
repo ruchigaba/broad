@@ -73,7 +73,7 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
      // if(this.title=="forgotPass"){
      //   alert(this.title);
 
-     //    document.body.className= 'cnt-ttl-frt-pss';
+        // document.body.className= 'cnt-ttl-frt-pss';
      // }
      
     //    window.addEventListener("click",()=>{
