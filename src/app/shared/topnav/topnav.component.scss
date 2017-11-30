@@ -1003,7 +1003,15 @@ margin-left: 840px;
      .logo-div img{
         margin-top:19px;
       }
+
+     .extraonlyleave{
+        margin-left: 45px !important;
+     }
+
     }
+
+
+
 
     @media only screen and  (max-width:1024px){
         .logo-div{
@@ -1064,9 +1072,9 @@ margin-left: 840px;
    }
 }
 
-@media only screen and (min-width:768px) and (max-width:800px){
+@media only screen and (min-width:768px) and (max-width:1024px){
     .navbar-right-1{
-         margin-top:-5px !important;
+         margin-top:0px !important;
     }
 }
 

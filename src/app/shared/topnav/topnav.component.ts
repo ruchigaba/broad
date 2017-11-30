@@ -49,6 +49,8 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
+
+    
   // this.LeaveTechTitle=sessionStorage.getItem("storage_navigation");
    //alert(this.LeaveTechTitle);
      if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
@@ -63,7 +65,9 @@ else if (sessionStorage.getItem("Id")=="workerscomp@gmail.com" && sessionStorage
    document.getElementById("set_id").classList.remove("router-link-active");
 }
 
-
+else if (sessionStorage.getItem("Id")=="onlyleavedisability@gmail.com"){
+  document.getElementById("sscustom").className+=" extraonlyleave";
+}
 
  
 

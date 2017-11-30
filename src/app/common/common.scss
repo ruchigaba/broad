@@ -41,6 +41,17 @@
 @import '../dashboard/leavetech-portal/leavetech-portal.component.scss';
 @import '../dashboard/help-in/help-in.component.scss';
 
+
+
+@media screen and (max-width: 1200px){
+body .commpaa {
+    font-size: inherit !important;
+   
+}
+
+}
+
+
 .aclass1{
   border:1.5px solid #0a9e49  !important;
   padding:5px !important;

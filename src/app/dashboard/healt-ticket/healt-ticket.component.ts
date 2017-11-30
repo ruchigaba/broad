@@ -87,7 +87,7 @@ export class HealtTicketComponent implements OnInit {
   ngOnInit() {
 
     //on back button android activate footer
-     document.getElementById('Health Ticket').className+=" activeFooter";
+     document.getElementById('Health Ticket').className+="activeFooter";
      document.getElementById('worker').className+=" router-link-active";
   	window.scrollTo(0, 0);
 
@@ -109,6 +109,7 @@ export class HealtTicketComponent implements OnInit {
 
   ngOnDestroy(){
     document.getElementById("worker").classList.remove("router-link-active");
+    //on back button android  remove activate footer class
     document.getElementById("Health Ticket").classList.remove("activeFooter");
    }
 
