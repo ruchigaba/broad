@@ -511,20 +511,10 @@ background-color:#efeeee;
     }
 }
 
-@media screen and (min-width: 600px) and (max-width:980px){
-/* .twenty {
-     padding-left: 100px;
-    margin-left: 100px;
-}
-   */
-}
 
 @media screen and (min-width: 768px) and (max-width:1380px){
-/* .twenty {
-     padding-left: 240px;
+
     
-} */
-  
 .logoclaim.mobileruc img {
     display: none;
 }
@@ -707,27 +697,8 @@ background-color:#efeeee;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
-// .navbar-collapse:before,.nav:before{
-//     display: table;
-//     content: " ";
-// }
-// .glyphicon-chevron-left:before {
-//     content: "\e079";
-// }
-// .glyphicon-home:before {
-//     content: "\e021";
-// }
-// .glyphicon-user:before {
-//     content: "\e008";
-// }
-// .glyphicon-log-out:before {
-//     content: "\e163";
-// }
-// .navbar-collapse:after,.nav:before{
-//         clear: both;
-//         display: table;
-//     content: " ";
-    
+
+
 
 @media only screen and (min-width: 1025px){
     .moreobtion{
@@ -931,20 +902,7 @@ margin-left: 840px;
     margin-top: -77px !important;
 }
 }
-/* 
-//------Updated By Niruti(Eula Page)-----//
-@media only screen and (max-width:767px){
-    .titltxtd{
-        padding-left:102px !important;
-    }
-}
-
-@media only screen and (max-width:800px){
-    .titltxtd{
-        padding-left:20px !important;
-    }
-}
-*/
+ 
 
 //-------Updated By Niruti (Eula Responsive)-----//
 @media only screen and (min-width:350px) and (max-width:650px){
@@ -1036,6 +994,10 @@ margin-left: 840px;
     .ios .mycomp-tp {
         margin-left: 105px !important;
     }
+
+    #pageHtml .extraonlyleave{
+        margin-left: 230px !important;
+    }
     }
 
 @media only screen and (min-width:768px) and (max-width:1024px){
@@ -1043,7 +1005,7 @@ margin-left: 840px;
        
      width: 0% !important;
     }
-
+    
 //     .absenceleave .mycomp-tp {
 //     margin-left: 125px;
 //     margin-top: 0;
@@ -1052,6 +1014,9 @@ margin-left: 840px;
     // .ios .mycomp-tp {
     //     margin-left: 75px;
     // }
+    .extraonlyleave{
+        margin-left: 140px !important;
+    }
      
     .leave-portal{
         .menu-item-img-span-abc{
@@ -1092,9 +1057,4 @@ margin-left: 840px;
 }
 
 
-// @media screen and (max-width: 1200px) and (min-width: 1024px)
-//  {
-// .ios .mycomp-tp {
-//     margin-left: 114px !important;
-// }
-//  }
+ 
