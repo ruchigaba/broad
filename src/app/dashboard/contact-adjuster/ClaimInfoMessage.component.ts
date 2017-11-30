@@ -59,6 +59,7 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
     if (this.pageName == "Adjuster") {
       this.name = sessionStorage.getItem('name');
       this.email = sessionStorage.getItem('email');
+      //this.email="ruchi.rani@primussoft.com";
       //alert(this.email);
     }
     else {
@@ -531,7 +532,7 @@ if(this.profileImg.length > 1){
     var data =
       {
         "email_Method": "Smart",
-        "to_email_address": "ruchi.rani@primussoft.com",
+        "to_email_address": this.email,
         "from_email_address": this.Message_email + ' <' + this.Message_email + '>',
         "subject_Text": this.Message_subject + ' Broadspire IQ Claim #: ' + this.claimNumber,
         "body_Text": this.inputMessage + '<br/>' + '<br/>' + '<b>' + ' Contact Phone Number: ' + '</b>' + this.Message_number + '<br/>',

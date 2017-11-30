@@ -18,7 +18,7 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
    * The keys will all be a path (as in route.routeConfig.path)
    * This allows us to see if we've got a route stored for the requested path
    */
-  acceptedRoutes: string[] = ["provider"];
+  acceptedRoutes: string[] = ["providers"];
   storedRoutes : { [key: string]: RouteStorageObject } = {};
 
   /**
@@ -58,6 +58,8 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
     this.storedRoutes[route.routeConfig.path] = storedRoute;
   }
 
+
+
   /**
    * Determines whether or not there is a stored route and, if there is, whether or not it should be rendered in place of requested route
    * @param route The route the user requested
@@ -68,8 +70,11 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
  //if user clicks left panel option or footer providers option then page should refresh.
 
  if(sessionStorage.getItem("refreshProviders") == "true"){
-
+  // document.addEventListener("backbutton", onBackKeyDown, false);
+   //alert("technician");
+ //document.getElementsByClassName("modal-backdrop fade in")[0].classList.remove("in");
   sessionStorage.setItem("refreshProviders","false");
+
    return false;
 
  }

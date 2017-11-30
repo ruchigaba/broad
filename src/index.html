@@ -226,14 +226,19 @@ label#modalLabel {
          document.addEventListener("deviceready", onDeviceReady, false);
     }
   function onDeviceReady() {
-        // Register the event listener
+         //Register the event listener
         document.addEventListener("backbutton", onBackKeyDown, false);
     }
 
     // Handle the back button
     //
     function onBackKeyDown() {
-      document.getElementsByClassName("modal-backdrop fade in")[0].classList.remove("in");
+      //alert("android back");
+      if(sessionStorage.getItem("title")=="Providers"){
+        alert("provider");
+        document.getElementsByClassName("modal-backdrop fade in")[0].classList.remove("in");
+      }
+      //document.getElementsByClassName("modal-backdrop fade in")[0].classList.remove("in");
     //document.getElementById("closePop").click();
     }
 </script>

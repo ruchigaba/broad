@@ -59,6 +59,7 @@ export class ForgothelpComponent implements OnInit {
   }
   // HELP VALIDTAION
     helpSend() {
+      this.claimNm=this.claimNm.trim();
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (this.name == undefined || this.name == '') {
             this.commnFunc.alertPopup("Enter Name","Help");
@@ -127,13 +128,13 @@ export class ForgothelpComponent implements OnInit {
 
     }
 
-    clearData(){
-      this.name='';
-      this.telephone='';
-      this.claimNm='';
-      this.canIHelp='';
+    // clearData(){
+    //   this.name='';
+    //   this.telephone='';
+    //   this.claimNm='';
+    //   this.canIHelp='';
 
-    }
+    // }
     // Help Cancel Button Method
     Cancel() {
                    if(localStorage.getItem("Help")=="Forgotpass-Registration"){
