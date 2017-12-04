@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonAPICall } from '../../shared/shared.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 import { HttpModule, Response } from '@angular/http';
 import { CommonFunction } from '../../shared/commonFunction';
 @Component({
@@ -18,11 +18,20 @@ export class HelpInComponent implements OnInit {
   telephone: string;
   claimNm: string;
   canIHelp: string;
-
-  constructor(private _route: Router, private _commonApiCall: CommonAPICall) { 
+  data: any;
+  title = '';
+  constructor(private _route: Router, private _commonApiCall: CommonAPICall,private route: ActivatedRoute) { 
   this.commnFunc = new CommonFunction();}
 
   ngOnInit() {
+     let currentRoute = this.route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
   	window.scrollTo(0, 0);
     this.supportContent();
    document.getElementById('titleBar').style.paddingLeft="300px";
@@ -135,6 +144,7 @@ helpCancel() {
                    }
                     else if(localStorage.getItem("Help")=="Leave-Registration"){
                         this._route.navigate(['./dashboard/workercomp']); 
+                        sessionStorage.setItem("storage_navigation", this.data.title);
                    }
                    else if(localStorage.getItem("Help")=="Worker-Registration"){
                         this._route.navigate(['./dashboard/leaveregistration']); 
