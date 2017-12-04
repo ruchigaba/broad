@@ -29,7 +29,7 @@ constructor(public _dashboardApiService: CommonAPICall, private route: Router,pr
   	var routevar = this.route;
     this._dashboardApiService.checkToken(routevar);
 
-  this.adjusterNo=  "tel:+"+"1"+sessionStorage.getItem("AdjusterPhone");
+   this.adjusterNo=  "tel:+"+"1"+sessionStorage.getItem("AdjusterPhone");
     //window.scrollTo(0, 0);
     this.claimNumber = sessionStorage.getItem("claimNumber");
     this.adjusterName = sessionStorage.getItem("AdjusterName");

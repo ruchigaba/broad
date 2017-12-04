@@ -194,6 +194,7 @@ getDocHeight() {
 
   // open claim info page when claim number is clicked in current claims
   openClaimInfoPage() {
+     sessionStorage.setItem("storage_navigation", this.data.title);
     this.route.navigate(['./dashboard/claim-info']);
 
   }

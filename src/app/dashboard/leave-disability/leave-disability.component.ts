@@ -1,5 +1,5 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
-import {Router} from '@angular/router';
+import {Router,ActivatedRoute} from '@angular/router';
 import { CommonFunction } from '../../shared/commonFunction';
 import { CommonAPICall } from '../../shared/shared.service';
 @Component({
@@ -21,10 +21,20 @@ export class LeaveDisabilityComponent implements OnInit, OnDestroy {
   dolmonth:string;
   doldate:string;
   dolyear:string;
-  constructor(private _commonApiCall: CommonAPICall,private router: Router) { 
+  data: any;
+  title = '';
+  constructor(private _commonApiCall: CommonAPICall,private router: Router,private route: ActivatedRoute) { 
      this.commnFunc = new CommonFunction();
   }
  ngOnInit() {
+    let currentRoute = this.route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
  document.body.className = 'leaave-disablity';
   localStorage.setItem("Help","Leave-Registration");
      document.getElementById('worker').className+=" router-link-active";

@@ -87,7 +87,7 @@ export const routes = [
       //{ path: 'disability', component: DisabilityComponent, data: { title: 'Disability Claims Details',parents:'disabilityclaim' } },
        { path: 'EmailSupervisor', component:  EmailSupervisorComponent, data: { title: 'Message',parents:'contact' } },
        { path: 'leaveregistration', component: LOBRegistrationComponent, data: { title: 'Leave/Disability Registration', parent:'' } },
-        { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'Registration',  parent:'' } },
+        { path: 'workercomp', component: LeaveDisabilityComponent, data: { title: 'WorkercompRegistration',  parent:'' } },
          { path: 'help-page', component: HelpInComponent, data: { title: 'Helping',  parent:'' } },  
     ]
   },

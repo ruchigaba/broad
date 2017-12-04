@@ -1,6 +1,6 @@
 
 import { Component, ElementRef, ChangeDetectorRef, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { CommonAPICall } from '../../shared/shared.service';
 import { CommonFunction } from '../../shared/commonFunction';
 import { SharedImg } from '../../shared/attachmentImg';
@@ -36,10 +36,12 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   Message_subject: string;
   messageLength = 40;
   inputMessage: string=""; showCameraButton = false;
+  data: any;
+  title = '';
 
   // attachImg= new SharedImg();
   constructor(private route: Router,private element: ElementRef, private _commonApiCall: CommonAPICall
-    , private changeDetectorRef: ChangeDetectorRef, private attachImg: SharedImg,private ComFunc:CommonFunction ) {
+    , private changeDetectorRef: ChangeDetectorRef, private attachImg: SharedImg,private ComFunc:CommonFunction,private _route: ActivatedRoute ) {
      if (navigator.userAgent.match(/Android/i) && typeof cordova != 'undefined' ) {
        this.showCameraButton = true;
      }
@@ -47,6 +49,14 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
   
 
   ngOnInit() {
+     let currentRoute = this._route.root;
+      while (currentRoute.children[0] !== undefined) {
+            currentRoute = currentRoute.children[0];
+          }
+       this.data = currentRoute.snapshot.data;
+        sessionStorage.setItem("parent",this.data.parent);
+                    //add title to header
+          this.title = this.data.title;
     this.claimNumber=sessionStorage.getItem('claim_number');
     var routevar = this.route;
     this._commonApiCall.checkToken(routevar);
