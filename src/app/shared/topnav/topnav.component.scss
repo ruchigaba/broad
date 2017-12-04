@@ -1,8 +1,7 @@
-
 //  @import '../../common/variables.scss';
 // @import '../../common/mixins.scss';
 // .customheader{
- 
+
  
 // margin-left: 20% !important;
 // }
@@ -11,8 +10,6 @@
         margin-left: 76px;
     }
 }
-
-
 
 a.w3-bar-item.w3-button {
     display: inline-block;
@@ -124,11 +121,10 @@ a.list-group-item-mycom.router-link-active {
 //     padding:0px;
 // }
 
-
 .fourty{
     float: left;
     width:  51%;
-    text-align: center;
+   text-align: center;
     color: #ffffff;
     height: 75px;
     vertical-align: middle;
@@ -511,7 +507,6 @@ background-color:#efeeee;
     }
 }
 
-
 @media screen and (min-width: 768px) and (max-width:1380px){
 
     
@@ -544,7 +539,6 @@ background-color:#efeeee;
      
 }
 
-
 // @media only screen and (max-width: 450px){
 //      a.list-group-item-mycom.router-link-active {
 //     border:0;
@@ -568,7 +562,6 @@ background-color:#efeeee;
   a.list-group-item-mycom.sjsj.router-link-active{
      display:none;
   }
-
 
     .headerBack .logo-div.logo-sec-new-one {
         width: 30%;
@@ -622,10 +615,10 @@ background-color:#efeeee;
 }
 }
 @media only screen and (max-width: 1024px){
- .clstextdiff{
+.clstextdiff{
           display:none;
       }
- }
+}
 //  .ios{
 //     .mycomp-tp {
 //         margin-left: 112px;
@@ -697,8 +690,6 @@ background-color:#efeeee;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
-
-
 
 @media only screen and (min-width: 1025px){
     .moreobtion{
@@ -902,7 +893,7 @@ margin-left: 840px;
     margin-top: -77px !important;
 }
 }
- 
+
 
 //-------Updated By Niruti (Eula Responsive)-----//
 @media only screen and (min-width:350px) and (max-width:650px){
@@ -925,8 +916,6 @@ margin-left: 840px;
         vertical-align: 0;
     }
 }
-
-
 
 //UPDATED ///
 @media only screen and (min-width: 1025px){
@@ -967,8 +956,6 @@ margin-left: 840px;
      }
 
     }
-
-
 
 
     @media only screen and  (max-width:1024px){
@@ -1056,5 +1043,3 @@ margin-left: 840px;
     }
 }
 
-
- 

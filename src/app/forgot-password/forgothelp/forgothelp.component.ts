@@ -128,13 +128,13 @@ export class ForgothelpComponent implements OnInit {
 
     }
 
-    // clearData(){
-    //   this.name='';
-    //   this.telephone='';
-    //   this.claimNm='';
-    //   this.canIHelp='';
+    clearData(){
+      this.name='';
+      this.telephone='';
+      this.claimNm='';
+      this.canIHelp='';
 
-    // }
+    }
     // Help Cancel Button Method
     Cancel() {
                    if(localStorage.getItem("Help")=="Forgotpass-Registration"){

@@ -49,8 +49,6 @@ WelcomeUsername = sessionStorage.getItem('welcomeUsername');
   }
 
   ngOnInit() {
-
-    
   // this.LeaveTechTitle=sessionStorage.getItem("storage_navigation");
    //alert(this.LeaveTechTitle);
      if (sessionStorage.getItem("Id")=="leavedisability@gmail.com") {
@@ -69,6 +67,8 @@ else if (sessionStorage.getItem("Id")=="onlyleavedisability@gmail.com"){
   document.getElementById("sscustom").className+=" extraonlyleave";
 }
 
+
+
  
 
 
@@ -77,7 +77,7 @@ else if (sessionStorage.getItem("Id")=="onlyleavedisability@gmail.com"){
      // if(this.title=="forgotPass"){
      //   alert(this.title);
 
-        // document.body.className= 'cnt-ttl-frt-pss';
+     //    document.body.className= 'cnt-ttl-frt-pss';
      // }
      
     //    window.addEventListener("click",()=>{

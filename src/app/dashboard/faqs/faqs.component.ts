@@ -39,8 +39,7 @@ getFAQService(){
   .subscribe(res => {
 
       this.faqs=res.result.faqs;
-      console.log(res);
-let keyArr: any[] = Object.keys(this.faqs);
+      let keyArr: any[] = Object.keys(this.faqs);
         // loop through the object, pushing values to the return array
         keyArr.forEach((key: any) => {
             let k: string = key;
@@ -54,7 +53,10 @@ let keyArr: any[] = Object.keys(this.faqs);
             }
             //console.log(this.quesArr);
         });
-    })
+    },
+    error => {
+        this._commonApi.handleError(error, "FAQ");
+      })
 }
 
 cls(i,question) {

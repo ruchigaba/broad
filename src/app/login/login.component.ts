@@ -283,15 +283,9 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
       }
          else if(this.username== 'workerscompExpiredltuser@gmail.com'){
         sessionStorage.setItem("Id","workerscompExpiredltuser@gmail.com");
-          this.commnFunc.alertPopup("Your Absence/Disability access is no longer active", "Login")
+          this.commnFunc.alertPopup("Your access to disability and absence claim is no longer active", "Login")
         this.router.navigate(['./dashboard/claims']);
        }
-       else if(this.username== 'leavedisabilityExpiredUser@gmail.com'){
-        sessionStorage.setItem("Id","leavedisabilityExpiredUser@gmail.com");
-          this.commnFunc.alertPopup("Your Absence/Disability access is no longer active", "Login")
-        //this.router.navigate(['./dashboard/claims']);
-       }
-
     else{
          sessionStorage.setItem("Id","");
        this.router.navigate(['./dashboard/claims']);

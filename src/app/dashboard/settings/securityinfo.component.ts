@@ -91,6 +91,7 @@ ngOnDestroy(){
       //function to update security info
       updatesecurityinfo()
       {
+        this.inputElem[this.index[0]]=this.inputElem[this.index[0]].trim();
         var token = sessionStorage.getItem('token');
         if (this.inputElem[this.index[0]] == "" || this.inputElem[this.index[0]] == undefined) {
          //alert("Security answers are required");
@@ -117,12 +118,14 @@ ngOnDestroy(){
                 }
             this._cac.putService("secQuestionsAnswers", "Bearer " + token, "application/json", data)
                 .subscribe(res => {
+                  document.getElementById("loadingDiv").style.display = "none";
                   if(res.statusCode == '200'){
                     this.commnFun.alertPopup("Security questions changed successfully.","Security Info");
                   }
                   this._routes.navigate(['./dashboard/settingMenu']);
                 },
                 error => {
+                  document.getElementById("loadingDiv").style.display = "none";
                     this._cac.handleError(error,"Security Info");
                 })
         }

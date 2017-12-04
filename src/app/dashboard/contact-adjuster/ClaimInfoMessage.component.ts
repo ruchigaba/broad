@@ -59,7 +59,6 @@ export class ClaimInfoMessageComponent implements OnInit, OnDestroy {
     if (this.pageName == "Adjuster") {
       this.name = sessionStorage.getItem('name');
       this.email = sessionStorage.getItem('email');
-      //this.email="ruchi.rani@primussoft.com";
       //alert(this.email);
     }
     else {

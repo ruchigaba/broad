@@ -35,7 +35,6 @@ commnFunc;
    this.router.navigate(['./lregistration']);
   
 }
-
 else if (a== "" || a== undefined) {
       this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
