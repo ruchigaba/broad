@@ -98,6 +98,7 @@ gotoHelp() {
          document.getElementById("leave").className+=" router-link-active";
     document.getElementById("worker").classList.remove("router-link-active");
         this.router.navigate(['./dashboard/leaveTechPortal']);
+         sessionStorage.setItem("storage_navigation", this.data.title);
   }
    dateOfLossInfo() {
 
