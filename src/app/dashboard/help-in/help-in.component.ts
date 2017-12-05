@@ -127,9 +127,7 @@ helpSend(){
       })
   }
 }
-//    gotoHelp() {
-//   	this._route.navigate(['./help']);
-// }
+
 // Help Cancel Button Method
 helpCancel() {
    if(localStorage.getItem("Help")=="workercomp-Registration")

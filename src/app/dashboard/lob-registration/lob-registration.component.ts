@@ -27,19 +27,8 @@ export class LOBRegistrationComponent implements OnInit {
 
   ngOnInit() {
      document.getElementById('leave').className+=" router-link-active";
-//      if (sessionStorage.getItem('Id1') == 'workerscom@gmail.com')  {
-//     document.getElementById("toshow").style.display = 'none';
-//       document.getElementById("titleBar").style.display = 'block';
-//   }
-//    else{
- 
-//   //document.getElementById("toshow").style.display = 'block';
- 
- 
-//     //document.getElementById("titleBar").style.display = 'none';
-//  }
- document.body.className = 'leave-registration';
- localStorage.setItem("Help","Worker-Registration");
+     document.body.className = 'leave-registration';
+     localStorage.setItem("Help","Worker-Registration");
   }
    ngOnDestroy(){
     document.body.className = '';
@@ -50,16 +39,9 @@ gotoHelp() {
     this.router.navigate(['./dashboard/help-page']);
   }
   goToWorkersComp() {
-    // var x =document.getElementById("worker")
-    //  var y= document.getElementById("leave")
-    //   x.setAttribute("className","list-group-item-mycom");
-    //     x.style.border="1.5px solid #0a9e49";
-    //     x.style.padding="5px";
-    //       y.style.border="0px";
-     document.getElementById("worker").className+=" router-link-active";
+    document.getElementById("worker").className+=" router-link-active";
     document.getElementById("leave").classList.remove("router-link-active");
-        // this.router.navigate(['./dashboard/claims']);
-        this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
+    this.router.navigate(['dashboard/' +sessionStorage.getItem("title")]);
   }
    question(): any {
     this._commonApiCall.getService("SecQuestions", "", "")

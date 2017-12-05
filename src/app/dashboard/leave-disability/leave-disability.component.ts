@@ -89,30 +89,16 @@ gotoHelp() {
   this.router.navigate(['./dashboard/help-page']);
   }
   goToLeaveDisability() {
-    //  var x =document.getElementById("worker")
-    //  var y= document.getElementById("leave")
-    //   x.setAttribute("className","list-group-item-mycom");
-    //     y.style.border="1.5px solid #0a9e49";
-    //     y.style.padding="5px";
-    //       x.style.border="0px";
-         document.getElementById("leave").className+=" router-link-active";
+    document.getElementById("leave").className+=" router-link-active";
     document.getElementById("worker").classList.remove("router-link-active");
-        this.router.navigate(['./dashboard/leaveTechPortal']);
-         sessionStorage.setItem("storage_navigation", this.data.title);
+    this.router.navigate(['./dashboard/leaveTechPortal']);
+    sessionStorage.setItem("storage_navigation", this.data.title);
   }
    dateOfLossInfo() {
-
   this._commonApiCall.getService("supportContent?Type=HelpDateOfLoss", "", "")
-
-     //alert("hello dateofloss");
-
-
-
-      .subscribe(res => {
-        //alert( res.result[0].base64);
-        this.dolImg = res.result[0].base64;
-        //alert(this.dolImg);
-        this.dolImgHide = true;
+ .subscribe(res => {
+   this.dolImg = res.result[0].base64;
+   this.dolImgHide = true;
       },
     error =>{
       this._commonApiCall.handleError(error,"Help Date Of Loss");

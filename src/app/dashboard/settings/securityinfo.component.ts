@@ -37,8 +37,7 @@ export class SecurityAnswerComponent {
 
     },
       error => {
-       //alert("Service Failed!");
-       this._cac.handleError(error,"Security questions");
+     this._cac.handleError(error,"Security questions");
     })
 
   }

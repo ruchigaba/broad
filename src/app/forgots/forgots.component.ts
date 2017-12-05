@@ -20,31 +20,26 @@ commnFunc;
 
 
 createNewUser12(){
-   
-  // alert("kh");
    let a = this.ClaimNumber;
    a=a.trim();
    sessionStorage.setItem("claimno",a);
-  // let a = sessionStorage.getItem("ClaimNumber");
    if (a == "" || a == undefined) {
-      this.commnFunc.alertPopup("Please enter the claim number.","Registration");
+   this.commnFunc.alertPopup("Please enter the claim number.","Registration");
     }
-  
-else if (a.charAt(0).match(/[a-z]/i)){
+  else if (a.charAt(0).match(/[a-z]/i)){
    this.router.navigate(['./validate-forgotpass']);
-  
-}
-else{
-   this.router.navigate(['./validate']);
-}
   }
-    gotoHelp() {
-    this.router.navigate(['./forgotHelp']);
+  else{
+   this.router.navigate(['./validate']);
+  }
+  }
+  gotoHelp() {
+  this.router.navigate(['./forgotHelp']);
   }
   goToLogin() {
-    this.router.navigate(['']);
+  this.router.navigate(['']);
   }
-}
+ }
 
 
  

@@ -241,7 +241,7 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
 
       sessionStorage.setItem('local_updateFlag', res.result.appUpdateReqFlag);
 
-      //this.navigateSuccess(this.username);
+ 
       if (sessionStorage.getItem('local_firstTimeLogin') == 'true') {
         sessionStorage.setItem('forgetPassFlag', 'firstTimeLogin');
 
@@ -262,10 +262,7 @@ var creds = 'grant_type=password&username=' + 'testingbroadspireapp@gmail.com' +
           "Update", ['OK']);
       }
       else {
-       // alert('hello' + this.username);
-        // this.router.navigate(['./dashboard/claims']);
-        // this.navigateSuccess(this.username);
-        if(this.username== 'leavedisability@gmail.com'){
+       if(this.username== 'leavedisability@gmail.com'){
           sessionStorage.setItem("Id","leavedisability@gmail.com");
             this.router.navigate(['./dashboard/leaveTechPortal']);
       }

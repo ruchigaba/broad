@@ -23,13 +23,10 @@ export class ForgotPasswordComponent implements OnInit,OnDestroy {
     secViewShow = false;
 
   constructor(private _route: Router, private _commonApiCall: CommonAPICall) {
-    // document.getElementById('titleBar').style.paddingLeft="0px";
   this.commnFunc = new CommonFunction(); 
-
-    if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Tablet/i)) {
-      var root = document.getElementsByTagName('body')[0];
-
-    root.className += "ResetForgotPage";
+ if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Tablet/i)) {
+var root = document.getElementsByTagName('body')[0];
+root.className += "ResetForgotPage";
 }
         this.secQuesObject = sessionStorage.getItem('secQues');
         console.log(this.secQuesObject);
@@ -39,13 +36,10 @@ export class ForgotPasswordComponent implements OnInit,OnDestroy {
         this.secQues3 = this.secQuesObj.securityquestion3;
   }
 ngOnInit() {
-   // document.getElementById('titleBar').style.paddingLeft="245px";
-    document.getElementById('titleBar').style.width="71%";
+ document.getElementById('titleBar').style.width="71%";
   }
   ngOnDestroy() {
- 
-  	//document.getElementById('titleBar').style.paddingLeft="0px";
-    var root = document.getElementsByTagName('body')[0];
+        var root = document.getElementsByTagName('body')[0];
         root.setAttribute('class', '');
   }
   gotovalidate() {
@@ -81,7 +75,6 @@ cancelSecAns() {
             // SECURITY ANSWER MACHING SERVICE CALLED HERE.
             this._commonApiCall.postService("secAnswers", "", "application/json", data)
                 .subscribe(res => {
-                  ///-----Updated By Niruti------//
                    document.getElementById("loadingDiv").style.display = "none";
                     if (res.result.secAnswersMatchedFlag == true) {
                         this._route.navigate(['./resetPass']);
@@ -89,8 +82,7 @@ cancelSecAns() {
                     this.secViewShow = true;
                 },
                 error => {
-                  //-------Updated By Niruti-----//
-                   document.getElementById("loadingDiv").style.display = "none";
+                document.getElementById("loadingDiv").style.display = "none";
                     this._commonApiCall.handleError(error,"Validate Security Answer");
                 })
         }
