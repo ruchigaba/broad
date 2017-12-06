@@ -1,7 +1,7 @@
 <div class="mobileFooter" id="hide" >
 
     <div class="hidden-content slide-down" id="togg-dv" class= "togg-dv" style="float: right;font-size: 10px;line-height: 26px;width: 20%;background: #f6f6f6 none repeat scroll 0 0; display:none; ">
-<!-- [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' " //active the footer menu(ruchi) -->
+
 <div id="FAQ" class="pop-blur-dv" [routerLink]="['FAQ']" (click) = "removeMoreOptions()"
  [ngClass]="activeFooterMenu =='FAQ' ? 'activeFooter' :'' ">
     <div class="midd-content" >
@@ -20,18 +20,6 @@
      <span  >Social</span></a>
     </div>
     </div>
-
- <!-- <div class="pop-blur-dv" id="social-media" [routerLink]="['social-media']" (click) = "removeMoreOptions()">
-    <div class="midd-content" >
-    <a md-ink-ripple [routerLink]="['social-media']" (click)="activeFooterMenu = 'social'; removeMoreOptions()">
-    <img  src=".\image\tutorial_64x64.png"  [routerLink]="['social-media']" />
-    <div style="clear:both;"></div>
-    <span [routerLink]="['social-media']">Social</span></a>
-    </div>
-    </div>
- -->
-
-
 
 
     <div class="pop-blur-dv" id="Tutorial" [ngClass]="activeFooterMenu =='Tutorial' ? 'activeFooter' :'' ">
@@ -62,22 +50,7 @@
     <span >Logout</span></a>
     </div>
     </div> 
-
-     <!--<div class="pop-blur-dv" id="Social" >
-    <div class="midd-content" >
-    <a md-ink-ripple [routerLink]="['leaveTechPortal']" (click)="activeFooterMenu ='Social';removeMoreOptions()">
-    <img  src=".\image\social2_64x64.png" >
-    <div style="clear:both;"></div>
-     <span  >Leavetech Portal</span></a>
-    </div>
-    </div> -->
-    
-    </div>
-
-     
-
-
-
+ </div>
 
     <div style="clear:both;"></div>
     <div class="main-data-div" >
@@ -92,22 +65,7 @@
     </div>
 
 
-     <!--<div class="col2-xx-mm" id="Claims">
-
-      <div class="midd-content">
-        <a md-ink-ripple [routerLink]="['claims']" (click)="activeFooterMenu = 'Claim Info';claimFooterClick()">
-           <img class="menu-item-img-sidebar" src=".\image\claim-info.png" >
-
-          <div style="clear:both;">
-
-          </div><span>Claims</span></a>
-      </div>
-       </div>-->
-        
-
-
-
-    <div class="col2-xx-mm"  id="Health Ticket" [ngClass]="activeFooterMenu =='Health Ticket' ? 'activeFooter' :'' " >
+     <div class="col2-xx-mm"  id="Health Ticket" [ngClass]="activeFooterMenu =='Health Ticket' ? 'activeFooter' :'' " >
     <div class="midd-content" >
     <a md-ink-ripple [routerLink]="['Health Ticket']" (click)="activeFooterMenu = 'Health Ticket' ">
     <img src=".\image\healthTicket.png">

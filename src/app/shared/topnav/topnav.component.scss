@@ -106,7 +106,7 @@ a.list-group-item-mycom.router-link-active {
 
 }
 
-.moreobtion img{
+.moreoption img{
     position: fixed;
     width: 20px;
     right: 10px;
@@ -204,7 +204,7 @@ a.active {
     
 
 }
-.abc{
+.menu-icon-log{
     width:20px;
    float:left;
 }
@@ -323,7 +323,7 @@ a.active {
 .w3-dropdown-dr{
 line-height: 40px;
 }
-.commpaa{
+.optiondown{
     font-size: 12px;
     margin-top: 6px;
     margin-left: 5px;
@@ -346,7 +346,7 @@ background-color:#efeeee;
     display: inline-block;
      
 }
-.abc img{
+.menu-icon-log img{
     width:10px;
     float:left;
 }
@@ -501,7 +501,7 @@ background-color:#efeeee;
 }
 }
 
-.moreobtion {
+.moreoption {
     ul , li{
         font-size:12px !important;
     }
@@ -552,14 +552,14 @@ background-color:#efeeee;
    
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-  a.list-group-item-mycom.sjsj.router-link-active{
+  a.list-group-item-mycom.sethide.router-link-active{
      display:none;
   }
 }
 
 @media only screen and (max-width: 450px){
 
-  a.list-group-item-mycom.sjsj.router-link-active{
+  a.list-group-item-mycom.sethide.router-link-active{
      display:none;
   }
 
@@ -692,7 +692,7 @@ background-color:#efeeee;
 }
 
 @media only screen and (min-width: 1025px){
-    .moreobtion{
+    .moreoption{
         display:none; 
     }
 }
@@ -834,7 +834,7 @@ margin-left:77px ;
 .w3-dropdown-dr{
 line-height: 40px;
 }
-.commpaa{
+.optiondown{
     font-size: 12px !important;
     margin-top: 6px;
     margin-left: 5px;
@@ -857,7 +857,7 @@ background-color:#f6f6f6;
     display: inline-block;
      
 }
-.abc img{
+.menu-icon-log img{
     width:10px;
     float:left;
 }

@@ -22,48 +22,20 @@ export class LeaveTechPortalComponent implements OnInit, OnDestroy {
   data: any;
 title = '';
   constructor(private domSanitizer : DomSanitizer,private route: ActivatedRoute) {
-   // this.name = 'Angular2'
+ 
   }
   ngOnInit() {
-//     var iframe = document.getElementById("frameid");
-// var iWindow = (<HTMLIFrameElement>iframe).src;
-  //var url = iWindow.location.href;  
-  //alert("url will be:" +iWindow);
-    
-    //  let currentRoute = this.route.root;
-    //   while (currentRoute.children[0] !== undefined) {
-    //         currentRoute = currentRoute.children[0];
-    //       }
-    //    this.data = currentRoute.snapshot.data;
-    //     sessionStorage.setItem("parent",this.data.parent);
-    //                 //add title to header
-    //       this.title = this.data.title;
-    //        document.getElementById("leave").className+=" router-link-active";
-    //        document.getElementById("worker").classList.remove("router-link-active");
-        //  sessionStorage.setItem("storage_navigation", this.data.title);
-        //  alert(sessionStorage.getItem("storage_navigation"))
-           document.getElementById('leave').className+=" router-link-active";
+         document.getElementById('leave').className+=" router-link-active";
          document.body.className = ' leave-portal absenceleave';
-      this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
+         this.Url = this.domSanitizer.bypassSecurityTrustResourceUrl('https://qa-broadspire.cs65.force.com/eep/cveep__Login');
       if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-
         document.body.className = 'ios onlyleavedisa'; 
       }
-      
-  
-
-    }
+       }
    ngOnDestroy(){
        document.getElementById("leave").classList.remove("router-link-active");
-    document.body.className = '';
-    document.body.className = ''; 
+       document.body.className = '';
+       document.body.className = ''; 
    }
-
 }
 
-// @NgModule({
-//   imports: [ BrowserModule ],
-//   declarations: [ App ],
-//   bootstrap: [ App ]
-// })
-// export class AppModule {}

@@ -23,22 +23,11 @@ title = '';
         sessionStorage.setItem("parent",this.data.parent);
                     //add title to header
           this.title = this.data.title;
-   // document.getElementById('main-container').style.marginLeft='259px';
-  //  if(document.getElementById("worker").className=="list-group-item-mycom sjsj"){
-  //     var x= document.getElementById("worker")
-  //           console.log(x);
-  // //     //  x.style.border="0px";
- 
- // document.getElementById("sidebar").style.display = 'none';
-  
-  // document.getElementById("mobileFooter").style.display = 'none';
-
-
- if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
+    if(sessionStorage.getItem('Id')=="onlyleavedisability@gmail.com"){
   document.getElementById("sidebar").style.display = 'none';
     document.getElementById("hide").style.display = 'none';
    document.body.className = 'settingswork absenceleave';
- //  document.getElementById("mobileFooter").style.display = 'none';
+
 }
 else if(sessionStorage.getItem('Id')=="workerscomp@gmail.com"){
   document.body.className = 'settingsworkerscomp';

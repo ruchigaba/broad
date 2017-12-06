@@ -28,15 +28,11 @@ position:relative !important;
 .leave-portal iframe{
     -webkit-overflow-scrolling: touch !important;
     overflow: scroll !important;
-   // position: absolute;
-   // width:500;
-   // left:10%;
-      }
+   }
 
     
 
 .ios .leavetech{
-    //display:none !important;
     position:relative !important;
     height:100vh !important;
     margin-top:-50px !important;
@@ -47,39 +43,22 @@ position:relative !important;
     display:none !important;
 }
 .ios {
-    
     overflow:hidden;
-    //margin-bottom: 2% !important;
-}
-  
-  .leave-portal{
-      
-      //height:100% !important;
-      // overflow:hidden !important;
-      //  position: fixed;
-      
-      // width:100%;
-      
-  }
-  .ios .wrapper-main-page {
+ }
+ .ios .wrapper-main-page {
       margin-bottom: 2% !important;
   }
   
   .ios iframe{
       -webkit-overflow-scrolling: touch !important;
       overflow: scroll !important;
-      // position: absolute;
-      // width:500;
-      // left:10%;
-  }
+   }
   @media only screen and (max-width: 800px) {
    .ios .mycontain {
         margin-left: 0px !important;  
         margin-right :0px !important;
     }
-
-
-    .absenceleave .mycontain {
+ .absenceleave .mycontain {
         margin-left: 0px !important;  
         margin-right :0px !important;
     }
