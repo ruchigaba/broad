@@ -1,16 +1,17 @@
 <h1 class="fonttext">Pie charts</h1>
 <div style="display:flex;"  >
         <div _ngcontent-c6="" class="gdr"></div>
-<svg class="card" width="600" height="500">
+<svg id="svg" class="card" width="600" height="500">
 
 </svg>
-<div _ngcontent-c6="" class="card">
+<div _ngcontent-c6="" class="card" *ngIf="dataTable">
+  
         
             <div _ngcontent-c6="" class="nav-tab-box">
               <div _ngcontent-c6="" class="tab">CLIENT PROGRAM NUMBER</div>
               <div _ngcontent-c6="" class="tab">CLIENT PROGRAM DESCRIPTION</div>
               <div _ngcontent-c6="" class="tab">NUMBER OF USERS ACCESSES</div>
-<ul *ngFor="let currentdata of arr3"  class="col5 tbl-data">
+   <ul *ngFor="let currentdata of finalarr"  class="col5 tbl-data">
           <li class="col7 checknum">{{currentdata.client_id}}</li>
            <li class="col7 checkdate">{{currentdata.description}}</li>
            <li class="col7 checkamnt">{{currentdata.value}}</li>

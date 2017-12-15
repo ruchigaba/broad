@@ -33,7 +33,11 @@ export class NumUserComponent implements OnInit {
      arr7:any[]=[];
       total:any[]=[];
       arraynew:"";
+      dataTable=false;
+
+      finalarr = []
   title: string = '';
+ 
   //subtitle: string = 'Pie Chart';
 
   private margin = {top: 20, right: 20, bottom: 30, left: 50};
@@ -82,49 +86,48 @@ export class NumUserComponent implements OnInit {
                     .enter().append("g")
                     .attr("class", "arc");
 
-//                     g.append("path")
-// .attr("d", this.arc)
 
-g.append("path")
-.attr("d", this.arc)
-//.style("fill", (d: any) => this.color(d.data.population))
-
-// g.append("rect")
-//         .attr({"class": "overlay" , "width": width , "height": height})
-//         .on({
-//           "mouseover": function() { /* do stuff */ },
-//           "mouseout":  function() { /* do stuff */ }, 
-//           "click":  function() { /* do stuff */ }, 
-//         });
- .on('click', (d) => {
-  alert("k")
-//  for(var i=0;i<Stocks.length;i++){ 
-// if(d.data >=3000){
-// this.arr1.push(Stocks[i])
-// console.log(this.arr1)
-// }
-// }
-// if (d.data.type == "Training") {
-// this.index = 1;
-// }
-// else if (d.data.type == "Assigned") {
-// this.index = 2
-// }
-// else {
-// this.index = 0
-// }
-
-// this.drawgraph()
-
-})
-.style("cursor", "pointer")
+// g.append("path").attr("d", this.arc)
+//                     .style("cursor", "pointer")
+//                     .on('click',(d)=>{
+//                       console.log("H")
+//                     });
 
 
 // .style("fill", d => this.color(d.data.applicants))
 
-.style("cursor", "pointer")
+
     g.append("path").attr("d", this.arc)
-                    .style("fill", (d: any) => this.color(d.data.age) );
+    .style('cursor','pointer')
+                    .style("fill", (d: any) => this.color(d.data.age) ).on('click',(d)=>{
+                      console.log("H");
+                   
+                       this.dataTable = true;
+                       this.finalarr = []
+
+                       if( d.data.age =="<50"){
+                       this.finalarr = this.arr5
+                       }
+                       else if(d.data.age =="51-500"){
+                         this.finalarr = this.arr4
+
+                       }
+                       else if(d.data.age =="501-1500"){
+                         this.finalarr = this.arr3
+
+                       }
+                       else if(d.data.age =="1501-3000"){
+                         this.finalarr = this.arr2
+
+                       }
+                       else{
+                         this.finalarr = this.arr1
+
+                       }
+
+                     
+                     
+                    });;
     g.append("text").attr("transform", (d: any) => "translate(" + this.labelArc.centroid(d) + ")")
                     .attr("dy", ".35em")
                     .text((d: any) => d.data.age);
@@ -190,25 +193,13 @@ data6 = parseInt(this.arr5[j].value)
 value5= value5 +data6;
 
 }
-//console.log(value5)
-// data3 = parseInt(this.arr2[j].value)
-// data4 = parseInt(this.arr3[j].value)
-// data5 = parseInt(this.arr4[j].value)
-// data6 = parseInt(this.arr5[j].value)
 
-// //console.log(data3)
-// //console.log(data2)
+console.log(this.arr1)
+console.log(this.arr2)
+console.log(this.arr3)
+console.log(this.arr4)
+console.log(this.arr5)
 
-// value1= value1 +data2;
-// //console.log(value2)
-// value2= value2 +data3;
-// //console.log(value2)
-// value3= value3 +data4;
-// value4= value4 +data5;
-// value5= value5 +data6;
-// //console.log(value5)
-
-// //console.log(value1)
 sessionStorage.setItem("array",JSON.stringify(value1));
 console.log(sessionStorage.getItem("array"));
 sessionStorage.setItem("array1",JSON.stringify(value2));
@@ -216,8 +207,7 @@ sessionStorage.setItem("array2",JSON.stringify(value3));
 sessionStorage.setItem("array3",JSON.stringify(value4));
 sessionStorage.setItem("array4",JSON.stringify(value5));
 
-// sessionStorage.setItem("pagePosition", JSON.stringify(this.getScroll()));
-//console.log(sessionStorage.getItem("array4"));
+
 
  
 
