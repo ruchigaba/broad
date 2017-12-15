@@ -49,6 +49,10 @@ securityinfo(){
    sessionStorage.setItem("storage_navigation", this.data.title);
   this._routes.navigate(['./dashboard/securityinfo']);
 }
+notification(){
+  sessionStorage.setItem("storage_navigation", this.data.title);
+  this._routes.navigate(['./dashboard/notification']); 
+}
 changePassword(){
    sessionStorage.setItem("storage_navigation", this.data.title);
   this._routes.navigate(['./dashboard/change-password']);
