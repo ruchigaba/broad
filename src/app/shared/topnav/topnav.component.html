@@ -94,12 +94,13 @@
          </li>
           
           <li>
+         <a [routerLink]="['settings']" (click)="settingClick();menuicon()" [routerLinkActive]="['router-link-active']" class="w3-bar">
           <div class="menu-icon">
-            <a [routerLink]="['settings']" (click)="settingClick()" [routerLinkActive]="['router-link-active']" class="w3-bar" (click)="menuicon()">
-              <img src=".\image\settings2_64x64.png" >
-           <span style="font-size:12px !important;" class="optiondown">Settings</span></a>
+           <img src=".\image\settings2_64x64.png" >
+           <span  class="optiondown">Settings</span>
 
           </div>
+          </a>
           </li>
            
 

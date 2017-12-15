@@ -323,12 +323,13 @@ a.active {
 .w3-dropdown-dr{
 line-height: 40px;
 }
-.optiondown{
+.optiondown,.setfontdiff{
     font-size: 12px;
     margin-top: 6px;
     margin-left: 5px;
         color: black;
 }
+
 .navbar-right-1{
 background-color:#efeeee;
    margin-left: 650px;
@@ -835,11 +836,12 @@ margin-left:77px ;
 line-height: 40px;
 }
 .optiondown{
-    font-size: 12px !important;
+    font-size: 12px;
     margin-top: 6px;
     margin-left: 5px;
         color: black;
 }
+
 .navbar-right-1{
 background-color:#f6f6f6;
    margin-left: 856px;
@@ -860,6 +862,15 @@ background-color:#f6f6f6;
 .menu-icon-log img{
     width:10px;
     float:left;
+}
+}
+
+@media only screen and (min-width:768px)and(max-width: 1024px){
+.setfontdiff{
+    font-size: 14px !important;
+    margin-top: 6px;
+    margin-left: 5px;
+    color: black; 
 }
 }
 @media only screen and (min-width:920px)and(max-width: 1024px){

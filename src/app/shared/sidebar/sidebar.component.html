@@ -99,6 +99,17 @@
     </a>
     </li>
 
+<li>
+<a [routerLink]="['./NoOfUser']" (click)="eventCalled()" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <div class="image-section-sidebar">
+    <img class="menu-item-img-sidebar" src=".\image\Chart Icon.png" >
+    </div>
+    <div class="image-section-span">
+    <span class="menu-item-img-span" >Charts</span>
+    </div>
+    </a>
+    </li> 
+
 
 
      <!--<li [routerLink]="['settings']" (click) = "activeFooterMenu='Settings'" [class.active]="activeFooterMenu=='Settings'">
@@ -114,6 +125,9 @@
     </div>
     </a>
     </li> 
+    
+
+
 
     <!-- <li [routerLink]="['']" (click) = "activeFooterMenu='Logout'" [class.active]="activeFooterMenu=='Logout'">
     <a class="list-group-item"> -->
