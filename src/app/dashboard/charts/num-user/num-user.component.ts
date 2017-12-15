@@ -1,8 +1,8 @@
 
 
 
- // templateUrl: './num-user.component.html',
- // styleUrls: ['./num-user.component.scss']
+  // templateUrl: './num-user.component.html',
+//  styleUrls: ['./num-user.component.scss']
 
 
 
@@ -16,12 +16,11 @@ import { Stats3 } from '../../../shared/data';
 import { Stocks } from '../../../shared/data';
 @Component({
   selector: 'app-num-user',
-  template: `
-    <h1>{{title}}</h1>
-    <h2>{{subtitle}}</h2>
-    <svg width="960" height="500"></svg>
-  ` 
-  // templateUrl: './num-user.component.html',
+  // template: `
+     
+    
+  // ` 
+  templateUrl: './num-user.component.html',
   
 })
 export class NumUserComponent implements OnInit {
@@ -35,7 +34,7 @@ export class NumUserComponent implements OnInit {
       total:any[]=[];
       arraynew:"";
   title: string = '';
-  subtitle: string = 'Pie Chart';
+  //subtitle: string = 'Pie Chart';
 
   private margin = {top: 20, right: 20, bottom: 30, left: 50};
   private width: number;
@@ -49,7 +48,7 @@ export class NumUserComponent implements OnInit {
   private svg: any;
 
   constructor() {
-    this.width = 900 - this.margin.left - this.margin.right;
+    this.width = 600 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
     this.radius = Math.min(this.width, this.height) / 2;
   }
@@ -62,7 +61,7 @@ export class NumUserComponent implements OnInit {
 
   private initSvg() {
     this.color = d3Scale.scaleOrdinal()
-                        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+                        .range(["#3f5f78 ", "#40bf94", "#ef666d", "#caddd7", "#cc485b", "#d0743c", "#ff8c00"]);
     this.arc = d3Shape.arc()
                       .outerRadius(this.radius - 10)
                       .innerRadius(0);
