@@ -61,7 +61,7 @@ export class NumUserComponent implements OnInit {
 
   private initSvg() {
     this.color = d3Scale.scaleOrdinal()
-                        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+                        .range(["#3f5f78 ", "#40bf94", "#ef666d", "#caddd7", "#cc485b", "#d0743c", "#ff8c00"]);
     this.arc = d3Shape.arc()
                       .outerRadius(this.radius - 10)
                       .innerRadius(0);
