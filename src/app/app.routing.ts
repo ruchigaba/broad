@@ -15,7 +15,9 @@ import { SecurityAnswerComponent } from './dashboard/settings/securityinfo.compo
 import { ChangeIdComponent } from './dashboard/settings/changeid.component';
 import { ChangePassComponent } from './dashboard/settings/changepass.component';
 import { AboutAppComponent } from './dashboard/settings/aboutapp.component';
+import { NumUserComponent } from './dashboard/charts/num-user/num-user.component';
 import { ClaimsComponent } from './dashboard/claims/claims.component';
+import{ ChartsComponent } from './dashboard/charts/charts.component';
 import { ContactAdjusterComponent } from './dashboard/contact-adjuster/contact-adjuster.component';
 import { HealtTicketComponent } from './dashboard/healt-ticket/healt-ticket.component';
 import { ProviderComponent } from './dashboard/provider/provider.component';
@@ -61,6 +63,10 @@ import { FirstTimePasswordComponent } from './login/first-time-password/first-ti
 export const routes = [
   { path: '', component:  LoginComponent   },
   { path: 'firstTimeLogin', component: FirstTimePasswordComponent },
+  
+
+  
+  
 
 
   {
@@ -81,6 +87,8 @@ export const routes = [
       { path:'providers', component:ProviderComponent , data: {title:'providers'} },
       { path: 'Providers', component: NearbyphysiciansMapComponent, data: { title:'Providers',parent:'providers' } },
       { path: 'social', component: SocialMediaComponent, data: { title: 'social' } },
+      { path:'charts', component: ChartsComponent, data:{title: 'charts'} },
+       { path:'NoOfUser', component: NumUserComponent, data:{title: 'NoOfUser'} },
       //{ path: 'leaveclaim-addedittime', component: AddEditTime, data: { title: 'Add/Edit Time',parents:'leaveclaim-details' } },
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
@@ -122,7 +130,11 @@ export const NavigatableComponents = [
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
    LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
+ 
    ValidateForgotpassComponent,HelpInComponent, 
+ 
+   ValidateForgotpassComponent,HelpInComponent,ChartsComponent,NumUserComponent
+ 
   // HealthTicketComponent 
 
 ];
