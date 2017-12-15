@@ -61,7 +61,7 @@ export class NumUserComponent implements OnInit {
 
   private initSvg() {
     this.color = d3Scale.scaleOrdinal()
-                        .range(["#3f5f78 ", "#40bf94", "#ef666d", "#caddd7", "#cc485b", "#d0743c", "#ff8c00"]);
+                        .range(["#40bf94", "#3f5f78", "#ef666d", "#caddd7", "rgb(220, 196, 146)", "#d0743c", "#ff8c00"]);
     this.arc = d3Shape.arc()
                       .outerRadius(this.radius - 10)
                       .innerRadius(0);
@@ -82,14 +82,22 @@ export class NumUserComponent implements OnInit {
                     .enter().append("g")
                     .attr("class", "arc");
 
-                    g.append("path")
-.attr("d", this.arc)
+//                     g.append("path")
+// .attr("d", this.arc)
 
-g.append("path").attr("d", this.arc)
+g.append("path")
+.attr("d", this.arc)
 //.style("fill", (d: any) => this.color(d.data.population))
-.style("cursor", "pointer")
-// .on('click', (d) => {
-//   alert("k")
+
+// g.append("rect")
+//         .attr({"class": "overlay" , "width": width , "height": height})
+//         .on({
+//           "mouseover": function() { /* do stuff */ },
+//           "mouseout":  function() { /* do stuff */ }, 
+//           "click":  function() { /* do stuff */ }, 
+//         });
+ .on('click', (d) => {
+  alert("k")
 //  for(var i=0;i<Stocks.length;i++){ 
 // if(d.data >=3000){
 // this.arr1.push(Stocks[i])
@@ -108,8 +116,8 @@ g.append("path").attr("d", this.arc)
 
 // this.drawgraph()
 
-// })
-
+})
+.style("cursor", "pointer")
 
 
 // .style("fill", d => this.color(d.data.applicants))

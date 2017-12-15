@@ -10,9 +10,18 @@
               <div _ngcontent-c6="" class="tab active">CLIENT PROGRAM NUMBER</div>
               <div _ngcontent-c6="" class="tab">CLIENT PROGRAM DESCRIPTION</div>
               <div _ngcontent-c6="" class="tab">NUMBER OF USERS ACCESSES</div>
+ 
                 </div>
  
                  
-                
-            
+          <ul *ngFor="let currentdata of arr3"  class="col5 tbl-data dtat">
+          <li class="col7 checknum">{{currentdata.client_id}}</li>
+           <li class="col7 checkdate">{{currentdata.description}}</li>
+           <li class="col7 checkamnt">{{currentdata.value}}</li>
+          
+           <div style="clear:both;"></div>
+         </ul>
+        
+            </div>
+  
 </div>
