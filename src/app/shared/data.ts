@@ -16,11 +16,11 @@ export const Stats2: any[] = [
 export const Stats3: any[] = [
   // {age: "<5", population: 2704659},
   // {age: "5-13", population: 4499890},
-  {age: "<50", population: 3524},
-  {age: "51-500", population: 28826},
-  {age: "501-1500", population: 32626},
-  {age: "1501-3000", population: 8024},
-  {age: "≥3000", population:sessionStorage.getItem("array") }
+  {age: "<50", population: sessionStorage.getItem("array4")},
+  {age: "51-500", population: sessionStorage.getItem("array3")},
+  {age: "501-1500", population: sessionStorage.getItem("array2")},
+  {age: "1501-3000", population:sessionStorage.getItem("array1")},
+  {age: "≥3000", population:sessionStorage.getItem("array") },
 ];
 export interface Stock {
   // date: Date,

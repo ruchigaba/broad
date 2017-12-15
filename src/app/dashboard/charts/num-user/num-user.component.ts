@@ -31,7 +31,9 @@ export class NumUserComponent implements OnInit {
     arr4:any[]=[];
      arr5:any[]=[];
      arr6:any[]=[];
+     arr7:any[]=[];
       total:any[]=[];
+      arraynew:"";
   title: string = '';
   subtitle: string = 'Pie Chart';
 
@@ -83,6 +85,34 @@ export class NumUserComponent implements OnInit {
 
                     g.append("path")
 .attr("d", this.arc)
+
+g.append("path").attr("d", this.arc)
+//.style("fill", (d: any) => this.color(d.data.population))
+.style("cursor", "pointer")
+// .on('click', (d) => {
+//   alert("k")
+//  for(var i=0;i<Stocks.length;i++){ 
+// if(d.data >=3000){
+// this.arr1.push(Stocks[i])
+// console.log(this.arr1)
+// }
+// }
+// if (d.data.type == "Training") {
+// this.index = 1;
+// }
+// else if (d.data.type == "Assigned") {
+// this.index = 2
+// }
+// else {
+// this.index = 0
+// }
+
+// this.drawgraph()
+
+// })
+
+
+
 // .style("fill", d => this.color(d.data.applicants))
 
 .style("cursor", "pointer")
@@ -93,21 +123,31 @@ export class NumUserComponent implements OnInit {
                     .text((d: any) => d.data.age);
   }
 private piechartClick(){
- var data
- var data2
- var value =0
+ var data;
+ var data2;
+  var data3;
+   var data4;
+    var data5;
+     var data6;
+ var value1=0;
+ var value2=0;
+ var value3=0;
+ var value4=0;
+ var value5=0;
+
  
  this.total = Stocks;
 
 for(var i=0;i<Stocks.length;i++){
   // console.log(Stocks[i]['value'],Stocks[i]['client_id'])
-    data = parseInt(Stocks[i]['value'])
+ data = parseInt(Stocks[i].value)
 if(data >=3000){
 this.arr1.push(Stocks[i])
-console.log(this.arr1)
+//console.log(this.arr1)
 }
 else if(data >=1501 && data < 3000){
 this.arr2.push(Stocks[i])
+//console.log(this.arr2)
 }
 else if(data >=501 && data <= 1500 ){
 this.arr3.push(Stocks[i])
@@ -117,19 +157,62 @@ this.arr4.push(Stocks[i])
 }
 else if (data <51) {
 this.arr5.push(Stocks[i])
+//console.log(this.arr5)
 }
 }
 
-for(var j=0;j<Stocks.length;j++){
-data2 = parseInt(this.arr1[j]['value'])
-//this.arr6[j]=this.arr1[j]+this.arr6[j];
-//console.log(this.arr1[j]['value'])
-value= value +data2;
-
-//sessionStorage.setItem("array",this.arr6[j]);
-//console.log(sessionStorage.getItem("array"));
+for(var j=0;j<this.arr1.length;j++){
+data2 = parseInt(this.arr1[j].value)
+value1= value1 +data2;
+//console.log(value1)
 }
- console.log(value)
+for(var j=0;j<this.arr2.length;j++){
+data3 = parseInt(this.arr2[j].value)
+value2= value2 +data3;
+}
+for(var j=0;j<this.arr3.length;j++){
+data4 = parseInt(this.arr3[j].value)
+value3= value3 +data4;
+}
+for(var j=0;j<this.arr4.length;j++){
+data5 = parseInt(this.arr4[j].value)
+value4= value4 +data5;
+}
+for(var j=0;j<this.arr5.length;j++){
+data6 = parseInt(this.arr5[j].value)
+value5= value5 +data6;
+
+}
+//console.log(value5)
+// data3 = parseInt(this.arr2[j].value)
+// data4 = parseInt(this.arr3[j].value)
+// data5 = parseInt(this.arr4[j].value)
+// data6 = parseInt(this.arr5[j].value)
+
+// //console.log(data3)
+// //console.log(data2)
+
+// value1= value1 +data2;
+// //console.log(value2)
+// value2= value2 +data3;
+// //console.log(value2)
+// value3= value3 +data4;
+// value4= value4 +data5;
+// value5= value5 +data6;
+// //console.log(value5)
+
+// //console.log(value1)
+sessionStorage.setItem("array",JSON.stringify(value1));
+console.log(sessionStorage.getItem("array"));
+sessionStorage.setItem("array1",JSON.stringify(value2));
+sessionStorage.setItem("array2",JSON.stringify(value3));
+sessionStorage.setItem("array3",JSON.stringify(value4));
+sessionStorage.setItem("array4",JSON.stringify(value5));
+
+// sessionStorage.setItem("pagePosition", JSON.stringify(this.getScroll()));
+//console.log(sessionStorage.getItem("array4"));
+
+ 
 
 
 }
