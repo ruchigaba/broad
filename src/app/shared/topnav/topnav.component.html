@@ -87,13 +87,16 @@
              </div> -->
             
          <li> 
+        <a> 
            <div class="menu-icon">
              <img src=".\image\user-icon.png" >
            </div>     
-               <span  class="optiondown">{{WelcomeUsername}}</span> 
+               <span  class="optiondown">{{WelcomeUsername}}</span> </a>
          </li>
           
+
           <li>
+<<<<<<< HEAD
          <a [routerLink]="['settings']" (click)="settingClick();menuicon()" [routerLinkActive]="['router-link-active']" class="w3-bar">
           <div class="menu-icon">
            <img src=".\image\settings2_64x64.png" >
@@ -101,13 +104,20 @@
 
           </div>
           </a>
+=======
+         <a [routerLink]="['settings']" (click)="settingClick()" [routerLinkActive]="['router-link-active']" class="w3-bar" (click)="menuicon()">
+          <div class="menu-icon">
+            <img src=".\image\settings2_64x64.png" >
+            </div>
+           <span class="optiondown">Settings</span></a>
+>>>>>>> 17ab355a0fbc942d141b764dad45f37b0d12e21a
           </li>
            
 
           <li>
           <a [routerLink]="['']" class="w3-bar " (click)="menuicon()">
             <div class="menu-icon">
-          <img  class="menu-icon-log" src=".\image\Untitled-2.png">
+          <img  src=".\image\Untitled-2.png">
             </div>
            <span class="optiondown">Log Out</span></a>
           </li>
