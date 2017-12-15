@@ -87,35 +87,27 @@
              </div> -->
             
          <li> 
-        <a> 
+        
            <div class="menu-icon">
              <img src=".\image\user-icon.png" >
            </div>     
-               <span  class="optiondown">{{WelcomeUsername}}</span> </a>
+               <span  class="optiondown">{{WelcomeUsername}}</span> 
          </li>
           
 
           <li>
-<<<<<<< HEAD
-         <a [routerLink]="['settings']" (click)="settingClick();menuicon()" [routerLinkActive]="['router-link-active']" class="w3-bar">
-          <div class="menu-icon">
-           <img src=".\image\settings2_64x64.png" >
-           <span  class="optiondown">Settings</span>
 
-          </div>
-          </a>
-=======
          <a [routerLink]="['settings']" (click)="settingClick()" [routerLinkActive]="['router-link-active']" class="w3-bar" (click)="menuicon()">
           <div class="menu-icon">
             <img src=".\image\settings2_64x64.png" >
             </div>
            <span class="optiondown">Settings</span></a>
->>>>>>> 17ab355a0fbc942d141b764dad45f37b0d12e21a
+
           </li>
            
 
           <li>
-          <a [routerLink]="['']" class="w3-bar " (click)="menuicon()">
+          <a [routerLink]="['']" class="w3-bar" (click)="menuicon()">
             <div class="menu-icon">
           <img  src=".\image\Untitled-2.png">
             </div>

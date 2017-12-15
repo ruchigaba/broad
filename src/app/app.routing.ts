@@ -8,6 +8,8 @@ import { RouteReuseStrategy  } from '@angular/router';
 //import { PieChartComponent } from './dashboard/view-claim/pie-chart/pie-chart.component';
 import { EulaComponent } from './newuser/eula/eula.component';
 import { FaqComponent } from './dashboard/faqs/faqs.component';
+
+import { NotificationComponent } from './dashboard/settings/notification/notification.component';
 import { SettingsComponent } from './dashboard/settings/settings.component';
 import { SecurityAnswerComponent } from './dashboard/settings/securityinfo.component';
 import { ChangeIdComponent } from './dashboard/settings/changeid.component';
@@ -74,7 +76,9 @@ export const routes = [
       { path: 'claim-paymentdetailspage', component: ClaimPaymentdetailsComponent, data: { title: 'claims', parent: 'claims' } },
       { path: 'claim-info', component: ClaimInfoComponent, data: { title: 'claims', parent: 'claims' } },
       { path: 'FAQ', component: FaqComponent, data: { title: 'FAQ' } },
+
       { path: 'settings', component: SettingsComponent, data: { title: 'settings'  } },
+      { path: 'notification', component: NotificationComponent, data: { title: 'notification'  } },
       { path: 'Health Ticket', component: HealtTicketComponent, data: { title: 'Health Ticket'} },
       { path: 'securityinfo', component: SecurityAnswerComponent, data: { title: 'security Info',parent:'settings' } },
       { path: 'change-email', component: ChangeIdComponent, data: { title: 'change email address',parent:'settings' } },
@@ -116,7 +120,7 @@ export const routes = [
 ];
 
 export const NavigatableComponents = [
-  LoginComponent, DashboardComponent, EulaComponent, FaqComponent,
+  LoginComponent, DashboardComponent, EulaComponent, FaqComponent,NotificationComponent,
   SettingsComponent, SecurityAnswerComponent, ChangeIdComponent, ChangePassComponent,
   TruncatePipe,
    AboutAppComponent, ClaimsComponent, HealtTicketComponent,
@@ -126,7 +130,11 @@ export const NavigatableComponents = [
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,LeaveTechPortalComponent
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
    LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
+ 
+   ValidateForgotpassComponent,HelpInComponent, 
+ 
    ValidateForgotpassComponent,HelpInComponent,ChartsComponent,NumUserComponent
+ 
   // HealthTicketComponent 
 
 ];

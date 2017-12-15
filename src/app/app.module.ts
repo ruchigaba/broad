@@ -53,8 +53,10 @@ import { ForgotsComponent } from './forgots/forgots.component';
 import { ValidateForgotpassComponent } from './forgot-password/validate-forgotpass/validate-forgotpass.component';
 
 import { HelpInComponent } from './dashboard/help-in/help-in.component';
+import { NotificationComponent } from './dashboard/settings/notification/notification.component';
 import { ChartsComponent } from './dashboard/charts/charts.component';
 import { NumUserComponent } from './dashboard/charts/num-user/num-user.component';
+
 
 // -------------------------------------registration tutorial component ends ---------------------------
 
@@ -90,8 +92,12 @@ import { NumUserComponent } from './dashboard/charts/num-user/num-user.component
     ForgotsComponent,
     ValidateForgotpassComponent,
   HelpInComponent,
+ 
+  NotificationComponent,
+ 
   ChartsComponent,
   NumUserComponent 
+ 
 
     // , DynemicUiComponent
   ],
