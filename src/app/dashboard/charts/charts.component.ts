@@ -19,8 +19,9 @@ import { Stocks } from '../../shared/data';
   selector: 'app-charts',
   template: `
     <h1>{{title}}</h1>
-    <h2>{{subtitle}}</h2>
+    <h1>{{subtitle}}</h1>
     <svg width="900" height="500"></svg>
+    
   `
 })
 export class ChartsComponent implements OnInit {

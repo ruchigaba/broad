@@ -1,8 +1,8 @@
 
 
 
- // templateUrl: './num-user.component.html',
- // styleUrls: ['./num-user.component.scss']
+  // templateUrl: './num-user.component.html',
+//  styleUrls: ['./num-user.component.scss']
 
 
 
@@ -16,12 +16,11 @@ import { Stats3 } from '../../../shared/data';
 import { Stocks } from '../../../shared/data';
 @Component({
   selector: 'app-num-user',
-  template: `
-    <h1>{{title}}</h1>
-    <h2>{{subtitle}}</h2>
-    <svg width="960" height="500"></svg>
-  ` 
-  // templateUrl: './num-user.component.html',
+  // template: `
+     
+    
+  // ` 
+  templateUrl: './num-user.component.html',
   
 })
 export class NumUserComponent implements OnInit {
@@ -33,7 +32,7 @@ export class NumUserComponent implements OnInit {
      arr6:any[]=[];
       total:any[]=[];
   title: string = '';
-  subtitle: string = 'Pie Chart';
+  //subtitle: string = 'Pie Chart';
 
   private margin = {top: 20, right: 20, bottom: 30, left: 50};
   private width: number;
@@ -47,7 +46,7 @@ export class NumUserComponent implements OnInit {
   private svg: any;
 
   constructor() {
-    this.width = 900 - this.margin.left - this.margin.right;
+    this.width = 600 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
     this.radius = Math.min(this.width, this.height) / 2;
   }
