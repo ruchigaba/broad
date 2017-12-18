@@ -64,6 +64,7 @@ export class NumUserComponent implements OnInit {
   }
 
   private initSvg() {
+    d3.select("svg > *").remove()
     this.color = d3Scale.scaleOrdinal()
                         .range(["#40bf94", "#3f5f78", "#ef666d", "#caddd7", "rgb(220, 196, 146)", "#d0743c", "#ff8c00"]);
     this.arc = d3Shape.arc()
@@ -107,22 +108,23 @@ export class NumUserComponent implements OnInit {
 
                        if( d.data.age =="<50"){
                        this.finalarr = this.arr5
+                        document.body.className = ' fifty';
                        }
                        else if(d.data.age =="51-500"){
                          this.finalarr = this.arr4
-
+                       document.body.className = ' fivehun';
                        }
                        else if(d.data.age =="501-1500"){
                          this.finalarr = this.arr3
-
+                         document.body.className = ' fifteenhun';
                        }
                        else if(d.data.age =="1501-3000"){
                          this.finalarr = this.arr2
-
+                             document.body.className = ' threethousand';
                        }
                        else{
                          this.finalarr = this.arr1
-
+                            document.body.className = ' morethreethousand';
                        }
 
                      
@@ -132,6 +134,9 @@ export class NumUserComponent implements OnInit {
                     .attr("dy", ".35em")
                     .text((d: any) => d.data.age);
   }
+    ngOnDestroy(){
+       document.body.className = '';
+    }
 private piechartClick(){
  var data;
  var data2;
