@@ -14,6 +14,7 @@ import * as d3Shape from 'd3-shape';
 import * as d3Array from 'd3-array';
 import * as d3Axis from 'd3-axis';
 
+
 import { Total_user } from '../../shared/total_user';
 import { Stats } from '../../shared/total_user';
 
@@ -22,6 +23,9 @@ import { Stats } from '../../shared/total_user';
 // {type: "Active", count: 6500},
 // {type: "inactive", count: 8000},
 // ];
+
+// import { Stocks } from '../../shared/data';
+
 
 @Component({
   selector: 'app-charts',
@@ -36,6 +40,7 @@ import { Stats } from '../../shared/total_user';
   styleUrls: ['./charts.component.scss']
 })
 export class ChartsComponent implements OnInit {
+
 
   title: string = '';
   subtitle: string = '';
@@ -73,7 +78,22 @@ export class ChartsComponent implements OnInit {
     this.width = 900 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
     this.radius = Math.min(this.width, this.height) / 2;
-  }
+}
+  // title: string = '';
+  // subtitle: string = 'Line Chart';
+
+  // private margin = {top: 20, right: 20, bottom: 30, left: 50};
+  // private width: number;
+  // private height: number;
+  // private x: any;
+  // private y: any;
+  // private svg: any;
+  // private line: d3Shape.Line<[number, number]>;
+
+    // this.width = 900 - this.margin.left - this.margin.right;
+    // this.height = 500 - this.margin.top - this.margin.bottom;
+
+  
 
   ngOnInit() {
      this.initSvg();
@@ -86,6 +106,7 @@ export class ChartsComponent implements OnInit {
      //this.drawAxisbar();
      //this.drawBarsbar();
   }
+
 
   private initSvg() {
     // d3.select("svg > *").remove()
@@ -106,9 +127,17 @@ export class ChartsComponent implements OnInit {
   }
 
 
+  // private initSvg() {
+  //   this.svg = d3.select("svg")
+  //                .append("g")
+  //                .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
+  // }
+
+
   // private initAxis() {
   //   this.x = d3Scale.scaleTime().range([0, this.width]);
   //   this.y = d3Scale.scaleLinear().range([this.height, 0]);
+
   //   this.x.domain(d3Array.extent(Total_user, (d) => d.Users ));
   //   this.y.domain(d3Array.extent(Total_user, (d) => d.RegisteredDate ));
   // }
@@ -153,6 +182,11 @@ export class ChartsComponent implements OnInit {
 //     //this.y.domain([0, d3Array.max(this.Total_user[this.index], (d: any) => d.adjuster * 1.1)]);
 //   }
 
+
+  //   this.x.domain(d3Array.extent(Stocks, (d) => d.date ));
+  //   this.y.domain(d3Array.extent(Stocks, (d) => d.value ));
+  // }
+
   // private drawAxis() {
 
   //   this.svg.append("g")
@@ -173,6 +207,7 @@ export class ChartsComponent implements OnInit {
   // }
 
   // private drawLine() {
+
   //  // this.line = d3Shape.line()
   //                      //.x( (d: any) => this.x(d.date) )
   //                     // .y( (d: any) => this.y(d.value) );
@@ -182,5 +217,19 @@ export class ChartsComponent implements OnInit {
   //           .attr("class", "line")
   //           //.attr("d", this.line);
   // }
+
+  //   this.line = d3Shape.line()
+  //                      .x( (d: any) => this.x(d.date) )
+  //                      .y( (d: any) => this.y(d.value) );
+
+  //   this.svg.append("path")
+  //           .datum(Stocks)
+  //           .attr("class", "line")
+  //           .attr("d", this.line);
+  // }
+
+
+  
+
 
 }

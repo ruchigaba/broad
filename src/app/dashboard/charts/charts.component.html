@@ -1,11 +1,40 @@
   
 <div _ngcontent-c5="" class="nav-pie">
     <ul _ngcontent-c5="" class="sub-menu-item">
-        <li _ngcontent-c5="" class="tabcls" routerlinkactive="active" tabindex="0" ng-reflect-router-link="./roster" ng-reflect-router-link-active="active">Total Users Count</li>
-        <li _ngcontent-c5="" class="tabcls" routerlinkactive="active" tabindex="0" ng-reflect-router-link="./applicant" ng-reflect-router-link-active="active">MYClaim Users Login Counts by CP</li>
-        <li _ngcontent-c5="" class="tabcls" routerlinkactive="active" tabindex="0" ng-reflect-router-link="./catclient" ng-reflect-router-link-active="active">Unique Users Access Count by CP</li>
-        <li _ngcontent-c5="" class="tabcls" routerlinkactive="active" tabindex="0" ng-reflect-router-link="./catevent" ng-reflect-router-link-active="active">Ave. Num of Logins By Unique ID</li>
-       
+        <!--<li _ngcontent-c5="" class="tabcls" routerlinkactive="active"  router-link="./roster" router-link-active="active">Total Users Count</li>-->
+        <li>
+        <a [routerLink]="['../roster']"   [routerLinkActive]="['router-link-active']" class="tabcls router-link-active">
+         <!--<a  id="worker"  (click) = "claimClicked = true;lasttitle();eventCalled();workercompClick();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom router-link-active">
+       <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="eventCalled();leavedisabilityClick()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">-->
+        <span>Total Users Count</span>
+        </a>
+        </li>
+         <li>
+        <a [routerLink]="['./NoOfUser']"   [routerLinkActive]="['router-link-active']" class="tabcls">
+        <span>MYClaim Users Login Counts by CP</span>
+        </a>
+        </li>
+        <li>
+        <a [routerLink]="['./UniqueAccess']"   [routerLinkActive]="['router-link-active']" class="tabcls">
+        <span>Unique Users Access Count by CP</span>
+        </a>
+        </li>
+        <li>
+        <a [routerLink]="['./AvgCount']"   [routerLinkActive]="['router-link-active']" class="tabcls">
+        <span>Ave. Num of Logins By Unique ID</span>
+        </a>
+        </li>
+
+
+
+
+
+
+
+        <!--<li _ngcontent-c5="" class="tabcls" routerlinkactive="active"  router-link="./NoOfUser" router-link-active="active">MYClaim Users Login Counts by CP</li>
+        <li _ngcontent-c5="" class="tabcls" routerlinkactive="active" router-link="./UniqueAccess" router-link-active="active">Unique Users Access Count by CP</li>
+        <li _ngcontent-c5="" class="tabcls" routerlinkactive="active" router-link="./AvgCount" router-link-active="active">Ave. Num of Logins By Unique ID</li>
+       -->
     </ul>
     <div  class="clear"></div>
 </div>
@@ -50,17 +79,17 @@
 
 
 
-  <div class="gdr">
+ <!--  <div class="gdr">-->
 
-  <div class="card">
-    <div #containerPieChart>
+  <div class="card123">
+    <div #containerPieChart> 
       <svg  width="600" height="500">
 </svg>    
 
     </div>
   </div>
 
-  <div class="card">
+  <!-- <div class="card"> -->
 
     <!-- <router-outlet></router-outlet> -->
     <!-- <div #containerPieChart2></div> -->
@@ -69,5 +98,5 @@
     </div>
 
     <div style="clear: both;"></div>
-  </div>
-</div>
+<!--   </div> -->
+<!-- </div> -->

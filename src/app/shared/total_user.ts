@@ -1,10 +1,10 @@
 export const Stats: any[] = [
   // {age: "<5", population: 2704659},
   // {age: "5-13", population: 4499890},
-  {age: "last month", population: 34567},
-  {age: "last 5years", population: 4567890},
-  {age: "last 6 months", population: 567890},
-  {age: "last year", population:67890},
+  {age: "last month", population: 1000},
+  {age: "last 5years", population: 8000},
+  {age: "last 6 months", population: 6000},
+  {age: "last year", population:6500},
  
 ];
 

@@ -129,7 +129,7 @@ export class NumUserComponent implements OnInit {
 
                      
                      
-                    });;
+                    });
     g.append("text").attr("transform", (d: any) => "translate(" + this.labelArc.centroid(d) + ")")
                     .attr("dy", ".35em")
                     .text((d: any) => d.data.age);
