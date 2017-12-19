@@ -1,30 +1,4 @@
-.axis {
-  font: 10px sans-serif;
-}
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.axis-title {
-  fill: none;
-  stroke: black;
-  stroke-width: 0.5px;
-}
-
-
-.axis--x path {
-  /*display: none;*/
-}
-
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
-}
  
  
 .nav-pie  {
@@ -53,7 +27,7 @@
   cursor: pointer;
   transition: background-color 200ms ease-in;
 }
-.top-stats[_ngcontent-c12] {
+.top-stats {
   padding: 1em;
   display: -ms-grid;
   display: grid;
@@ -63,15 +37,15 @@
   color: black;
   // background-color: #94a497;
 }
-.top-stats[_ngcontent-c12] .cardcharts[_ngcontent-c12] {
+.top-stats .cardcharts {
   text-align: center;
   background-color: #d3dcd3  ;
 }
-.top-stats[_ngcontent-c12] .heading[_ngcontent-c12] {
+.top-stats .heading {
   opacity: .75;
   font-weight: 600;
 }
-.top-stats[_ngcontent-c12] .value[_ngcontent-c12] {
+.top-stats .value{
   font-size: 22px;
   font-weight: 600;
   color: #007a33;
@@ -87,4 +61,24 @@ right: 0;
 left: 260px;
 bottom: 0;
 overflow: auto;
+}
+
+
+
+
+.tabcls{
+ color: #fff;
+    position: relative;
+    left: 9px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+}
+a.tabcls.router-link-active {
+  color: #000;
+    background-color: #cce4d6;
+     border-bottom: 4px solid #007a33;
+}
+.nav-pie .sub-menu-item a.router-link-active{
+   background-color: #cce4d6;
 }

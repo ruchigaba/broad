@@ -3,23 +3,25 @@
     <ul _ngcontent-c5="" class="sub-menu-item">
         <!--<li _ngcontent-c5="" class="tabcls" routerlinkactive="active"  router-link="./roster" router-link-active="active">Total Users Count</li>-->
         <li>
-        <a [routerLink]="['../roster']"   [routerLinkActive]="['router-link-active']" class="tabcls">
-        <span class="menu-item-img-span">Total Users Count</span>
+        <a [routerLink]="['../roster']"   [routerLinkActive]="['router-link-active']" class="tabcls router-link-active">
+         <!--<a  id="worker"  (click) = "claimClicked = true;lasttitle();eventCalled();workercompClick();" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom router-link-active">
+       <a  id="leave" [routerLink]="['leaveTechPortal']"(click)="eventCalled();leavedisabilityClick()" [routerLinkActive]="['router-link-active']" class="list-group-item-mycom">-->
+        <span>Total Users Count</span>
         </a>
         </li>
          <li>
         <a [routerLink]="['../NoOfUser']"   [routerLinkActive]="['router-link-active']" class="tabcls">
-        <span class="menu-item-img-span">MYClaim Users Login Counts by CP</span>
+        <span>MYClaim Users Login Counts by CP</span>
         </a>
         </li>
         <li>
         <a [routerLink]="['../UniqueAccess']"   [routerLinkActive]="['router-link-active']" class="tabcls">
-        <span class="menu-item-img-span">Unique Users Access Count by CP</span>
+        <span>Unique Users Access Count by CP</span>
         </a>
         </li>
         <li>
         <a [routerLink]="['../AvgCount']"   [routerLinkActive]="['router-link-active']" class="tabcls">
-        <span class="menu-item-img-span">Ave. Num of Logins By Unique ID</span>
+        <span>Ave. Num of Logins By Unique ID</span>
         </a>
         </li>
 
