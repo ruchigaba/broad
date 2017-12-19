@@ -16,6 +16,8 @@ import { ChangeIdComponent } from './dashboard/settings/changeid.component';
 import { ChangePassComponent } from './dashboard/settings/changepass.component';
 import { AboutAppComponent } from './dashboard/settings/aboutapp.component';
 import { NumUserComponent } from './dashboard/charts/num-user/num-user.component';
+import { AveNumComponent } from './dashboard/charts/ave-num/ave-num.component';
+import { UniqueAccessComponent } from './dashboard/charts/unique-access/unique-access.component';
 import { ClaimsComponent } from './dashboard/claims/claims.component';
 import{ ChartsComponent } from './dashboard/charts/charts.component';
 import { ContactAdjusterComponent } from './dashboard/contact-adjuster/contact-adjuster.component';
@@ -89,6 +91,9 @@ export const routes = [
       { path: 'social', component: SocialMediaComponent, data: { title: 'social' } },
       { path:'charts', component: ChartsComponent, data:{title: 'charts'} },
        { path:'NoOfUser', component: NumUserComponent, data:{title: 'NoOfUser'} },
+        { path:'UniqueAccess', component: UniqueAccessComponent, data:{title: 'UniqueAccess'} },
+        { path:'AvgCount', component: AveNumComponent, data:{title: 'AvgCount'} },
+       
       //{ path: 'leaveclaim-addedittime', component: AddEditTime, data: { title: 'Add/Edit Time',parents:'leaveclaim-details' } },
      // { path: 'cancel-time', component: CancelTimeComponent, data: { title: 'Cancel Time',parents:'leaveclaim-details' } },
       { path: 'aboutApp', component: AboutAppComponent, data: { title: 'Info',parent:'settings' } },
@@ -131,9 +136,9 @@ export const NavigatableComponents = [
    ,ClaimInfoMessageComponent,RegistrationComponent, ForgothelpComponent, RegistrationTutorialComponent,ResetpasswordComponent,WorkerCompComponent,
    LOBRegistrationComponent,LDRegistrationComponent,LeaveDisabilityComponent,SecurityQuestionsComponent, FirstTimePasswordComponent,ForgotsComponent,
  
-   ValidateForgotpassComponent,HelpInComponent, 
+   ValidateForgotpassComponent,HelpInComponent,UniqueAccessComponent, 
  
-   ValidateForgotpassComponent,HelpInComponent,ChartsComponent,NumUserComponent
+   ValidateForgotpassComponent,AveNumComponent,HelpInComponent,ChartsComponent,NumUserComponent
  
   // HealthTicketComponent 
 

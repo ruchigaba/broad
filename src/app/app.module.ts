@@ -56,6 +56,8 @@ import { HelpInComponent } from './dashboard/help-in/help-in.component';
 import { NotificationComponent } from './dashboard/settings/notification/notification.component';
 import { ChartsComponent } from './dashboard/charts/charts.component';
 import { NumUserComponent } from './dashboard/charts/num-user/num-user.component';
+import { UniqueAccessComponent } from './dashboard/charts/unique-access/unique-access.component';
+import { AveNumComponent } from './dashboard/charts/ave-num/ave-num.component';
 
 
 // -------------------------------------registration tutorial component ends ---------------------------
@@ -96,7 +98,9 @@ import { NumUserComponent } from './dashboard/charts/num-user/num-user.component
   NotificationComponent,
  
   ChartsComponent,
-  NumUserComponent 
+  NumUserComponent,
+  UniqueAccessComponent,
+  AveNumComponent 
  
 
     // , DynemicUiComponent
