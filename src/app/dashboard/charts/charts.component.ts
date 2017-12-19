@@ -17,12 +17,14 @@ import { Stocks } from '../../shared/data';
 
 @Component({
   selector: 'app-charts',
-  template: `
-    <h1>{{title}}</h1>
-    <h1>{{subtitle}}</h1>
-    <svg width="900" height="500"></svg>
+  // template: `
+  //   <h1>{{title}}</h1>
+  //   <h1>{{subtitle}}</h1>
+  //   <svg width="900" height="500"></svg>
     
-  `
+  // `
+
+  templateUrl: './charts.component.html', 
 })
 export class ChartsComponent implements OnInit {
 
