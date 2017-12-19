@@ -21,25 +21,23 @@ color: #3f5f78;
   font-size:10px;
   display: grid;
 }
-.fifty .nav-tab-box[_ngcontent-c6] .tab[_ngcontent-c6]{
-  background-color: rgb(64, 191, 148) !important;
+.twenty .nav-tab-box .tab{
+  background-color: rgb(152, 171, 197) !important;
 }
-.fivehun .nav-tab-box .tab{
-  background-color: rgb(63, 95, 120) !important;
+.hundred .nav-tab-box .tab{
+  background-color: rgb(123, 104, 136) !important;
 }
-.fifteenhun .nav-tab-box .tab{
-  background-color: rgb(239, 102, 109) !important;
+.sixty .nav-tab-box .tab{
+  background-color: rgb(138, 137, 166) !important;
 }
-.threethousand .nav-tab-box .tab{
-  background-color: rgb(202, 221, 215) !important;
+.morehundred .nav-tab-box .tab{
+  background-color: rgb(107, 72, 107) !important;
 }
-.morethreethousand .nav-tab-box .tab{
-  background-color:  rgb(220, 196, 146) !important;
-}
+
 .card {
   margin-left: 16px;
   width: 48%;
-  padding: 16px;
+  padding: 4px !important;
   background-color: white;
   border-radius: 2px;
   box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.2);
