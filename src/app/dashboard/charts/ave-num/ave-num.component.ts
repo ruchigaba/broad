@@ -5,11 +5,17 @@ import * as d3Shape from 'd3-shape';
 
 import { StatsAve } from '../../../shared/data';
 import { Stocks_Avg } from '../../../shared/data';
+
+
+
 @Component({
   selector: 'app-ave-num',
   templateUrl: './ave-num.component.html',
  // styleUrls: ['./ave-num.component.scss']
 })
+
+
+
 export class AveNumComponent implements OnInit {
 arr1: any[] = [];
   arr2:any[]=[];
@@ -85,20 +91,21 @@ arr1: any[] = [];
 
                        if( d.data.age =="<50"){
                        this.finalarr = this.arr4
-                        document.body.className = ' fifty';
+
+                        document.body.className = ' fiftyless';
                   
                        }
                        else if(d.data.age =="50-150"){
                          this.finalarr = this.arr3
-                       document.body.className = ' fivehun';
+                       document.body.className = ' onefifty';
                        }
                        else if(d.data.age =="151-300"){
                          this.finalarr = this.arr2
-                         document.body.className = ' fifteenhun';
+                         document.body.className = ' threehun';
                        }
                       else{
                          this.finalarr = this.arr1
-                            document.body.className = ' morethreethousand';
+                            document.body.className = ' morethreehundred';
                        }
 
                      
@@ -137,38 +144,67 @@ for(var i=0;i<Stocks_Avg.length;i++){
  this.finaldata[i]= data/data1;
 
 if(this.finaldata[i] >=300){
-this.arr1.push(Stocks_Avg[i])
-this.arr1.push(this.finaldata[i])
-console.log(this.arr1)
+this.arr1.push({
+  "Client_num":Stocks_Avg[i].Client_num,
+  "Prog_desc":Stocks_Avg[i].Prog_desc,
+  "num_user":Stocks_Avg[i].num_user,
+  "user_access":Stocks_Avg[i].user_access,
+  "avg_score":0,
+
+})
+this.arr1[i].avg_score = this.finaldata[i]
+// console.log(this.arr1)
 }
 else if(this.finaldata[i] >=151 && this.finaldata[i] < 300){
-this.arr2.push(Stocks_Avg[i])
 
-//console.log(this.arr2)
+this.arr2.push({
+   "Client_num":Stocks_Avg[i].Client_num,
+  "Prog_desc":Stocks_Avg[i].Prog_desc,
+  "num_user":Stocks_Avg[i].num_user,
+  "user_access":Stocks_Avg[i].user_access,
+  "avg_score":this.finaldata[i]
+})
+
+console.log(this.arr2)
 }
 else if(this.finaldata[i] >=50 && this.finaldata[i] <= 150 ){
-this.arr3.push(Stocks_Avg[i])
+this.arr3.push({
+  "Client_num":Stocks_Avg[i].Client_num,
+  "Prog_desc":Stocks_Avg[i].Prog_desc,
+  "num_user":Stocks_Avg[i].num_user,
+  "user_access":Stocks_Avg[i].user_access,
+  "avg_score": this.finaldata[i],
+})
+
 }
 else if(this.finaldata[i] < 50 ){
-this.arr4.push(Stocks_Avg[i])
+this.arr4.push({
+   "Client_num":Stocks_Avg[i].Client_num,
+  "Prog_desc":Stocks_Avg[i].Prog_desc,
+  "num_user":Stocks_Avg[i].num_user,
+  "user_access":Stocks_Avg[i].user_access,
+  "avg_score": this.finaldata[i],
+})
+
+
 }
 }
 
 for(var j=0;j<this.arr1.length;j++){
-data2 = parseInt(this.arr1[j+1])
+data2 = parseInt(this.arr1[j].avg_score)
 value1= value1 +data2;
 //console.log(value1)
 }
 for(var j=0;j<this.arr2.length;j++){
-data3 = parseInt(this.arr2[j+1])
+data3 = parseInt(this.arr2[j].avg_score)
 value2= value2 +data3;
 }
 for(var j=0;j<this.arr3.length;j++){
-data4 = parseInt(this.arr3[j+1])
+data4 = parseInt(this.arr3[j].avg_score)
 value3= value3 +data4;
 }
 for(var j=0;j<this.arr4.length;j++){
-data5 = parseInt(this.arr4[j+1])
+data5 = parseInt(this.arr4[j].avg_score)
 value4= value4 +data5;
 }
 
