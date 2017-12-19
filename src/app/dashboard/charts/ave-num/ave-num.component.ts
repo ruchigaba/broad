@@ -86,6 +86,7 @@ arr1: any[] = [];
                        if( d.data.age =="<50"){
                        this.finalarr = this.arr4
                         document.body.className = ' fifty';
+
                        }
                        else if(d.data.age =="50-150"){
                          this.finalarr = this.arr3

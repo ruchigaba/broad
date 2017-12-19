@@ -13,6 +13,7 @@ export const Stats2: any[] = [
   {age: "7 weeks", population: 7},
   {age: "5 weeks", population: 5},
 ];
+
 export const Stats3: any[] = [
   // {age: "<5", population: 2704659},
   // {age: "5-13", population: 4499890},

@@ -25,3 +25,139 @@
   stroke: steelblue;
   stroke-width: 1.5px;
 }
+ 
+ 
+.nav-pie  {
+  position: fixed;
+  top: 116px;
+  z-index: -1;
+  background-color: #94a497;
+  width: 81%;
+  box-sizing: border-box;
+  line-height: 41px;
+  margin: 0px 15px;
+}
+.nav-pie ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-pie  li {
+  display: inline;
+  outline: none;
+  list-style-type: none;
+  font-weight: 600;
+  padding: 11px 16px;
+  font-size: 14px;
+  color: white;;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+}
+.top-stats[_ngcontent-c12] {
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  color: black;
+  // background-color: #94a497;
+}
+.top-stats[_ngcontent-c12] .cardcharts[_ngcontent-c12] {
+  text-align: center;
+  background-color: #d3dcd3  ;
+}
+.top-stats[_ngcontent-c12] .heading[_ngcontent-c12] {
+  opacity: .75;
+  font-weight: 600;
+}
+.top-stats[_ngcontent-c12] .value[_ngcontent-c12] {
+  font-size: 22px;
+  font-weight: 600;
+  color: #007a33;
+}
+.cardcharts {
+ border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.main-div{
+position: fixed;
+top: 153px;
+right: 0;
+left: 260px;
+bottom: 0;
+overflow: auto;
+}
+
+
+.top-stats {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    color: white;
+    background-color: #94a497;
+    .card {
+        text-align: center;
+        background-color: #94a495;
+        
+    }
+    .heading {
+        opacity: .75;
+    }
+    .value {
+        font-size: xx-large;
+        font-weight: 700;
+    }
+}
+
+.bottom {
+    padding: 1em;
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 1fr 2fr;
+}
+
+.gdr {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1em;
+    grid-column-gap: 1em;
+}
+.grid-3r {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    .r3 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    // .card{
+    //     width:80%;
+    //     float:left;
+    // }
+}
+.client-list {
+    width: 100%;
+    td{
+        padding: 8px 16px;
+    }
+    tr{
+        td:nth-child(even){
+            text-align: center;
+        }
+    }
+    tr:nth-child(odd) {
+        background-color: #42a5f5;
+    }
+
+    tr:nth-child(even) {
+        background-color: #90caf9;
+    }
+}
+
+#barChartDiv3 {
+    height:200px; 
+}
